@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>李登輝生平年表</title>
+<meta name="description" content="李登輝 1923–2020 互動年表：從蔣經國到李登輝的民主接力、政治手腕索引、台灣歷史背景補充與翻卡複習。讀《餘生》的學習筆記。">
+<meta property="og:title" content="李登輝生平年表">
+<meta property="og:description" content="台灣民主化怎麼從蔣經國萌芽、在李登輝手上落實？互動年表、政治手腕索引、背景補充、翻卡複習。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231d2320'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' font-family='serif' font-weight='900' fill='%23d6b25a'%3E李%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: 頂部標題 + 分頁導覽（年表／民主接力／政治手腕／背景補充／翻卡複習）；年表為單欄縱向，左側年份、年號、年齡。 */
+:root{
+  --bg:#eef1ec; --paper:#f8faf6; --ink:#1d2320; --muted:#5d6862; --line:#cfd7d0;
+  --seal:#b4322a; --gold:#8a6a1f; --chip:#e1e7e1;
+  --display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141816; --paper:#1c211e; --ink:#e7ece8; --muted:#9aa59f; --line:#323a35;
+  --seal:#e0675d; --gold:#d6b25a; --chip:#262d29; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141816; --paper:#1c211e; --ink:#e7ece8; --muted:#9aa59f; --line:#323a35;
+  --seal:#e0675d; --gold:#d6b25a; --chip:#262d29; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+[hidden]{display:none!important}
+.wrap{max-width:780px;margin:0 auto;padding-block:24px 72px}
+button{font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+a{color:var(--seal)}
+
+/* 標題 */
+.masthead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.masthead h1{font-family:var(--display);font-weight:900;font-size:clamp(30px,7vw,44px);margin:0;letter-spacing:.04em;line-height:1.15;text-wrap:balance}
+.masthead .sub{color:var(--muted);margin:6px 0 0;font-size:14px;max-width:60ch}
+.masthead .sub b{color:var(--gold);font-weight:700}
+.theme{flex:none;border:1px solid var(--line);background:var(--paper);border-radius:999px;width:38px;height:38px;display:grid;place-items:center;font-size:16px;margin-top:6px}
+
+/* 分頁導覽 */
+.tabs{position:sticky;top:0;z-index:6;background:var(--bg);margin-top:18px;border-bottom:2px solid var(--ink);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;background:none;border:0;padding:10px 14px;font-size:15px;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
+.tab[aria-selected=true]{color:var(--ink);font-weight:700;border-bottom-color:var(--seal)}
+.tab small{display:block;font-size:11px;letter-spacing:.04em;color:var(--muted);font-weight:400;line-height:1.2}
+
+/* 工具列 */
+.bar{position:sticky;top:46px;z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.row.scroll::-webkit-scrollbar{display:none}
+input[type=search]{flex:1;min-width:0;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+.chip{flex:none;border:1px solid var(--line);background:var(--chip);padding:4px 11px;border-radius:999px;font-size:13px;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.ghost{background:none}
+.count{color:var(--muted);font-size:13px;margin-left:auto;white-space:nowrap}
+.active-m{font-size:13px;color:var(--seal)}
+.active-m button{border:0;background:none;color:var(--muted);text-decoration:underline;font-size:13px;padding:0 4px}
+
+/* 分期總覽帶 */
+.eras-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin:18px 0 6px}
+.es{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:8px 8px 6px;text-align:left;display:flex;flex-direction:column;gap:1px;min-width:0}
+.es b{font-family:var(--display);font-size:13.5px;line-height:1.3}
+.es span{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.es small{font-size:11px;color:var(--gold)}
+.es[aria-pressed=true]{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal)}
+.es[aria-pressed=true] b{color:var(--seal)}
+@media (max-width:640px){.eras-strip{grid-template-columns:repeat(3,1fr)}.es b{font-size:12.5px}}
+@media (max-width:480px){.tab{padding:9px 10px;font-size:14px}.tab small{display:none}.bar{top:40px}}
+.intro{color:var(--muted);font-size:14px;max-width:62ch;margin:14px 0 0}
+
+/* 年表 */
+.era-head{font-family:var(--display);font-size:20px;font-weight:700;margin:36px 0 4px;display:flex;align-items:baseline;gap:10px;scroll-margin-top:120px}
+.era-head span{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:400}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:14px;padding-block:14px;border-top:1px solid var(--line)}
+.when{font-variant-numeric:tabular-nums}
+.yr{font-family:var(--display);font-size:24px;font-weight:900;line-height:1.1}
+.era-yr{font-size:12px;color:var(--muted);line-height:1.4;margin-top:2px}
+.age{font-size:12px;color:var(--gold);font-weight:700}
+.what{min-width:0}
+.ttl{font-weight:700;font-size:16px;display:flex;gap:6px;align-items:flex-start;background:none;border:0;padding:0;text-align:left;width:100%;line-height:1.5}
+.ttl .tw{flex:1}
+.seal{flex:none;font-family:var(--display);font-size:11px;color:var(--seal);border:1.5px solid var(--seal);padding:0 4px;border-radius:3px;margin-top:3px;line-height:1.5}
+.seal.m{color:var(--gold);border-color:var(--gold)}
+.seal.ck{color:var(--ink);border-color:var(--ink)}
+.det{margin-top:6px}
+.det p{margin:0 0 6px;max-width:62ch}
+.move,.ckbox{margin:8px 0;padding:10px 12px;border:1px solid var(--line);border-radius:6px;max-width:62ch;background:var(--paper)}
+.move .lbl,.ckbox .lbl{font-family:var(--display);font-weight:700;font-size:14px;display:block;margin-bottom:2px}
+.move .lbl{color:var(--gold)}
+.ckbox{background:color-mix(in srgb,var(--seal) 6%,var(--paper))}
+.ckbox .lbl{color:var(--seal)}
+.move p,.ckbox p{margin:0;font-size:14.5px}
+.why{color:var(--muted);font-size:14px}
+.why b{color:var(--seal)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:12px;color:var(--muted);background:var(--chip);padding:1px 8px;border-radius:4px;border:0}
+.tag.mt{color:var(--gold)}
+textarea{width:100%;margin-top:8px;font:inherit;font-size:14px;padding:8px 10px;border:1px dashed var(--line);border-radius:6px;background:var(--paper);color:var(--ink);resize:vertical;min-height:2.6em}
+mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;border-radius:2px}
+.empty{color:var(--muted);padding:32px 0;text-align:center}
+@media (max-width:440px){.ev{grid-template-columns:70px 1fr;gap:10px}.yr{font-size:20px}}
+@media (prefers-reduced-motion:no-preference){.det{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}}}
+
+/* 民主接力 */
+.sec{margin-top:22px}
+.sec h2{font-family:var(--display);font-size:20px;margin:0 0 4px;text-wrap:balance}
+.sec h3{font-family:var(--display);font-size:17px;margin:28px 0 6px}
+.sec p.lead{margin:0 0 12px;color:var(--muted);font-size:14px;max-width:62ch}
+.rtable{border-top:2px solid var(--ink)}
+.rrow{display:grid;grid-template-columns:5.5em 1fr 1fr;gap:10px;padding-block:9px;border-bottom:1px solid var(--line);font-size:14px;align-items:start}
+.rrow.rh{font-size:12px;color:var(--muted);letter-spacing:.06em;font-weight:700}
+.rrow .rk{font-family:var(--display);font-weight:700}
+.rrow button{background:none;border:0;padding:0;text-align:left;font-size:14px;line-height:1.55}
+.rrow button:hover .ry{text-decoration:underline}
+.ry{font-weight:700;font-variant-numeric:tabular-nums}
+.ra .ry{color:var(--muted)}
+.rb .ry{color:var(--seal)}
+@media (max-width:520px){.rrow{grid-template-columns:1fr 1fr}.rrow .rk{grid-column:1/-1}.rrow.rh span:first-child{display:none}}
+.steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:5em 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .sy{font-family:var(--display);font-weight:900;color:var(--seal);font-variant-numeric:tabular-nums}
+.steps .sy small{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:11px}
+.steps .st b{display:block}
+.steps .st span{color:var(--muted);font-size:14px}
+.steps button{background:none;border:0;padding:0;font:inherit;color:var(--ink);text-align:left;font-weight:700}
+.steps button:hover{text-decoration:underline}
+
+/* 政治手腕 */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-top:10px}
+.mbtn{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:3px}
+.mbtn b{font-family:var(--display);font-size:17px}
+.mbtn span{font-size:13.5px;color:var(--muted);line-height:1.5}
+.mbtn small{font-size:12px;color:var(--gold);font-variant-numeric:tabular-nums;margin-top:4px}
+.mbtn em{font-style:normal;font-size:13px;color:var(--ink)}
+.mbtn:hover{border-color:var(--seal)}
+
+/* 背景補充 */
+.bg-lead{color:var(--muted);font-size:14px;max-width:62ch;margin:20px 0 12px}
+.bg-nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.bg-nav a{font-size:13px;color:var(--ink);text-decoration:none;background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:4px 10px;display:flex;gap:6px;align-items:baseline}
+.bg-nav a span{font-size:11px;color:var(--gold);font-variant-numeric:tabular-nums}
+.bg-nav a:hover{border-color:var(--seal)}
+.bgc{border-top:1px solid var(--line);scroll-margin-top:130px}
+.bgc:last-of-type{border-bottom:1px solid var(--line)}
+.bgc summary{cursor:pointer;padding-block:14px;display:grid;grid-template-columns:92px 1fr;column-gap:14px;list-style:none}
+.bgc summary::-webkit-details-marker{display:none}
+.bk{grid-row:span 2;font-family:var(--display);font-weight:900;font-size:15px;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.4}
+.bt{font-family:var(--display);font-weight:700;font-size:18px;text-wrap:balance}
+.bt::after{content:" ＋";color:var(--muted);font-family:var(--body);font-weight:400;font-size:14px}
+.bgc[open] .bt::after{content:" －"}
+.bs{color:var(--muted);font-size:14px}
+.bgb{padding:0 0 18px 106px;min-width:0}
+.bgb>p{margin:0 0 10px;max-width:62ch}
+.bgb h4{margin:0 0 4px;font-size:14px;color:var(--seal)}
+.flow{list-style:none;margin:6px 0 14px 6px;padding:0 0 0 14px;border-left:2px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.flow li{display:grid;grid-template-columns:7.5em 1fr;gap:10px;position:relative}
+.flow li::before{content:"";position:absolute;left:-19px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.fl{font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+.ft{min-width:0;font-size:14.5px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 14px}
+.pair>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 12px;min-width:0}
+.pair ul{margin:0;padding-left:1.1em;font-size:14px}
+.tblw{overflow-x:auto;margin:6px 0 14px}
+.tblw table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+.tblw th{text-align:left;font-size:12px;color:var(--muted);font-weight:700;border-bottom:2px solid var(--ink);padding:6px 8px}
+.tblw td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.tblw td:first-child{font-weight:700;white-space:nowrap}
+.nt,.ln{font-size:14px;padding:9px 12px;border-radius:6px;margin:0 0 10px;max-width:62ch}
+.nt{background:var(--chip)}
+.nt b,.ln b{display:block;font-family:var(--display);font-size:13px;margin-bottom:2px}
+.nt b{color:var(--gold)}
+.ln{border:1px solid var(--seal);background:color-mix(in srgb,var(--seal) 6%,var(--paper))}
+.ln b{color:var(--seal)}
+.tl-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--muted);margin-top:6px}
+.tl-links button{border:1px solid var(--line);background:var(--paper);border-radius:4px;padding:1px 8px;font-size:13px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.bgc summary{grid-template-columns:1fr}.bk{grid-row:auto}.bgb{padding-left:0}.pair{grid-template-columns:1fr}.flow li{grid-template-columns:1fr;gap:0}}
+
+/* 翻卡 */
+.quiz{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px}
+.q-scope{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px;align-items:center;font-size:13px;color:var(--muted)}
+.prog{height:4px;background:var(--chip);border-radius:2px;overflow:hidden;margin-bottom:14px}
+.prog i{display:block;height:100%;background:var(--seal);width:0;transition:width .2s}
+.q-k{font-size:13px;color:var(--muted)}
+.q-front{font-family:var(--display);font-size:22px;font-weight:700;margin:8px 0 4px;text-wrap:balance}
+.q-hint{color:var(--muted);font-size:14px}
+.q-back{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.q-back .yr{color:var(--seal)}
+.q-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.q-act button{border:1px solid var(--line);background:var(--chip);padding:8px 14px;border-radius:6px}
+.q-act .pri{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.q-act kbd{font-family:inherit;font-size:11px;color:var(--muted);margin-left:6px}
+.score{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;margin-top:10px}
+
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));border:1px solid var(--line);background:var(--paper);border-radius:999px;width:40px;height:40px;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.12);z-index:4}
+footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+footer p{margin:0 0 6px;max-width:70ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div>
+    <h1>李登輝生平年表</h1>
+    <p class="sub">讀《餘生：我的生命之旅與台灣民主之路》的學習筆記 · 1923–2020 · <b id="total"></b> 則事件，<b id="mtotal"></b> 則附政治手腕解析，<b id="cktotal"></b> 則標出蔣經國的影響</p>
+  </div>
+  <button class="theme" id="theme" aria-label="切換深色／淺色" title="切換深色／淺色">◐</button>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="主要分頁">
+  <button class="tab" role="tab" data-view="timeline" aria-selected="true">年表<small>生平事件</small></button>
+  <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
+  <button class="tab" role="tab" data-view="methods">政治手腕<small>六種手法</small></button>
+  <button class="tab" role="tab" data-view="background">背景補充<small>台灣史脈絡</small></button>
+  <button class="tab" role="tab" data-view="quiz">翻卡複習<small>自我測驗</small></button>
+</nav>
+
+<!-- 年表 -->
+<section id="v-timeline" role="tabpanel">
+  <p class="intro">一位沒有派系、沒有軍權的農經學者，如何在 12 年內把威權體制改成民主制度。點選分期可以只看那段時間；每則事件點標題展開，底部可以寫自己的筆記。</p>
+  <div class="eras-strip" id="erasStrip"></div>
+  <div class="bar">
+    <div class="row">
+      <input type="search" id="q" placeholder="搜尋：人名、年份、關鍵字（如 郝柏村、1991、釋字261）" aria-label="搜尋事件">
+    </div>
+    <div class="row scroll">
+      <button class="chip" id="keyonly" aria-pressed="false">只看必記</button>
+      <button class="chip" id="mvonly" aria-pressed="false">只看手腕</button>
+      <button class="chip" id="ckonly" aria-pressed="false">蔣經國線</button>
+      <button class="chip ghost" id="expand">全部展開</button>
+      <span class="active-m" id="activeM"></span>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+  <main id="list"></main>
+</section>
+
+<!-- 民主接力 -->
+<section id="v-relay" role="tabpanel" class="sec" hidden>
+  <h2>民主接力：蔣經國萌芽，李登輝落實</h2>
+  <p class="lead">蔣經國晚年打開了門，但體制的骨架（臨時條款、萬年國會、間接選舉）還在。李登輝把門後的路走完。點年份可跳到年表裡當年的事件。</p>
+  <div class="rtable" role="table" aria-label="民主接力對照">
+    <div class="rrow rh" role="row"><span role="columnheader">議題</span><span role="columnheader">蔣經國 · 萌芽</span><span role="columnheader">李登輝 · 落實</span></div>
+    <div id="rbody"></div>
+  </div>
+
+  <h3>萬年國會怎麼退場：三步走</h3>
+  <p class="lead">上百位在中國大陸選出、四十多年沒改選的老代表，最後沒有發生正面衝突就全部退職。每一步都給對方台階。</p>
+  <ol class="steps" id="steps1"></ol>
+
+  <h3>終止動員戡亂的路徑</h3>
+  <p class="lead">解嚴只是讓軍隊退出街頭；終止動員戡亂才讓憲法回到正常運作。從民意壓力到法律程序，花了一年多。</p>
+  <ol class="steps" id="steps2"></ol>
+
+  <h3>戒嚴與動員戡亂，差在哪？</h3>
+  <p class="lead">戒嚴管的是「街上」，動員戡亂管的是「憲法」。兩者都屬於戰時體制，但影響層面和結束時間不同。</p>
+  <div class="tblw"><table>
+    <thead><tr><th></th><th>戒嚴</th><th>動員戡亂時期</th></tr></thead>
+    <tbody>
+      <tr><td>是什麼</td><td>由軍方管制社會的措施</td><td>把共產黨定為「叛亂團體」的國家非常狀態</td></tr>
+      <tr><td>影響層面</td><td>社會生活：集會、遊行、組黨、辦報、出入境；平民可受軍法審判</td><td>憲政體制：憲法被凍結、總統權力擴大、萬年國會不必改選、叛亂罪重判</td></tr>
+      <tr><td>期間</td><td>本島 1949.5.20–1987.7.15<br>金馬至 1992.11.7</td><td>1947.7–1991.4.30</td></tr>
+      <tr><td>誰結束</td><td>蔣經國（本島）、李登輝（金馬）</td><td>李登輝</td></tr>
+      <tr><td>兩岸定位</td><td>沒有直接改變</td><td>結束後不再視中共為叛亂團體，改稱「大陸當局」</td></tr>
+    </tbody>
+  </table></div>
+  <p class="nt"><b>重點句</b>蔣經國解嚴，讓人民不再被軍隊管；李登輝終止動員戡亂，讓國家不再用「戰時」當理由凍結憲法。解嚴之後，台灣人仍可能因為言論被判叛亂罪，這是兩者最大的差別。</p>
+</section>
+
+<!-- 政治手腕 -->
+<section id="v-methods" role="tabpanel" class="sec" hidden>
+  <h2>政治手腕索引</h2>
+  <p class="lead">他反覆使用的六種手法。點選任一種，會切到年表，只留下用到這種手法的事件。</p>
+  <div class="mgrid" id="mgrid"></div>
+  <p class="nt" style="margin-top:16px"><b>怎麼讀</b>這些手法常常同時出現在同一件事上。例如 1990 年讓郝柏村組閣，同時是「人事佈局」（借重強人）、「先穩後改」（安撫保守派）與「借力使力」（之後靠新國會讓他下台）。</p>
+</section>
+
+<!-- 背景補充 -->
+<section id="v-background" role="tabpanel" hidden>
+  <div class="bar" style="top:46px">
+    <div class="row"><input type="search" id="qbg" placeholder="在背景補充裡搜尋（如 戒嚴、三民主義、二二八）" aria-label="搜尋背景"><span class="count" id="countbg"></span></div>
+  </div>
+  <div id="bg"></div>
+</section>
+
+<!-- 翻卡 -->
+<section id="v-quiz" role="tabpanel" hidden>
+  <div class="q-scope">範圍：
+    <button class="chip" data-scope="all" aria-pressed="true">全部</button>
+    <button class="chip" data-scope="key" aria-pressed="false">必記</button>
+    <button class="chip" data-scope="mv" aria-pressed="false">有手腕解析</button>
+    <button class="chip" data-scope="ck" aria-pressed="false">蔣經國線</button>
+    <button class="chip" data-scope="d" aria-pressed="false">總統十二年</button>
+  </div>
+  <div class="quiz" id="quiz"></div>
+</section>
+
+<button class="totop" id="totop" aria-label="回到頂部" hidden>↑</button>
+
+<footer>
+  <p>年號欄：1945 年以前標示日治年號（大正／昭和），之後標示民國紀年；年齡為實歲（當年 − 1923）。「必記」是理解他一生轉折最關鍵的節點，「手腕」表示附有政治手腕解析，「經國」表示標出蔣經國的影響與民主接力。</p>
+  <p>事件內容、手腕解析與背景補充是根據公開史料整理的學習筆記，不是《餘生》的原文。受難人數、接班意圖等仍有爭議的說法，頁面上都有註明。每則事件下方的筆記只存在你這台裝置的瀏覽器裡。</p>
+  <p>主要參考：行政院轉型正義資料、司法院釋字第 261 號、國史館與國父紀念館資料庫、Taipei Times「Taiwan in Time」專欄、洪惟仁台灣語言研究。</p>
+</footer>
+</div>
+
+<script>
+const ERAS=[
+ {id:"a",name:"日治少年與京都",range:"1923–1945"},
+ {id:"b",name:"農經學者",range:"1946–1971"},
+ {id:"c",name:"從政之路",range:"1972–1988.1"},
+ {id:"d",name:"總統十二年",range:"1988–2000"},
+ {id:"e",name:"卸任與餘生",range:"2000–2020"}
+];
+const METHODS=[
+ {id:"借力",name:"借力使力",d:"讓學生、在野黨、輿論替他施壓，再用這股壓力說服黨內保守派。"},
+ {id:"依法",name:"依法而行",d:"每一步都走法律程序，讓對手難以指控他違憲或奪權。"},
+ {id:"給台階",name:"給台階",d:"用退職金、榮銜、副主席位子，讓下台的人保住面子。"},
+ {id:"人事",name:"人事佈局",d:"先借重強人穩住局面，再用制度把他換掉。"},
+ {id:"先穩",name:"先穩後改",d:"先端出安撫對手的政策當安全網，再推動真正的改革。"},
+ {id:"結盟",name:"跨黨結盟",d:"必要時和在野黨合作，繞過黨內反對勢力。"}
+];
+/* [分期, 年, 月日, 標題, 內容, 串連, 標籤, 必記, 手腕解析, 手法] */
+const E=[
+ ["a",1923,"1月15日","出生於台北州淡水郡三芝庄","父親李金龍任職警察，家中務農兼營小生意。生長在日治時期，從小接受日本教育，日語是他最早的思考語言。","日本教育背景塑造了他一生的思考方式與對日情感。",["家庭","三芝"],1],
+ ["a",1938,"","進入淡水中學","在淡水求學期間大量閱讀哲學與文學，開始追問「我是誰」這類人生問題。","「我是不是我的我」的自我追問，起點在少年閱讀。",["求學","哲學"],0],
+ ["a",1941,"","考入台北高等學校","台北高校是當時台灣的菁英學校。他在此接觸新渡戶稻造《武士道》等著作，建立日後常談的修身觀。","",["求學","武士道"],0],
+ ["a",1943,"","進入京都帝國大學農學部","選讀農業經濟，原因是關心台灣農民的處境。這個選擇決定了他後來數十年的專業方向。","為何讀農經？因為想解決台灣農村貧困。這條線一路通到農復會與政壇。",["京都","農經"],1],
+ ["a",1944,"","學徒出陣，入日本陸軍","戰爭末期以學生身分被徵召，在日本本土擔任高射砲部隊見習士官。","",["戰爭","日本"],0],
+ ["a",1945,"2月","兄長李登欽戰死馬尼拉","哥哥以日本海軍志願兵身分戰死於菲律賓。這份喪兄之痛，是他日後參拜靖國神社的私人理由。","連結 2007 年參拜靖國神社。",["家庭","戰爭"],0],
+ ["b",1946,"","返台，轉入台灣大學農經系","戰後回到台灣，進入改制後的台大繼續學業。這段期間曾參加左翼讀書會，晚年自承曾短暫加入共產黨後退出。","",["台大","農經"],0],
+ ["b",1947,"2月","二二八事件","他當時正在台北，親身經歷事件與其後的恐怖氣氛，部分同學、朋友受害。","伏筆：1995 年以總統身分公開道歉。",["二二八","白色恐怖"],1],
+ ["b",1949,"2月","與曾文惠結婚；台大畢業","與同樣出身三芝的曾文惠成婚，同年自台大農經系畢業，留校任助教。","",["家庭","曾文惠"],0],
+ ["b",1953,"","取得美國愛荷華州立大學碩士","赴美攻讀農業經濟碩士，回台後在台灣省農林廳、台大任職。","",["留學","美國"],0],
+ ["b",1957,"","進入農復會","農復會（中國農村復興聯合委員會）是美援時代主導台灣農業政策的機構。他在此從事農業經濟研究，成為技術官僚。","從學者轉為政策人的關鍵一步。",["農復會","美援"],1],
+ ["b",1968,"","獲康乃爾大學博士","論文研究 1895–1960 年台灣農工部門間的資本流動，獲美國農業經濟學會年度傑出論文獎。","他的學術招牌：用數據說明台灣農業如何支撐工業化。",["康乃爾","農經"],1],
+ ["b",1969,"","遭警備總部約談","返台後不久被警總帶走連續訊問約一週，追究他年輕時的左翼經歷。","親身體驗白色恐怖，也讓他看清政權的運作方式。",["白色恐怖","警總"],0],
+ ["b",1971,"","加入國民黨","經王作榮等人引介、蔣經國賞識，以本省籍技術官僚身分入黨。","",["國民黨","蔣經國"],0],
+ ["c",1972,"6月","出任行政院政務委員","蔣經國組閣時延攬他負責農業事務，成為蔣經國拔擢台籍菁英（俗稱「吹台青」）的代表人物之一。","從技術官僚踏入政治核心。",["蔣經國","吹台青"],1,"他在蔣經國身邊十多年，做事低調、不結派、不搶功。這讓蔣經國放心，也讓黨內元老把他看成「沒有威脅的學者」。這份被低估，後來成了他最大的掩護。",["人事"],"蔣經國用人重專業、重本省籍新血，而且常帶部屬下鄉看基層。李登輝晚年常說自己是「蔣經國學校」畢業的，指的就是這段跟在蔣經國身邊學做事的歲月：怎麼看民情、怎麼用人、怎麼守口如瓶。"],
+ ["c",1972,"9月","「加速農村建設重要措施」","蔣經國宣布一系列農村政策，包括廢除肥料換穀制度、放寬農貸、加強農村基礎建設等，改善農民負擔。李登輝以農經專家身分參與規劃。","把他在京都、康乃爾學到的農業經濟，第一次大規模變成政策。",["農業","蔣經國"],0,"","","身教：蔣經國重視「讓政策照顧基層」，他給李登輝的第一份大任務就是農民。李登輝之後當市長、省主席、總統，也一直把基層民生放在施政語言的前面。"],
+ ["c",1972,"12月","首次「增額」中央民代選舉","依修訂後的臨時條款，在台灣定期改選一部分中央民代名額，但 1947–48 年選出的資深代表仍然不必改選。","萌芽：國會開了一道小門，萬年國會仍在。要到 1991 年才全面退職。",["國會","萬年國會","蔣經國"],0,"","","民主萌芽：蔣經國時代先讓台灣人民「部分」選出國會。李登輝後來的做法，是把這道小門推到全開：資深代表全部退職，國會全部改選。"],
+ ["c",1978,"6月","出任台北市長","推動翡翠水庫、捷運規劃等建設，累積地方行政經驗。","",["台北市長","蔣經國"],0,"","","蔣經國刻意讓他在中央政務委員、首都市長、省主席之間輪調，等於一套完整的接班歷練：懂政策、懂城市、也懂全台灣的地方。"],
+ ["c",1981,"12月","出任台灣省主席","任內推動「八萬農業建設大軍」，強化基層農業。","",["省主席","農業","蔣經國"],0,"","","省主席是當時本省籍官員能到的最高行政職位之一。蔣經國讓他管全省事務，也讓他走遍各縣市、建立地方人脈，這是他日後選總統的基本盤。"],
+ ["c",1982,"3月","獨子李憲文病逝","兒子因癌症過世，對他打擊極大。他自述在信仰中尋求力量。","",["家庭","信仰"],0],
+ ["c",1984,"5月20日","就任副總統","經蔣經國提名，由國民大會選出。外界當時多視為過渡性安排。","沒有派系的副總統：這是他的弱點，也是他被接受的原因。",["副總統","蔣經國"],1,"副總統沒有實權，他就把這四年當學習期，不表態、不結派，讓各方都不覺得他有野心。",["人事"],"李登輝自述，副總統任內蔣經國安排他到總統府資料室閱讀國政紀錄，他認為這是蔣經國有意培養他。但也有不少國民黨人士認為，他並不是蔣經國心中屬意的接班人，這點至今仍有爭論。"],
+ ["c",1984,"10月","江南案","旅美作家江南（劉宜良）在美國遭暗殺，涉案者包括台灣情報系統人員，引發美國強烈關切。","外部壓力成為蔣經國啟動政治改革的背景之一。",["蔣經國","美國"],0,"","","萌芽的背景：江南案讓國民黨政府在美國的形象重挫。外界多認為，這是蔣經國後來加快政治改革、並表態不讓蔣家接班的原因之一。"],
+ ["c",1985,"12月25日","蔣經國宣示蔣家人不會接班","蔣經國在行憲紀念大會上表示，蔣家人不能也不會競選下一任總統，也不會以軍政府方式統治。","萌芽：家族接班的路被關上，權力交給制度。",["蔣經國","接班"],1,"","","言教：這句話等於公開預告，下一任領導人會依憲法產生。三年後他過世，李登輝依憲法繼任，正是這句話的落實。"],
+ ["c",1986,"3月","國民黨三中全會成立「政治革新小組」","蔣經國指示成立十二人小組，研究解除戒嚴、開放黨禁、充實中央民意機構（國會改革）、地方自治法制化等議題。李登輝是小組成員之一。","李登輝總統任內推動的議題，很多在這份清單上就已經出現。",["蔣經國","民主化","國會"],1,"","","這是兩人之間最直接的「民主接力」。改革的題目由蔣經國出，李登輝在小組裡參與討論；蔣經國生前完成了解嚴、黨禁鬆綁，國會改革則留給李登輝。"],
+ ["c",1986,"9月28日","民主進步黨成立","黨外人士在圓山飯店宣布組黨，當時仍在戒嚴與黨禁之下。蔣經國沒有下令取締。","萌芽：台灣第一個有實力的反對黨，在法律還不允許時就已存在。",["民進黨","蔣經國","政黨"],1,"","","身教：據黨內人士轉述，蔣經國當時的態度是不能用激烈手段處理。他選擇容忍，而不是鎮壓。李登輝後來把民進黨請進國是會議、國發會，則是從「容忍」走到「合作」。"],
+ ["c",1986,"10月","蔣經國：「時代在變，環境在變，潮流也在變」","10 月 7 日接受《華盛頓郵報》發行人訪問時，宣布將解除戒嚴。同一時期在國民黨中常會說出「時代在變、環境在變、潮流也在變」，要黨用新的觀念面對新局勢。","這句話常被視為台灣民主化的起點宣言。",["蔣經國","戒嚴"],1,"","","言教：這是蔣經國留給國民黨，也留給李登輝最重要的一句話。改革不是背叛黨，而是順應潮流。李登輝任內面對黨內保守派時，走的正是這條「順應潮流」的路線。"],
+ ["c",1987,"7月15日","解除戒嚴","台灣結束 38 年的戒嚴，改以《國家安全法》規範。但動員戡亂時期與臨時條款仍然存在。","萌芽：戒嚴解除了，但動員戡亂體制要到 1991 年才由李登輝終止。",["戒嚴","蔣經國","臨時條款"],1,"","","接力的分界線：蔣經國拿掉了「戒嚴」，李登輝拿掉了「動員戡亂」與「臨時條款」。前者讓社會鬆綁，後者讓憲政回到常態。"],
+ ["c",1987,"7月27日","蔣經國：「我也是台灣人」","蔣經國接見地方耆老時說，自己在台灣住了將近四十年，已經是台灣人，也是中國人。","",["蔣經國","台灣主體性","族群"],0,"","","言教：一位外省籍的最高領導人公開認同台灣。李登輝 1998 年提出「新台灣人」，可以看成同一個方向的延伸。"],
+ ["c",1987,"11月2日","開放大陸探親","政府開放民眾赴大陸探親，兩岸隔絕近四十年後恢復民間往來。","",["兩岸","蔣經國"],0,"","","萌芽：兩岸開始有民間接觸。李登輝之後終止動員戡亂、成立海基會、促成辜汪會談，把民間往來推到半官方對話。"],
+ ["c",1988,"1月1日","解除報禁","開放報紙登記與增張，媒體數量與篇幅大增。12 天後蔣經國過世。","蔣經國生前最後一項重大開放措施。",["言論自由","蔣經國"],0,"","","萌芽：媒體開放了，但言論入罪的刑法一百條還在。李登輝在 1992 年修法，言論內亂罪才走入歷史。"],
+
+ ["d",1988,"1月13日","蔣經國逝世，依憲法繼任總統","成為第一位台灣出生的中華民國總統。軍、黨、政實權仍在元老手上，他的位置並不穩固。","「寧靜革命」的起點。",["總統","蔣經國"],1,"他繼任靠的是憲法條文，不是派系實力。所以他一開始的策略是「不動」：保留俞國華內閣與原班人馬，公開表示延續蔣經國路線，先讓各方安心。",["依法","先穩"],"接力的交棒點：蔣經國 1985 年說蔣家人不接班，1988 年由副總統依憲法繼任，權力第一次不是靠家族或軍隊轉移。李登輝之後也一直以「繼承蔣經國遺志」作為推動改革的正當性來源。"],
+ ["d",1988,"1月27日","出任國民黨代理主席","黨內有人主張延後選代理主席（蔣宋美齡曾來信表達此意）。中常會上，副秘書長宋楚瑜起身發言力挺，代理主席案隨即通過。7 月十三全大會正式選他為黨主席，並大幅改組中常會。","掌握黨權，是之後所有改革的前提。",["國民黨","宋楚瑜","蔣宋美齡"],1,"他自己沒有出面爭取，是由別人替他開口。結果他拿到了黨權，卻沒有和蔣家正面衝突。在國民黨「以黨領政」的體制下，黨主席才是真正的權力中心。",["人事","依法"]],
+ ["d",1989,"1月","《第一屆資深中央民意代表自願退職條例》通過","立法院通過條例，讓 1947–48 年在中國大陸選出、從未改選的資深民代可以自願退職，並領取退職金。但多數人仍留在位子上。","第一次嘗試：自願退場。效果不彰，才有後面的釋字 261 號。",["萬年國會","退職"],1,"第一步不是強迫，而是給錢、給面子、讓人自己選。這一步雖然沒讓多數人退場，但先把「該退了」變成官方立場，也讓之後的強制退職顯得仁至義盡。",["給台階","依法"]],
+ ["d",1989,"1月","《人民團體法》修正，政黨可依法登記","黨禁正式解除，政黨成立有了法律依據。民進黨隨後依法登記，從「事實存在」變成「合法存在」。","",["政黨","民進黨","蔣經國"],0,"","","落實：1986 年蔣經國默許民進黨成立，靠的是領導人的容忍；李登輝任內把它寫進法律，政黨競爭從此不再依賴某個人的態度。"],
+ ["d",1989,"5月","李煥接任行政院長","俞國華在黨內壓力下辭職，由黨祕書長李煥組閣。","",["李煥","行政院"],0,"李煥是黨內重量級人物。讓他組閣，可以安撫元老；同時也把他從黨祕書長這個掌握黨機器的位子移開。",["人事"]],
+ ["d",1990,"2月","二月政爭","李登輝提名李元簇當副總統搭檔，黨內「非主流派」不滿，臨中全會上爭執提名該用「起立表決」還是「無記名票選」。最後以起立方式通過李、李配。隨後非主流派推出林洋港、蔣緯國搭檔，與他打對台。","權力最危險的時刻：黨內有人準備在國民大會另推人選。",["權力鬥爭","李元簇","林洋港","蔣緯國"],1,"他有三個關鍵選擇：選一位沒有派系、不會威脅他的文官李元簇當副手；用公開起立的程序，讓不願當眾反對的人只能站起來；最後讓「八大老」等黨內耆老出面協調，林洋港在 3 月宣布退選。整場鬥爭他自己很少正面開火。",["人事","給台階","依法"]],
+ ["d",1990,"3月21日","國民大會選他為總統；接見野百合學生","3 月中旬，學生在中正紀念堂靜坐，要求解散國民大會、廢除臨時條款、召開國是會議、訂政經改革時間表。他當選當天就接見學生代表，承諾召開國是會議。","學生的四大訴求，後來幾乎都由他完成。",["學運","野百合","國是會議"],1,"學生的訴求和他想做的改革方向一致。他沒有鎮壓，而是接住這股民意，再用它說服國民黨內的保守派：「社會已經等不及了。」改革的壓力來自外面，他就不必獨自承擔。",["借力"]],
+ ["d",1990,"5月","郝柏村接任行政院長","提名非主流派的軍方強人郝柏村擔任閣揆，6 月 1 日就職。","「軍人組閣」當時引發大規模抗議，但這步棋到 1993 年才看出用意。",["郝柏村","美麗島","人事"],1,"郝柏村是軍方實權人物，也是非主流派的支柱。讓他當閣揆，一方面借他的威望穩住軍隊與保守派；另一方面，閣揆是文官，郝必須脫下軍職，等於把軍權和個人分開。同一個月他又特赦政治犯、承諾一年內終止動員戡亂，對保守派和在野黨兩邊同時出牌。",["人事","先穩","借力"]],
+ ["d",1990,"6月21日","大法官釋字第 261 號：資深民代限期退職","大法官會議解釋，第一屆未定期改選的中央民代，應在 1991 年 12 月 31 日以前終止行使職權，政府並應辦理全國性的次屆民代選舉。","萬年國會的退場時間，從此有了法律上的截止日。",["萬年國會","釋字261","大法官"],1,"這是最關鍵的一步：讓老代表下台的不是總統的命令，而是憲法解釋。老代表無法說「被李登輝趕走」，只能說「依法退職」。總統不必和數百位黨內老前輩當面翻臉。",["依法","給台階"]],
+ ["d",1990,"6月28日","召開國是會議","邀請朝野各黨派、學者，甚至海外異議人士參加。會議形成共識：終止動員戡亂時期、廢除臨時條款、國會全面改選、總統由公民選出（直選或委任直選當時仍有爭論）。","從這裡開始，改革有了全國性的共識作為依據。",["國是會議","民進黨"],1,"國是會議不是正式的立法機關，但它給了改革「全民共識」的正當性。他把在野黨拉進來一起背書，再拿這份共識回到國民黨內推動修憲，保守派很難再說這是他一個人的主張。",["借力","結盟"]],
+ ["d",1990,"10月","成立國家統一委員會，次年 2 月通過《國家統一綱領》","由總統府成立國統會，並訂出「近程、中程、遠程」三階段的統一綱領。","國統會在 2006 年由陳水扁政府宣布終止運作。",["兩岸","國統會"],0,"在大刀闊斧修憲之前，先端出「我們仍以統一為目標」的政策。這讓黨內統派與北京不至於把他的改革看成走向台獨，替接下來的終止動員戡亂鋪了一張安全網。",["先穩"]],
+ ["d",1991,"4月22日","第一屆國民大會臨時會：廢止臨時條款、通過增修條文","由第一屆（也就是即將退職的）國大代表自己開會，通過憲法增修條文，並決議廢止《動員戡亂時期臨時條款》。增修條文為第二屆國大、立委的全面改選提供法源。這就是「一機關兩階段修憲」：第一階段由舊國代處理程序，第二階段由新選出的國代處理實質內容。","這是終止動員戡亂的法律基礎。",["修憲","臨時條款","國民大會"],1,"為什麼讓舊國代自己修憲，而不是另立新憲？因為這樣法統沒有中斷：權力由舊國會「合法地」交給新國會，避開了制憲、改國號這類會引發激烈衝突的議題。舊代表親手簽下自己的退場文件，也讓退場更有尊嚴。",["依法","給台階"]],
+ ["d",1991,"4月30日","宣布 5 月 1 日終止動員戡亂時期","他在記者會宣布，自 5 月 1 日零時起終止動員戡亂時期，並表示不再以武力追求統一，把中共政權稱為「大陸當局」，不再視為叛亂團體。","結束了自 1948 年起、實施四十多年的動員戡亂體制。",["臨時條款","兩岸","憲政"],1,"終止動員戡亂的同時，他用新的稱呼重新定義兩岸：不再是「平亂」，而是兩個對等的統治當局。法律、說法、政策一次到位，台灣的憲政從此回到常態。",["依法"]],
+ ["d",1991,"5月","廢止《懲治叛亂條例》","「獨台會案」中，調查局逮捕多名學生，引發校園與社會強烈抗議。隨後立法院廢止懲治叛亂條例。","",["白色恐怖","人權"],0,"保守體制的一次反撲，反而成了改革的加速器。他順著社會的反彈，讓舊法廢止。",["借力"]],
+ ["d",1991,"12月31日","萬年國會全面退職","12 月 21 日第二屆國大代表選出，年底依釋字 261 號，資深中央民代全部退職，其中國大代表就有 565 位。從此國會全部由台灣人民選出。","從 1947 年選出到退職，這批代表在位四十多年。",["萬年國會","國民大會"],1,"整個過程分三步：1989 年給退職金讓人自願退，1990 年由大法官定出期限，1991 年讓舊國代自己通過改選法源。每一步都給對方台階，最後沒有發生正面衝突。",["給台階","依法"],"落實：1972 年蔣經國開了「增額選舉」的小門，1986 年把「充實中央民意機構」列入政治革新議題；李登輝把它做到底，資深代表全部退職。"],
+ ["d",1992,"5月","修正《刑法》第一百條","刪除「意圖」顛覆政府的言論與思想入罪，只有實際以強暴脅迫手段者才處罰。言論內亂罪走入歷史，海外黑名單也逐步解除。","",["人權","言論自由"],0],
+ ["d",1992,"12月","立法委員首次全面改選","台灣第一次全面改選立法院，民進黨取得約三分之一席次。","國會權力結構從此改變。",["國會","立委選舉"],1],
+ ["d",1993,"2月","郝柏村辭職，連戰接任閣揆","新國會開議後，郝柏村在立法院與黨內壓力下辭去行政院長，由本省籍的連戰組閣。","1990 年「郝柏村組閣」那步棋在此收尾。",["郝柏村","連戰","人事"],1,"他不必親手撤換郝柏村。新國會依憲政慣例要求內閣總辭，民意與國會壓力讓郝自己下台。這是「先借重、再用制度替換」的典型：用了三年，換掉時沒有動用總統權力。",["人事","依法","借力"]],
+ ["d",1993,"8月","新黨成立；十四全增設副主席","黨內「新國民黨連線」出走成立新黨。同月國民黨十四全大會，他連任黨主席，並增設副主席，由李元簇、郝柏村、林洋港、連戰出任。","非主流派正式分裂。",["新黨","國民黨","林洋港"],0,"讓昔日的對手當副主席，是給榮銜而不給實權。有位子、有面子，但決策還是在主席手上。",["給台階","人事"]],
+ ["d",1993,"4月","辜汪會談","海基會辜振甫與海協會汪道涵在新加坡會談，是兩岸分治後首次高層級的半官方會談。","",["兩岸"],0],
+ ["d",1994,"","與司馬遼太郎對談「生為台灣人的悲哀」","對談中談到台灣人長期無法掌握自己命運的處境，並以摩西出埃及自比，引起兩岸強烈反應。","",["日本","台灣主體性"],0],
+ ["d",1994,"7月","第三次修憲：總統改由人民直選","國民大會通過總統、副總統由台灣地區全體人民直接選舉。同年 12 月首次舉行台灣省長、北高直轄市長直選，宋楚瑜當選省長。","國是會議時還有爭論的「直選或委任直選」，在此定案為直選。",["修憲","直選"],1,"黨內原本主張「委任直選」（由國代代選），他後來轉向支持公民直選。等社會支持直選的聲音夠大，他才表態，讓黨內反對者只能順勢接受。",["借力","依法"]],
+ ["d",1995,"2月28日","代表政府為二二八事件道歉","在二二八紀念碑落成典禮上，以國家元首身分公開道歉，並推動補償條例。","呼應 1947 年他的親身經歷。",["二二八","轉型正義"],1],
+ ["d",1995,"6月","訪問母校康乃爾，演講「民之所欲，長在我心」","以私人身分訪美回母校演講，突破外交封鎖。北京隨後在台海進行飛彈試射。","",["美國","外交","兩岸"],1,"以「校友返校」而非「國事訪問」名義成行，讓美國國會可以施壓行政部門放行。用私人身分做國家層級的事。",["借力"]],
+ ["d",1996,"3月23日","首次總統直選，以 54% 得票當選","台灣第一次由人民直接選出總統。選前中共在台海試射飛彈，美國派航艦戒備（台海危機）。","他最核心的政治遺產：主權在民。",["直選","民主化","台海危機"],1,"","","落實：蔣經國讓權力從家族交給憲法，李登輝再讓權力從國民大會交給全體人民。"],
+ ["d",1996,"9月","提出「戒急用忍」","限制對中國大陸的大型投資，避免台灣經濟過度依賴對岸。","",["兩岸","經濟"],0],
+ ["d",1996,"12月","召開國家發展會議","國民黨與民進黨（主席許信良）在會中達成共識：凍結省級選舉、取消立法院對行政院長的同意權等。新黨退席抗議。","為 1997 年修憲「精省」鋪路。",["國發會","民進黨","許信良"],0,"精省會觸動宋楚瑜等黨內勢力，國民黨單獨不一定湊得到修憲票數。他找民進黨合作，用跨黨多數繞過黨內反對。",["結盟"]],
+ ["d",1997,"7月","第四次修憲「精省」","凍結台灣省級選舉與功能，精簡政府層級，與省長宋楚瑜關係因此破裂。","",["修憲","宋楚瑜"],0,"",["結盟","依法"]],
+ ["d",1998,"12月","提出「新台灣人」","為馬英九台北市長選戰站台時提出：不論何時來台，認同這塊土地就是新台灣人，試圖化解省籍對立。","",["族群","台灣主體性"],0,"","","呼應 1987 年蔣經國「我也是台灣人」：以認同這塊土地，而不是以出身，定義台灣人。"],
+ ["d",1999,"7月9日","「特殊國與國關係」（兩國論）","接受德國之聲訪問時，將兩岸關係定位為特殊的國與國關係，兩岸關係隨即緊張。同年出版《台灣的主張》。","",["兩岸","台灣主體性"],1],
+ ["d",1999,"9月21日","九二一大地震","台灣中部發生規模 7.3 強震。他發布緊急命令，親赴災區指揮救災與重建。","",["九二一","救災"],0],
+ ["d",2000,"3月","政黨輪替；辭國民黨主席","國民黨在總統大選落敗，陳水扁當選。支持者包圍黨部，他辭去黨主席。5 月 20 日完成台灣首次和平政權移轉。","民主化的最後一塊拼圖：政權可以和平交出。",["政黨輪替","國民黨"],1,"","","落實：1986 年蔣經國容忍民進黨成立，2000 年民進黨經由選舉執政，國民黨和平交出政權。從「容許反對黨存在」到「反對黨可以執政」，民主接力在此完成。"],
+ ["e",2001,"8月","台灣團結聯盟成立","以「精神領袖」身分支持台聯成立，同年 9 月遭國民黨撤銷黨籍。","",["台聯","國民黨"],0],
+ ["e",2003,"","出版《「武士道」解題》","以新渡戶稻造的《武士道》為本，談領導者的修養與公私分際。","",["武士道","日本"],0],
+ ["e",2004,"2月28日","二二八百萬人手護台灣","參與從基隆到屏東的牽手護台灣活動。","",["二二八","社會運動"],0],
+ ["e",2007,"6月","參拜靖國神社","為悼念戰死的哥哥李登欽前往參拜，引發兩岸與國內爭議。","呼應 1945 年兄長戰死。",["日本","家庭"],0],
+ ["e",2016,"","出版《餘生》","整理自己的生命歷程與民主化經驗，談信仰、領導與台灣的未來。百年誕辰紀念版於 2023 年出版。","你手上這本書。",["著作"],1],
+ ["e",2018,"6月","最後一次訪日（沖繩）","出席沖繩台灣人戰歿者慰靈碑揭幕，是他最後一次出國。","",["日本"],0],
+ ["e",2020,"7月30日","病逝於台北榮總，享壽 97 歲","過世後，各國政要表達悼念，外界常以「民主先生」稱呼他。","",["逝世"],1],
+ ["a",1945,"10月25日","中華民國接收台灣","日本戰敗後，國民政府在台北受降，設台灣省行政長官公署，由陳儀主持。李登輝此時人在日本，隔年才返台。","背景補充：「戰後接收」。",["接收","陳儀"],0],
+ ["b",1949,"5月20日","台灣全面戒嚴","台灣省主席兼警備總司令陳誠宣布戒嚴，原因是國共內戰失利、怕共產黨滲透。戒嚴持續到 1987 年，共 38 年。","背景補充：「戒嚴、動員戡亂、臨時條款」。",["戒嚴","白色恐怖"],1],
+ ["d",1992,"11月7日","金門、馬祖解嚴","金馬結束戰地政務，全台灣都脫離軍事管制。《促進轉型正義條例》把前一天定為威權時期的最後一天。","背景補充：「威權時期」。",["戒嚴","金馬"],0,"","","落實：蔣經國 1987 年解除台灣本島戒嚴，金馬解嚴則在李登輝任內完成。"],
+ ["c",1979,"12月10日","美麗島事件（時代背景）","黨外人士在高雄舉辦世界人權日集會，與軍警爆發衝突，主要領袖遭軍法審判。李登輝當時是台北市長，未直接涉入。辯護律師群中有陳水扁、謝長廷、蘇貞昌等人，後來成為民進黨要角。","1990 年他就任第八任總統當天，特赦這批政治犯。",["美麗島","黨外","背景"],0],
+ ["d",1990,"5月20日","就任第八任總統：承諾一年內終止動員戡亂，特赦美麗島政治犯","就職演說中宣示將在一年內終止動員戡亂時期、回歸憲政常態；同日特赦美麗島事件等政治案件受刑人，並恢復公權。","他說到做到：1991 年 5 月 1 日，正好一年內。",["總統","美麗島","臨時條款"],1,"先公開給出時間表，把自己和黨一起綁在改革的時程上。保守派如果反對，就等於要總統食言；在野黨則因為特赦而願意坐上談判桌。",["借力","先穩"]],
+ ["d",1990,"11月21日","成立海峽交流基金會","由政府捐助成立的民間團體，負責與大陸方面的事務性接觸；隔年 1 月成立行政院大陸委員會統籌兩岸政策。","官方不直接談，由「白手套」出面：這是之後辜汪會談的機制。",["兩岸","海基會"],0,"兩岸沒有官方關係，他就設計一個民間機構代替政府談。既能處理實際問題，又不必承認對方政府。",["依法"]],
+ ["d",1992,"5月27日","第二次修憲","第二屆國大通過增修條文：台灣省長、直轄市長改為人民直選，監察院改由總統提名、國民大會同意，不再由省市議會選出；總統選舉方式則留待下次修憲決定。","民主從中央向地方延伸：1994 年首次省長、直轄市長直選。",["修憲","省長"],0],
+].sort((a,b)=>a[1]-b[1]||(parseInt(a[2])||0)-(parseInt(b[2])||0)).map((r,i)=>({id:i,era:r[0],y:r[1],md:r[2],t:r[3],b:r[4],w:r[5],tags:r[6],key:!!r[7],mv:r[8]||"",ms:r[9]||[],ck:r[10]||""}));
+const RELAY=[
+ {k:"權力交接",a:"1985 宣示蔣家人不接班",ay:1985,b:"1988 依憲法繼任；1996 人民直選總統",by:1996},
+ {k:"戒嚴體制",a:"1987 解除戒嚴",ay:1987,b:"1991 終止動員戡亂、廢臨時條款",by:1991},
+ {k:"國會",a:"1972 增額選舉，資深代表不改選",ay:1972,b:"1991 萬年國會退職；1992 立委全面改選",by:1991},
+ {k:"反對黨",a:"1986 容忍民進黨成立",ay:1986,b:"1989 政黨合法登記；2000 政黨輪替",by:2000},
+ {k:"言論",a:"1988 解除報禁",ay:1988,b:"1992 修刑法一百條，言論不再入罪",by:1992},
+ {k:"兩岸",a:"1987 開放大陸探親",ay:1987,b:"1991 不再視中共為叛亂團體；1993 辜汪會談",by:1993},
+ {k:"人才與認同",a:"「吹台青」；1987「我也是台灣人」",ay:1987,b:"1993 首位台籍閣揆連戰；1998「新台灣人」",by:1998}
+];
+
+
+/* 背景補充 */
+const F=rows=>`<ol class="flow">${rows.map(([a,b])=>`<li><span class="fl">${a}</span><span class="ft">${b}</span></li>`).join("")}</ol>`;
+const P=(a,ai,b,bi)=>`<div class="pair"><div><h4>${a}</h4><ul>${ai.map(x=>`<li>${x}</li>`).join("")}</ul></div><div><h4>${b}</h4><ul>${bi.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>`;
+const T=(h,rows)=>`<div class="tblw"><table><thead><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+const N=(t,lbl="補充")=>`<p class="nt"><b>${lbl}</b>${t}</p>`;
+const L=t=>`<p class="ln"><b>和李登輝的關係</b>${t}</p>`;
+const Pp=t=>`<p>${t}</p>`;
+const BG=[
+{id:"rulers",k:"1624–1945",t:"台灣四百年：誰在統治？",s:"荷西、明鄭、清、日本、中華民國，統治者換了五次。",ys:[1945],html:
+ Pp("要理解台灣的歷史，先記住統治者換了幾次。每一次換手，語言、法律和身分認同都跟著改變。")+
+ F([["數千年前起","原住民族（南島語族）居住在台灣，是這座島最早的主人。"],["1624–1662","荷蘭統治南部（1626–1642 西班牙佔領北部）。荷蘭人把台灣當成東亞貿易據點，招募漢人來種稻米和甘蔗。"],["1662–1683","明鄭時期。鄭成功趕走荷蘭人，把台灣當成反清復明的基地。中國這時正是明末清初。"],["1683–1895","清朝統治 212 年。漢人移民在這段時間大量湧入。"],["1895–1945","日本統治 50 年。甲午戰爭清朝戰敗，依《馬關條約》割讓台灣。"],["1945–","中華民國。日本戰敗後接收台灣，1949 年中央政府遷到台北。"]])+
+ N("「台灣屬於誰」在每個時代的答案都不同，這是今天台灣認同問題複雜的根源之一。")},
+{id:"migration",k:"17–19 世紀",t:"唐山過台灣：為什麼大量移民？",s:"清朝時期，福建、廣東的人冒險渡海來開墾。",ys:[],html:
+ Pp("大量漢人移民主要發生在清朝，起頭在荷蘭與明鄭時期。用「推力與拉力」來理解最清楚。")+
+ P("推力：原鄉待不下去",["福建、廣東山多田少，耕地不夠","18 世紀人口暴增，地更不夠分","饑荒、宗族械鬥，生活困苦"],"拉力：台灣吸引人",["西部平原肥沃、雨量充足","種稻米、甘蔗可以賺錢","荷蘭、鄭氏政權主動招募漢人開墾"])+
+ F([["1684 起","清朝怕台灣再成為反清基地，設「渡台禁令」：渡海要申請許可，長期不准攜帶家眷。"],["偷渡","很多人只好偷渡，橫越危險的台灣海峽（黑水溝）。民間說「六死三留一回頭」：十個人裡只有三個能留下來。"],["羅漢腳","因為不能帶家眷，早期台灣有大量單身男性，社會不穩，民變頻繁，俗稱「三年一小反，五年一大亂」。"],["1874–1875","日本藉牡丹社事件出兵台灣。清朝警覺台灣的戰略價值，派沈葆楨來台，1875 年全面解除渡台禁令。"]])+
+ T(["移民來源","主要語言","落腳地區舉例"],[["福建泉州","閩南語（泉州腔）","鹿港、艋舺等港口城市"],["福建漳州","閩南語（漳州腔）","宜蘭、內陸平原"],["廣東潮州、嘉應州；福建汀州","客語為主","桃竹苗、六堆（高屏）"]])+
+ N("移民之間常為了水源和土地發生「漳泉械鬥」「閩客械鬥」；漢人越界開墾，也不斷壓縮原住民族的土地。")+
+ L("李登輝的祖先據說來自福建汀州永定，是客家人後裔，在台灣逐漸改說閩南語，這類家族俗稱「福佬客」。")},
+{id:"taigi",k:"語言",t:"台語是怎麼來的？",s:"根在福建閩南，在台灣長成了自己的樣子。",ys:[],html:
+ Pp("台語的根是福建南部的閩南語，但在台灣發展了三百多年，已經有自己的腔調和詞彙。最好懂的比喻是：台語之於閩南語，就像美式英語之於英式英語。")+
+ F([["源頭","泉州話、漳州話（閩南語）隨移民渡海來台。"],["混合","泉、漳兩種腔調在台灣混在一起，語言學家稱為「漳泉濫」，形成「不泉不漳」的台灣腔。"],["吸收原住民族語言","不少地名來自平埔族語，例如「艋舺」（Báng-kah）原意是獨木舟。"],["吸收日語","日治 50 年留下大量借詞，例如 o-tó-bái（摩托車）、pháng（麵包，源自葡萄牙語，經日語傳入）。"],["今天","和廈門、泉州的閩南語可以溝通，但腔調和詞彙已經不同。"]])+
+ N("台灣不只一種本土語言，客語、原住民族語也都是。所以有人主張「台語」應稱「台灣閩南語」或「台灣台語」，名稱本身就是一個爭論點。2019 年《國家語言發展法》上路，把台灣各固有族群的語言都定為國家語言。","名稱")},
+{id:"japan",k:"1895–1945",t:"日治五十年：被殖民，也開始追求民主",s:"台灣人的民主運動，在日治時期就開始了。",ys:[1923,1945],html:
+ Pp("日本統治台灣 50 年：前期以武力鎮壓抗日，中期推動現代化建設，末期為了戰爭推行同化。台灣人爭取政治權利的運動，也在這段期間出現。")+
+ F([["1895","乙未戰爭：日軍登陸，台灣各地武裝抗日。"],["1915","西來庵事件，最後一次大規模漢人武裝抗日。之後轉向非武力的政治運動。"],["1921","林獻堂、蔣渭水等人成立「台灣文化協會」，推動啟蒙與文化運動。"],["1921–1934","台灣議會設置請願運動，前後 15 次向日本帝國議會請願，要求設立由台灣人選出的議會，都未成功。"],["1930","霧社事件，賽德克族抗日，遭日軍鎮壓。"],["1935","台灣第一次地方選舉：只選一半議員，選民限有一定納稅額的男性。"],["1937 起","中日戰爭爆發，推行「皇民化運動」：推廣日語「國語家庭」、改日本姓名、徵召台灣人當兵。"]])+
+ N("戰後討論台灣民主，常只從國民政府講起。但台灣人追求自治與選舉，在 1920 年代就有完整的運動，這是台灣民主的另一條根。","重點")+
+ L("李登輝在這個時代長大，受完整日本教育，曾使用日本名「岩里政男」。哥哥李登欽以日本海軍志願兵身分戰死。這是他一生對日本有複雜情感的背景。")},
+{id:"sun",k:"思想源頭",t:"孫中山與三民主義",s:"三民主義不等於民主主義：民主只是三者之一，而且分階段給。",ys:[1991,1996],html:
+ Pp("三民主義是孫中山提出的。1905 年在東京成立同盟會時首次提出，1924 年在廣州做系統性演講，後來集結成書。他說靈感之一來自林肯的「民有、民治、民享」。")+
+ T(["主義","內容","白話"],[["民族主義","推翻滿清；後來指中國對外獨立、國內各民族平等","國家要自己作主"],["民權主義","人民有選舉、罷免、創制、複決四權；政府分行政、立法、司法、考試、監察五權","這才是「民主」的部分"],["民生主義","平均地權、節制資本","照顧民生，防止貧富懸殊"]])+
+ Pp("最關鍵的是他設計的建國三階段：")+
+ F([["軍政","用軍隊統一全國。"],["訓政","由國民黨「教導」人民行使民權，實際上是一黨執政。"],["憲政","還政於民，實施憲法與民主選舉。"]])+
+ N("「訓政」的理論是人民還不懂民主，要先由黨來帶。所以三民主義對民主是雙面的：它把民主寫成目標，也替延後民主提供了說法。","關鍵")+
+ Pp("<b>他為什麼被稱為國父？</b>")+
+ F([["1894","在檀香山成立興中會，第一個以推翻滿清為目標的革命團體。"],["1895 起","多次發動起義，大多失敗，長年流亡海外募款。"],["1905","在東京成立同盟會，整合各革命團體。"],["1911","武昌起義成功（辛亥革命）。他當時人在美國，不是現場指揮者。"],["1912","1 月 1 日在南京就任臨時大總統，中華民國成立；清帝退位後讓位給袁世凱，換取和平統一。"],["1919","成立中國國民黨，1924 年改組。"],["1925","病逝北京。"],["1940","國民政府明令尊稱他為「國父」。"]])+
+ N("辛亥革命是很多人共同完成的，黃興等革命同志、各省新軍、立憲派都有份。「國父」是官方尊稱，在台灣有爭議：有人認為他和台灣的直接關係有限，主張取消；也有人認為中華民國體制仍在，這個稱號有其歷史地位。")+
+ N("孫中山 1913 年曾住在台北的「梅屋敷」，今天是國父史蹟紀念館。蔣渭水很崇拜他，1925 年孫中山過世時，蔣渭水在台北辦追悼會。","小故事")+
+ L("1947 年憲法第 1 條寫著「中華民國基於三民主義，為民有民治民享之民主共和國」。李登輝廢除臨時條款、讓國會全面改選、推動總統直選，可以看成把「訓政 → 憲政」的最後一步真正做完。")},
+{id:"takeover",k:"1945–1949",t:"戰後接收：從歡迎到失望",s:"國民政府派陳儀治台，兩年內民怨累積到爆發。",ys:[1945,1947,1949],html:
+ T(["日期","事件"],[["1945.8.15","日本天皇廣播宣布投降"],["1945.9.2","在美國密蘇里號戰艦上正式簽署降書"],["1945.10.25","中華民國在台北受降，接收台灣（後來的「光復節」）"],["1947.2.28","二二八事件"],["1947.5","撤銷行政長官公署，改設台灣省政府"],["1949.5.20","台灣全面戒嚴"],["1949.12","中華民國中央政府遷到台北"]])+
+ Pp("負責接收的是「台灣省行政長官公署」。長官陳儀同時握有行政、立法、司法與軍事大權，很多台灣人覺得像是換了一個新總督。")+
+ P("台灣人一開始的期待",["脫離殖民統治，回到「祖國」","以為可以參與治理自己的家鄉","日治時期已有一定的現代化與法治基礎"],"實際遇到的問題",["官員貪腐、軍紀不佳","米價飛漲、通貨膨脹，物資被運往內戰前線","菸酒、樟腦等專賣，壟斷經濟","重要職位多由外省人擔任，台灣人被排除"])+
+ N("當時流行一句話「狗去豬來」：日本人像狗，兇但會看家；新來的官員像豬，只會吃。這句話反映了當時的失望。","民間說法")+
+ N("這段時期中國正在打國共內戰，國民政府的重心在大陸，台灣被放在次要位置。另外，台灣在法律上何時正式歸屬中華民國有不同看法：1952 年生效的《舊金山和約》只寫日本放棄台灣，沒寫交給誰，因此有「台灣地位未定論」，至今仍是政治爭議。","背景")},
+{id:"e228",k:"1947",t:"二二八事件",s:"一次查緝私菸引爆全台衝突，之後是軍隊鎮壓與清鄉。",ys:[1947,1995],html:
+ F([["1947.2.27","台北大稻埕，專賣局人員查緝私菸，打傷女菸販林江邁，混亂中開槍打死路人陳文溪。"],["2.28","民眾到行政長官公署請願，遭衛兵開槍，衝突迅速擴及全台。"],["3 月初","各地成立「二二八事件處理委員會」，提出政治改革要求，例如讓台灣人參與治理、實施地方自治。"],["3.8 起","國軍從基隆、高雄登陸，展開鎮壓。"],["之後","「清鄉」搜捕，大量台灣菁英被殺或失蹤，例如民意代表王添灯、畫家陳澄波、台大文學院代理院長林茂生。"]])+
+ N("1992 年行政院的《二二八事件研究報告》以人口統計推估，死亡人數約在 18,000 到 28,000 人之間。確切數字至今仍有爭議。","死亡人數")+
+ Pp("<b>影響</b>：一整代台灣本土菁英消失，社會從此對政治噤聲；本省人與外省人之間留下長期的隔閡，也就是「省籍情結」。")+
+ T(["年份","後續"],[["1987","民間發起「二二八和平日促進運動」，首次公開要求平反"],["1992","行政院公布研究報告"],["1995","李登輝以總統身分公開道歉，立法通過補償條例"],["1997","2 月 28 日定為國定紀念日"]])+
+ L("1947 年李登輝 24 歲，人在台北，親身經歷事件，部分同學朋友受害。48 年後他以國家元首身分道歉。")},
+{id:"martial",k:"名詞釐清",t:"戒嚴、動員戡亂、臨時條款",s:"三個最常被混在一起的名詞，起訖時間和意義都不同。",ys:[1987,1991,1992],html:
+ T(["名詞","是什麼","期間","誰結束"],[["動員戡亂時期","把共產黨定為「叛亂團體」，國家進入平亂的非常狀態","1947.7–1991.4.30","李登輝"],["臨時條款","附在憲法上的特別條款：凍結部分憲法、擴大總統權力，例如總統連任不受限制、可發布緊急處分","1948.5–1991.5","李登輝（由國大廢止）"],["戒嚴","由軍方管制集會、結社、言論、出版，一般人民也可能受軍法審判","本島 1949.5.20–1987.7.15<br>金馬至 1992.11.7","本島：蔣經國<br>金馬：李登輝"]])+
+ Pp("可以把它們想成三層：")+
+ F([["最外層：動員戡亂","國家處於「戰時」的法律狀態。"],["中間層：臨時條款","因為是戰時，所以憲法可以被凍結，總統權力可以擴大。"],["最內層：戒嚴","因為是戰時，所以軍方可以管制人民的日常生活與言論。"]])+
+ N("二二八期間陳儀在台北宣布過短期的「臨時戒嚴」，事件後就解除。1949 年開始的長期戒嚴，原因是國共內戰：同年 4 月南京失守，國民黨怕共軍攻台、怕共產黨滲透。所以 38 年的戒嚴不是因為二二八。","常見誤解")+
+ Pp("<b>配套的法律工具</b>：1949 年《懲治叛亂條例》（第 2 條第 1 項俗稱「二條一」，唯一刑罰是死刑）、1950 年《檢肅匪諜條例》。這些法律是白色恐怖的主要工具。")},
+{id:"terror",k:"1949–1987",t:"白色恐怖",s:"主要成因是國共內戰與反共，不是二二八。",ys:[1969,1990,1991],html:
+ Pp("白色恐怖指戒嚴時期，政府以「匪諜」「叛亂」等罪名，大規模逮捕、審判、處決政治異議者。名稱源自法國大革命後，保皇派（白色）對革命派的報復。")+
+ F([["遠因：二二八（1947）","大量菁英被殺，社會學會沉默；部分參與者後來加入共產黨地下組織，又成為追查對象。"],["主因：內戰失利（1949）","國民黨撤退來台，害怕共產黨滲透，寧可錯殺。"],["冷戰（1950 起）","韓戰爆發，美國協防台灣，國民黨政權穩定下來，反共體制也跟著鞏固。"],["工具","戒嚴、懲治叛亂條例、警備總部、軍事審判。"]])+
+ T(["","二二八","白色恐怖"],[["主要原因","接收後治理失當、官民衝突","國共內戰、反共、冷戰"],["型態","短期、大規模的軍事鎮壓","長期、靠法律與特務的系統性整肅"],["對象","以本省人、地方菁英為主","本省人、外省人都有"]])+
+ Pp("<b>幾個代表案件</b>")+
+ F([["1949–1950s","大量「匪諜案」，其中有些確實與共產黨地下組織有關，也有大量冤案、錯案。"],["1960","雷震案：《自由中國》雜誌發行人雷震籌組反對黨，被以「知匪不報」等罪名判刑十年。"],["1964","彭明敏與學生起草《台灣人民自救運動宣言》，被捕。"],["1979","美麗島事件：黨外人士在高雄集會，主要領袖被軍法審判。1990 年李登輝特赦。"]])+
+ L("1969 年李登輝被警總約談一週，就是白色恐怖的典型手法。1991 年他廢止懲治叛亂條例，1992 年修正刑法一百條，言論從此不再入罪。")},
+{id:"mandarin",k:"語言政策",t:"國語政策：台語被壓制兩次",s:"日治推日語，戰後推華語，兩次都叫「國語」。",ys:[1992],html:
+ Pp("壓制台語主要來自國語政策。它和白色恐怖是兩件事，但發生在同一個威權體制下：講台語通常不會被當成政治犯，但在學校會被處罰，在媒體上受到限制。")+
+ P("為什麼要推國語？",["去日本化：戰後要求全面不用日語","「一個國家、一種語言」：國民政府在大陸本來就推國語","政治控制：本土語言連著本土認同，二二八後政府對台灣人的地方意識有很深的戒心"],"怎麼推？",["學校：說方言罰錢，或掛「我要說國語」的牌子","電影：1959 年禁止戲院用台語辯士","電視廣播：1976 年《廣播電視法》規定方言節目應逐年減少"])+
+ F([["1937 起","皇民化運動。第一次「國語」：日語。"],["1946","成立台灣省國語推行委員會；同年 10 月報紙廢止日文版。第二次「國語」：華語。"],["1950s–1980s","學校、媒體全面限制方言。"],["1990s","《廣播電視法》的方言限制被刪除，本土語言開始回到媒體與校園。"],["2001","本土語言列入國小課程。"],["2019","《國家語言發展法》上路，各族群語言都是國家語言。"]])+
+ N("這段歷史讓很多台灣家庭出現世代斷層：祖父母說台語或日語，孫子只會說華語。")},
+{id:"period",k:"1945–1992",t:"威權時期：為什麼是 1945.8.15 到 1992.11.6？",s:"《促進轉型正義條例》的法定起訖日期，以及背後的原因。",ys:[1987,1991,1992],html:
+ Pp("2017 年的《促進轉型正義條例》把「威權統治時期」定為 1945 年 8 月 15 日至 1992 年 11 月 6 日，二二八和白色恐怖都在這段期間內。")+
+ T(["日期","為什麼重要"],[["1945.8.15（起）","日本宣布投降，日本統治實質結束。從這天起，國家做的不當壓迫都要檢討。"],["1987.7.15","台灣本島解嚴，但金門、馬祖仍是「戰地政務」，由軍方管理。"],["1991.5.1","終止動員戡亂時期，廢止臨時條款。"],["1992.5","修正刑法一百條，言論不再入罪。"],["1992.11.7","金門、馬祖解嚴，全台灣都結束軍事管制。"],["1992.11.6（迄）","金馬解嚴的前一天，就是威權時期的最後一天。"]])+
+ L("威權時期的最後幾道門：終止動員戡亂、修正刑法一百條、金馬解嚴，都是在李登輝任內關上的。")},
+{id:"lee1969",k:"1969",t:"李登輝 1969 年為什麼被約談？",s:"直接原因是他年輕時的左翼經歷，而且發生在蔣經國重用他之前。",ys:[1946,1969,1972],html:
+ F([["1946–1947","在台大期間參加左翼讀書會，晚年自承曾短暫加入共產黨後退出。"],["1968","康乃爾博士畢業返台，在《大學雜誌》寫文章、批評政府農業政策，開始受到注意。"],["1969","被警總帶走約談約一週，追問 1940 年代的左翼經歷。"],["1971","加入國民黨。"],["1972","被蔣經國任命為政務委員。"]])+
+ P("直接原因",["警總在追查他的過去","這是白色恐怖時期的典型做法，許多知識分子都被這樣盯上"],"可能的另一層",["當局要用一位有左翼背景的台籍學者前，本來就會做安全審查","約談沒查出他和共產黨仍有關係，反而等於「過關」","這種說法有道理，但目前沒有確切證據證明約談是為了重用他"])+
+ N("順序很重要：先被調查，後被重用。讀《餘生》時可以對照他自己的描述。","重點")}
+];
+
+/* ---------- 共用 ---------- */
+const $=s=>document.querySelector(s);
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const eraYear=y=>y<1926?`大正 ${y-1911} 年`:y<=1945?`昭和 ${y-1925} 年`:`民國 ${y-1911} 年`;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mName=id=>METHODS.find(m=>m.id===id).name;
+let state={view:"timeline",q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
+$("#total").textContent=E.length;
+$("#mtotal").textContent=E.filter(e=>e.mv).length;
+$("#cktotal").textContent=E.filter(e=>e.ck).length;
+
+/* 主題切換 */
+(function(){const t=store.get("theme");if(t)document.documentElement.dataset.theme=t;})();
+$("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";store.set("theme",r.dataset.theme)};
+
+/* 分頁 */
+const VIEWS=["timeline","relay","methods","background","quiz"];
+function setView(v,push=true){
+  if(!VIEWS.includes(v))v="timeline";
+  state.view=v;
+  document.querySelectorAll(".tab").forEach(t=>{t.setAttribute("aria-selected",t.dataset.view===v);if(t.dataset.view===v)t.scrollIntoView({block:"nearest",inline:"center"})});
+  VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);
+  if(push&&location.hash!=="#"+v)history.replaceState(null,"","#"+v);
+  if(v==="timeline")render();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
+}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{setView(t.dataset.view);window.scrollTo({top:0})});
+addEventListener("hashchange",()=>setView(location.hash.slice(1)||"timeline",false));
+
+/* ---------- 年表 ---------- */
+const strip=$("#erasStrip");
+[{id:"all",name:"全部",range:"1923–2020"},...ERAS].forEach(e=>{
+  const n=e.id==="all"?E.length:E.filter(x=>x.era===e.id).length;
+  const b=document.createElement("button");b.className="es";b.dataset.era=e.id;
+  b.innerHTML=`<b>${e.name}</b><span>${e.range}</span><small>${n} 則</small>`;
+  b.onclick=()=>{state.era=state.era===e.id?"all":e.id;sync()};strip.append(b);
+});
+function hi(text){if(!state.q)return esc(text);const q=state.q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");return esc(text).replace(new RegExp(q,"gi"),m=>`<mark>${m}</mark>`)}
+function filtered(){
+  const q=state.q.toLowerCase();
+  return E.filter(e=>(state.era==="all"||e.era===state.era)&&(!state.keyOnly||e.key)&&(!state.mvOnly||e.mv)&&(!state.method||e.ms.includes(state.method))&&(!state.ckOnly||e.ck||e.tags.includes("蔣經國"))&&
+    (!q||[e.t,e.b,e.w,e.mv,e.ck,e.md,String(e.y),eraYear(e.y),...e.tags,...e.ms.map(mName)].join(" ").toLowerCase().includes(q)));
+}
+function render(){
+  const list=filtered();$("#count").textContent=`${list.length} / ${E.length} 則`;
+  const main=$("#list");main.innerHTML="";
+  if(!list.length){main.innerHTML=`<p class="empty">沒有符合條件的事件，換個關鍵字或清除篩選試試。</p>`;return}
+  let cur=null;
+  list.forEach(e=>{
+    if(e.era!==cur){cur=e.era;const er=ERAS.find(x=>x.id===cur);
+      main.insertAdjacentHTML("beforeend",`<h2 class="era-head" id="era-${cur}">${er.name}<span>${er.range}</span></h2>`)}
+    const open=state.expandAll||state.open.has(e.id)||!!state.q||!!state.method||state.ckOnly||state.mvOnly;
+    const note=store.get("note-"+e.id)||"";
+    const div=document.createElement("article");div.className="ev";div.id="ev-"+e.id;
+    div.innerHTML=`<div class="when"><div class="yr">${e.y}</div><div class="era-yr">${e.md?e.md+"<br>":""}${eraYear(e.y)}</div><div class="age">${e.y-1923} 歲</div></div>
+    <div class="what"><button class="ttl" aria-expanded="${open}"><span class="tw">${hi(e.t)}</span>${e.ck?'<span class="seal ck">經國</span>':""}${e.mv?'<span class="seal m">手腕</span>':""}${e.key?'<span class="seal">必記</span>':""}</button>
+    <div class="det" ${open?"":"hidden"}><p>${hi(e.b)}</p>
+    ${e.ck?`<div class="ckbox"><span class="lbl">蔣經國的影響 · 民主接力</span><p>${hi(e.ck)}</p></div>`:""}
+    ${e.mv?`<div class="move"><span class="lbl">政治手腕</span><p>${hi(e.mv)}</p></div>`:""}
+    ${e.w?`<p class="why"><b>串連：</b>${hi(e.w)}</p>`:""}
+    <div class="tags">${e.ms.map(m=>`<button class="tag mt" data-m="${m}">◆ ${mName(m)}</button>`).join("")}${e.tags.map(t=>`<button class="tag" data-tag="${esc(t)}">#${esc(t)}</button>`).join("")}</div>
+    <textarea id="note-${e.id}" placeholder="我的筆記（頁碼、心得…）">${esc(note)}</textarea></div></div>`;
+    div.querySelector(".ttl").onclick=()=>{state.open.has(e.id)?state.open.delete(e.id):state.open.add(e.id);if(state.expandAll){state.expandAll=false;E.forEach(x=>state.open.add(x.id));state.open.delete(e.id)}render()};
+    div.querySelectorAll(".tag[data-tag]").forEach(t=>t.onclick=()=>{$("#q").value=t.dataset.tag;state.q=t.dataset.tag;sync()});
+    div.querySelectorAll(".tag[data-m]").forEach(t=>t.onclick=()=>{state.method=t.dataset.m;state.era="all";sync()});
+    div.querySelector("textarea").oninput=ev=>store.set("note-"+e.id,ev.target.value);
+    main.append(div);
+  });
+}
+function gotoYear(y){state.q=String(y);$("#q").value=y;state.era="all";state.method=null;state.keyOnly=state.mvOnly=state.ckOnly=false;setView("timeline");sync();$("#v-timeline .bar").scrollIntoView({block:"start"})}
+function sync(){
+  document.querySelectorAll(".es").forEach(b=>b.setAttribute("aria-pressed",b.dataset.era===state.era));
+  document.querySelectorAll(".mbtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m===state.method));
+  $("#keyonly").setAttribute("aria-pressed",state.keyOnly);$("#mvonly").setAttribute("aria-pressed",state.mvOnly);$("#ckonly").setAttribute("aria-pressed",state.ckOnly);
+  $("#expand").textContent=state.expandAll?"全部收合":"全部展開";
+  $("#activeM").innerHTML=state.method?`手法：${mName(state.method)}<button id="clrM">清除</button>`:"";
+  if(state.method)$("#clrM").onclick=()=>{state.method=null;sync()};
+  if(state.view==="timeline")render();
+}
+$("#q").oninput=ev=>{state.q=ev.target.value.trim();sync()};
+$("#keyonly").onclick=()=>{state.keyOnly=!state.keyOnly;sync()};
+$("#mvonly").onclick=()=>{state.mvOnly=!state.mvOnly;sync()};
+$("#ckonly").onclick=()=>{state.ckOnly=!state.ckOnly;sync()};
+$("#expand").onclick=()=>{state.expandAll=!state.expandAll;if(!state.expandAll)state.open.clear();sync()};
+
+/* ---------- 民主接力 ---------- */
+const rb=$("#rbody");
+RELAY.forEach(r=>{const d=document.createElement("div");d.className="rrow";d.setAttribute("role","row");
+  d.innerHTML=`<span class="rk" role="cell">${r.k}</span><button class="ra" role="cell" data-y="${r.ay}">${esc(r.a).replace(/(\d{4})/g,'<span class="ry">$1</span>')}</button><button class="rb" role="cell" data-y="${r.by}">${esc(r.b).replace(/(\d{4})/g,'<span class="ry">$1</span>')}</button>`;
+  d.querySelectorAll("button").forEach(b=>b.onclick=()=>gotoYear(b.dataset.y));
+  rb.append(d)});
+const STEPS1=[
+ ["1989","1月","自願退職條例","給錢、給面子，讓人自己選。多數人不退，但「該退了」成了官方立場。"],
+ ["1990","6月","釋字第 261 號","大法官定出截止日 1991.12.31。是「依法退職」，不是「被李登輝趕走」。"],
+ ["1991","4月","舊國代自己修憲","第一屆國大通過增修條文，親手通過改選法源。法統不中斷，退場也有尊嚴。"],
+ ["1991","12月","全面退職","12 月 21 日選出第二屆國代，年底老代表全部退職。國會從此由台灣人民選出。"]];
+const STEPS2=[
+ ["1990","3月","野百合學運","學生要求廢臨時條款、召開國是會議。他接見學生，承諾召開。民意壓力從此由他來用。"],
+ ["1990","5月","就職演說","公開承諾一年內終止動員戡亂，把自己和黨綁在時程上。"],
+ ["1990","6–7月","國是會議","朝野一起背書：終止動員戡亂、廢臨時條款、國會全面改選。"],
+ ["1990","10月","國統綱領","先說「我們仍以統一為目標」，安撫黨內統派與北京，替修憲鋪安全網。"],
+ ["1991","4月","修憲與廢止","第一屆國大通過增修條文、決議廢止臨時條款。"],
+ ["1991","5月1日","終止動員戡亂","正好在承諾的一年內。中共不再是「叛亂團體」，憲政回到常態。"]];
+function steps(el,rows){el.innerHTML=rows.map(r=>`<li><span class="sy">${r[0]}<small>${r[1]}</small></span><span class="st"><button data-y="${r[0]}">${r[2]}</button><span>${r[3]}</span></span></li>`).join("");el.querySelectorAll("button").forEach(b=>b.onclick=()=>gotoYear(b.dataset.y))}
+steps($("#steps1"),STEPS1);steps($("#steps2"),STEPS2);
+
+/* ---------- 政治手腕 ---------- */
+const EX={借力:"1990 接住野百合學運",依法:"1990 釋字 261 號定期限",給台階:"1989 退職金；1993 舊對手任副主席",人事:"1990 郝柏村組閣，1993 由新國會讓他下台",先穩:"1990 先端出國統綱領，再終止動員戡亂",結盟:"1996 國發會與民進黨合作推動精省"};
+const mg=$("#mgrid");
+METHODS.forEach(m=>{
+  const n=E.filter(e=>e.ms.includes(m.id)).length;
+  const b=document.createElement("button");b.className="mbtn";b.dataset.m=m.id;b.setAttribute("aria-pressed","false");
+  b.innerHTML=`<b>${m.name}</b><span>${m.d}</span><em>例：${EX[m.id]}</em><small>${n} 則事件 →</small>`;
+  b.onclick=()=>{state.method=m.id;state.era="all";state.q="";$("#q").value="";setView("timeline");sync();$("#v-timeline .bar").scrollIntoView({block:"start"})};
+  mg.append(b);
+});
+
+/* ---------- 背景補充 ---------- */
+let bgOpen=new Set();
+function renderBg(){
+  const q=state.qbg.toLowerCase();
+  const items=BG.filter(b=>!q||(b.k+b.t+b.s+b.html.replace(/<[^>]+>/g,"")).toLowerCase().includes(q));
+  $("#countbg").textContent=`${items.length} / ${BG.length} 篇`;
+  const box=$("#bg");
+  if(!items.length){box.innerHTML=`<p class="empty">背景補充裡沒有「${esc(state.qbg)}」，換個關鍵字試試。</p>`;return}
+  box.innerHTML=`<p class="bg-lead">讀李登輝之前，先把舞台看清楚：台灣在他出生前後經歷了什麼。依時間順序整理 ${BG.length} 個主題，點標題展開；每篇底部的年份可以跳回年表。</p>
+  <nav class="bg-nav" aria-label="背景主題">${items.map(b=>`<a href="#bg-${b.id}" data-id="${b.id}"><span>${b.k}</span>${b.t}</a>`).join("")}</nav>`+
+  items.map(b=>`<details class="bgc" id="bg-${b.id}" ${bgOpen.has(b.id)||q?"open":""}><summary><span class="bk">${b.k}</span><span class="bt">${b.t}</span><span class="bs">${b.s}</span></summary><div class="bgb">${b.html}${b.ys.length?`<div class="tl-links">在年表中看：${b.ys.map(y=>`<button data-y="${y}">${y}</button>`).join("")}</div>`:""}</div></details>`).join("");
+  box.querySelectorAll("details").forEach(d=>d.addEventListener("toggle",()=>{const id=d.id.slice(3);d.open?bgOpen.add(id):bgOpen.delete(id)}));
+  box.querySelectorAll(".bg-nav a").forEach(a=>a.onclick=ev=>{ev.preventDefault();const d=document.getElementById("bg-"+a.dataset.id);if(d){d.open=true;bgOpen.add(a.dataset.id);d.scrollIntoView({block:"start"})}});
+  box.querySelectorAll(".tl-links button").forEach(b=>b.onclick=()=>gotoYear(b.dataset.y));
+}
+$("#qbg").oninput=ev=>{state.qbg=ev.target.value.trim();renderBg()};
+
+/* ---------- 翻卡 ---------- */
+let deck=[],qi=0,shown=false,score={ok:0,no:0};
+function scoped(){return E.filter(e=>state.scope==="all"||(state.scope==="key"&&e.key)||(state.scope==="mv"&&e.mv)||(state.scope==="ck"&&(e.ck||e.tags.includes("蔣經國")))||(state.scope==="d"&&e.era==="d"))}
+function newDeck(){deck=scoped().slice().sort(()=>Math.random()-.5);qi=0;shown=false;score={ok:0,no:0}}
+document.querySelectorAll(".q-scope .chip").forEach(c=>c.onclick=()=>{state.scope=c.dataset.scope;document.querySelectorAll(".q-scope .chip").forEach(x=>x.setAttribute("aria-pressed",x===c));newDeck();renderQuiz()});
+function renderQuiz(){
+  const box=$("#quiz");
+  const total=deck.length;
+  const bar=`<div class="prog"><i style="width:${total?Math.min(100,qi/total*100):0}%"></i></div>`;
+  if(!total){box.innerHTML=`<p class="empty">這個範圍沒有事件。</p>`;return}
+  if(qi>=total){box.innerHTML=bar+`<p class="q-front">這一輪完成</p><p class="score">記得 ${score.ok} 則 · 還要再看 ${score.no} 則</p><div class="q-act"><button class="pri" id="again">再來一輪</button></div>`;
+    $("#again").onclick=()=>{newDeck();renderQuiz()};return}
+  const e=deck[qi];
+  box.innerHTML=bar+`<div class="q-k">第 ${qi+1} / ${total} 張 · 先想：哪一年？他幾歲？${e.mv?"他用了什麼手法？":"為什麼重要？"}</div>
+  <div class="q-front">${esc(e.t)}</div><div class="q-hint">${ERAS.find(x=>x.id===e.era).name}</div>
+  <div class="q-back" ${shown?"":"hidden"}><div class="yr">${e.y}${e.md?" · "+e.md:""}</div><div class="era-yr">${eraYear(e.y)} · ${e.y-1923} 歲</div><p>${esc(e.b)}</p>
+  ${e.ck?`<div class="ckbox"><span class="lbl">蔣經國的影響 · 民主接力</span><p>${esc(e.ck)}</p></div>`:""}
+  ${e.mv?`<div class="move"><span class="lbl">政治手腕${e.ms.length?"：":""}${e.ms.map(mName).join("、")}</span><p>${esc(e.mv)}</p></div>`:""}
+  ${e.w?`<p class="why"><b>串連：</b>${esc(e.w)}</p>`:""}</div>
+  <div class="q-act">${shown?`<button class="pri" id="ok">記得<kbd>1</kbd></button><button id="no">還要再看<kbd>2</kbd></button>`:`<button class="pri" id="flip">翻開答案<kbd>空白鍵</kbd></button><button id="skip">跳過<kbd>→</kbd></button>`}</div>
+  <div class="score">記得 ${score.ok} · 再看 ${score.no}</div>`;
+  if(shown){$("#ok").onclick=()=>{score.ok++;next()};$("#no").onclick=()=>{score.no++;deck.push(e);next()}}
+  else{$("#flip").onclick=()=>{shown=true;renderQuiz()};$("#skip").onclick=next}
+}
+function next(){qi++;shown=false;renderQuiz()}
+addEventListener("keydown",ev=>{if(state.view!=="quiz"||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+  if(ev.key===" "&&!shown){ev.preventDefault();shown=true;renderQuiz()}
+  else if(ev.key==="ArrowRight"&&!shown)next();
+  else if(ev.key==="1"&&shown){score.ok++;next()}
+  else if(ev.key==="2"&&shown){score.no++;deck.push(deck[qi]);next()}});
+
+/* ---------- 回頂部 ---------- */
+addEventListener("scroll",()=>{$("#totop").hidden=scrollY<600},{passive:true});
+$("#totop").onclick=()=>scrollTo({top:0});
+
+setView(location.hash.slice(1)||"timeline",false);
+</script>
+</body>
+</html>

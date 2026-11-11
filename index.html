@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>李登輝生平年表</title>
+<title>台灣史年表：從荷西到今天</title>
 <meta name="description" content="李登輝 1923–2020 互動年表：從蔣經國到李登輝的民主接力、政治手腕索引、台灣歷史背景補充與翻卡複習。讀《餘生》的學習筆記。">
 <meta property="og:title" content="李登輝生平年表">
 <meta property="og:description" content="台灣民主化怎麼從蔣經國萌芽、在李登輝手上落實？互動年表、政治手腕索引、背景補充、翻卡複習。">
@@ -260,6 +260,44 @@ footer p{margin:0 0 6px;max-width:70ch}
 .ev.flash{animation:flash 2s ease-out}
 @keyframes flash{0%,40%{background:color-mix(in srgb,var(--gold) 22%,transparent)}100%{background:transparent}}
 .ev{scroll-margin-top:110px}
+
+/* 台灣史 */
+.hblocks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+@media (max-width:640px){.hblocks{grid-template-columns:repeat(2,1fr)}}
+.hb{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.hb b{font-family:var(--display);font-size:16px}
+.hb span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hb small{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.hb em{font-style:normal;font-size:12px;color:var(--gold);margin-top:auto;padding-top:4px}
+.hb[aria-pressed=true]{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal)}
+.hb[aria-pressed=true] b{color:var(--seal)}
+.hpanel{margin-top:6px}
+.hhead{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.hhead h2{font-family:var(--display);font-size:22px;margin:0}
+.hhead p{margin:2px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+#hSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
+#hSvg text{fill:var(--ink)}
+#hSvg .axis{stroke:var(--line);stroke-width:1.5}
+#hSvg .lead{stroke:var(--line)}
+#hSvg .grid{stroke:var(--line);stroke-dasharray:2 4}
+#hSvg .lanelbl{font-size:15px;font-weight:700}
+#hSvg .yr{font-size:11px;fill:var(--muted)}
+#hSvg .ev{cursor:pointer;outline:none}
+#hSvg .ev .dot{stroke:var(--paper);stroke-width:2}
+#hSvg .ev text{font-size:16px;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#hSvg .ev:hover text,#hSvg .ev:focus-visible text{font-weight:700}
+#hSvg .ev.sel .dot{stroke:var(--ink);stroke-width:3}
+#hSvg .ev.sel text{font-weight:900;fill:var(--seal)}
+.badge{display:inline-block;font-size:12px;padding:0 8px;border-radius:999px;border:1.5px solid var(--muted);color:var(--muted);margin-left:6px;vertical-align:1px}
+.badge.verified{border-color:#2f7a4f;color:#2f7a4f}
+.badge.disputed{border-color:var(--seal);color:var(--seal)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge.verified{border-color:#6fc28f;color:#6fc28f}}
+:root[data-theme="dark"] .badge.verified{border-color:#6fc28f;color:#6fc28f}
+.hnote{color:var(--seal)}
+.alias summary{cursor:pointer;color:var(--muted);font-size:14px}
+.alias ul{margin:4px 0 6px;padding-left:20px;font-size:14px}
+.src{font-size:13.5px;color:var(--muted)}
+.src a{margin-right:2px}
 </style>
 </head>
 <body>
@@ -267,27 +305,40 @@ footer p{margin:0 0 6px;max-width:70ch}
 <button class="backpill" id="backpill" hidden>↩ 回總覽</button>
 <header class="masthead">
   <div>
-    <h1>李登輝生平年表</h1>
-    <p class="sub">讀《餘生：我的生命之旅與台灣民主之路》的學習筆記 · 1923–2020 · <b id="total"></b> 則事件，<b id="mtotal"></b> 則附政治手腕解析，<b id="cktotal"></b> 則標出蔣經國的影響</p>
+    <h1>台灣史年表：從荷西到今天</h1>
+    <p class="sub">1624 年至今的台灣與中華民國史，持續擴充中。另有李登輝線（讀《餘生》的學習筆記，1923–2020）：<b id="total"></b> 則事件，<b id="mtotal"></b> 則附政治手腕解析，<b id="cktotal"></b> 則標出蔣經國的影響</p>
   </div>
   <button class="theme" id="theme" aria-label="切換深色／淺色" title="切換深色／淺色">◐</button>
 </header>
 
 <nav class="tabs" role="tablist" aria-label="主要分頁">
-  <button class="tab" role="tab" data-view="overview" aria-selected="true">總覽<small>一頁看完一生</small></button>
-  <button class="tab" role="tab" data-view="timeline" aria-selected="false">年表<small>生平事件</small></button>
+  <button class="tab" role="tab" data-view="history" aria-selected="true">台灣史<small>1624 至今</small></button>
+  <button class="tab" role="tab" data-view="overview" aria-selected="false">李登輝總覽<small>一頁看完一生</small></button>
+  <button class="tab" role="tab" data-view="timeline" aria-selected="false">李登輝年表<small>生平事件</small></button>
   <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
   <button class="tab" role="tab" data-view="methods">政治手腕<small>六種手法</small></button>
   <button class="tab" role="tab" data-view="background">背景補充<small>台灣史脈絡</small></button>
   <button class="tab" role="tab" data-view="quiz">翻卡複習<small>自我測驗</small></button>
 </nav>
 
+<!-- 台灣史 -->
+<section id="v-history" role="tabpanel">
+  <p class="intro">從荷蘭、西班牙來台（1624）到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
+  <div class="hblocks" id="hBlocks"></div>
+  <div id="hPanel" class="hpanel" hidden>
+    <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
+    <div class="ovbar"><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交</span><span><i style="background:var(--c1)"></i>李登輝線</span><span>可左右滑動</span></span></div>
+    <div class="ovscroll" id="hScroll"><svg id="hSvg" role="group" aria-label="時期事件軌道"></svg></div>
+    <div class="ovcard hcard" id="hCard" aria-live="polite"></div>
+  </div>
+</section>
+
 <!-- 總覽 -->
-<section id="v-overview" role="tabpanel">
+<section id="v-overview" role="tabpanel" hidden>
   <p class="intro">一張圖看完 1923–2020：上面是李登輝的人生，中間是台灣政局（含蔣經國時代），下面是國際與兩岸。點圖上的事件看摘要，再決定要不要跳到年表或背景補充。</p>
   <div class="ovbar">
     <button class="chip" id="ovAll" aria-pressed="false">顯示全部事件（小圓點）</button>
-    <span class="legend"><span><i style="background:var(--c0)"></i>李登輝人生</span><span><i style="background:var(--c1)"></i>台灣政局</span><span><i style="background:var(--c2)"></i>國際與兩岸</span><span>手機可左右滑動</span></span>
+    <span class="legend"><span><i style="background:var(--c0)"></i>李登輝人生</span><span><i style="background:var(--c1)"></i>台灣政局</span><span><i style="background:var(--c2)"></i>國際與兩岸</span><span>可左右滑動</span></span>
   </div>
   <div class="ovscroll" id="ovScroll"><svg id="ovSvg" role="group" aria-label="李登輝生平總覽時間軸"></svg></div>
   <div class="ovcard" id="ovCard" aria-live="polite"></div>
@@ -390,6 +441,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 <button class="totop" id="totop" aria-label="回到頂部" hidden>↑</button>
 
 <footer>
+  <p>「台灣史」分頁：目前只有「日治時期」補完整，其餘時期會依同樣格式逐期擴充。每則事件都標示可信度（✓已查證／≈常見說法／⚑有爭議），並盡量並列各方稱謂與來源。其餘分頁是以李登輝為主體的深入內容。</p>
   <p>年號欄：1945 年以前標示日治年號（大正／昭和），之後標示民國紀年；年齡為實歲（當年 − 1923）。「必記」是理解他一生轉折最關鍵的節點，「手腕」表示附有政治手腕解析，「經國」表示標出蔣經國的影響與民主接力。</p>
   <p>事件內容、手腕解析與背景補充是根據公開史料整理的學習筆記，不是《餘生》的原文。受難人數、接班意圖等仍有爭議的說法，頁面上都有註明。每則事件下方的筆記只存在你這台裝置的瀏覽器裡。</p>
   <p>主要參考：行政院轉型正義資料、司法院釋字第 261 號、國家人權記憶庫「江南案」、中國時報人間副刊評論（2024.10.17）、《近代史研究所集刊》第 114 期書評、國史館與國父紀念館資料庫、中央社、關鍵評論網、Taipei Times「Taiwan in Time」專欄、洪惟仁台灣語言研究。</p>
@@ -801,6 +853,10 @@ const BG=[
  N("據報導，高雄市長吳敦義曾說過「省是政權的安全閥，精省將危及政權」，同時他在國發會公開支持精省。這顯示黨內意見並不一致。這個引述來自《遠見》報導。","黨內意見")+
  N("「李宋情結」這個詞，我沒有查到官方定義。教別人時可以說：精省有制度理由，也有人看出人事爭議，兩者可能同時存在。至於其中哪一個是主要動機，沒有定論。","教別人時的說法")+
  L("這是他任內最具爭議的制度改革之一。支持者看到他完成中央與地方層級的整理；批評者看到的是權力集中。細節與實施日期我主要依一般記載，建議對照憲法增修條文與省政府資料。")},
+{id:"jp-policy",k:"1895–1945",t:"日治統治政策三階段與總督概況",s:"總督制度、六三法與三階段統治策略。",ys:[1896, 1919, 1936],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>英文維基的分期為：武力鎮壓（1895–1915）、同化（1915–37）、皇民化（1937–45），原住民另有特別政策。</li><li>總督集行政、立法、司法三權；1896年3月31日公布六三法，授權總督發布律令，原定三年，經1899、1902、1905年延長，1906年由三一法取代。</li><li>共19任總督，前7任（樺山資紀至明石元二郎，1895–1919）為武官，第8至16任（田健治郎至中川健藏，1919.10–1936.9）為文官，第17至19任（小林躋造、長谷川清、安藤利吉，1936.9–1945.10）為武官。</li><li>兒玉源太郎1898年2月26日至1906年4月11日任總督，後藤新平任民政長官，推動土地調查、專賣、港口與鐵路建設。</li><li>1936年9月小林躋造就任，提出皇民化、工業化、南進基地化三原則；1941年4月成立皇民奉公會（具體日期有4月9日與4月19日兩說，一般通說為19日）。</li><li>皇民化期間：1937年起查禁報紙漢文欄、廢漢文書房；1942年陸軍特別志願兵、1943年海軍特別志願兵、1945年全面徵兵。</li><li>英文維基稱1940年「國語」使用者占人口51%，該來源指出此為「national language speakers」，未必代表流利程度。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>分期起訖並無單一通說：英文維基以1915（西來庵事件後）為同化起點，一般敘述常以1919年文官總督為起點。</li><li>「日治」與「日據」稱謂各有立場；英文維基記載2013年行政院令用「日據」，2016年表示不再適用。</li><li>改姓名比例：中文維基稱1943年底約2%，英文維基稱戰爭結束時約7%，時間點不同，終戰時確切比例待查。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a>　<a href=\"https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95\" target=\"_blank\" rel=\"noopener\">維基百科中文「六三法」</a>　<a href=\"https://en.wikipedia.org/wiki/Governor-General_of_Taiwan\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Governor-General of Taiwan</a>　<a href=\"https://en.wikipedia.org/wiki/Gotō_Shinpei\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Gotō Shinpei</a>　<a href=\"https://zh.wikipedia.org/wiki/皇民化運動\" target=\"_blank\" rel=\"noopener\">維基百科中文「皇民化運動」</a>　<a href=\"https://en.wikipedia.org/wiki/Japanization\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Japanization</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
+{id:"wushe",k:"1930–1931",t:"霧社事件",s:"日治時期知名的原住民武裝事件，傷亡數字至今各說不一。",ys:[1930],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>起因：英文維基指長期警察不當對待、強制勞動、對原住民信仰習俗不敬；直接導火線為莫那魯道之子達多莫那婚宴上，警員與酒敬之爭執。</li><li>1930年10月27日清晨，起事六社人口約1,236人，其中壯丁逾300人在霧社公學校運動會襲擊，日人134人死亡、26人受傷（Taiwan Today）。</li><li>英文維基與Taipei Times皆載134名日人死亡，另有兩名穿日本服裝的漢人被誤殺。</li><li>日方出動約2,000名軍警，使用山砲、飛機與毒氣類武器，約兩個月內鎮壓（Taiwan Today稱40天後結束）。</li><li>賽德克方死亡：英文維基稱644人（含290人自殺，該數字標待引用）；Taipei Times稱逾600人、約半數自殺；香港01稱六社約1,500人中逾半死亡、剩298人。</li><li>莫那魯道於1930年11月28日自殺（英文維基）。</li><li>第二次霧社事件：1931年4月25日，與日方合作的原住民攻擊收容所倖存者；Taiwan Today稱再有216人死亡。</li><li>倖存298人被遷至約50公里外的平地，日方稱「川中島」，賽德克語Alang Gluban；道澤與德魯固群獲得原屬土地。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>日方死傷人數：傷者26人（Taiwan Today）與215人（英文維基資訊框）不一致。</li><li>賽德克死亡人數：644、逾600、「逾半數」三種口徑並存；自殺比例亦待證。</li><li>毒氣是否使用：英文維基稱曾被指為亞洲首次化學戰，但另引春山說法，認為使用的是催淚瓦斯或氰化物混合物，效果不明。</li><li>評價：1954年《台灣省通志稿》將其定調為反壓迫、抗日民族主義，賽德克社群長期沉默；近年原住民族觀點強調轉型正義與歷史記憶被政治形塑。</li><li>英文維基Taiwan under Japanese rule所引《日本年鑑》對事件年份有1930與1929夏季兩種記載，應視為資料矛盾。</li><li>總督石塚英藏與總務長官人見次郎於1931年1月因批評而下台（英文維基）。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://en.wikipedia.org/wiki/Musha_Incident\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Musha Incident</a>　<a href=\"https://www.taipeitimes.com/News/feat/archives/2015/10/25/2003630860\" target=\"_blank\" rel=\"noopener\">Taipei Times: Taiwan in Time（2015-10-25）</a>　<a href=\"https://taiwanreview.nat.gov.tw/AMP/Culture/Top-News/24465\" target=\"_blank\" rel=\"noopener\">Taiwan Today 2011-07-15：'Seediq Bale' sparks renewed interest in Wushe Uprising</a>　<a href=\"https://www.hk01.com/%E8%97%9D%E6%96%87%E4%B8%AD%E5%9C%8B/536836/\" target=\"_blank\" rel=\"noopener\">香港01：霧社事件九十周年</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
+{id:"jp-development",k:"1895–1945",t:"經濟與社會建設及其評價爭議",s:"建設是事實，怎麼評價卻有很大爭議。",ys:[1898, 1930],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>土地調查：1898–1905年，1898年7月公布《臺灣土地調查規則》10條；1905年3月完成、5月實施土地登記；編製地籍圖與土地台帳並消滅大租權。</li><li>人口：1905年10月1日現住人口3,039,751人，同年底3,046,859人（不含高山原住民）；英文維基稱1940年人口5.87百萬。</li><li>糖業：砂糖產量由1905年8,263萬斤增至1935年16億942萬斤，甘蔗收穫量約12.57倍；新式糖廠占比1907年16.0%、1935年97.6%。</li><li>糖廠專用鐵道由1909年450.8公里增至1922年1,519公里；1905–1935年甘蔗收穫量年增率8.8%。</li><li>嘉南大圳1920年動工、1930年完成，烏山頭水庫集水58平方公里、容量約1.5億立方公尺。</li><li>教育：英文維基稱1944年學齡兒童就學率台灣人71.3%、原住民86.4%、日本人99.6%，1943年實施義務教育。</li><li>纏足：1905年女性1,406,224人中纏足800,618人（56.9%），1915年纏足279,038人（20.6%）。</li><li>衛生：後藤新平主導的鴉片漸禁政策，吸食者由1900年16.5萬人降至1941年不足8,000人（英文維基）；吳聰敏統計台灣人死亡率1906年3.49%降至1912年2.46%。</li><li>吳聰敏估計日治初期人均GDP年平均成長約2%，脫離清治長期停滯。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>吳聰敏認為台灣糖業缺乏比較利益，是在日本進口替代保護下發展，蔗農受益、成本由日本本土消費者負擔；但同一份講義並未分析蔗價、利潤分配或契約，不足以評估剝削論。</li><li>講義提出的疑問：原料採集區制度下糖廠對區內甘蔗有獨買權，是否對農民不利；另一方面農民仍可選擇作物。這是爭點而非結論。</li><li>英文維基指日治初期為殖民母國服務的政策「工業屬日本、農業屬台灣」，大型企業皆為日人所有且受嚴格管制，與「殖民現代性」敘述並存。</li><li>土地調查：英文維基稱1911年前未做調查，與吳聰敏講義的1898–1905不一致。</li><li>戰爭末期鐵路僅約四成可用（英文維基），顯示戰時動員與空襲破壞。</li><li>剝削論與現代化論的學界代表性文獻與具體對立論點，目前未見可引用來源，請標明此處資料不足。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏講義：土地調查與戶口調查（國立臺灣大學）</a>　<a href=\"https://econ.ntu.edu.tw/wp-content/uploads/2023/12/hist_1080516.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏：糖業、纏足與失蹤婦女（未完成初稿，臺大經濟系）</a>　<a href=\"https://homepage.ntu.edu.tw/~ntut019/ltes/Sugar-Gender.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏：糖業與性別（臺大）</a>　<a href=\"https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-Railway-why.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏講義：鐵路（臺大）</a>　<a href=\"https://zh.wikipedia.org/wiki/嘉南大圳\" target=\"_blank\" rel=\"noopener\">維基百科中文「嘉南大圳」</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a>　<a href=\"https://en.wikipedia.org/wiki/Gotō_Shinpei\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Gotō Shinpei</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
+{id:"jp-identity",k:"1895–1945",t:"日治時期台灣人的身份與認同",s:"同一個時代，台灣人有抵抗、協力、適應等多種選擇。",ys:[1921, 1937, 1942],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>1895年《馬關條約》生效後，英文維基所引資料稱居民可在兩年內選擇去留以決定國籍。</li><li>台灣人在日本統治下被稱「本島人」，日本人稱「內地人」，法制上適用不同法令，六三法使總督可制定專屬台灣的律令。</li><li>台北帝大1928–1943年學生約八成日籍、兩成台籍；1931屆畢業生中日籍41人、台籍5人。</li><li>1944年學齡兒童就學率：台灣人71.3%、日本人99.6%。</li><li>1937年起推動皇民化，國語家庭享有配給與任用等優惠；1943年底17,526戶、126,211人改姓名。</li><li>1937–1945年共207,183名台灣人服役（現役80,433、軍屬126,750）；戰後因失去日本國籍而無法依日本法令獲補償。</li><li>1945年10月25日日方在台北向陳儀簽收受降，行政長官公署同日運作。</li><li>ROC稱台灣人自1945年10月25日起恢復中國國籍（1946年1月12日行政院令確認、溯及生效）；英國1946年8月31日、美國1946年11月表示不接受。</li><li>1952年8月5日《台北條約》生效；1952年4月19日日本文件稱台灣人屆時喪失日本國籍。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>國籍恢復：行政院1946.1.12令溯及1945.10.25生效，兩個日期是同一件事；真正的爭議是國際上是否承認，以及1952年條約生效後的法律地位。陳逸南社論主張1945–46年的做法違反當事人意願與國際法，這是評論性立場而非通說，ROC方面完整法理論述目前未見來源。</li><li>「光復」「終戰」「戰敗」「接收」用語反映政權與族群立場；亦有學者稱「再淪陷」，並有人主張10月25日僅為軍事占領之始，主權待和約。</li><li>英美1946年不接受ROC單方面主張國籍已恢復，但美國承認ROC為中國合法政府。</li><li>台灣人對「日本人／中國人／台灣人」的自我認同，目前未見具代表性的學術調查來源，請勿自行推論。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://www.taipeitimes.com/News/editorials/archives/2011/01/20/2003493942\" target=\"_blank\" rel=\"noopener\">Taipei Times 社論（陳逸南）：ROC forced citizenship on unwary Taiwanese（2011-01-20，評論性文章）</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan Retrocession Day</a>　<a href=\"https://zh.wikipedia.org/wiki/臺灣光復\" target=\"_blank\" rel=\"noopener\">維基百科中文「臺灣光復」</a>　<a href=\"https://zh.wikipedia.org/wiki/皇民化運動\" target=\"_blank\" rel=\"noopener\">維基百科中文「皇民化運動」</a>　<a href=\"https://en.wikipedia.org/wiki/Conscription_in_Taiwan\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Conscription in Taiwan</a>　<a href=\"https://www.thenewslens.com/article/145592\" target=\"_blank\" rel=\"noopener\">The News Lens：台籍日本兵補償議題</a>　<a href=\"https://en.wikipedia.org/wiki/National_Taiwan_University\" target=\"_blank\" rel=\"noopener\">English Wikipedia: National Taiwan University</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a>　<a href=\"https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95\" target=\"_blank\" rel=\"noopener\">維基百科中文「六三法」</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
 {id:"jiangnan",k:"1984–1991",t:"江南案",s:"一樁發生在美國的暗殺，成為蔣經國晚年最大的政治醜聞。",ys:[1984,1985,1990],html:
  Pp("<b>一句話：</b>旅美作家劉宜良（筆名江南）1984 年 10 月 15 日在美國被槍殺，主謀是台灣國防部情報局長。這是解嚴前最受國際矚目的政治醜聞。")+
  T(["人物","角色"],[["劉宜良（江南）","1932 年生於江蘇，來台後當過記者，1967 年赴美，1973–74 年入美國籍。寫過多篇批評蔣家的文章，1984 年出版《蔣經國傳》"],["汪希苓","國防部情報局長（海軍中將），核定「教訓」劉宜良的任務"],["胡儀敏、陳虎門","情報局副局長、第三處副處長，居間聯繫"],["陳啟禮","竹聯幫幫主，被情報局吸收；策劃並開車接應"],["吳敦、董桂森","竹聯幫成員，在車庫開槍的兩人"],["崔蓉芝","劉宜良的妻子，後來在美國對台灣政府提告"]])+
@@ -857,13 +913,777 @@ const BG=[
  N("「接力」是整理兩人各自做了什麼的框架，不代表民主只來自他們兩個人。外部壓力與民間運動，是這場接力背後的推手。教別人時，建議用「他們做了什麼」取代「誰的功勞更大」。","教別人時的說法")}
 ];
 
+const PERIODS=[
+ {id:"p0",name:"原住民社會",range:"至 1624",a:1400,b:1624,sum:"南島語系原住民族在各地生活，各有自己的社會與信仰。"},
+ {id:"p1",name:"荷西與鄭氏",range:"1624–1683",a:1624,b:1683,sum:"荷蘭、西班牙先後經營台灣，後由鄭成功趕走荷蘭，鄭氏政權延續到 1683 年。"},
+ {id:"p2",name:"清領時期",range:"1683–1895",a:1683,b:1895,sum:"1683 年起納入清朝版圖，漢人移民增加，19 世紀後期建省。"},
+ {id:"p3",name:"日治時期",range:"1895–1945",a:1895,b:1946,sum:"馬關條約後日本統治台灣五十年（亦稱日據時期、日本殖民統治時期），從武力鎮壓、同化到戰時動員。"},
+ {id:"p4",name:"戰後接收與內戰",range:"1945–1949",a:1946,b:1950,sum:"國民政府接收台灣，1947 年二二八事件，1949 年中華民國政府遷台。"},
+ {id:"p5",name:"威權戒嚴",range:"1949–1987",a:1950,b:1988,sum:"戒嚴與動員戡亂體制下的政治、經濟起飛，也是白色恐怖時期。"},
+ {id:"p6",name:"民主化",range:"1987–2000",a:1988,b:2001,sum:"解嚴、國會全面改選、修憲與總統直選，2000 年第一次政黨輪替。"},
+ {id:"p7",name:"政黨輪替後",range:"2000–今",a:2001,b:2027,sum:"政黨輪替成為常態，兩岸與國際關係成為核心議題。"}
+];
+const CONF={verified:["✓","已查證"],common:["≈","常見說法"],disputed:["⚑","有爭議"]};
+const H_RAW=[
+{
+"y": 1895,
+"md": "4月17日",
+"t": "簽訂《馬關條約》",
+"s": "馬關條約",
+"b": "清日兩國於馬關簽訂條約，清廷將台灣與澎湖永久讓與日本。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "馬關條約／下關條約／日清講和條約",
+"note": "中文多稱「馬關條約」，日文稱「下關條約」「日清講和條約」。"
+}
+],
+"note": "英文維基標示條約於1895年5月8日生效；日本實際接收時間，各來源另有說法（英文維基Shimonoseki條目稱至10月才接收，Invasion條目稱6月3日基隆海上交接）。",
+"src": [
+{
+"t": "English Wikipedia: Treaty of Shimonoseki",
+"u": "https://en.wikipedia.org/wiki/Treaty_of_Shimonoseki"
+},
+{
+"t": "維基百科中文「乙未戰爭」",
+"u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+}
+]
+},
+{
+"y": 1895,
+"md": "5月25日",
+"t": "台灣民主國宣布成立",
+"s": "台灣民主國",
+"b": "5月23日發布自主宣言，5月25日成立，台灣士紳與官員推唐景崧為總統，年號「永清」，以抵抗接收。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "台灣民主國／臺灣共和國（Republic of Formosa）",
+"note": "中文多稱台灣民主國；英文常譯Republic of Formosa；性質上為短暫的抗拒割讓政權，各方評價不一。"
+}
+],
+"note": "5月23日（宣言）與25日（成立、唐景崧就任）是兩個不同動作，各來源擇一記載。英文維基Republic of Formosa對唐景崧離任日期自相矛盾（表列至6月5日，內文稱6月4日夜潛逃、6日搭船離台）。",
+"src": [
+{
+"t": "維基百科中文「乙未戰爭」",
+"u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+},
+{
+"t": "English Wikipedia: Republic of Formosa",
+"u": "https://en.wikipedia.org/wiki/Republic_of_Formosa"
+}
+]
+},
+{
+"y": 1895,
+"md": "5月29日",
+"t": "日軍於澳底登陸",
+"s": "日軍登陸澳底",
+"b": "日軍近衛師團在基隆東方的澳底一帶登陸，展開接收台灣的軍事行動。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "乙未戰爭／乙未之役／台灣平定",
+"note": "中文以干支「乙未」命名；日方稱「臺灣平定」「臺灣征討」，立場不同。"
+}
+],
+"note": "中文維基稱「澳底」；英文維基稱 Samtiao Point（三貂角）近Audi，日期同為5月29日。",
+"src": [
+{
+"t": "維基百科中文「乙未戰爭」",
+"u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+},
+{
+"t": "English Wikipedia: Japanese invasion of Taiwan (1895)",
+"u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1895)"
+}
+]
+},
+{
+"y": 1895,
+"md": "6月17日",
+"t": "台北舉行始政式",
+"s": "始政式",
+"b": "樺山資紀在台北城內原布政使司衙門的總督府舉行始政儀式，日後稱「始政紀念日」。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "始政／始政紀念日",
+"note": "日方以此日為統治開始；台灣方面亦有以5月至10月戰事視為統治確立過程之觀點。"
+}
+],
+"note": "英文維基Invasion條目另記6月3日在基隆港日艦上由樺山資紀與李經方辦理交接，與6月17日始政式為不同儀式。",
+"src": [
+{
+"t": "維基百科中文「乙未戰爭」",
+"u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+},
+{
+"t": "English Wikipedia: Japanese invasion of Taiwan (1895)",
+"u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1895)"
+}
+]
+},
+{
+"y": 1895,
+"md": "10月21日",
+"t": "台南城陷落，劉永福離台",
+"s": "台南陷落",
+"b": "10月20日劉永福離開台南渡廈門；21日日軍進入台南城，日方視為台灣民主國結束。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "抗日／反抗殖民／抗日運動",
+"note": "「抗日」為台灣與中國通行用語；日方與部分研究稱「匪亂」「土匪」（日本殖民史觀）；現代台灣史觀多稱抗日或反殖民。"
+},
+{
+"term": "乙未戰爭／乙未之役／台灣平定",
+"note": "中文以干支「乙未」命名；日方稱「臺灣平定」「臺灣征討」，立場不同。"
+}
+],
+"note": "日期：中文維基稱日軍10月21日進入台南，靖國神社統計以10月22日為占領日；英文維基Invasion與Formosa皆為10月21日。劉永福：10月20日棄城，所乘英輪被日艦攔檢、後獲釋（船名英文維基作SS Thales）。",
+"src": [
+{
+"t": "維基百科中文「乙未戰爭」",
+"u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+},
+{
+"t": "English Wikipedia: Japanese invasion of Taiwan (1895)",
+"u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1895)"
+},
+{
+"t": "English Wikipedia: Republic of Formosa",
+"u": "https://en.wikipedia.org/wiki/Republic_of_Formosa"
+}
+]
+},
+{
+"y": 1895,
+"md": "",
+"t": "武裝抗日（1895–1902）",
+"s": "武裝抗日",
+"b": "乙未戰爭後各地仍有武裝抗日；總督府以軍警鎮壓並輔以招降，至1902年前後大規模武裝抗爭大致平息。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "抗日／反抗殖民／抗日運動",
+"note": "「抗日」為台灣與中國通行用語；日方與部分研究稱「匪亂」「土匪」（日本殖民史觀）；現代台灣史觀多稱抗日或反殖民。"
+},
+{
+"term": "乙未戰爭／乙未之役／台灣平定",
+"note": "中文以干支「乙未」命名；日方稱「臺灣平定」「臺灣征討」，立場不同。"
+}
+],
+"note": "乙未戰爭數字：日軍衛生部門統計死亡8,503人（戰死333人）；靖國神社統計戰死354人；台方戰場遺屍據稱七、八千人，學術估算陣亡至少14,000人，平民受害估計至少10萬人（均據中文維基，估計值差異大）。1898–1902年的招降與各地抗日事件，目前未見足夠一手或學術來源，細節待補。 另1907–1915年仍有北埔、林圮埔、苗栗等事件，至西來庵事件為止，並非1902年後就沒有武裝抗爭。",
+"src": [
+{
+"t": "維基百科中文「乙未戰爭」",
+"u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+]
+},
+{
+"y": 1896,
+"md": "3月31日",
+"t": "公布「六三法」",
+"s": "六三法",
+"b": "日本帝國議會通過法律第63號，授權台灣總督發布具法律效力的命令（律令），總督集行政、立法、司法權。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "六三法／台灣施行法令相關法律",
+"note": "正式名為《臺灣ニ施行スヘキ法令ニ關スル法律》；台灣人稱總督為「土皇帝」（據中文維基）。"
+}
+],
+"note": "原定三年期限，經1899、1902、1905年延長；1906年改以《三一法》取代，總督仍保有律令制定權。其與憲法適用台灣之關係，學者意見分歧。",
+"src": [
+{
+"t": "維基百科中文「六三法」",
+"u": "https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-policy"
+},
+{
+"y": 1898,
+"md": "2月26日",
+"t": "兒玉源太郎就任，後藤新平主持民政",
+"s": "兒玉、後藤上任",
+"b": "第四任總督兒玉源太郎於1898年2月26日就任，後藤新平主持民政（初任民政局長，同年官制改為民政長官），推動土地、戶口調查與基礎建設。",
+"track": "政權",
+"conf": "verified",
+"aliases": [],
+"note": "兒玉任期1898.2.26–1906.4.11（據英文維基總督表）；後藤就任及改任民政長官的確切日期，目前未見可引用的線上來源。",
+"src": [
+{
+"t": "English Wikipedia: Governor-General of Taiwan",
+"u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+},
+{
+"t": "English Wikipedia: Gotō Shinpei",
+"u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
+}
+],
+"bg": "jp-policy"
+},
+{
+"y": 1898,
+"md": "",
+"t": "土地調查事業（1898–1905）",
+"s": "土地調查",
+"b": "總督府以1898年《臺灣土地調查規則》展開土地調查，1905年3月完成、5月實施土地登記，並消滅大租權。",
+"track": "政權",
+"conf": "common",
+"aliases": [],
+"note": "吳聰敏講義：1898–1905年，1898年7月公告規則，1905年3月調查完成。英文維基Taiwan under Japanese rule稱「1911年前未做調查」，與前者不一致，疑指另一階段或表述有誤，需查原始文獻。調查前後的耕地面積與地租數字，目前未見可引用來源。",
+"src": [
+{
+"t": "吳聰敏講義：土地調查與戶口調查（國立臺灣大學）",
+"u": "https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf"
+},
+{
+"t": "English Wikipedia: Gotō Shinpei",
+"u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-development"
+},
+{
+"y": 1899,
+"md": "",
+"t": "台灣銀行成立",
+"s": "台灣銀行",
+"b": "依1897年《臺灣銀行法》設立的台灣銀行，於1899年（9月26日）開業，兼具發行貨幣與中央銀行功能。",
+"track": "政權",
+"conf": "common",
+"aliases": [],
+"note": "1897年是設立法案通過，1899年是開業，並非矛盾；英文維基Bank of Taiwan資訊框列1897。1898年6月成立之說，目前未見其他來源佐證。",
+"src": [
+{
+"t": "English Wikipedia: Bank of Taiwan",
+"u": "https://en.wikipedia.org/wiki/Bank_of_Taiwan"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-development"
+},
+{
+"y": 1905,
+"md": "10月1日",
+"t": "第一次臨時台灣戶口調查",
+"s": "首次戶口調查",
+"b": "總督府於1905年10月1日進行首次戶口調查，其後1915年再調查，1920年起每五年一次，結果顯示台灣人口約三百萬。",
+"track": "政權",
+"conf": "common",
+"aliases": [],
+"note": "吳聰敏：1905年10月1日現住人口3,039,751人（不含高山原住民），同年底3,046,859人；英文維基只稱約三百萬。講義另載調查年份為1905、1915、1920。",
+"src": [
+{
+"t": "吳聰敏講義：土地調查與戶口調查（國立臺灣大學）",
+"u": "https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf"
+},
+{
+"t": "吳聰敏：糖業、纏足與失蹤婦女（未完成初稿，臺大經濟系）",
+"u": "https://econ.ntu.edu.tw/wp-content/uploads/2023/12/hist_1080516.pdf"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-development"
+},
+{
+"y": 1915,
+"md": "7月6日",
+"t": "西來庵（噍吧哖）事件",
+"s": "西來庵事件",
+"b": "余清芳等人以西來庵為據點起事，8月在噍吧哖與日軍警衝突，總督府大規模逮捕並軍法審判。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "西來庵事件／噍吧哖事件／余清芳事件",
+"note": "依地名或領導者命名；日方史觀曾稱匪亂，台灣現代史觀多視為抗日事件。"
+}
+],
+"note": "人數各來源不一：中文維基（目前取得內容）：總督府統計逮捕1,957人，台南臨時法院判死刑866人（另有余清芳、羅俊、江定），11月10日安東貞美宣布約四分之三死刑改無期徒刑；學者估計日方殺害可能逾萬人；2014年新化發現逾3,000具遺骨，身分未確認。英文維基Tapani：參與1,413人，江定等272人於1916年5月18日被捕；死亡總數未給。日期：英文維基起事為7月6日，余清芳8月22日被捕。",
+"src": [
+{
+"t": "維基百科中文「西來庵事件」",
+"u": "https://zh.wikipedia.org/wiki/西來庵事件"
+},
+{
+"t": "English Wikipedia: Tapani incident",
+"u": "https://en.wikipedia.org/wiki/Tapani_incident"
+}
+]
+},
+{
+"y": 1919,
+"md": "10月29日",
+"t": "田健治郎就任首位文官總督",
+"s": "首位文官總督",
+"b": "田健治郎於1919年10月29日就任，台灣總督改由文官出任，統治方針轉向同化。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "同化政策／內地延長主義",
+"note": "同化政策主張台灣視為日本延長，實際仍存在本島人與內地人差別待遇。"
+}
+],
+"note": "總督表列田健治郎任期1919.10.29–1923.9.6，為第8任。同化階段起點，英文維基Taiwan under Japanese rule分期為1915–37，通說常以1919為文官總督起點，兩說並存。",
+"src": [
+{
+"t": "English Wikipedia: Governor-General of Taiwan",
+"u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-policy"
+},
+{
+"y": 1921,
+"md": "10月17日",
+"t": "台灣文化協會成立",
+"s": "文化協會",
+"b": "蔣渭水等人在台北大稻埕創立台灣文化協會，林獻堂任總理，以講演、讀報社等啟蒙社會。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [],
+"note": "英文維基：1925與1926年巡迴講演聽眾超過23萬人次（為出席人次，非會員數）。會員人數目前未見。",
+"src": [
+{
+"t": "English Wikipedia: Taiwanese Cultural Association",
+"u": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1921,
+"md": "1月30日",
+"t": "台灣議會設置請願運動展開",
+"s": "議會請願",
+"b": "1921年1月30日首次向帝國議會提出請願，至1934年共15次，9月2日宣布停止。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [],
+"note": "中文維基：1921–1934共約14年、15次；1934年9月2日林獻堂等人決議停止，1931年台灣民主黨已解散。",
+"src": [
+{
+"t": "維基百科中文「臺灣議會設置請願運動」",
+"u": "https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1923,
+"md": "12月16日",
+"t": "治警事件",
+"s": "治警事件",
+"b": "總督府以違反《治安警察法》為由大規模搜捕議會請願運動成員，後經三審判決。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "治警事件／台灣治安警察法違反事件",
+"note": "日方以違反治安警察法為名，台灣方面視為鎮壓政治結社。"
+}
+],
+"note": "日期與判決人數各來源大致一致（二審13人有罪，三審維持；蔣渭水、蔡培火各4個月，另5人各3個月，6人罰金100圓）。中文維基「臺灣議會設置請願運動」條目寫「六人判3至4個月」且列七人，與治警事件條不一致，採後者。拘捕41人、傳訊58人、牽連99人、起訴18人（中文維基）。",
+"src": [
+{
+"t": "維基百科中文「治警事件」",
+"u": "https://zh.wikipedia.org/wiki/治警事件"
+},
+{
+"t": "維基百科中文「臺灣議會設置請願運動」",
+"u": "https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1927,
+"md": "7月10日",
+"t": "台灣民眾黨成立",
+"s": "民眾黨",
+"b": "文協內部溫和派與左翼分歧，部分成員另組台灣民眾黨，被視為台灣第一個政黨。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [],
+"note": "成立日1927年7月10日各來源一致。被禁日期以1931年2月18日為是；英文維基資訊框的「1931年8月」疑為誤植（該月是蔣渭水過世）。文協分裂的確切日期，目前未見可引用來源。",
+"src": [
+{
+"t": "English Wikipedia: Taiwanese People's Party",
+"u": "https://en.wikipedia.org/wiki/Taiwanese_People%27s_Party"
+},
+{
+"t": "English Wikipedia: Taiwanese Cultural Association",
+"u": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1928,
+"md": "3月16日",
+"t": "台北帝國大學設立",
+"s": "台北帝大",
+"b": "台北帝國大學為日本第七所帝國大學，1928年設立，初設文政學部與理農學部。",
+"track": "政權",
+"conf": "verified",
+"aliases": [],
+"note": "英文維基：1928年3月16日設立，首屆新生入學4月30日、5月5日開課；1928–1943年學生約八成日籍、兩成台籍；1945年接收時1,767名學生中台籍351人。",
+"src": [
+{
+"t": "English Wikipedia: National Taiwan University",
+"u": "https://en.wikipedia.org/wiki/National_Taiwan_University"
+}
+],
+"bg": "jp-development"
+},
+{
+"y": 1930,
+"md": "10月27日",
+"t": "霧社事件",
+"s": "霧社事件",
+"b": "賽德克族起事六社，在霧社公學校運動會當日襲擊日人；日方以軍警、飛機與火砲鎮壓，並被指使用毒氣。起因包括強制勞動、警察不當對待等（英文維基）。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "霧社事件／Musha（Wushe）Incident",
+"note": "日文稱「霧社事件」；台灣原住民族視角強調賽德克人反殖民抵抗；亦有「抗日」之稱。"
+}
+],
+"note": "死傷各來源不一：日人死亡134人（英文維基、Taipei Times、Taiwan Today一致；英文維基另提兩名著和服的漢人）；日方傷者，Taiwan Today稱26人，英文維基資訊框稱215人。賽德克方：英文維基稱644人死亡（其中290人自殺，該數字標註待引用）；Taipei Times稱逾600人死、約半數自殺；香港01稱六社約1,500人減至298人倖存。起事六社人口約1,236人（Taiwan Today），英文維基稱實際參與襲擊的壯丁逾300人；Taipei Times稱「數百人」。第二次霧社事件：1931年4月25日，味方蕃襲擊收容所，Taiwan Today稱216人死亡；英文維基稱斬首15歲以上男性、無死亡數。",
+"src": [
+{
+"t": "English Wikipedia: Musha Incident",
+"u": "https://en.wikipedia.org/wiki/Musha_Incident"
+},
+{
+"t": "Taipei Times: Taiwan in Time（2015-10-25）",
+"u": "https://www.taipeitimes.com/News/feat/archives/2015/10/25/2003630860"
+},
+{
+"t": "Taiwan Today 2011-07-15：'Seediq Bale' sparks renewed interest in Wushe Uprising",
+"u": "https://taiwanreview.nat.gov.tw/AMP/Culture/Top-News/24465"
+},
+{
+"t": "香港01：霧社事件九十周年",
+"u": "https://www.hk01.com/%E8%97%9D%E6%96%87%E4%B8%AD%E5%9C%8B/536836/"
+}
+],
+"bg": "wushe"
+},
+{
+"y": 1930,
+"md": "5月",
+"t": "嘉南大圳完工",
+"s": "嘉南大圳",
+"b": "嘉南大圳1920年動工、1930年完工，由總督府技師八田與一設計，以烏山頭水庫為核心。",
+"track": "政權",
+"conf": "common",
+"aliases": [],
+"note": "中文維基：1920年9月動工、1930年5月完成；灌溉區各幹線面積加總約144,000甲（為依條目數字自行加總，條目未載總數）。英文維基稱可耕稻田由5,000增至150,000公頃，兩者單位與口徑不同。",
+"src": [
+{
+"t": "維基百科中文「嘉南大圳」",
+"u": "https://zh.wikipedia.org/wiki/嘉南大圳"
+},
+{
+"t": "English Wikipedia: Chianan Irrigation",
+"u": "https://en.wikipedia.org/wiki/Chianan_Irrigation"
+}
+],
+"bg": "jp-development"
+},
+{
+"y": 1935,
+"md": "10月10日",
+"t": "始政四十週年台灣博覽會",
+"s": "始政40年博覽會",
+"b": "為紀念統治四十年，博覽會於1935年10月10日至11月28日舉行，展示總督府施政建設。",
+"track": "政權",
+"conf": "verified",
+"aliases": [],
+"note": "英文維基：共50天，入場者逾100萬人，另載館內參觀人次2,750,000。",
+"src": [
+{
+"t": "English Wikipedia: The Taiwan Exposition (1935)",
+"u": "https://en.wikipedia.org/wiki/The_Taiwan_Exposition:_In_Commemoration_of_the_First_Forty_Years_of_Colonial_Rule"
+}
+],
+"bg": "jp-development"
+},
+{
+"y": 1936,
+"md": "9月2日",
+"t": "小林躋造就任，武官總督復活",
+"s": "武官總督復活",
+"b": "海軍出身的小林躋造就任第17任總督，台灣總督重回武官，提出「皇民化、工業化、南進基地化」。",
+"track": "政權",
+"conf": "verified",
+"aliases": [],
+"note": "總督表：小林躋造1936.9.2–1940.11.27。「三原則」說法見中文維基皇民化運動條。",
+"src": [
+{
+"t": "English Wikipedia: Governor-General of Taiwan",
+"u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+},
+{
+"t": "維基百科中文「皇民化運動」",
+"u": "https://zh.wikipedia.org/wiki/皇民化運動"
+},
+{
+"t": "Soundtraces: Colonial Government Intensifies the Kominka Movement",
+"u": "https://soundtraces.tw/?p=102611"
+}
+],
+"bg": "jp-policy"
+},
+{
+"y": 1937,
+"md": "4月",
+"t": "皇民化運動與報紙漢文欄廢止",
+"s": "皇民化運動",
+"b": "1937年起強化日語推行，查禁報紙漢文欄、廢除漢文書房，並推動神社參拜與國語家庭。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "皇民化運動／皇民奉公運動／Japanization",
+"note": "1941年4月成立皇民奉公會後轉稱皇民奉公運動；台灣學界亦譯Kōminka。"
+}
+],
+"note": "時間點：中文維基稱1937年四、五月開始查禁漢文欄；英文維基Taiwan under Japanese rule稱1937年4月；英文維基Japanization僅稱運動始於1937、未單獨標漢文欄日期。皇民化起點亦有1936年底說（中文維基第一階段為1936年底至1940年）。",
+"src": [
+{
+"t": "維基百科中文「皇民化運動」",
+"u": "https://zh.wikipedia.org/wiki/皇民化運動"
+},
+{
+"t": "English Wikipedia: Japanization",
+"u": "https://en.wikipedia.org/wiki/Japanization"
+},
+{
+"t": "Soundtraces: Colonial Government Intensifies the Kominka Movement",
+"u": "https://soundtraces.tw/?p=102611"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1940,
+"md": "",
+"t": "改姓名運動",
+"s": "改姓名",
+"b": "1940年起實施改日本姓名，採申請許可制，非全面強制，附帶配給與升學等優惠。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "改姓名／改姓名運動",
+"note": "日方稱「內地人式氏名」，台灣人則多稱改姓名；是否出於自願，學界常強調有壓力與誘因。"
+}
+],
+"note": "數字差異主要是時間點不同：中文維基載1941年底約1%、1943年底17,526戶（126,211人，約占人口2%）；英文維基稱「戰爭結束時約7%」。終戰時的確切比例目前未見可引用來源。",
+"src": [
+{
+"t": "維基百科中文「皇民化運動」",
+"u": "https://zh.wikipedia.org/wiki/皇民化運動"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1942,
+"md": "",
+"t": "陸軍特別志願兵制度",
+"s": "特別志願兵",
+"b": "1942年實施陸軍特別志願兵制度，1943年續設海軍特別志願兵，台灣人開始以正式軍人身分（志願兵）入伍。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "台籍日本兵／志願兵",
+"note": "稱謂涉及自願與否及身分認同；戰後因喪失日本國籍而無法依日本法令請求撫卹，成為補償爭議。"
+}
+],
+"note": "人數：英文維基Conscription in Taiwan：1937–1945共207,183人服役（現役80,433、軍屬126,750）；The News Lens：約207,000人，約3萬人死亡；英文維基Taiwan under Japanese rule稱約5萬人死亡或失蹤。死亡數口徑不同：日本厚生省統計戰死30,304人（約15%），英文維基「約5萬」為死亡加失蹤。1937年起已有軍屬、軍夫，1942年另有高砂義勇隊。志願兵申請人數與錄取人數，目前未見可引用來源。",
+"src": [
+{
+"t": "維基百科中文「皇民化運動」",
+"u": "https://zh.wikipedia.org/wiki/皇民化運動"
+},
+{
+"t": "English Wikipedia: Conscription in Taiwan",
+"u": "https://en.wikipedia.org/wiki/Conscription_in_Taiwan"
+},
+{
+"t": "The News Lens：台籍日本兵補償議題",
+"u": "https://www.thenewslens.com/article/145592"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1945,
+"md": "1月",
+"t": "徵兵制（1943年宣布、1945年1月起徵兵檢查）",
+"s": "徵兵制",
+"b": "1943年宣布自1945年起施行；1944年9月起台灣人負兵役義務，1945年1月開始徵兵檢查並入營，至日本投降為止。",
+"track": "政權",
+"conf": "common",
+"aliases": [],
+"note": "各來源記載的是不同階段：中文維基與英文維基Conscription in Taiwan稱1945年（英文維基稱1945年1月）；日文維基稱1944年9月起台灣人負兵役義務；The News Lens稱「1944年更實施了徵兵制度」。首批受檢人數等細節尚待官方資料確認。",
+"src": [
+{
+"t": "維基百科中文「皇民化運動」",
+"u": "https://zh.wikipedia.org/wiki/皇民化運動"
+},
+{
+"t": "English Wikipedia: Conscription in Taiwan",
+"u": "https://en.wikipedia.org/wiki/Conscription_in_Taiwan"
+},
+{
+"t": "維基百科中文「台籍日本兵」",
+"u": "https://zh.wikipedia.org/wiki/台籍日本兵"
+}
+],
+"bg": "jp-identity"
+},
+{
+"y": 1945,
+"md": "8月15日",
+"t": "日本宣布投降",
+"s": "日本投降",
+"b": "1945年8月15日天皇廣播《終戰詔書》，9月2日簽署降伏文書，戰爭結束。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "光復／終戰／戰敗／接收",
+"note": "「光復」為中華民國官方傳統用語；「終戰」為日本與部分台灣人用語；「戰敗」強調日本角度；「接收」側重軍事接管、不預設主權移轉；亦有學者稱「再淪陷」（據中文維基光復條）。"
+}
+],
+"note": "8月14日天皇決定接受波茨坦公告並照會盟國；8月15日玉音放送；9月2日密蘇里號簽降。英文維基Taiwan under Japanese rule另寫「8月14日投降」，屬口徑不同。",
+"src": [
+{
+"t": "維基百科中文「日本投降」",
+"u": "https://zh.wikipedia.org/wiki/日本投降"
+},
+{
+"t": "English Wikipedia: Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+]
+},
+{
+"y": 1945,
+"md": "10月25日",
+"t": "台灣受降與行政長官公署接收",
+"s": "受降與接收",
+"b": "日方總督安藤利吉在台北公會堂向陳儀簽收受降，行政長官公署同日開始運作。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "光復／終戰／戰敗／接收",
+"note": "「光復」為中華民國官方傳統用語；「終戰」為日本與部分台灣人用語；「戰敗」強調日本角度；「接收」側重軍事接管、不預設主權移轉；亦有學者稱「再淪陷」（據中文維基光復條）。"
+}
+],
+"note": "性質有歧見：中華民國政府稱「光復」「收回」；部分學者與當時英美視為戰後軍事占領／接收、待和約決定主權（英文維基Retrocession Day稱英美不接受陳儀單方行動）。",
+"src": [
+{
+"t": "維基百科中文「臺灣光復」",
+"u": "https://zh.wikipedia.org/wiki/臺灣光復"
+},
+{
+"t": "English Wikipedia: Taiwan Retrocession Day",
+"u": "https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"
+}
+]
+},
+{
+"y": 1946,
+"md": "1月12日",
+"t": "恢復中華民國國籍",
+"s": "恢復國籍",
+"b": "1946年1月12日行政院令台澎居民恢復中華民國國籍，並溯及1945年10月25日生效；1月20日長官公署再公告。",
+"track": "政治外交",
+"conf": "disputed",
+"aliases": [
+{
+"term": "恢復國籍／國籍變更",
+"note": "ROC稱「恢復」，批評者稱未經同意強加國籍；英美當時未接受。"
+}
+],
+"note": "爭議點在國際法上是否承認，而非日期：據Taipei Times社論（陳逸南，評論性文章，立場批評ROC），英國1946年8月31日表示接受ROC管理台灣、但不接受國籍已恢復；美國1946年11月備忘錄同意英方；1952年8月5日《台北條約》生效。中文維基光復條未載此日期。目前未見行政院原令文本或國史館原件。",
+"src": [
+{
+"t": "Taipei Times 社論（陳逸南）：ROC forced citizenship on unwary Taiwanese（2011-01-20，評論性文章）",
+"u": "https://www.taipeitimes.com/News/editorials/archives/2011/01/20/2003493942"
+},
+{
+"t": "English Wikipedia: Taiwan Retrocession Day",
+"u": "https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"
+},
+{
+"t": "維基百科中文「臺灣光復」",
+"u": "https://zh.wikipedia.org/wiki/臺灣光復"
+}
+]
+}
+];
+const H=H_RAW.map((h,i)=>({id:"h"+i,...h})).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));
+
 /* ---------- 共用 ---------- */
 const $=s=>document.querySelector(s);
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-const eraYear=y=>y<1926?`大正 ${y-1911} 年`:y<=1945?`昭和 ${y-1925} 年`:`民國 ${y-1911} 年`;
+const eraYear=y=>y<1868?"":y<1912?`明治 ${y-1867} 年`:y<1926?`大正 ${y-1911} 年`:y<=1945?`昭和 ${y-1925} 年`:`民國 ${y-1911} 年`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mName=id=>METHODS.find(m=>m.id===id).name;
-let state={view:"overview",from:null,ovSel:null,ovAll:false,q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
+let state={view:"history",hp:null,hsel:null,hback:null,from:null,ovSel:null,ovAll:false,q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
 $("#total").textContent=E.length;
 $("#mtotal").textContent=E.filter(e=>e.mv).length;
 $("#cktotal").textContent=E.filter(e=>e.ck).length;
@@ -873,18 +1693,20 @@ $("#cktotal").textContent=E.filter(e=>e.ck).length;
 $("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";store.set("theme",r.dataset.theme)};
 
 /* 分頁 */
-const VIEWS=["overview","timeline","relay","methods","background","quiz"];
+const VIEWS=["history","overview","timeline","relay","methods","background","quiz"];
 function setView(v,push=true){
-  if(!VIEWS.includes(v))v="overview";
+  if(!VIEWS.includes(v))v="history";
   state.view=v;
   document.querySelectorAll(".tab").forEach(t=>{t.setAttribute("aria-selected",t.dataset.view===v);if(t.dataset.view===v)t.scrollIntoView({block:"nearest",inline:"center"})});
   VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);
   if(push&&location.hash!=="#"+v)history.replaceState(null,"","#"+v);
-  $("#backpill").hidden=!(state.from!=null&&v!=="overview");
-  if(v==="overview"){state.from=null;$("#backpill").hidden=true;renderOv()}else if(v==="timeline")render();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
+  if(v==="history")state.hback=null;
+  if(v==="overview")state.from=null;
+  refreshPill();
+  if(v==="history")renderHistory();else if(v==="overview")renderOv();else if(v==="timeline")render();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
 }
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{setView(t.dataset.view);window.scrollTo({top:0})});
-addEventListener("hashchange",()=>setView(location.hash.slice(1)||"overview",false));
+addEventListener("hashchange",()=>setView(location.hash.slice(1)||"history",false));
 
 /* ---------- 年表 ---------- */
 const strip=$("#erasStrip");
@@ -1107,13 +1929,83 @@ function gotoEvent(id){
   setView("timeline");sync();
   requestAnimationFrame(()=>{const el=document.getElementById("ev-"+id);if(el){el.scrollIntoView({block:"start"});el.classList.add("flash")}});
 }
-$("#backpill").onclick=()=>{const id=state.from;state.ovSel=id;setView("overview");window.scrollTo({top:0});ovSelect(id,true)};
+function refreshPill(){const p=$("#backpill");let show=false,txt="↩ 回總覽";
+  if(state.from!=null&&state.view!=="overview")show=true;
+  else if(state.hback&&state.view!=="history"){show=true;txt="↩ 回台灣史"}
+  p.textContent=txt;p.hidden=!show}
+$("#backpill").onclick=()=>{
+  if(state.from!=null&&state.view!=="overview"){const id=state.from;state.ovSel=id;const hb=state.hback;setView("overview");state.hback=hb;refreshPill();window.scrollTo({top:0});ovSelect(id,true)}
+  else if(state.hback){const hb=state.hback;state.hp=hb.pid;state.hsel=hb.sel;setView("history");window.scrollTo({top:0})}};
+
+
+/* ---------- 台灣史（三層下鑽） ---------- */
+const pOf=y=>PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[PERIODS.length-1];
+const H_LANES=["統治政權","政治與外交","李登輝線"];
+const H_LC=["var(--c0)","var(--c2)","var(--c1)"];
+function leeInPeriod(p){return E.filter(e=>e.key&&e.y>=p.a&&e.y<p.b)}
+function leeShort(e){const s=OV_SEL.find(x=>x[0]===e.y&&e.t.startsWith(x[1]));return s?s[2]:e.t.slice(0,7)}
+function renderHistory(){
+  const box=$("#hBlocks");
+  box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOf(h.y)===p).length,m=leeInPeriod(p).length;
+    return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
+  box.querySelectorAll(".hb").forEach(b=>b.onclick=()=>{state.hp=state.hp===b.dataset.p?null:b.dataset.p;state.hsel=null;renderHistory();if(state.hp)setTimeout(()=>$("#hPanel").scrollIntoView({block:"nearest",behavior:"smooth"}),50)});
+  hPanel()}
+$("#hClose").onclick=()=>{state.hp=null;state.hsel=null;renderHistory();window.scrollTo({top:0})};
+function hPanel(){
+  const p=PERIODS.find(x=>x.id===state.hp);$("#hPanel").hidden=!p;if(!p)return;
+  $("#hTitle").textContent=p.name+"　"+p.range;$("#hSum").textContent=p.sum;
+  const hs=H.filter(h=>pOf(h.y)===p),es=leeInPeriod(p);
+  const svg=$("#hSvg");
+  if(!hs.length&&!es.length){$("#hScroll").hidden=true;$("#hCard").innerHTML=`<p class="hint">這個時期的事件還沒有補完，之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;return}
+  $("#hScroll").hidden=false;
+  const W=1500,x0=100,x1=W-50,a=p.a,b=p.b;
+  const cnt={};hs.concat(es).forEach(h=>{cnt[Math.floor(h.y)]=(cnt[Math.floor(h.y)]||0)+1});
+  const cum=[0];for(let y=a;y<b;y++)cum.push(cum[cum.length-1]+1+2.5*(cnt[y]||0));
+  const X=(y,md)=>{const m=/月/.test(md||"")?parseInt(md):6;const yy=Math.floor(y),i=Math.max(0,Math.min(cum.length-2,yy-a)),f=y>yy?y-yy:((m-1)/12+.04);return x0+(cum[i]+(cum[i+1]-cum[i])*f)/cum[cum.length-1]*(x1-x0)};
+  const items=[];
+  hs.forEach(h=>items.push({key:h.id,lane:h.track==="政權"?0:1,x:X(h.y,h.md),lab:h.s||h.t.slice(0,8),t:h.y+(h.md?" "+h.md:"")+"　"+h.t}));
+  es.forEach(e=>items.push({key:"e"+e.id,lane:2,x:X(e.y,e.md),lab:leeShort(e),t:e.y+(e.md?" "+e.md:"")+"　"+e.t}));
+  const used=[0,1,2].filter(l=>items.some(i=>i.lane===l));
+  let Y=14,s="";const lanes={};
+  used.forEach(l=>{const list=items.filter(i=>i.lane===l).sort((p1,p2)=>p1.x-p2.x),ends=[];
+    list.forEach(c=>{const w=c.lab.length*16+12;c.l=Math.max(x0+4,Math.min(W-w-6,c.x-w/2));c.r=c.l+w;let k=ends.findIndex(v=>v<c.l-4);if(k<0){k=ends.length;ends.push(0)}ends[k]=c.r;c.row=k});
+    const rows=Math.max(1,ends.length);lanes[l]={list,rows,y0:Y,axis:Y+10+rows*25+8};Y+=10+rows*25+8+22});
+  const H2=Y+30;svg.setAttribute("viewBox",`0 0 ${W} ${H2}`);
+  const step=(b-a)>150?25:(b-a)>40?10:5;
+  for(let y=Math.ceil(a/step)*step;y<b;y+=step){const x=X(y,"");s+=`<line class="grid" x1="${x}" x2="${x}" y1="6" y2="${H2-22}"/><text class="yr" x="${x}" y="${H2-6}" text-anchor="middle">${y}</text>`}
+  used.forEach(l=>{const L=lanes[l];
+    s+=`<text class="lanelbl" x="8" y="${L.axis-6}" style="fill:${H_LC[l]}">${H_LANES[l]}</text><line class="axis" x1="${x0}" x2="${x1+10}" y1="${L.axis}" y2="${L.axis}"/>`;
+    L.list.forEach(c=>{const top=L.y0+(L.rows-1-c.row)*25;
+      s+=`<g class="ev${state.hsel===c.key?" sel":""}" data-k="${c.key}" role="button" tabindex="0" aria-label="${esc(c.t)}"><line class="lead" x1="${c.x}" x2="${c.x}" y1="${top+22}" y2="${L.axis}"/><text x="${(c.l+c.r)/2}" y="${top+17}" text-anchor="middle">${esc(c.lab)}</text><circle class="dot" cx="${c.x}" cy="${L.axis}" r="6.5" style="fill:${H_LC[l]}"/><title>${esc(c.t)}</title></g>`})});
+  svg.innerHTML=s;
+  svg.querySelectorAll("[data-k]").forEach(g=>{const k=g.dataset.k;g.onclick=()=>hSelect(k);g.onkeydown=ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();hSelect(k)}}});
+  hCard()}
+function hSelect(k){state.hsel=k;document.querySelectorAll("#hSvg [data-k]").forEach(g=>g.classList.toggle("sel",g.dataset.k===k));hCard()}
+function hCard(){
+  const c=$("#hCard"),k=state.hsel;
+  if(!k){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現中性陳述、各方稱謂、來源與可信度。</p>`;return}
+  if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));if(!e){c.innerHTML="";return}
+    c.innerHTML=`<div class="d">${e.y}${e.md?" · "+e.md:""} · 李登輝線</div><h3>${esc(e.t)}</h3><p>${esc(e.b.length>140?e.b.slice(0,140)+"……":e.b)}</p><div class="act"><button class="pri" id="hLee">在李登輝總覽看 →</button><button id="hLee2">看年表完整內容 →</button></div>`;
+    $("#hLee").onclick=()=>{state.hback={pid:state.hp,sel:k};setView("overview");ovSelect(e.id,true);window.scrollTo({top:0})};
+    $("#hLee2").onclick=()=>{state.hback={pid:state.hp,sel:k};gotoEvent(e.id)};return}
+  const h=H.find(x=>x.id===k);if(!h){c.innerHTML="";return}
+  const cf=CONF[h.conf]||CONF.common;
+  const near=E.filter(e=>e.key).sort((p1,p2)=>Math.abs(p1.y-h.y)-Math.abs(p2.y-h.y))[0];
+  const showLee=near&&Math.abs(near.y-h.y)<=8&&h.y>=1923;
+  c.innerHTML=`<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
+  ${h.note?`<p class="hnote">⚑ ${esc(h.note)}</p>`:""}
+  ${(h.aliases||[]).length?`<details class="alias"><summary>各方稱謂</summary><ul>${h.aliases.map(a=>`<li><b>${esc(a.term)}</b>：${esc(a.note)}</li>`).join("")}</ul></details>`:""}
+  ${(h.src||[]).length?`<p class="src">來源：${h.src.map(s=>`<a href="${esc(s.u)}" target="_blank" rel="noopener noreferrer">${esc(s.t)}</a>`).join("、")}</p>`:`<p class="src">來源：待補</p>`}
+  <div class="act">${h.bg&&BG.find(g=>g.id===h.bg)?`<button class="pri" data-bg="${h.bg}">背景：${esc(BG.find(g=>g.id===h.bg).t)} →</button>`:""}${showLee?`<button id="hLeeNear">李登輝視角：${esc(leeShort(near))}（${near.y}）→</button>`:""}</div>`;
+  c.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{state.hback={pid:state.hp,sel:k};gotoBg(b.dataset.bg)});
+  const ln=$("#hLeeNear");if(ln)ln.onclick=()=>{state.hback={pid:state.hp,sel:k};setView("overview");ovSelect(near.id,true);window.scrollTo({top:0})}
+}
 
 /* ---------- 回頂部 ---------- */
 addEventListener("scroll",()=>{$("#totop").hidden=scrollY<600},{passive:true});
 $("#totop").onclick=()=>scrollTo({top:0});
 
-setView(location.hash.slice(1)||"overview",false);
+setView(location.hash.slice(1)||"history",false);
 </script>
 </body>
 </html>

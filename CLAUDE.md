@@ -1,6 +1,7 @@
-# 台灣史年表：從荷西到今天（接手說明）
+# 中華民國、台灣史年表（網站標題：台灣史年表：從荷西到今天）接手說明
 
-單檔靜態網站（原生 JS/CSS，無框架），GitHub Pages 發布。**台灣史是主軸，李登輝（讀《餘生》的學習筆記）是可切換的深入視角。**
+單檔靜態網站（原生 JS/CSS，無框架），GitHub Pages 發布（https://github.com/ZLO-25/TWN-history，網站 https://zlo-25.github.io/TWN-history/）。
+**範圍：中華民國史與台灣史（1624 → 今）。台灣史是主軸；中華民國在大陸時期（1912–1949）以「同期中國大陸」軌道／`ctx` 欄位呈現，用來對照台灣同時期的統治政權；李登輝（讀《餘生》的學習筆記）是可切換的深入視角。**
 使用者是台灣的繁體中文讀者，**目的是拿來教別人**，所以內容要容易理解、可教學。
 
 ## 一定要遵守的使用者偏好
@@ -22,11 +23,12 @@ python3 tests/smoke.py        # Playwright 冒煙測試（桌機＋手機，需�
 ```
 src/template.html   頁面外殼：CSS、HTML、全部前端 JS（含 __DATA__ / __BG__ / __HIST__ 佔位符）
 src/data.js         李登輝線：ERAS、METHODS、E（111 則事件）、RELAY
-src/bgdata.js       背景補充專題 BG（目前 38 則，含 4 則 jp-*）
+src/bgdata.js       背景補充專題 BG（目前 39 則，含 4 則 jp-*、1 則 roc-terms）
 src/history.js      台灣史：PERIODS（8 時期）、CONF、H_RAW（事件）
 docs/               ROADMAP.md（待辦與擴充流程）、jp_events.research.json（日治原始查證資料）
 tests/smoke.py      冒煙測試
 ```
+**對話交接摘要見 `docs/CONVERSATION_DIGEST.md`（使用者的所有關鍵決定與已做的事）。**
 頁面（分頁）：台灣史（預設）｜李登輝（總覽圖＋逐年年表同一頁）｜民主接力｜政治手腕｜背景補充｜翻卡複習。
 台灣史三層下鑽：8 時期方塊（上方另有全期泳道圖）→ 該時期泳道圖（統治政權／政治與外交／李登輝線）→ 事件卡。
 
@@ -35,7 +37,8 @@ tests/smoke.py      冒煙測試
 ```
 {y:1930, md:"10月27日", t:"霧社事件", s:"霧社事件"(圖上短標籤≤8字),
  b:"中性陳述", track:"政權"|"政治外交", conf:"verified"|"common"|"disputed",
- aliases:[{term,note}] 各方稱謂, note:"歧異/爭議說明", src:[{t,u}] 來源, bg:"背景專題id"(可選)}
+ aliases:[{term,note}] 各方稱謂, note:"歧異/爭議說明", src:[{t,u}] 來源, bg:"背景專題id"(可選),
+ ctx:"中國大陸"(可選：事件發生地不在台灣時填，會進「同期中國大陸」軌道，事件卡註明同期背景，且不顯示日本年號)}
 ```
 - `conf` 的意思：verified＝各來源一致的事實；common＝常見說法/各來源只是記載不同階段；disputed＝學界或各方有實質爭議。有歧見的事不可標 verified。
 - 時期歸屬依 `y` 落在 `PERIODS` 的 `[a,b)` 區間。`md` 是範圍（如 1895–1902）時改放進標題，`md` 留空。

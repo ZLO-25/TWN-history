@@ -11,7 +11,7 @@
 
 讀《餘生：我的生命之旅與台灣民主之路》的學習筆記，做成互動網頁。
 
-**網站：** https://zlo-25.github.io/lee-teng-hui-timeline/
+**網站：** https://zlo-25.github.io/TWN-history/
 
 ## 內容
 

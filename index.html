@@ -212,10 +212,59 @@ mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;bor
 .totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));border:1px solid var(--line);background:var(--paper);border-radius:999px;width:40px;height:40px;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.12);z-index:4}
 footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
 footer p{margin:0 0 6px;max-width:70ch}
+
+/* 總覽 */
+:root{--c0:var(--seal);--c1:var(--gold);--c2:#3b6d8a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c2:#7fb0cf}}
+:root[data-theme="dark"]{--c2:#7fb0cf}
+#v-overview{width:min(1500px,calc(100vw - 40px));margin-left:50%;transform:translateX(-50%)}
+.ovbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 8px}
+.ovbar .legend{font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}
+.ovbar .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.ovscroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--paper);scrollbar-width:thin}
+#ovSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
+#ovSvg text{fill:var(--ink)}
+#ovSvg .lanebg{fill:color-mix(in srgb,var(--ink) 3%,transparent)}
+#ovSvg .axis{stroke:var(--line);stroke-width:1.5}
+#ovSvg .lead{stroke:var(--line);stroke-width:1}
+#ovSvg .lanelbl{font-size:15px;font-weight:700;fill:var(--muted)}
+#ovSvg .era text{font-size:13px;font-weight:700}
+#ovSvg .era rect{fill:var(--chip);stroke:var(--paper);stroke-width:2}
+#ovSvg .era small{font-size:11px}
+#ovSvg .yr{font-size:11px;fill:var(--muted)}
+#ovSvg .grid{stroke:var(--line);stroke-dasharray:2 4;stroke-width:1}
+#ovSvg .ev{cursor:pointer;outline:none}
+#ovSvg .ev .dot{stroke:var(--paper);stroke-width:2}
+#ovSvg .ev text{font-size:16px;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#ovSvg .ev:hover text,#ovSvg .ev:focus-visible text{font-weight:700}
+#ovSvg .ev.sel .dot{stroke:var(--ink);stroke-width:3}
+#ovSvg .ev.sel text{font-weight:900;fill:var(--seal)}
+#ovSvg .minor{cursor:pointer;outline:none}
+#ovSvg .minor circle{opacity:.55}
+#ovSvg .minor:hover circle,#ovSvg .minor.sel circle{opacity:1}
+#ovSvg .minor.sel circle{stroke:var(--ink);stroke-width:2}
+#ovSvg .office{cursor:pointer}
+#ovSvg .office rect{opacity:.22}
+#ovSvg .office:hover rect,#ovSvg .office.sel rect{opacity:.5}
+#ovSvg .office text{font-size:13px;font-weight:700}
+.ovcard{margin-top:10px;border:1px solid var(--line);border-left:4px solid var(--seal);border-radius:8px;background:var(--paper);padding:12px 16px;min-height:96px}
+.ovcard .hint{color:var(--muted);margin:0}
+.ovcard .d{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ovcard h3{font-family:var(--display);font-size:19px;margin:2px 0 6px;line-height:1.4}
+.ovcard p{margin:0 0 6px;max-width:80ch;font-size:14.5px}
+.ovcard .act{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ovcard .act button{border:1px solid var(--line);background:var(--chip);border-radius:6px;padding:5px 12px;font-size:13.5px}
+.ovcard .act .pri{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ovcard .act .sp{margin-left:auto;display:flex;gap:6px}
+.backpill{position:fixed;left:16px;bottom:16px;z-index:9;border:0;background:var(--seal);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.ev.flash{animation:flash 2s ease-out}
+@keyframes flash{0%,40%{background:color-mix(in srgb,var(--gold) 22%,transparent)}100%{background:transparent}}
+.ev{scroll-margin-top:110px}
 </style>
 </head>
 <body>
 <div class="wrap">
+<button class="backpill" id="backpill" hidden>↩ 回總覽</button>
 <header class="masthead">
   <div>
     <h1>李登輝生平年表</h1>
@@ -225,15 +274,27 @@ footer p{margin:0 0 6px;max-width:70ch}
 </header>
 
 <nav class="tabs" role="tablist" aria-label="主要分頁">
-  <button class="tab" role="tab" data-view="timeline" aria-selected="true">年表<small>生平事件</small></button>
+  <button class="tab" role="tab" data-view="overview" aria-selected="true">總覽<small>一頁看完一生</small></button>
+  <button class="tab" role="tab" data-view="timeline" aria-selected="false">年表<small>生平事件</small></button>
   <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
   <button class="tab" role="tab" data-view="methods">政治手腕<small>六種手法</small></button>
   <button class="tab" role="tab" data-view="background">背景補充<small>台灣史脈絡</small></button>
   <button class="tab" role="tab" data-view="quiz">翻卡複習<small>自我測驗</small></button>
 </nav>
 
+<!-- 總覽 -->
+<section id="v-overview" role="tabpanel">
+  <p class="intro">一張圖看完 1923–2020：上面是李登輝的人生，中間是台灣政局（含蔣經國時代），下面是國際與兩岸。點圖上的事件看摘要，再決定要不要跳到年表或背景補充。</p>
+  <div class="ovbar">
+    <button class="chip" id="ovAll" aria-pressed="false">顯示全部事件（小圓點）</button>
+    <span class="legend"><span><i style="background:var(--c0)"></i>李登輝人生</span><span><i style="background:var(--c1)"></i>台灣政局</span><span><i style="background:var(--c2)"></i>國際與兩岸</span><span>手機可左右滑動</span></span>
+  </div>
+  <div class="ovscroll" id="ovScroll"><svg id="ovSvg" role="group" aria-label="李登輝生平總覽時間軸"></svg></div>
+  <div class="ovcard" id="ovCard" aria-live="polite"></div>
+</section>
+
 <!-- 年表 -->
-<section id="v-timeline" role="tabpanel">
+<section id="v-timeline" role="tabpanel" hidden>
   <p class="intro">一位沒有派系、沒有軍權的農經學者，如何在 12 年內把威權體制改成民主制度。點選分期可以只看那段時間；每則事件點標題展開，底部可以寫自己的筆記。</p>
   <div class="eras-strip" id="erasStrip"></div>
   <div class="bar">
@@ -802,7 +863,7 @@ const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},se
 const eraYear=y=>y<1926?`大正 ${y-1911} 年`:y<=1945?`昭和 ${y-1925} 年`:`民國 ${y-1911} 年`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mName=id=>METHODS.find(m=>m.id===id).name;
-let state={view:"timeline",q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
+let state={view:"overview",from:null,ovSel:null,ovAll:false,q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
 $("#total").textContent=E.length;
 $("#mtotal").textContent=E.filter(e=>e.mv).length;
 $("#cktotal").textContent=E.filter(e=>e.ck).length;
@@ -812,17 +873,18 @@ $("#cktotal").textContent=E.filter(e=>e.ck).length;
 $("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";store.set("theme",r.dataset.theme)};
 
 /* 分頁 */
-const VIEWS=["timeline","relay","methods","background","quiz"];
+const VIEWS=["overview","timeline","relay","methods","background","quiz"];
 function setView(v,push=true){
-  if(!VIEWS.includes(v))v="timeline";
+  if(!VIEWS.includes(v))v="overview";
   state.view=v;
   document.querySelectorAll(".tab").forEach(t=>{t.setAttribute("aria-selected",t.dataset.view===v);if(t.dataset.view===v)t.scrollIntoView({block:"nearest",inline:"center"})});
   VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);
   if(push&&location.hash!=="#"+v)history.replaceState(null,"","#"+v);
-  if(v==="timeline")render();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
+  $("#backpill").hidden=!(state.from!=null&&v!=="overview");
+  if(v==="overview"){state.from=null;$("#backpill").hidden=true;renderOv()}else if(v==="timeline")render();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
 }
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{setView(t.dataset.view);window.scrollTo({top:0})});
-addEventListener("hashchange",()=>setView(location.hash.slice(1)||"timeline",false));
+addEventListener("hashchange",()=>setView(location.hash.slice(1)||"overview",false));
 
 /* ---------- 年表 ---------- */
 const strip=$("#erasStrip");
@@ -970,11 +1032,88 @@ addEventListener("keydown",ev=>{if(state.view!=="quiz"||/INPUT|TEXTAREA/.test(do
   else if(ev.key==="1"&&shown){score.ok++;next()}
   else if(ev.key==="2"&&shown){score.no++;deck.push(deck[qi]);next()}});
 
+
+/* ---------- 總覽 ---------- */
+const OV_SEL=[[1923,"出生於","出生三芝",0],[1943,"進入京都帝國大學","京都帝大",0],[1957,"進入農復會","農復會",0],[1968,"獲康乃爾","康乃爾博士",0],
+[1988,"蔣經國逝世","繼任總統",0],[1996,"首次總統直選","直選當選",0],[2000,"政黨輪替","卸任",0],[2020,"病逝","病逝",0],
+[1947,"二二八事件","二二八",1],[1949,"台灣全面戒嚴","戒嚴",1],[1978,"蔣經國就任總統","蔣經國就任",1],[1979,"美麗島事件","美麗島",1],[1984,"江南案","江南案",1],[1985,"蔣經國宣示","不傳子",1],[1986,"民主進步黨成立","民進黨成立",1],[1987,"解除戒嚴","解嚴",1],[1990,"野百合學運","野百合",1],[1991,"宣布 5 月 1 日","終止動員戡亂",1],[1991,"萬年國會全面退職","萬年國會退職",1],[1994,"第三次修憲","修憲直選",1],[1995,"代表政府為二二八","二二八道歉",1],[1999,"九二一大地震","921",1],
+[1923,"孫文與蘇聯","聯俄容共",2],[1949,"中華民國政府遷往台北","國府遷台",2],[1971,"中華民國退出聯合國","退出聯合國",2],[1978,"美國宣布與中華人民共和國建交","美中斷交",2],[1991,"蘇聯解體","蘇聯解體",2],[1996,"台海飛彈危機","飛彈危機",2],[1999,"「特殊國與國關係」","兩國論",2]];
+const OV_OFF=[[1972.45,1978.45,"政務委員","出任行政院政務委員",0],[1978.45,1981.95,"台北市長","出任台北市長",0],[1981.95,1984.4,"省主席","出任台灣省主席",0],[1984.4,1988.04,"副總統","就任副總統",0],[1988.04,2000.4,"總統（1988–2000）","蔣經國逝世",0],[1972.45,1988.04,"蔣經國時代（行政院長 → 總統）","",1]];
+const OV_ERA=[["a",1923,1946],["b",1946,1972],["c",1972,1988.04],["d",1988.04,2000.4],["e",2000.4,2020.6]];
+const OV_PTS=[[1923,100],[1945,220],[1972,430],[1988,770],[2000,1310],[2021,1530]];
+const OV_W=1580, OV_LANES=["李登輝人生","台灣政局","國際與兩岸"];
+const ovX=(y,md)=>{const m=/月/.test(md||"")?parseInt(md):6;const v=y+(m-1)/12+0.04;for(let i=1;i<OV_PTS.length;i++){const[a,ax]=OV_PTS[i-1],[b,bx]=OV_PTS[i];if(v<=b)return ax+(Math.max(v,a)-a)/(b-a)*(bx-ax)}return OV_PTS[OV_PTS.length-1][1]};
+const ovYX=v=>{for(let i=1;i<OV_PTS.length;i++){const[a,ax]=OV_PTS[i-1],[b,bx]=OV_PTS[i];if(v<=b)return ax+(Math.max(v,a)-a)/(b-a)*(bx-ax)}return OV_PTS[OV_PTS.length-1][1]};
+function ovLane(e){const s=e.t+" "+e.tags.join(" ");
+  if(/蔣經國|蔣介石/.test(e.t))return 1;
+  if(/外交|美國|日本|斷交|聯合國|蘇聯|冷戰|兩岸|飛彈|國共|中共|中國|大陸|海基|辜汪|九二共識|統一|金門|砲戰|俄/.test(s))return 2;
+  if(/出生|進入|獲|結婚|畢業|赴|出任|就任|辭|病逝|出版|任教|服役|入伍|返台|回台|擔任/.test(e.t))return 0;
+  return 1}
+function ovBuild(){
+  const cur=[];
+  OV_SEL.forEach(([y,p,lab,lane])=>{const e=E.find(x=>x.y===y&&x.t.startsWith(p));if(e)cur.push({e,lab,lane,major:true})});
+  if(state.ovAll){const used=new Set(cur.map(c=>c.e.id));E.forEach(e=>{if(!used.has(e.id))cur.push({e,lab:"",lane:ovLane(e),major:false})})}
+  return cur}
+function renderOv(){
+  const svg=$("#ovSvg");const items=ovBuild();
+  items.forEach(c=>{c.x=ovX(c.e.y,c.e.md)});
+  const lanes=[0,1,2].map(l=>{
+    const list=items.filter(c=>c.lane===l&&c.major).sort((a,b)=>a.x-b.x);const rowsEnd=[];
+    list.forEach(c=>{const w=c.lab.length*16+12;c.l=Math.max(104,Math.min(OV_W-w-6,c.x-w/2));c.r=c.l+w;
+      let k=rowsEnd.findIndex(end=>end<c.l-4);if(k<0){k=rowsEnd.length;rowsEnd.push(0)}rowsEnd[k]=c.r;c.row=k});
+    return {list,rows:Math.max(1,rowsEnd.length)}});
+  let Y=58,out="",lanesOut="";
+  lanes.forEach((L,l)=>{L.hasBar=l<2;L.h=10+L.rows*25+8+(L.hasBar?32:16);L.y0=Y;L.axis=Y+10+L.rows*25+8;Y+=L.h+4});
+  const H=Y+26;
+  svg.setAttribute("viewBox",`0 0 ${OV_W} ${H}`);
+  let s=`<g class="era">`;
+  OV_ERA.forEach(([id,a,b])=>{const er=ERAS.find(x=>x.id===id);const x1=ovYX(a),x2=ovYX(b);
+    s+=`<rect x="${x1}" y="6" width="${x2-x1}" height="40" rx="4"/><text x="${(x1+x2)/2}" y="24" text-anchor="middle">${er.name}</text><text class="small" x="${(x1+x2)/2}" y="40" text-anchor="middle" style="font-size:11px;font-weight:400;fill:var(--muted)">${er.range}</text>`});
+  s+=`</g>`;
+  [1930,1940,1950,1960,1970,1980,1990,2000,2010,2020].forEach(y=>{const x=ovYX(y);s+=`<line class="grid" x1="${x}" x2="${x}" y1="50" y2="${H-20}"/><text class="yr" x="${x}" y="${H-6}" text-anchor="middle">${y}</text>`});
+  lanes.forEach((L,l)=>{
+    s+=`<rect class="lanebg" x="0" y="${L.y0}" width="${OV_W}" height="${L.h}" ${l%2?'':'style="opacity:.0"'}/><text class="lanelbl" x="8" y="${L.axis-6}" style="fill:var(--c${l})">${OV_LANES[l]}</text><line class="axis" x1="100" x2="${OV_W-20}" y1="${L.axis}" y2="${L.axis}"/>`;
+    OV_OFF.filter(o=>o[4]===l).forEach(o=>{const e=E.find(x=>x.t.startsWith(o[3]||"\u0000"));const x1=ovYX(o[0]),x2=ovYX(o[1]);
+      s+=`<g class="office" ${e?`data-id="${e.id}" role="button" tabindex="0"`:""}><rect x="${x1}" y="${L.axis+8}" width="${x2-x1}" height="20" rx="3" style="fill:var(--c${l})"/><text x="${(x1+x2)/2}" y="${L.axis+23}" text-anchor="middle" style="fill:var(--ink)">${o[2]}</text></g>`});
+    L.list.forEach(c=>{const top=L.y0+8+(L.rows-1-c.row)*25;
+      s+=`<g class="ev" data-id="${c.e.id}" role="button" tabindex="0" aria-label="${esc(c.e.y+' '+c.e.t)}"><line class="lead" x1="${c.x}" x2="${c.x}" y1="${top+22}" y2="${L.axis}"/><text x="${(c.l+c.r)/2}" y="${top+17}" text-anchor="middle">${esc(c.lab)}</text><circle class="dot" cx="${c.x}" cy="${L.axis}" r="6.5" style="fill:var(--c${l})"/><title>${esc(c.e.y+(c.e.md?" "+c.e.md:"")+"　"+c.e.t)}</title></g>`});
+    items.filter(c=>c.lane===l&&!c.major).forEach(c=>{
+      s+=`<g class="minor" data-id="${c.e.id}" role="button" tabindex="0" aria-label="${esc(c.e.y+' '+c.e.t)}"><circle cx="${c.x}" cy="${L.axis}" r="4" style="fill:var(--c${l})"/><title>${esc(c.e.y+(c.e.md?" "+c.e.md:"")+"　"+c.e.t)}</title></g>`})});
+  svg.innerHTML=s;
+  svg.querySelectorAll("[data-id]").forEach(g=>{const id=+g.dataset.id;g.onclick=()=>ovSelect(id);g.onkeydown=ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();ovSelect(id)}}});
+  ovMark();ovCard();
+  $("#ovAll").setAttribute("aria-pressed",state.ovAll);$("#ovAll").textContent=state.ovAll?"只顯示主要事件":"顯示全部事件（小圓點）";
+}
+function ovMark(){document.querySelectorAll("#ovSvg [data-id]").forEach(g=>g.classList.toggle("sel",+g.dataset.id===state.ovSel))}
+function ovSelect(id,scroll){state.ovSel=id;ovMark();ovCard();if(scroll){const g=document.querySelector(`#ovSvg [data-id="${id}"]`);if(g)g.scrollIntoView({inline:"center",block:"nearest"})}}
+function ovCard(){
+  const c=$("#ovCard");const e=E.find(x=>x.id===state.ovSel);
+  if(!e){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現摘要。<br>點最上面的色塊可看人生階段；底下的長條是各個職位的任期。</p>`;return}
+  const clean=e.w.replace(/\[\[bg:[\w-]+\]\]/g,"").trim();
+  const bgs=[...e.w.matchAll(/\[\[bg:([\w-]+)\]\]/g)].map(m=>BG.find(x=>x.id===m[1])).filter(Boolean);
+  let body=e.b;if(body.length>150)body=body.slice(0,150).replace(/[，、；。]?[^，、；。]*$/,"")+"……";
+  c.innerHTML=`<div class="d">${e.y}${e.md?" · "+e.md:""} · ${eraYear(e.y)} · ${e.y-1923} 歲</div><h3>${esc(e.t)}</h3><p>${esc(body)}</p>${clean?`<p style="color:var(--muted)"><b style="color:var(--seal)">串連：</b>${esc(clean)}</p>`:""}
+  <div class="act"><button class="pri" id="ovGo">看年表完整內容 →</button>${bgs.map(g=>`<button data-bg="${g.id}">背景：${esc(g.t)} →</button>`).join("")}<span class="sp"><button id="ovPrev" aria-label="上一個">← 前一個</button><button id="ovNext" aria-label="下一個">後一個 →</button></span></div>`;
+  $("#ovGo").onclick=()=>gotoEvent(e.id);
+  c.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{state.from=e.id;gotoBg(b.dataset.bg)});
+  const order=[...document.querySelectorAll("#ovSvg .ev,#ovSvg .minor")].map(g=>+g.dataset.id).map(i=>E.find(x=>x.id===i)).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));
+  const i=order.findIndex(x=>x.id===e.id);
+  const step=d=>{const n=order[(i+d+order.length)%order.length];ovSelect(n.id,true)};
+  $("#ovPrev").onclick=()=>step(-1);$("#ovNext").onclick=()=>step(1);
+}
+$("#ovAll").onclick=()=>{state.ovAll=!state.ovAll;renderOv()};
+function gotoEvent(id){
+  state.from=id;state.q="";$("#q").value="";state.era="all";state.method=null;state.keyOnly=state.mvOnly=state.ckOnly=false;state.expandAll=false;state.open.add(id);
+  setView("timeline");sync();
+  requestAnimationFrame(()=>{const el=document.getElementById("ev-"+id);if(el){el.scrollIntoView({block:"start"});el.classList.add("flash")}});
+}
+$("#backpill").onclick=()=>{const id=state.from;state.ovSel=id;setView("overview");window.scrollTo({top:0});ovSelect(id,true)};
+
 /* ---------- 回頂部 ---------- */
 addEventListener("scroll",()=>{$("#totop").hidden=scrollY<600},{passive:true});
 $("#totop").onclick=()=>scrollTo({top:0});
 
-setView(location.hash.slice(1)||"timeline",false);
+setView(location.hash.slice(1)||"overview",false);
 </script>
 </body>
 </html>

@@ -826,11 +826,11 @@ const H_RAW=[
 {
 "y": 1912,
 "md": "3月10日",
-"t": "袁世凱在北京就任臨時大總統，政府北遷",
+"t": "袁世凱在北京就任臨時大總統",
 "s": "袁世凱就任",
-"b": "1912年3月10日，袁世凱出任第二任臨時大總統，政府所在地由南京轉至北京。此後的中央政府一般稱北京政府或北洋政府。",
+"b": "1912年2月15日南京臨時參議院選出袁世凱為臨時大總統；3月10日袁在北京就任。孫文於4月1日解職後，臨時參議院北遷，此後中央政府一般稱北京政府或北洋政府。",
 "track": "政權",
-"conf": "common",
+"conf": "verified",
 "aliases": [
 {
 "term": "北京政府",
@@ -841,7 +841,7 @@ const H_RAW=[
 "note": "以北洋軍系掌權得名；英文維基指其為國民黨後來普及的稱法，帶有負面意涵"
 }
 ],
-"note": "3月10日在各來源的描述不同：英文《Xinhai Revolution》寫『3月10日宣誓就任總統』；英文《Provisional Government (1912–1913)》寫臨時參議院在3月10日選出袁為第二任臨時大總統，並把3月10日列為政府遷北京之日，未提宣誓儀式。『選舉』與『就職』的日期是否同一日，目前未見可引用來源釐清，故標 common。",
+"note": "英文維基《Provisional Government (1912–1913)》把參議院選舉寫在3月10日，與香港中華文化資源（chiculture.org.hk）及archontology的記載（2月15日選出、3月10日就任）不一致，這裡採後者。『政府北遷』是3至4月間陸續完成的過程，並非3月10日單日的事。",
 "src": [
 {
 "t": "Wikipedia: Xinhai Revolution",
@@ -854,6 +854,14 @@ const H_RAW=[
 {
 "t": "Wikipedia: Beiyang government",
 "u": "https://en.wikipedia.org/wiki/Beiyang_government"
+},
+{
+"t": "香港中華文化資源：中華民國臨時政府",
+"u": "https://chiculture.org.hk/en/node/2163"
+},
+{
+"t": "Archontology：China 1912 Provisional Presidents",
+"u": "https://archontology.org/nations/china/china-roc/00_1912_28_s.php"
 }
 ],
 "bg": "roc-terms",
@@ -925,19 +933,19 @@ const H_RAW=[
 },
 {
 "y": 1914,
-"md": "",
+"md": "7月8日",
 "t": "孫文在日本另組中華革命黨",
 "s": "中華革命黨",
-"b": "二次革命失敗、國民黨被取締後，孫文在日本另組中華革命黨。1919年孫文在上海再改組，並於10月10日定名中國國民黨。",
+"b": "二次革命失敗、國民黨被取締後，孫文在日本另組中華革命黨，1914年7月8日在東京召開成立大會。1919年孫文在上海再改組，並於10月10日定名中國國民黨。",
 "track": "政權",
 "conf": "common",
 "aliases": [
 {
 "term": "中華革命黨",
-"note": "1914年在東京成立的說法常見，但所引英文維基未列明年份"
+"note": "1914年在東京成立，後於1919年改組為中國國民黨"
 }
 ],
-"note": "『1914年』未見於所讀來源，所讀到的英文維基《Kuomintang》只寫『不久後（later）孫在日本成立中華革命黨』，未註明年份，因此年份待以黨史資料或國史館資料補證。",
+"note": "成立大會日期依國父紀念館孫學研究資料（成立大會照片說明載1914年7月8日）；英文維基《Kuomintang》只寫「不久後在日本成立」，未標年份。",
 "src": [
 {
 "t": "Wikipedia: Kuomintang",
@@ -946,6 +954,10 @@ const H_RAW=[
 {
 "t": "Wikipedia: 1st National Congress of the Kuomintang",
 "u": "https://en.wikipedia.org/wiki/1st_National_Congress_of_the_Kuomintang"
+},
+{
+"t": "國父紀念館孫學研究：中華革命黨成立大會",
+"u": "https://sunology.culture.tw/detail/bb1c35f33545a55aae54c032155c9c09/"
 }
 ],
 "bg": "roc-terms",
@@ -959,13 +971,8 @@ const H_RAW=[
 "b": "1919年10月10日，孫文在上海將中華革命黨改稱中國國民黨，沿用至今。",
 "track": "政權",
 "conf": "common",
-"aliases": [
-{
-"term": "中華國民黨",
-"note": "部分文獻對1919年更名前後的稱呼有『中華國民黨』說法；目前未見可引用來源逐一釐清"
-}
-],
-"note": "英文維基《Kuomintang》寫1919年10月10日於上海以『Kuomintang of China』重建；《1st National Congress》寫1919年由中華革命黨改稱。中文維基《中國國民黨》頁面讀取結果僅有英文摘要，亦同為1919年。『中華國民黨』一詞是否曾為正式名稱，目前未見可引用來源。",
+"aliases": [],
+"note": "英文維基《Kuomintang》寫1919年10月10日於上海重建並定名；《1st National Congress》寫1919年由中華革命黨改稱，兩者一致。目前只有維基類來源，黨史館或國史館資料未見可引用。",
 "src": [
 {
 "t": "Wikipedia: Kuomintang",
@@ -1192,7 +1199,7 @@ const H_RAW=[
 "md": "12月25日",
 "t": "制憲國民大會三讀通過《中華民國憲法》",
 "s": "制憲通過",
-"b": "國民大會於1946年12月25日在南京三讀通過憲法，國民政府於1947年1月1日公布，自1947年12月25日起施行。中國共產黨未參加國民大會，並否認該憲法。",
+"b": "國民大會於1946年12月25日在南京三讀通過憲法，國民政府於1947年1月1日公布，自1947年12月25日起施行。中國共產黨與中國民主同盟未參加國民大會，中共並否認該憲法。",
 "track": "政權",
 "conf": "verified",
 "aliases": [
@@ -1205,7 +1212,7 @@ const H_RAW=[
 "note": "憲法施行，1947年12月25日（今臺灣行憲紀念日）"
 }
 ],
-"note": "司法院大法官網站所附憲法資料與英文維基《Constitution of the Republic of China》日期一致。",
+"note": "司法院大法官網站所附憲法資料與英文維基《Constitution of the Republic of China》日期一致（通過12月25日、公布1月1日、施行1947年12月25日）。",
 "src": [
 {
 "t": "司法院：憲法相關資料",
@@ -1214,10 +1221,6 @@ const H_RAW=[
 {
 "t": "Wikipedia: Constitution of the Republic of China",
 "u": "https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China"
-},
-{
-"t": "NOWnews：行憲紀念日相關報導（確認1947/12/25施行）",
-"u": "https://www.nownews.com/news/politics/5006630"
 }
 ],
 "bg": "roc-terms",
@@ -1260,7 +1263,7 @@ const H_RAW=[
 "md": "5月20日",
 "t": "行憲後第一任總統就職，國民政府改組",
 "s": "第一任總統就職",
-"b": "1948年5月20日，蔣中正與李宗仁就任行憲後第一任總統與副總統；國民政府主席改由總統擔任，國民政府的機關轉為總統府幕僚機關，中央政府改稱中華民國政府，訓政時期在制度上結束。",
+"b": "1948年5月20日，蔣中正與李宗仁就任行憲後第一任總統與副總統；國民政府主席一職由總統取代，國民政府改組為總統府，中央政府改稱中華民國政府，訓政時期在制度上結束。",
 "track": "政權",
 "conf": "common",
 "aliases": [
@@ -1269,7 +1272,7 @@ const H_RAW=[
 "note": "憲法施行後的中華民國政府"
 }
 ],
-"note": "中文維基《國民政府》與《中華民國總統》均載5月20日；英文維基《Nationalist government》正文寫5月20日解散、infobox寫5月28日，且英文《Republic of China (1912–1949)》寫國民大會選舉在1948年3月21日，與其他來源敘述不一，目前未見可引用來源確認選舉日期，故不列。",
+"note": "中文維基《國民政府》與《中華民國總統》均載5月20日；英文維基《Nationalist government》正文寫5月20日解散、infobox寫5月28日。總統、副總統由國民大會於1948年4月間選出，確切選舉日期各來源記載不一（英文《Republic of China (1912–1949)》寫國大選舉在3月21日，與其他來源不同），此處不列。",
 "src": [
 {
 "t": "中文維基百科：國民政府",
@@ -1330,18 +1333,18 @@ const H_RAW=[
 },
 {
 "term": "播遷來臺",
-"note": "臺灣方面部分文獻用語（twcenter作者使用）"
+"note": "中華民國官方與國民黨方面常用的說法"
 },
 {
 "term": "撤退來臺／退入臺灣",
-"note": "英文維基標題用 retreat；中文『撤退』『流亡』為批評性或中性並存的稱呼"
+"note": "英文維基標題用 retreat；『撤退』『退入』在中文敘述中為中性或批評性並存的稱呼"
 },
 {
 "term": "流亡政府（government-in-exile）",
 "note": "部分學者與臺灣獨立派的看法，只作並列陳述"
 }
 ],
-"note": "日期各來源不同：英文《Great Retreat》寫12月7日抵臺；英文《Republic of China (1912–1949)》寫12月7日宣布臺北為臨時首都；ipfs版英文維基《1949 in the Republic of China》與history.com寫12月8日；美國國務院文件（FRUS 1949 VIII，1949年12月15日備忘錄）顯示美方到12月15日尚未接獲中華民國政府遷都臺北的正式通知。Taipei Times（1999）與twcenter文章對12月7日遷台過程描述不一，其中twcenter未用『遷都』，且引蔣中正之語稱『中華民國到去年終就隨大陸淪陷而已滅亡』。行政院決議全文目前未見可引用來源。",
+"note": "日期各來源不同：英文《Great Retreat》寫12月7日抵臺；英文《Republic of China (1912–1949)》寫12月7日宣布臺北為臨時首都；英文維基《1949 in the Republic of China》與history.com寫12月8日；Taipei Times（1999）同時提到7日與8日（8日是國民黨宣布遷臺）；美國國務院文件（FRUS 1949 VIII，12月15日備忘錄）顯示美方到12月15日尚未接獲遷都臺北的正式通知。爭議較大的是用語（遷都、播遷、撤退、流亡）。台灣研究中心（twcenter）一文以『撤退』『退入』『流亡』描述，並引蔣中正之語稱『中華民國到去年終就隨大陸淪陷而已滅亡』；該文標示講話日期為1950年3月13日，英文版標3月3日，原講稿出處未附。行政院決議全文未見可引用來源。",
 "src": [
 {
 "t": "Wikipedia: Retreat of the government of Republic of China to Taiwan",

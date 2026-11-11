@@ -275,6 +275,21 @@ footer p{margin:0 0 6px;max-width:70ch}
 .hhead{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
 .hhead h2{font-family:var(--display);font-size:22px;margin:0}
 .hhead p{margin:2px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+#hAll{display:block;width:100%;min-width:720px;height:auto;font-family:var(--body)}
+#hAll text{fill:var(--ink)}
+#hAll .axis{stroke:var(--line);stroke-width:1.5}
+#hAll .grid{stroke:var(--line);stroke-dasharray:2 4}
+#hAll .lanelbl{font-size:14px;font-weight:700}
+#hAll .yr{font-size:11px;fill:var(--muted)}
+#hAll .bar{cursor:pointer}
+#hAll .bar rect{stroke:var(--bg);stroke-width:1.5}
+#hAll .bar text{fill:#fff;font-size:13px;font-weight:600;pointer-events:none}
+#hAll .bar:hover rect,#hAll .dot:hover circle{filter:brightness(1.12)}
+#hAll .dot{cursor:pointer}
+#hAll .band{fill:var(--seal);opacity:.08;pointer-events:none}
+#hAll .tbd{font-size:12px;fill:var(--muted)!important}
+.hall{margin:14px 0 18px}.hallh{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
 #hSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
 #hSvg text{fill:var(--ink)}
 #hSvg .axis{stroke:var(--line);stroke-width:1.5}
@@ -313,8 +328,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 
 <nav class="tabs" role="tablist" aria-label="主要分頁">
   <button class="tab" role="tab" data-view="history" aria-selected="true">台灣史<small>1624 至今</small></button>
-  <button class="tab" role="tab" data-view="overview" aria-selected="false">李登輝總覽<small>一頁看完一生</small></button>
-  <button class="tab" role="tab" data-view="timeline" aria-selected="false">李登輝年表<small>生平事件</small></button>
+  <button class="tab" role="tab" data-view="overview" aria-selected="false">李登輝<small>總覽圖＋逐年年表</small></button>
   <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
   <button class="tab" role="tab" data-view="methods">政治手腕<small>六種手法</small></button>
   <button class="tab" role="tab" data-view="background">背景補充<small>台灣史脈絡</small></button>
@@ -324,6 +338,11 @@ footer p{margin:0 0 6px;max-width:70ch}
 <!-- 台灣史 -->
 <section id="v-history" role="tabpanel">
   <p class="intro">從荷蘭、西班牙來台（1624）到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
+  <div class="hall">
+    <div class="hallh"><b>整段台灣史一張圖</b><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交（已補完的事件）</span><span><i style="background:var(--c1)"></i>李登輝線</span></span></div>
+    <div class="ovscroll"><svg id="hAll" role="group" aria-label="台灣史全期泳道圖"></svg></div>
+    <p class="hallnote">點色條或圓點，會打開該時期的細部圖。統治政權只畫主要政權的大略起訖，1895 年台灣民主國等短暫政權未畫出；「政治與外交」目前只有日治時期補完，其他時期之後逐期加入。</p>
+  </div>
   <div class="hblocks" id="hBlocks"></div>
   <div id="hPanel" class="hpanel" hidden>
     <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
@@ -335,7 +354,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 
 <!-- 總覽 -->
 <section id="v-overview" role="tabpanel" hidden>
-  <p class="intro">一張圖看完 1923–2020：上面是李登輝的人生，中間是台灣政局（含蔣經國時代），下面是國際與兩岸。點圖上的事件看摘要，再決定要不要跳到年表或背景補充。</p>
+  <p class="intro">這一頁分兩半：上半是 1923–2020 的總覽圖（李登輝的人生、台灣政局、國際與兩岸），點事件看摘要；下半是逐年年表，可搜尋、篩選、寫筆記。圖上點「看下方年表」會跳到那則事件，再按「↩ 回總覽圖」就回來。</p>
   <div class="ovbar">
     <button class="chip" id="ovAll" aria-pressed="false">顯示全部事件（小圓點）</button>
     <span class="legend"><span><i style="background:var(--c0)"></i>李登輝人生</span><span><i style="background:var(--c1)"></i>台灣政局</span><span><i style="background:var(--c2)"></i>國際與兩岸</span><span>可左右滑動</span></span>
@@ -346,6 +365,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 
 <!-- 年表 -->
 <section id="v-timeline" role="tabpanel" hidden>
+  <h2 class="subh" id="tlHead">逐年年表</h2>
   <p class="intro">一位沒有派系、沒有軍權的農經學者，如何在 12 年內把威權體制改成民主制度。點選分期可以只看那段時間；每則事件點標題展開，底部可以寫自己的筆記。</p>
   <div class="eras-strip" id="erasStrip"></div>
   <div class="bar">
@@ -1693,19 +1713,19 @@ $("#cktotal").textContent=E.filter(e=>e.ck).length;
 $("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";store.set("theme",r.dataset.theme)};
 
 /* 分頁 */
-const VIEWS=["history","overview","timeline","relay","methods","background","quiz"];
+const VIEWS=["history","overview","relay","methods","background","quiz"];
 function setView(v,push=true){
+  if(v==="timeline")v="overview";
   if(!VIEWS.includes(v))v="history";
   state.view=v;
   document.querySelectorAll(".tab").forEach(t=>{t.setAttribute("aria-selected",t.dataset.view===v);if(t.dataset.view===v)t.scrollIntoView({block:"nearest",inline:"center"})});
-  VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);
+  VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);$("#v-timeline").hidden=v!=="overview";
   if(push&&location.hash!=="#"+v)history.replaceState(null,"","#"+v);
   if(v==="history")state.hback=null;
-  if(v==="overview")state.from=null;
   refreshPill();
-  if(v==="history")renderHistory();else if(v==="overview")renderOv();else if(v==="timeline")render();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
+  if(v==="history")renderHistory();else if(v==="overview"){renderOv();render()}else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
 }
-document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{setView(t.dataset.view);window.scrollTo({top:0})});
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{state.from=null;setView(t.dataset.view);window.scrollTo({top:0})});
 addEventListener("hashchange",()=>setView(location.hash.slice(1)||"history",false));
 
 /* ---------- 年表 ---------- */
@@ -1757,7 +1777,7 @@ function sync(){
   $("#expand").textContent=state.expandAll?"全部收合":"全部展開";
   $("#activeM").innerHTML=state.method?`手法：${mName(state.method)}<button id="clrM">清除</button>`:"";
   if(state.method)$("#clrM").onclick=()=>{state.method=null;sync()};
-  if(state.view==="timeline")render();
+  if(state.view==="overview")render();
 }
 $("#q").oninput=ev=>{state.q=ev.target.value.trim();sync()};
 $("#keyonly").onclick=()=>{state.keyOnly=!state.keyOnly;sync()};
@@ -1915,7 +1935,7 @@ function ovCard(){
   const bgs=[...e.w.matchAll(/\[\[bg:([\w-]+)\]\]/g)].map(m=>BG.find(x=>x.id===m[1])).filter(Boolean);
   let body=e.b;if(body.length>150)body=body.slice(0,150).replace(/[，、；。]?[^，、；。]*$/,"")+"……";
   c.innerHTML=`<div class="d">${e.y}${e.md?" · "+e.md:""} · ${eraYear(e.y)} · ${e.y-1923} 歲</div><h3>${esc(e.t)}</h3><p>${esc(body)}</p>${clean?`<p style="color:var(--muted)"><b style="color:var(--seal)">串連：</b>${esc(clean)}</p>`:""}
-  <div class="act"><button class="pri" id="ovGo">看年表完整內容 →</button>${bgs.map(g=>`<button data-bg="${g.id}">背景：${esc(g.t)} →</button>`).join("")}<span class="sp"><button id="ovPrev" aria-label="上一個">← 前一個</button><button id="ovNext" aria-label="下一個">後一個 →</button></span></div>`;
+  <div class="act"><button class="pri" id="ovGo">看下方年表完整內容 ↓</button>${bgs.map(g=>`<button data-bg="${g.id}">背景：${esc(g.t)} →</button>`).join("")}<span class="sp"><button id="ovPrev" aria-label="上一個">← 前一個</button><button id="ovNext" aria-label="下一個">後一個 →</button></span></div>`;
   $("#ovGo").onclick=()=>gotoEvent(e.id);
   c.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{state.from=e.id;gotoBg(b.dataset.bg)});
   const order=[...document.querySelectorAll("#ovSvg .ev,#ovSvg .minor")].map(g=>+g.dataset.id).map(i=>E.find(x=>x.id===i)).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));
@@ -1929,12 +1949,12 @@ function gotoEvent(id){
   setView("timeline");sync();
   requestAnimationFrame(()=>{const el=document.getElementById("ev-"+id);if(el){el.scrollIntoView({block:"start"});el.classList.add("flash")}});
 }
-function refreshPill(){const p=$("#backpill");let show=false,txt="↩ 回總覽";
-  if(state.from!=null&&state.view!=="overview")show=true;
+function refreshPill(){const p=$("#backpill");let show=false,txt="↩ 回總覽圖";
+  if(state.from!=null)show=true;
   else if(state.hback&&state.view!=="history"){show=true;txt="↩ 回台灣史"}
   p.textContent=txt;p.hidden=!show}
 $("#backpill").onclick=()=>{
-  if(state.from!=null&&state.view!=="overview"){const id=state.from;state.ovSel=id;const hb=state.hback;setView("overview");state.hback=hb;refreshPill();window.scrollTo({top:0});ovSelect(id,true)}
+  if(state.from!=null){const id=state.from;state.from=null;state.ovSel=id;if(state.view!=="overview")setView("overview");refreshPill();window.scrollTo({top:0});ovMark();ovSelect(id,true)}
   else if(state.hback){const hb=state.hback;state.hp=hb.pid;state.hsel=hb.sel;setView("history");window.scrollTo({top:0})}};
 
 
@@ -1944,12 +1964,47 @@ const H_LANES=["統治政權","政治與外交","李登輝線"];
 const H_LC=["var(--c0)","var(--c2)","var(--c1)"];
 function leeInPeriod(p){return E.filter(e=>e.key&&e.y>=p.a&&e.y<p.b)}
 function leeShort(e){const s=OV_SEL.find(x=>x[0]===e.y&&e.t.startsWith(x[1]));return s?s[2]:e.t.slice(0,7)}
+
+const HALL_PTS=[[1624,0],[1683,.14],[1895,.42],[1945,.62],[1987,.84],[2027,1]];
+function hallX(y,x0,x1){let i=0;while(i<HALL_PTS.length-2&&y>HALL_PTS[i+1][0])i++;const [a,fa]=HALL_PTS[i],[b,fb]=HALL_PTS[i+1];return x0+(fa+(Math.max(a,Math.min(b,y))-a)/(b-a)*(fb-fa))*(x1-x0)}
+function hallInv(f){f=Math.max(0,Math.min(1,f));let i=0;while(i<HALL_PTS.length-2&&f>HALL_PTS[i+1][1])i++;const [a,fa]=HALL_PTS[i],[b,fb]=HALL_PTS[i+1];return a+(f-fa)/(fb-fa)*(b-a)}
+const HALL_BARS=[
+ [1624,1662,"荷蘭",0,0,"荷蘭統治南部（1624–1662）"],[1626,1642,"西班牙",1,0,"西班牙佔領北部（1626–1642）"],[1662,1683,"鄭氏",0,1,"鄭氏政權（1662–1683）"],
+ [1683,1895,"清朝",0,2,"清領（1683–1895）"],[1895,1945,"日本",0,3,"日治（1895–1945）"],[1945,2027,"中華民國",0,4,"中華民國（1945 接收至今）"]];
+function renderHall(){
+  const svg=$("#hAll");if(!svg)return;const W=1000,x0=92,x1=W-24,rh=26;let s="";
+  const cur=PERIODS.find(p=>p.id===state.hp);
+  if(cur)s+=`<rect class="band" x="${hallX(Math.max(1624,cur.a),x0,x1)}" y="4" width="${hallX(Math.min(2027,cur.b),x0,x1)-hallX(Math.max(1624,cur.a),x0,x1)}" height="226"/>`;
+  [1624,1683,1895,1945,1987,2026].forEach(y=>{const x=hallX(y,x0,x1);s+=`<line class="grid" x1="${x}" x2="${x}" y1="4" y2="226"/><text class="yr" x="${x}" y="244" text-anchor="${y===2026?"end":y===1624?"start":"middle"}">${y}</text>`});
+  // lane 0
+  s+=`<text class="lanelbl" x="8" y="48" style="fill:var(--c0)">統治政權</text>`;
+  HALL_BARS.forEach(([a,b,n,row,_,tip])=>{const xa=hallX(a,x0,x1),xb=hallX(b,x0,x1),y=10+row*(rh+3);
+    s+=`<g class="bar" data-hy="${n==="中華民國"?1986:(a+b)/2}"><title>${tip}</title><rect x="${xa}" y="${y}" width="${xb-xa}" height="${rh}" rx="4" fill="var(--c0)" opacity="${n==="西班牙"?.7:1}"/>${xb-xa>40?`<text x="${(xa+xb)/2}" y="${y+18}" text-anchor="middle">${n}</text>`:""}</g>${xb-xa<=40?`<text class="tbd" x="${xb+5}" y="${y+18}">${n}</text>`:""}`});
+  const yo=10+2*(rh+3)+rh+4;
+  s+=`<g class="bar" data-hy="1700"><title>原住民族自古居住於此，各族群的社會與信仰延續至今（簡圖以細線表示）</title><rect x="${hallX(1624,x0,x1)}" y="${yo}" width="${x1-x0}" height="6" rx="3" fill="var(--c0)" opacity=".35"/></g><text class="tbd" x="${x0+6}" y="${yo+20}">原住民族：自古居住，延續至今</text>`;
+  s+=`<line class="axis" x1="${x0}" x2="${x1}" y1="134" y2="134"/>`;
+  // lane 1
+  s+=`<text class="lanelbl" x="8" y="165" style="fill:var(--c2)">政治與外交</text><line class="axis" x1="${x0}" x2="${x1}" y1="168" y2="168"/>`;
+  PERIODS.filter(p=>p.a>=1624&&!H.some(h=>pOf(h.y)===p)).forEach(p=>{const xa=hallX(p.a,x0,x1),xb=hallX(Math.min(p.b,2027),x0,x1);if(xb-xa>70)s+=`<text class="tbd" x="${(xa+xb)/2}" y="160" text-anchor="middle">待擴充</text>`});
+  H.filter(h=>h.track==="政治外交"||h.track==="政權").forEach(h=>{const x=hallX(h.y+(h.md&&/月/.test(h.md)?(parseInt(h.md)-1)/12:.5),x0,x1);
+    s+=`<g class="dot" data-hid="${h.id}"><title>${h.y} ${esc(h.t)}</title><circle cx="${x}" cy="${h.track==="政權"?150:168}" r="5" fill="${h.track==="政權"?"var(--c0)":"var(--c2)"}"/></g>`});
+  // lane 2
+  s+=`<text class="lanelbl" x="8" y="207" style="fill:var(--c1)">李登輝線</text><line class="axis" x1="${x0}" x2="${x1}" y1="210" y2="210"/>`;
+  s+=`<g class="bar" data-hy="1970"><title>李登輝生平（1923–2020）</title><rect x="${hallX(1923,x0,x1)}" y="196" width="${hallX(2020.6,x0,x1)-hallX(1923,x0,x1)}" height="6" rx="3" fill="var(--c1)" opacity=".35"/></g>`;
+  E.filter(e=>e.key).forEach(e=>{const x=hallX(e.y+.5,x0,x1);s+=`<g class="dot" data-lee="${e.id}"><title>${e.y} ${esc(e.t)}</title><circle cx="${x}" cy="210" r="4.5" fill="var(--c1)"/></g>`});
+  svg.setAttribute("viewBox","0 0 "+W+" 254");svg.innerHTML=s;
+  const open=(pid,sel)=>{state.hp=pid;state.hsel=sel||null;renderHistory();setTimeout(()=>$("#hPanel").scrollIntoView({block:"nearest",behavior:"smooth"}),50)};
+  const yearAt=(ev)=>{const r=svg.getBoundingClientRect();const f=((ev.clientX-r.left)/r.width*W-x0)/(x1-x0);return hallInv(f)};
+  svg.querySelectorAll(".bar").forEach(g=>g.onclick=ev=>{const y=g.dataset.hy=="1986"?yearAt(ev):+g.dataset.hy;const p=PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[7];open(p.id)});
+  svg.querySelectorAll("[data-hid]").forEach(g=>g.onclick=()=>{const h=H.find(x=>x.id===g.dataset.hid);open(pOf(h.y).id,h.id)});
+  svg.querySelectorAll("[data-lee]").forEach(g=>g.onclick=()=>{const e=E.find(x=>x.id===+g.dataset.lee);open(pOf(e.y).id,"e"+e.id)});
+}
 function renderHistory(){
   const box=$("#hBlocks");
   box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOf(h.y)===p).length,m=leeInPeriod(p).length;
     return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
   box.querySelectorAll(".hb").forEach(b=>b.onclick=()=>{state.hp=state.hp===b.dataset.p?null:b.dataset.p;state.hsel=null;renderHistory();if(state.hp)setTimeout(()=>$("#hPanel").scrollIntoView({block:"nearest",behavior:"smooth"}),50)});
-  hPanel()}
+  renderHall();hPanel()}
 $("#hClose").onclick=()=>{state.hp=null;state.hsel=null;renderHistory();window.scrollTo({top:0})};
 function hPanel(){
   const p=PERIODS.find(x=>x.id===state.hp);$("#hPanel").hidden=!p;if(!p)return;

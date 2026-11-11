@@ -293,7 +293,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 .zoombar button{font:inherit;font-size:13px;padding:3px 10px;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:6px;cursor:pointer}
 .zoombar button:hover{border-color:var(--seal)}.zoombar .zl{font-size:12px;color:var(--muted);min-width:44px;text-align:center}
 @media(min-width:900px){.ovscroll.wide,.zoombar.wide{width:min(96vw,1700px);position:relative;left:50%;transform:translateX(-50%)}}
-.hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
+.hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}pre.tree{font-family:ui-monospace,Menlo,Consolas,"Noto Sans TC",monospace;font-size:13px;line-height:1.7;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto;white-space:pre}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
 #hSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
 #hSvg text{fill:var(--ink)}
 #hSvg .axis{stroke:var(--line);stroke-width:1.5}
@@ -350,7 +350,7 @@ footer p{margin:0 0 6px;max-width:70ch}
   <div class="hblocks" id="hBlocks"></div>
   <div id="hPanel" class="hpanel" hidden>
     <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
-    <div class="ovbar"><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交</span><span><i style="background:var(--c1)"></i>李登輝線</span><span>可左右滑動</span></span></div>
+    <div class="ovbar"><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交</span><span><i style="background:var(--muted)"></i>同期中國大陸</span><span><i style="background:var(--c1)"></i>李登輝線</span><span>可左右滑動</span></span></div>
     <div class="ovscroll" id="hScroll"><svg id="hSvg" role="group" aria-label="時期事件軌道"></svg></div>
     <div class="ovcard hcard" id="hCard" aria-live="polite"></div>
   </div>
@@ -881,6 +881,7 @@ const BG=[
 {id:"wushe",k:"1930–1931",t:"霧社事件",s:"日治時期知名的原住民武裝事件，傷亡數字至今各說不一。",ys:[1930],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>起因：英文維基指長期警察不當對待、強制勞動、對原住民信仰習俗不敬；直接導火線為莫那魯道之子達多莫那婚宴上，警員與酒敬之爭執。</li><li>1930年10月27日清晨，起事六社人口約1,236人，其中壯丁逾300人在霧社公學校運動會襲擊，日人134人死亡、26人受傷（Taiwan Today）。</li><li>英文維基與Taipei Times皆載134名日人死亡，另有兩名穿日本服裝的漢人被誤殺。</li><li>日方出動約2,000名軍警，使用山砲、飛機與毒氣類武器，約兩個月內鎮壓（Taiwan Today稱40天後結束）。</li><li>賽德克方死亡：英文維基稱644人（含290人自殺，該數字標待引用）；Taipei Times稱逾600人、約半數自殺；香港01稱六社約1,500人中逾半死亡、剩298人。</li><li>莫那魯道於1930年11月28日自殺（英文維基）。</li><li>第二次霧社事件：1931年4月25日，與日方合作的原住民攻擊收容所倖存者；Taiwan Today稱再有216人死亡。</li><li>倖存298人被遷至約50公里外的平地，日方稱「川中島」，賽德克語Alang Gluban；道澤與德魯固群獲得原屬土地。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>日方死傷人數：傷者26人（Taiwan Today）與215人（英文維基資訊框）不一致。</li><li>賽德克死亡人數：644、逾600、「逾半數」三種口徑並存；自殺比例亦待證。</li><li>毒氣是否使用：英文維基稱曾被指為亞洲首次化學戰，但另引春山說法，認為使用的是催淚瓦斯或氰化物混合物，效果不明。</li><li>評價：1954年《台灣省通志稿》將其定調為反壓迫、抗日民族主義，賽德克社群長期沉默；近年原住民族觀點強調轉型正義與歷史記憶被政治形塑。</li><li>英文維基Taiwan under Japanese rule所引《日本年鑑》對事件年份有1930與1929夏季兩種記載，應視為資料矛盾。</li><li>總督石塚英藏與總務長官人見次郎於1931年1月因批評而下台（英文維基）。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://en.wikipedia.org/wiki/Musha_Incident\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Musha Incident</a>　<a href=\"https://www.taipeitimes.com/News/feat/archives/2015/10/25/2003630860\" target=\"_blank\" rel=\"noopener\">Taipei Times: Taiwan in Time（2015-10-25）</a>　<a href=\"https://taiwanreview.nat.gov.tw/AMP/Culture/Top-News/24465\" target=\"_blank\" rel=\"noopener\">Taiwan Today 2011-07-15：'Seediq Bale' sparks renewed interest in Wushe Uprising</a>　<a href=\"https://www.hk01.com/%E8%97%9D%E6%96%87%E4%B8%AD%E5%9C%8B/536836/\" target=\"_blank\" rel=\"noopener\">香港01：霧社事件九十周年</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
 {id:"jp-development",k:"1895–1945",t:"經濟與社會建設及其評價爭議",s:"建設是事實，怎麼評價卻有很大爭議。",ys:[1898, 1930],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>土地調查：1898–1905年，1898年7月公布《臺灣土地調查規則》10條；1905年3月完成、5月實施土地登記；編製地籍圖與土地台帳並消滅大租權。</li><li>人口：1905年10月1日現住人口3,039,751人，同年底3,046,859人（不含高山原住民）；英文維基稱1940年人口5.87百萬。</li><li>糖業：砂糖產量由1905年8,263萬斤增至1935年16億942萬斤，甘蔗收穫量約12.57倍；新式糖廠占比1907年16.0%、1935年97.6%。</li><li>糖廠專用鐵道由1909年450.8公里增至1922年1,519公里；1905–1935年甘蔗收穫量年增率8.8%。</li><li>嘉南大圳1920年動工、1930年完成，烏山頭水庫集水58平方公里、容量約1.5億立方公尺。</li><li>教育：英文維基稱1944年學齡兒童就學率台灣人71.3%、原住民86.4%、日本人99.6%，1943年實施義務教育。</li><li>纏足：1905年女性1,406,224人中纏足800,618人（56.9%），1915年纏足279,038人（20.6%）。</li><li>衛生：後藤新平主導的鴉片漸禁政策，吸食者由1900年16.5萬人降至1941年不足8,000人（英文維基）；吳聰敏統計台灣人死亡率1906年3.49%降至1912年2.46%。</li><li>吳聰敏估計日治初期人均GDP年平均成長約2%，脫離清治長期停滯。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>吳聰敏認為台灣糖業缺乏比較利益，是在日本進口替代保護下發展，蔗農受益、成本由日本本土消費者負擔；但同一份講義並未分析蔗價、利潤分配或契約，不足以評估剝削論。</li><li>講義提出的疑問：原料採集區制度下糖廠對區內甘蔗有獨買權，是否對農民不利；另一方面農民仍可選擇作物。這是爭點而非結論。</li><li>英文維基指日治初期為殖民母國服務的政策「工業屬日本、農業屬台灣」，大型企業皆為日人所有且受嚴格管制，與「殖民現代性」敘述並存。</li><li>土地調查：英文維基稱1911年前未做調查，與吳聰敏講義的1898–1905不一致。</li><li>戰爭末期鐵路僅約四成可用（英文維基），顯示戰時動員與空襲破壞。</li><li>剝削論與現代化論的學界代表性文獻與具體對立論點，目前未見可引用來源，請標明此處資料不足。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏講義：土地調查與戶口調查（國立臺灣大學）</a>　<a href=\"https://econ.ntu.edu.tw/wp-content/uploads/2023/12/hist_1080516.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏：糖業、纏足與失蹤婦女（未完成初稿，臺大經濟系）</a>　<a href=\"https://homepage.ntu.edu.tw/~ntut019/ltes/Sugar-Gender.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏：糖業與性別（臺大）</a>　<a href=\"https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-Railway-why.pdf\" target=\"_blank\" rel=\"noopener\">吳聰敏講義：鐵路（臺大）</a>　<a href=\"https://zh.wikipedia.org/wiki/嘉南大圳\" target=\"_blank\" rel=\"noopener\">維基百科中文「嘉南大圳」</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a>　<a href=\"https://en.wikipedia.org/wiki/Gotō_Shinpei\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Gotō Shinpei</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
 {id:"jp-identity",k:"1895–1945",t:"日治時期台灣人的身份與認同",s:"同一個時代，台灣人有抵抗、協力、適應等多種選擇。",ys:[1921, 1937, 1942],html:"<p>以下依序是查到的事實、各來源不一致或有爭議之處，最後附來源。</p><h4>事實整理</h4><ul><li>1895年《馬關條約》生效後，英文維基所引資料稱居民可在兩年內選擇去留以決定國籍。</li><li>台灣人在日本統治下被稱「本島人」，日本人稱「內地人」，法制上適用不同法令，六三法使總督可制定專屬台灣的律令。</li><li>台北帝大1928–1943年學生約八成日籍、兩成台籍；1931屆畢業生中日籍41人、台籍5人。</li><li>1944年學齡兒童就學率：台灣人71.3%、日本人99.6%。</li><li>1937年起推動皇民化，國語家庭享有配給與任用等優惠；1943年底17,526戶、126,211人改姓名。</li><li>1937–1945年共207,183名台灣人服役（現役80,433、軍屬126,750）；戰後因失去日本國籍而無法依日本法令獲補償。</li><li>1945年10月25日日方在台北向陳儀簽收受降，行政長官公署同日運作。</li><li>ROC稱台灣人自1945年10月25日起恢復中國國籍（1946年1月12日行政院令確認、溯及生效）；英國1946年8月31日、美國1946年11月表示不接受。</li><li>1952年8月5日《台北條約》生效；1952年4月19日日本文件稱台灣人屆時喪失日本國籍。</li></ul><p class=\"nt\"><b>有爭議／來源不一</b></p><ul><li>國籍恢復：行政院1946.1.12令溯及1945.10.25生效，兩個日期是同一件事；真正的爭議是國際上是否承認，以及1952年條約生效後的法律地位。陳逸南社論主張1945–46年的做法違反當事人意願與國際法，這是評論性立場而非通說，ROC方面完整法理論述目前未見來源。</li><li>「光復」「終戰」「戰敗」「接收」用語反映政權與族群立場；亦有學者稱「再淪陷」，並有人主張10月25日僅為軍事占領之始，主權待和約。</li><li>英美1946年不接受ROC單方面主張國籍已恢復，但美國承認ROC為中國合法政府。</li><li>台灣人對「日本人／中國人／台灣人」的自我認同，目前未見具代表性的學術調查來源，請勿自行推論。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://www.taipeitimes.com/News/editorials/archives/2011/01/20/2003493942\" target=\"_blank\" rel=\"noopener\">Taipei Times 社論（陳逸南）：ROC forced citizenship on unwary Taiwanese（2011-01-20，評論性文章）</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan Retrocession Day</a>　<a href=\"https://zh.wikipedia.org/wiki/臺灣光復\" target=\"_blank\" rel=\"noopener\">維基百科中文「臺灣光復」</a>　<a href=\"https://zh.wikipedia.org/wiki/皇民化運動\" target=\"_blank\" rel=\"noopener\">維基百科中文「皇民化運動」</a>　<a href=\"https://en.wikipedia.org/wiki/Conscription_in_Taiwan\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Conscription in Taiwan</a>　<a href=\"https://www.thenewslens.com/article/145592\" target=\"_blank\" rel=\"noopener\">The News Lens：台籍日本兵補償議題</a>　<a href=\"https://en.wikipedia.org/wiki/National_Taiwan_University\" target=\"_blank\" rel=\"noopener\">English Wikipedia: National Taiwan University</a>　<a href=\"https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule\" target=\"_blank\" rel=\"noopener\">English Wikipedia: Taiwan under Japanese rule</a>　<a href=\"https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95\" target=\"_blank\" rel=\"noopener\">維基百科中文「六三法」</a></p><p class=\"nt\"><b>查證程度</b>本篇依網路公開資料（以維基百科與媒體報導為主）整理，尚未對照國史館等官方資料，數字請當作各來源的說法。</p>"},
+{id:"roc-terms",k:"1912–1949",t:"中華民國、北洋政府、國民政府、國民黨：四個詞怎麼分",s:"『中華民國』是國家、『北洋』『國民政府』是不同階段的政府、『國民黨』是政黨。",ys:[1912, 1927, 1948],html:"<p>這四個詞常被混著用。先看結構，再看各方怎麼說。</p><pre class=\"tree\">中華民國（國號、國家）  1912 年宣告成立\n  ├─ 北洋政府／北京政府    ← 一段時期的中央政府（起訖有不同界定）\n  ├─ 國民政府（南京）      ← 國民黨建立的政府；訓政時期＝黨國體制\n  └─ 行憲後的中華民國政府   ← 1947 年憲法施行後；1949 年遷設臺北\n\n中國國民黨（政黨）       ← 是黨，不是政府，也不是國家名</pre><p class=\"nt\"><b>一句話</b>『中華民國』是國號與國家，『北洋政府』『國民政府』『行憲後政府』是不同階段的政府，『中國國民黨』是政黨；訓政時期則是黨與政府高度結合的制度安排。</p><h4>事實整理</h4><ul><li>1912年1月1日中華民國宣告成立（行政院、英文維基）；其後歷經北京政府（北洋政府）、南京國民政府、1948年行憲後的中華民國政府（中文維基《國民政府》）。這支持『國家一個、政府分階段』的框架。</li><li>『Beiyang government』在英文維基被描述為國民黨後來普及的後設稱呼（retronym），帶負面意涵；部分史家偏好『北京政府』。</li><li>國民政府正式名稱是『國民政府』（National Government），由國民黨在1925年於廣州成立；1948年5月20日行憲後，國民政府改組為總統府與行政院所在的中央政府（中文維基《國民政府》）。</li><li>中國國民黨是政黨：1912年國民黨、1919年10月10日改稱中國國民黨、1924年一大改組（英文維基）。</li><li>訓政綱領（1928年10月3日）與訓政時期約法（1931年6月1日公布）規定中國國民黨全國代表大會代表國民大會領導國民行使政權，五種治權交國民政府（mnd.gov.tw、維基文庫、政大論文），一般描述為以黨領政的黨國體制。</li><li>英文維基《Republic of China (1912–1949)》寫道：從中華民國的角度，國家在1949年後並未消失、只是政府遷臺；從中華人民共和國的角度，中華民國在1949年已不存在。</li></ul><h4>常見混淆</h4><ul><li>把『國民政府』等同『國民黨』：兩者在制度上不同（政黨 vs 政府），但訓政時期依《訓政綱領》由國民黨最高機關指導監督國民政府，二者關係特別緊密，這是容易混淆的來源之一。</li><li>把『中華民國』等同『國民黨政府』：中華民國是國號與國家，北洋政府與國民政府都曾以其名行使中央政府職權，1947年憲法也使行憲後政府不再是黨的訓政政府。</li><li>把『北洋政府』當成另一個國家：它是1912年後中華民國的中央政府之一，英文維基稱它在國際上被承認為中華民國政府。</li><li>把『1912』與『1945』『1949』連成一條單一因果線：這些日期標示的是不同事件（建國、接收臺灣、政府遷臺），不宜寫成因果。</li></ul><h4>各方怎麼說（並列，不評斷）</h4><ul><li><b>中華民國史觀（中華民國政府官方立場，各時期內容有差異）</b>：中華民國1912年成立、持續存在；1945年依開羅宣言、波茨坦公告及相關條約接收臺灣，並以10月25日為光復節；1949年後政府遷臺，國家並未消失（依英文維基對ROC立場的整理）。</li><li><b>中華人民共和國史觀</b>：中華人民共和國依國家繼承理論取代中華民國，中華民國在1949年已不再是合法政府；稱1912–1949為『民國時期』；將臺灣視為不可分割的一部分（依英文維基《Political status of Taiwan》整理）。</li><li><b>臺灣本土／臺灣獨立相關史觀（內部並非單一）</b>：部分論者認為1945年為軍事占領或接管而非主權移交，並指舊金山和約未指定歸屬；有人主張中華民國已是主權獨立國家，另有人主張它是流亡政權；與1912至1945年臺灣歸屬日本統治的時期，並行敘述（依中文維基《臺灣光復》與英文維基整理）。</li><li><b>李登輝的說法（臺灣政治人物的一種說法）</b>：英文維基載李登輝曾表示中華民國主權僅及於臺灣；該文同時指出中華民國官方仍保有對大陸的主張。</li></ul><h4>有爭議／來源不一</h4><ul><li>北洋政府的起訖：1912年或1913年起算；1928年6月（占北京）或12月29日（東北易幟）結束。</li><li>臺灣的接收是否為『光復』、『接收』、『軍事占領』或『再淪陷』，及10月25日的法律意義。</li><li>1949年12月政府遷臺的日期與用語（7日／8日；遷都、撤退、播遷、流亡）。</li><li>兩岸對中華民國是否在1949年後仍存在的立場不同，臺灣內部亦有不同主張。</li></ul><p class=\"nt\"><b>來源</b><a href=\"https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)\" target=\"_blank\" rel=\"noopener\">Wikipedia: Republic of China (1912–1949)</a>　<a href=\"https://en.wikipedia.org/wiki/Beiyang_government\" target=\"_blank\" rel=\"noopener\">Wikipedia: Beiyang government</a>　<a href=\"https://en.wikipedia.org/wiki/Nationalist_government\" target=\"_blank\" rel=\"noopener\">Wikipedia: Nationalist government</a>　<a href=\"https://en.wikipedia.org/wiki/Political_status_of_Taiwan\" target=\"_blank\" rel=\"noopener\">Wikipedia: Political status of Taiwan</a>　<a href=\"https://www.mnd.gov.tw/File/6046\" target=\"_blank\" rel=\"noopener\">國防部：訓政綱領</a>　<a href=\"https://zh.wikipedia.org/wiki/國民政府\" target=\"_blank\" rel=\"noopener\">中文維基百科：國民政府</a></p><p class=\"nt\"><b>查證程度</b>本篇「四個詞的分類」是依多個來源整理，沒有單一文獻這樣明列；常見混淆清單屬整理推得，並非引自單一文獻。目前尚未讀到國史館、中研院、教育部辭典、總統府等官方原始資料，日期請當作各來源的說法；已知歧見（北洋政府起訖、南京國民政府成立日、遷臺日期等）已並列於事件卡。</p>"},
 {id:"jiangnan",k:"1984–1991",t:"江南案",s:"一樁發生在美國的暗殺，成為蔣經國晚年最大的政治醜聞。",ys:[1984,1985,1990],html:
  Pp("<b>一句話：</b>旅美作家劉宜良（筆名江南）1984 年 10 月 15 日在美國被槍殺，主謀是台灣國防部情報局長。這是解嚴前最受國際矚目的政治醜聞。")+
  T(["人物","角色"],[["劉宜良（江南）","1932 年生於江蘇，來台後當過記者，1967 年赴美，1973–74 年入美國籍。寫過多篇批評蔣家的文章，1984 年出版《蔣經國傳》"],["汪希苓","國防部情報局長（海軍中將），核定「教訓」劉宜良的任務"],["胡儀敏、陳虎門","情報局副局長、第三處副處長，居間聯繫"],["陳啟禮","竹聯幫幫主，被情報局吸收；策劃並開車接應"],["吳敦、董桂森","竹聯幫成員，在車庫開槍的兩人"],["崔蓉芝","劉宜良的妻子，後來在美國對台灣政府提告"]])+
@@ -1697,6 +1698,613 @@ const H_RAW=[
 "u": "https://zh.wikipedia.org/wiki/臺灣光復"
 }
 ]
+},
+{
+"y": 1912,
+"md": "1月1日",
+"t": "中華民國臨時政府在南京成立，孫文就任臨時大總統",
+"s": "臨時政府成立",
+"b": "1912年1月1日，中華民國宣告成立，革命各省代表在南京組成臨時政府，孫文（孫中山）就任臨時大總統。行政院網站與英文維基百科均以這一天作為民國成立日。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "南京臨時政府",
+"note": "常見簡稱；與1937–1940年日本支持下成立、同名的『中華民國臨時政府』（北京）不同"
+},
+{
+"term": "民國元年",
+"note": "以1912年為紀元元年"
+}
+],
+"note": "英文維基《Xinhai Revolution》寫為『參議會宣告中華民國成立、孫為總統』，未寫南京就職典禮；行政院網頁寫『孫中山宣誓就職』但未列地點；英文《Provisional Government of the Republic of China (1912–1913)》明確寫在南京就任。臨時政府籌組過程另有細節差異（如首次代表會議地點：武昌或漢口英租界），此處不展開。",
+"src": [
+{
+"t": "行政院：中華民國成立相關敘述",
+"u": "https://www.ey.gov.tw/state/62879155A536D543/bf75db05-30af-4c3a-bdda-3fe32e3f8e5a"
+},
+{
+"t": "Wikipedia: Provisional Government of the Republic of China (1912–1913)",
+"u": "https://en.wikipedia.org/wiki/Provisional_Government_of_the_Republic_of_China_(1912%E2%80%931913)"
+},
+{
+"t": "Wikipedia: Xinhai Revolution",
+"u": "https://en.wikipedia.org/wiki/Xinhai_Revolution"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1912,
+"md": "2月12日",
+"t": "清帝（宣統帝）頒布退位詔書",
+"s": "清帝退位",
+"b": "1912年2月12日，宣統帝的退位詔書頒布，清朝帝制結束。這是臨時政府與北方清廷、袁世凱交涉的結果之一。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "清帝遜位",
+"note": "民國早期常用語"
+}
+],
+"note": "英文維基《Xinhai Revolution》載明詔書於1912年2月12日頒布，並提到部分地區在正式詔書前已得知退位消息，屬消息傳遞時間差，非詔書日期不同。孫文辭職與參議院選袁世凱的先後，各來源敘述詳略不一，本條不下因果判斷。",
+"src": [
+{
+"t": "Wikipedia: Xinhai Revolution",
+"u": "https://en.wikipedia.org/wiki/Xinhai_Revolution"
+},
+{
+"t": "行政院：中華民國成立相關敘述（述及袁世凱促使清帝退位，未列日期）",
+"u": "https://www.ey.gov.tw/state/62879155A536D543/bf75db05-30af-4c3a-bdda-3fe32e3f8e5a"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1912,
+"md": "3月10日",
+"t": "袁世凱在北京就任臨時大總統，政府北遷",
+"s": "袁世凱就任",
+"b": "1912年3月10日，袁世凱出任第二任臨時大總統，政府所在地由南京轉至北京。此後的中央政府一般稱北京政府或北洋政府。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "北京政府",
+"note": "以首都所在地命名，被認為較中性"
+},
+{
+"term": "北洋政府",
+"note": "以北洋軍系掌權得名；英文維基指其為國民黨後來普及的稱法，帶有負面意涵"
+}
+],
+"note": "3月10日在各來源的描述不同：英文《Xinhai Revolution》寫『3月10日宣誓就任總統』；英文《Provisional Government (1912–1913)》寫臨時參議院在3月10日選出袁為第二任臨時大總統，並把3月10日列為政府遷北京之日，未提宣誓儀式。『選舉』與『就職』的日期是否同一日，目前未見可引用來源釐清，故標 common。",
+"src": [
+{
+"t": "Wikipedia: Xinhai Revolution",
+"u": "https://en.wikipedia.org/wiki/Xinhai_Revolution"
+},
+{
+"t": "Wikipedia: Provisional Government of the Republic of China (1912–1913)",
+"u": "https://en.wikipedia.org/wiki/Provisional_Government_of_the_Republic_of_China_(1912%E2%80%931913)"
+},
+{
+"t": "Wikipedia: Beiyang government",
+"u": "https://en.wikipedia.org/wiki/Beiyang_government"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1912,
+"md": "",
+"t": "北洋（北京）政府時期：起訖年份的幾種界定",
+"s": "北洋政府時期",
+"b": "北洋政府（北京政府）一般指1912年起、以北京為首都、由北洋軍系人物主導的中華民國中央政府，至1928年北伐完成前後結束。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "北京政府",
+"note": "以首都命名；英文維基指有史家為求中性而偏好此稱"
+},
+{
+"term": "北洋政府",
+"note": "以掌權軍系命名"
+}
+],
+"note": "起點：英文維基《Beiyang government》與《Republic of China (1912–1949)》以1912年起算；中文維基《北洋政府》信息框為1913年起，以1913年10月6日袁世凱當選正式大總統、10日就職為標誌。終點：中文維基列1928年6月3日張作霖軍政府瓦解、6月8日國民革命軍占領北京、12月29日張學良東北易幟，並稱以12月29日『北洋政府就此結束運作』；英文《Northern Expedition》列6月4日皇姑屯事件、6月6日國民革命軍進入北京、12月29日張學良宣布效忠南京政府。北伐開始日：英文維基為1926年7月9日；中文維基《北洋政府》條列為7月29日，兩者不同，目前未見可引用來源說明差異。",
+"src": [
+{
+"t": "中文維基百科：北洋政府",
+"u": "https://zh.wikipedia.org/wiki/北洋政府"
+},
+{
+"t": "Wikipedia: Beiyang government",
+"u": "https://en.wikipedia.org/wiki/Beiyang_government"
+},
+{
+"t": "Wikipedia: Northern Expedition",
+"u": "https://en.wikipedia.org/wiki/Northern_Expedition"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1912,
+"md": "8月25日",
+"t": "國民黨成立（同盟會與數個小黨合併）",
+"s": "國民黨成立",
+"b": "1912年8月25日，同盟會與其他小黨合併成立國民黨，宋教仁為實際最具影響力的成員。1913年宋教仁遇刺、二次革命失敗後，袁世凱取締國民黨。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "國民黨（1912）",
+"note": "與後來的中華革命黨、中國國民黨為前後相承的黨史脈絡，但屬不同階段的組織"
+}
+],
+"note": "英文維基《Kuomintang》寫1912年8月25日於北京成立、孫為理事長（chairman）；有說法稱創立者為宋教仁，英文維基該文並不支持『由宋創立』，只稱宋為最具影響力成員。『中國國民黨』自稱的黨史起點（興中會1894、同盟會1905）是黨自身的史觀，學界與他黨不一定採同一起點。",
+"src": [
+{
+"t": "Wikipedia: Kuomintang",
+"u": "https://en.wikipedia.org/wiki/Kuomintang"
+},
+{
+"t": "中文維基百科：中國國民黨",
+"u": "https://zh.wikipedia.org/wiki/中國國民黨"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1914,
+"md": "",
+"t": "孫文在日本另組中華革命黨",
+"s": "中華革命黨",
+"b": "二次革命失敗、國民黨被取締後，孫文在日本另組中華革命黨。1919年孫文在上海再改組，並於10月10日定名中國國民黨。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "中華革命黨",
+"note": "1914年在東京成立的說法常見，但所引英文維基未列明年份"
+}
+],
+"note": "『1914年』未見於所讀來源，所讀到的英文維基《Kuomintang》只寫『不久後（later）孫在日本成立中華革命黨』，未註明年份，因此年份待以黨史資料或國史館資料補證。",
+"src": [
+{
+"t": "Wikipedia: Kuomintang",
+"u": "https://en.wikipedia.org/wiki/Kuomintang"
+},
+{
+"t": "Wikipedia: 1st National Congress of the Kuomintang",
+"u": "https://en.wikipedia.org/wiki/1st_National_Congress_of_the_Kuomintang"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1919,
+"md": "10月10日",
+"t": "中華革命黨改稱中國國民黨",
+"s": "改稱中國國民黨",
+"b": "1919年10月10日，孫文在上海將中華革命黨改稱中國國民黨，沿用至今。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "中華國民黨",
+"note": "部分文獻對1919年更名前後的稱呼有『中華國民黨』說法；目前未見可引用來源逐一釐清"
+}
+],
+"note": "英文維基《Kuomintang》寫1919年10月10日於上海以『Kuomintang of China』重建；《1st National Congress》寫1919年由中華革命黨改稱。中文維基《中國國民黨》頁面讀取結果僅有英文摘要，亦同為1919年。『中華國民黨』一詞是否曾為正式名稱，目前未見可引用來源。",
+"src": [
+{
+"t": "Wikipedia: Kuomintang",
+"u": "https://en.wikipedia.org/wiki/Kuomintang"
+},
+{
+"t": "Wikipedia: 1st National Congress of the Kuomintang",
+"u": "https://en.wikipedia.org/wiki/1st_National_Congress_of_the_Kuomintang"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1924,
+"md": "1月20日",
+"t": "中國國民黨一全大會於廣州召開，完成改組",
+"s": "國民黨一大",
+"b": "1924年1月20日至30日，中國國民黨第一次全國代表大會在廣州舉行，完成黨的改組，通過與蘇聯合作、與中國共產黨合作（第一次國共合作）等政策，並採列寧式黨組織。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "聯俄容共",
+"note": "國民黨方面的常見稱呼"
+},
+{
+"term": "第一次國共合作",
+"note": "中性歷史用語"
+},
+{
+"term": "聯俄聯共",
+"note": "中共方面的常見稱呼"
+}
+],
+"note": "英文維基《1st National Congress》寫會期為1月20–30日，《Kuomintang》寫1923–1924年在蘇聯協助下採列寧式結構；『聯俄容共』與『聯俄聯共』是各方對同一政策的不同稱謂，各方評價不同。",
+"src": [
+{
+"t": "Wikipedia: 1st National Congress of the Kuomintang",
+"u": "https://en.wikipedia.org/wiki/1st_National_Congress_of_the_Kuomintang"
+},
+{
+"t": "Wikipedia: Kuomintang",
+"u": "https://en.wikipedia.org/wiki/Kuomintang"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1925,
+"md": "7月1日",
+"t": "廣州國民政府成立",
+"s": "廣州國民政府",
+"b": "孫文於1925年3月12日逝世後，國民黨在廣州公布《國民政府組織法》，於1925年7月1日成立國民政府。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "國民政府",
+"note": "正式名稱為『國民政府』，是國民黨領導下的政府，不等同於政黨『國民黨』"
+},
+{
+"term": "廣州國民政府",
+"note": "以所在地區分"
+}
+],
+"note": "中文維基《國民政府》記載當日在廣州市第三公園宣告成立；英文維基《Nationalist government》亦記1925年7月1日於廣州成立。",
+"src": [
+{
+"t": "中文維基百科：國民政府",
+"u": "https://zh.wikipedia.org/wiki/國民政府"
+},
+{
+"t": "Wikipedia: Nationalist government",
+"u": "https://en.wikipedia.org/wiki/Nationalist_government"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1926,
+"md": "7月9日",
+"t": "國民革命軍北伐（1926–1928）",
+"s": "北伐",
+"b": "國民革命軍自1926年7月起自廣東北上，以結束軍閥割據為目標；1928年6月進入北京，12月29日張學良宣布效忠南京政府，北伐在形式上完成。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "國民革命",
+"note": "國民黨方面的整體稱呼"
+}
+],
+"note": "英文維基《Northern Expedition》：1926年7月9日正式開始、1927年3月24日攻占南京、1927年4月12–14日上海清黨、1928年6月6日進入北京、12月29日結束。中文維基《北洋政府》列北伐開始為7月29日，與7月9日不同。『北伐完成』在1928年6月（占北京）與12月29日（東北易幟）兩種截點並存；英文維基亦指各地軍閥實力仍在，隨後有1929–1930年中原大戰。",
+"src": [
+{
+"t": "Wikipedia: Northern Expedition",
+"u": "https://en.wikipedia.org/wiki/Northern_Expedition"
+},
+{
+"t": "中文維基百科：北洋政府",
+"u": "https://zh.wikipedia.org/wiki/北洋政府"
+},
+{
+"t": "中文維基百科：國民政府",
+"u": "https://zh.wikipedia.org/wiki/國民政府"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1927,
+"md": "4月18日",
+"t": "南京國民政府成立（寧漢對立）",
+"s": "南京國民政府",
+"b": "1927年4月，蔣中正發動清黨（4月12日起），並於4月18日在南京另立國民政府；以汪兆銘為首的武漢國民政府與之對立，形成寧漢分裂，其後兩方合流。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "寧漢分裂",
+"note": "南京與武漢兩政府並立"
+},
+{
+"term": "清黨",
+"note": "國民黨方面用語；中共方面常稱『四一二政變／反革命政變』"
+},
+{
+"term": "南京政府",
+"note": "常用簡稱"
+}
+],
+"note": "合流日期說法不一：中文維基《國民政府》寫『7月15日汪兆銘的武漢政府宣布反共，兩方合流』；英文維基《Nationalist government》寫武漢派於1927年8月加入南京。香港中華文化資源網（chiculture.org.hk）確認4月18日蔣在南京成立國民政府。英文《Northern Expedition》提到南京政府的就職為1928年10月10日，並未記4月18日，故4月18日由中文維基與前述網站支持，英文維基二文未載。",
+"src": [
+{
+"t": "中文維基百科：國民政府",
+"u": "https://zh.wikipedia.org/wiki/國民政府"
+},
+{
+"t": "中華文化資源網：寧漢分裂",
+"u": "https://chiculture.org.hk/en/node/2769"
+},
+{
+"t": "Wikipedia: Nationalist government",
+"u": "https://en.wikipedia.org/wiki/Nationalist_government"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1928,
+"md": "10月3日",
+"t": "《訓政綱領》通過，國民黨以黨領政的訓政開始",
+"s": "訓政綱領",
+"b": "1928年北伐形式完成後，國民黨宣布進入訓政時期。10月3日中央政治會議通過《訓政綱領》，規定訓政期間由中國國民黨全國代表大會代表國民大會領導國民行使政權，行政、立法、司法、考試、監察五種治權由國民政府總攬。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "以黨治國",
+"note": "當時國民黨方面的用語"
+},
+{
+"term": "黨國體制",
+"note": "後世學界常用的描述用語"
+},
+{
+"term": "訓政",
+"note": "孫文《建國大綱》『軍政、訓政、憲政』三階段中的第二階段"
+}
+],
+"note": "國防部資料（mnd.gov.tw）載訓政綱領於1928年（民國17年）10月3日由中央政治會議第172次常會通過、1929年3月三全大會追認；政大論文引述為1928年10月通過。中文維基《國民政府》載1928年9月二屆五中全會宣布進入訓政、10月公布《國民政府組織法》。英文《Republic of China (1912–1949)》寫訓政以1930年的臨時憲法為準，與其他來源不同，不採用。",
+"src": [
+{
+"t": "國防部：訓政綱領與訓政相關資料",
+"u": "https://www.mnd.gov.tw/File/6046"
+},
+{
+"t": "政治大學學術資料（訓政綱領與訓政時期約法）",
+"u": "https://irtest.lib.nccu.edu.tw/ir/retrieve/150119/408007.pdf"
+},
+{
+"t": "中文維基百科：國民政府",
+"u": "https://zh.wikipedia.org/wiki/國民政府"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1931,
+"md": "6月1日",
+"t": "《中華民國訓政時期約法》公布",
+"s": "訓政時期約法",
+"b": "國民會議於1931年5月12日制定《中華民國訓政時期約法》，國民政府於6月1日公布施行。第30條規定訓政時期中央統治權由中國國民黨全國代表大會代表國民大會行使，閉會時由中央執行委員會行使；第85條規定約法解釋權屬於中央執行委員會。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "訓政約法",
+"note": "簡稱"
+}
+],
+"note": "中文維基文庫條文與政大論文一致（5月12日制定、6月1日公布）。英文維基《Republic of China (1912–1949)》把訓政以1930年臨時憲法為準，與此不同，不採用。",
+"src": [
+{
+"t": "維基文庫：中華民國訓政時期約法",
+"u": "https://zh.wikisource.org/wiki/中華民國訓政時期約法"
+},
+{
+"t": "政治大學學術資料",
+"u": "https://irtest.lib.nccu.edu.tw/ir/retrieve/150119/408007.pdf"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1946,
+"md": "12月25日",
+"t": "制憲國民大會三讀通過《中華民國憲法》",
+"s": "制憲通過",
+"b": "國民大會於1946年12月25日在南京三讀通過憲法，國民政府於1947年1月1日公布，自1947年12月25日起施行。中國共產黨未參加國民大會，並否認該憲法。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "制憲",
+"note": "制定憲法"
+},
+{
+"term": "行憲",
+"note": "憲法施行，1947年12月25日（今臺灣行憲紀念日）"
+}
+],
+"note": "司法院大法官網站所附憲法資料與英文維基《Constitution of the Republic of China》日期一致。",
+"src": [
+{
+"t": "司法院：憲法相關資料",
+"u": "https://cons.judicial.gov.tw/download/download.aspx?id=395446"
+},
+{
+"t": "Wikipedia: Constitution of the Republic of China",
+"u": "https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China"
+},
+{
+"t": "NOWnews：行憲紀念日相關報導（確認1947/12/25施行）",
+"u": "https://www.nownews.com/news/politics/5006630"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1948,
+"md": "5月10日",
+"t": "《動員戡亂時期臨時條款》公布",
+"s": "動員戡亂條款",
+"b": "國民大會於1948年4月18日依憲法修憲程序三讀通過《動員戡亂時期臨時條款》，國民政府於5月10日公布施行。條款使總統得經行政院會議決議實施緊急處分，不受憲法第39條或第43條限制，後經修訂延續，至1991年5月1日廢止。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "臨時條款",
+"note": "簡稱"
+},
+{
+"term": "戡亂",
+"note": "中華民國方面的用語；中共方面稱『解放戰爭』"
+}
+],
+"note": "中文維基與英文維基日期一致（4月18日通過、5月10日施行）；廢止日期為1991年（4月22日國民大會通過、4月30日總統令終止動員戡亂時期、5月1日廢止）。",
+"src": [
+{
+"t": "中文維基百科：動員戡亂時期臨時條款",
+"u": "https://zh.wikipedia.org/wiki/動員戡亂時期臨時條款"
+},
+{
+"t": "Wikipedia: Constitution of the Republic of China",
+"u": "https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1948,
+"md": "5月20日",
+"t": "行憲後第一任總統就職，國民政府改組",
+"s": "第一任總統就職",
+"b": "1948年5月20日，蔣中正與李宗仁就任行憲後第一任總統與副總統；國民政府主席改由總統擔任，國民政府的機關轉為總統府幕僚機關，中央政府改稱中華民國政府，訓政時期在制度上結束。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "行憲政府",
+"note": "憲法施行後的中華民國政府"
+}
+],
+"note": "中文維基《國民政府》與《中華民國總統》均載5月20日；英文維基《Nationalist government》正文寫5月20日解散、infobox寫5月28日，且英文《Republic of China (1912–1949)》寫國民大會選舉在1948年3月21日，與其他來源敘述不一，目前未見可引用來源確認選舉日期，故不列。",
+"src": [
+{
+"t": "中文維基百科：國民政府",
+"u": "https://zh.wikipedia.org/wiki/國民政府"
+},
+{
+"t": "中文維基百科：中華民國總統",
+"u": "https://zh.wikipedia.org/wiki/中華民國總統"
+},
+{
+"t": "Wikipedia: Nationalist government",
+"u": "https://en.wikipedia.org/wiki/Nationalist_government"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1949,
+"md": "10月1日",
+"t": "中華人民共和國中央人民政府成立",
+"s": "人民共和國成立",
+"b": "1949年10月1日下午3時，毛澤東在北京天安門廣場宣告中華人民共和國中央人民政府成立。公告稱該政府為『代表中華人民共和國全國人民唯一合法政府』。",
+"track": "政權",
+"conf": "verified",
+"aliases": [
+{
+"term": "開國大典",
+"note": "中華人民共和國方面的用語"
+}
+],
+"note": "英文維基《Retreat of the government of Republic of China to Taiwan》與中文維基《中華人民共和國成立》日期一致；當時多數國家仍與中華民國政府保持外交關係。",
+"src": [
+{
+"t": "中文維基百科：中華人民共和國成立",
+"u": "https://zh.wikipedia.org/wiki/中華人民共和國成立"
+},
+{
+"t": "Wikipedia: Retreat of the government of Republic of China to Taiwan",
+"u": "https://en.wikipedia.org/wiki/Great_Retreat_(Taiwan)"
+}
+],
+"bg": "roc-terms",
+"ctx": "中國大陸"
+},
+{
+"y": 1949,
+"md": "12月7日",
+"t": "中華民國政府遷設臺北（宣布以臺北為臨時首都）",
+"s": "政府遷臺北",
+"b": "1949年12月，中華民國政府自大陸遷至臺灣，臺北被宣布為（臨時）首都，行政院長閻錫山等人於當時前往臺北。常見日期為12月7日。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "遷臺／遷都臺北",
+"note": "官方與較中性用語"
+},
+{
+"term": "播遷來臺",
+"note": "臺灣方面部分文獻用語（twcenter作者使用）"
+},
+{
+"term": "撤退來臺／退入臺灣",
+"note": "英文維基標題用 retreat；中文『撤退』『流亡』為批評性或中性並存的稱呼"
+},
+{
+"term": "流亡政府（government-in-exile）",
+"note": "部分學者與臺灣獨立派的看法，只作並列陳述"
+}
+],
+"note": "日期各來源不同：英文《Great Retreat》寫12月7日抵臺；英文《Republic of China (1912–1949)》寫12月7日宣布臺北為臨時首都；ipfs版英文維基《1949 in the Republic of China》與history.com寫12月8日；美國國務院文件（FRUS 1949 VIII，1949年12月15日備忘錄）顯示美方到12月15日尚未接獲中華民國政府遷都臺北的正式通知。Taipei Times（1999）與twcenter文章對12月7日遷台過程描述不一，其中twcenter未用『遷都』，且引蔣中正之語稱『中華民國到去年終就隨大陸淪陷而已滅亡』。行政院決議全文目前未見可引用來源。",
+"src": [
+{
+"t": "Wikipedia: Retreat of the government of Republic of China to Taiwan",
+"u": "https://en.wikipedia.org/wiki/Great_Retreat_(Taiwan)"
+},
+{
+"t": "Wikipedia: Republic of China (1912–1949)",
+"u": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)"
+},
+{
+"t": "Taipei Times 1999-12-08",
+"u": "https://www.taipeitimes.com/News/front/archives/1999/12/08/0000014054"
+},
+{
+"t": "台灣研究中心：政權退入台灣的敘述",
+"u": "https://www.twcenter.org.tw/?p=2434"
+},
+{
+"t": "FRUS 1949 Vol. VIII, doc 850",
+"u": "https://history.state.gov/historicaldocuments/frus1949v08/d850"
+}
+],
+"bg": "roc-terms"
 }
 ];
 const H=H_RAW.map((h,i)=>({id:"h"+i,...h})).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));
@@ -1964,8 +2572,8 @@ $("#backpill").onclick=()=>{
 
 /* ---------- 台灣史（三層下鑽） ---------- */
 const pOf=y=>PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[PERIODS.length-1];
-const H_LANES=["統治政權","政治與外交","李登輝線"];
-const H_LC=["var(--c0)","var(--c2)","var(--c1)"];
+const H_LANES=["統治政權","政治與外交","李登輝線","同期中國大陸"];
+const H_LC=["var(--c0)","var(--c2)","var(--c1)","var(--muted)"];
 function leeInPeriod(p){return E.filter(e=>e.key&&e.y>=p.a&&e.y<p.b)}
 function leeShort(e){const s=OV_SEL.find(x=>x[0]===e.y&&e.t.startsWith(x[1]));return s?s[2]:e.t.slice(0,7)}
 
@@ -2023,9 +2631,9 @@ function hPanel(){
   const cum=[0];for(let y=a;y<b;y++)cum.push(cum[cum.length-1]+1+2.5*(cnt[y]||0));
   const X=(y,md)=>{const m=/月/.test(md||"")?parseInt(md):6;const yy=Math.floor(y),i=Math.max(0,Math.min(cum.length-2,yy-a)),f=y>yy?y-yy:((m-1)/12+.04);return x0+(cum[i]+(cum[i+1]-cum[i])*f)/cum[cum.length-1]*(x1-x0)};
   const items=[];
-  hs.forEach(h=>items.push({key:h.id,lane:h.track==="政權"?0:1,x:X(h.y,h.md),lab:h.s||h.t.slice(0,8),t:h.y+(h.md?" "+h.md:"")+"　"+h.t}));
+  hs.forEach(h=>items.push({key:h.id,lane:h.ctx?3:h.track==="政權"?0:1,x:X(h.y,h.md),lab:h.s||h.t.slice(0,8),t:h.y+(h.md?" "+h.md:"")+"　"+h.t}));
   es.forEach(e=>items.push({key:"e"+e.id,lane:2,x:X(e.y,e.md),lab:leeShort(e),t:e.y+(e.md?" "+e.md:"")+"　"+e.t}));
-  const used=[0,1,2].filter(l=>items.some(i=>i.lane===l));
+  const used=[0,3,1,2].filter(l=>items.some(i=>i.lane===l));
   let Y=14,s="";const lanes={};
   used.forEach(l=>{const list=items.filter(i=>i.lane===l).sort((p1,p2)=>p1.x-p2.x),ends=[];
     list.forEach(c=>{const w=c.lab.length*16+12;c.l=Math.max(x0+4,Math.min(W-w-6,c.x-w/2));c.r=c.l+w;let k=ends.findIndex(v=>v<c.l-4);if(k<0){k=ends.length;ends.push(0)}ends[k]=c.r;c.row=k});
@@ -2052,7 +2660,7 @@ function hCard(){
   const cf=CONF[h.conf]||CONF.common;
   const near=E.filter(e=>e.key).sort((p1,p2)=>Math.abs(p1.y-h.y)-Math.abs(p2.y-h.y))[0];
   const showLee=near&&Math.abs(near.y-h.y)<=8&&h.y>=1923;
-  c.innerHTML=`<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
+  c.innerHTML=`<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)&&!h.ctx?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
   ${h.ctx?`<p class="hnote">🌏 同期背景：事件發生地為${esc(h.ctx)}，列在這裡是為了對照台灣同時期的統治政權。</p>`:""}
   ${h.note?`<p class="hnote">⚑ ${esc(h.note)}</p>`:""}
   ${(h.aliases||[]).length?`<details class="alias"><summary>各方稱謂</summary><ul>${h.aliases.map(a=>`<li><b>${esc(a.term)}</b>：${esc(a.note)}</li>`).join("")}</ul></details>`:""}

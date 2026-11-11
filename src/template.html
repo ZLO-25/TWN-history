@@ -293,7 +293,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 .zoombar button{font:inherit;font-size:13px;padding:3px 10px;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:6px;cursor:pointer}
 .zoombar button:hover{border-color:var(--seal)}.zoombar .zl{font-size:12px;color:var(--muted);min-width:44px;text-align:center}
 @media(min-width:900px){.ovscroll.wide,.zoombar.wide{width:min(96vw,1700px);position:relative;left:50%;transform:translateX(-50%)}}
-.hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
+.hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}pre.tree{font-family:ui-monospace,Menlo,Consolas,"Noto Sans TC",monospace;font-size:13px;line-height:1.7;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto;white-space:pre}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
 #hSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
 #hSvg text{fill:var(--ink)}
 #hSvg .axis{stroke:var(--line);stroke-width:1.5}
@@ -350,7 +350,7 @@ footer p{margin:0 0 6px;max-width:70ch}
   <div class="hblocks" id="hBlocks"></div>
   <div id="hPanel" class="hpanel" hidden>
     <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
-    <div class="ovbar"><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交</span><span><i style="background:var(--c1)"></i>李登輝線</span><span>可左右滑動</span></span></div>
+    <div class="ovbar"><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交</span><span><i style="background:var(--muted)"></i>同期中國大陸</span><span><i style="background:var(--c1)"></i>李登輝線</span><span>可左右滑動</span></span></div>
     <div class="ovscroll" id="hScroll"><svg id="hSvg" role="group" aria-label="時期事件軌道"></svg></div>
     <div class="ovcard hcard" id="hCard" aria-live="polite"></div>
   </div>
@@ -739,8 +739,8 @@ $("#backpill").onclick=()=>{
 
 /* ---------- 台灣史（三層下鑽） ---------- */
 const pOf=y=>PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[PERIODS.length-1];
-const H_LANES=["統治政權","政治與外交","李登輝線"];
-const H_LC=["var(--c0)","var(--c2)","var(--c1)"];
+const H_LANES=["統治政權","政治與外交","李登輝線","同期中國大陸"];
+const H_LC=["var(--c0)","var(--c2)","var(--c1)","var(--muted)"];
 function leeInPeriod(p){return E.filter(e=>e.key&&e.y>=p.a&&e.y<p.b)}
 function leeShort(e){const s=OV_SEL.find(x=>x[0]===e.y&&e.t.startsWith(x[1]));return s?s[2]:e.t.slice(0,7)}
 
@@ -798,9 +798,9 @@ function hPanel(){
   const cum=[0];for(let y=a;y<b;y++)cum.push(cum[cum.length-1]+1+2.5*(cnt[y]||0));
   const X=(y,md)=>{const m=/月/.test(md||"")?parseInt(md):6;const yy=Math.floor(y),i=Math.max(0,Math.min(cum.length-2,yy-a)),f=y>yy?y-yy:((m-1)/12+.04);return x0+(cum[i]+(cum[i+1]-cum[i])*f)/cum[cum.length-1]*(x1-x0)};
   const items=[];
-  hs.forEach(h=>items.push({key:h.id,lane:h.track==="政權"?0:1,x:X(h.y,h.md),lab:h.s||h.t.slice(0,8),t:h.y+(h.md?" "+h.md:"")+"　"+h.t}));
+  hs.forEach(h=>items.push({key:h.id,lane:h.ctx?3:h.track==="政權"?0:1,x:X(h.y,h.md),lab:h.s||h.t.slice(0,8),t:h.y+(h.md?" "+h.md:"")+"　"+h.t}));
   es.forEach(e=>items.push({key:"e"+e.id,lane:2,x:X(e.y,e.md),lab:leeShort(e),t:e.y+(e.md?" "+e.md:"")+"　"+e.t}));
-  const used=[0,1,2].filter(l=>items.some(i=>i.lane===l));
+  const used=[0,3,1,2].filter(l=>items.some(i=>i.lane===l));
   let Y=14,s="";const lanes={};
   used.forEach(l=>{const list=items.filter(i=>i.lane===l).sort((p1,p2)=>p1.x-p2.x),ends=[];
     list.forEach(c=>{const w=c.lab.length*16+12;c.l=Math.max(x0+4,Math.min(W-w-6,c.x-w/2));c.r=c.l+w;let k=ends.findIndex(v=>v<c.l-4);if(k<0){k=ends.length;ends.push(0)}ends[k]=c.r;c.row=k});
@@ -827,7 +827,7 @@ function hCard(){
   const cf=CONF[h.conf]||CONF.common;
   const near=E.filter(e=>e.key).sort((p1,p2)=>Math.abs(p1.y-h.y)-Math.abs(p2.y-h.y))[0];
   const showLee=near&&Math.abs(near.y-h.y)<=8&&h.y>=1923;
-  c.innerHTML=`<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
+  c.innerHTML=`<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)&&!h.ctx?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
   ${h.ctx?`<p class="hnote">🌏 同期背景：事件發生地為${esc(h.ctx)}，列在這裡是為了對照台灣同時期的統治政權。</p>`:""}
   ${h.note?`<p class="hnote">⚑ ${esc(h.note)}</p>`:""}
   ${(h.aliases||[]).length?`<details class="alias"><summary>各方稱謂</summary><ul>${h.aliases.map(a=>`<li><b>${esc(a.term)}</b>：${esc(a.note)}</li>`).join("")}</ul></details>`:""}

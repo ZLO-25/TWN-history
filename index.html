@@ -289,6 +289,10 @@ footer p{margin:0 0 6px;max-width:70ch}
 #hAll .band{fill:var(--seal);opacity:.08;pointer-events:none}
 #hAll .tbd{font-size:12px;fill:var(--muted)!important}
 .hall{margin:14px 0 18px}.hallh{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.zoombar{display:flex;gap:6px;align-items:center;justify-content:flex-end;margin:4px 0}
+.zoombar button{font:inherit;font-size:13px;padding:3px 10px;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:6px;cursor:pointer}
+.zoombar button:hover{border-color:var(--seal)}.zoombar .zl{font-size:12px;color:var(--muted);min-width:44px;text-align:center}
+@media(min-width:900px){.ovscroll.wide,.zoombar.wide{width:min(96vw,1700px);position:relative;left:50%;transform:translateX(-50%)}}
 .hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
 #hSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
 #hSvg text{fill:var(--ink)}
@@ -340,7 +344,7 @@ footer p{margin:0 0 6px;max-width:70ch}
   <p class="intro">從荷蘭、西班牙來台（1624）到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
   <div class="hall">
     <div class="hallh"><b>整段台灣史一張圖</b><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交（已補完的事件）</span><span><i style="background:var(--c1)"></i>李登輝線</span></span></div>
-    <div class="ovscroll"><svg id="hAll" role="group" aria-label="台灣史全期泳道圖"></svg></div>
+    <div class="ovscroll" id="hAllScroll"><svg id="hAll" role="group" aria-label="台灣史全期泳道圖"></svg></div>
     <p class="hallnote">點色條或圓點，會打開該時期的細部圖。統治政權只畫主要政權的大略起訖，1895 年台灣民主國等短暫政權未畫出；「政治與外交」目前只有日治時期補完，其他時期之後逐期加入。</p>
   </div>
   <div class="hblocks" id="hBlocks"></div>
@@ -2060,6 +2064,19 @@ function hCard(){
 addEventListener("scroll",()=>{$("#totop").hidden=scrollY<600},{passive:true});
 $("#totop").onclick=()=>scrollTo({top:0});
 
+
+/* ---------- 泳道圖放大 ---------- */
+function addZoom(scrollId,svgId){
+  const sc=document.getElementById(scrollId),sv=document.getElementById(svgId);if(!sc||!sv)return;
+  sc.classList.add("wide");let z=1;
+  const bar=document.createElement("div");bar.className="zoombar wide";
+  bar.innerHTML=`<span class="zl" style="min-width:auto;margin-right:4px">圖表縮放</span><button type="button" data-z="-">－</button><span class="zl">100%</span><button type="button" data-z="+">＋</button><button type="button" data-z="0">還原</button>`;
+  sc.parentNode.insertBefore(bar,sc);
+  const bm=parseFloat(getComputedStyle(sv).minWidth)||0;const apply=()=>{sv.style.width=(z*100)+"%";sv.style.minWidth=innerWidth<900?(bm*z)+"px":"0";bar.querySelector(".zl:nth-of-type(2)").textContent=Math.round(z*100)+"%"};
+  bar.onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=b.dataset.z;z=k==="+"?Math.min(3,z+.25):k==="-"?Math.max(.75,z-.25):1;apply()};
+  new MutationObserver(()=>{bar.hidden=sc.hidden||sc.closest("[hidden]")!==null}).observe(sc,{attributes:true,attributeFilter:["hidden"]});
+  apply()}
+['hAll','hSvg','ovSvg'].forEach((s,i)=>addZoom(['hAllScroll','hScroll','ovScroll'][i],s));
 setView(location.hash.slice(1)||"history",false);
 </script>
 </body>

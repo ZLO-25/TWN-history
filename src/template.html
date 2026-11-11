@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>台灣史年表：從荷西到今天</title>
+<meta name="description" content="李登輝 1923–2020 互動年表：從蔣經國到李登輝的民主接力、政治手腕索引、台灣歷史背景補充與翻卡複習。讀《餘生》的學習筆記。">
+<meta property="og:title" content="李登輝生平年表">
+<meta property="og:description" content="台灣民主化怎麼從蔣經國萌芽、在李登輝手上落實？互動年表、政治手腕索引、背景補充、翻卡複習。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231d2320'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' font-family='serif' font-weight='900' fill='%23d6b25a'%3E李%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: 頂部標題 + 分頁導覽（年表／民主接力／政治手腕／背景補充／翻卡複習）；年表為單欄縱向，左側年份、年號、年齡。 */
+:root{
+  --bg:#eef1ec; --paper:#f8faf6; --ink:#1d2320; --muted:#5d6862; --line:#cfd7d0;
+  --seal:#b4322a; --gold:#8a6a1f; --chip:#e1e7e1;
+  --display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141816; --paper:#1c211e; --ink:#e7ece8; --muted:#9aa59f; --line:#323a35;
+  --seal:#e0675d; --gold:#d6b25a; --chip:#262d29; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141816; --paper:#1c211e; --ink:#e7ece8; --muted:#9aa59f; --line:#323a35;
+  --seal:#e0675d; --gold:#d6b25a; --chip:#262d29; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+[hidden]{display:none!important}
+.wrap{max-width:780px;margin:0 auto;padding-block:24px 72px}
+button{font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+a{color:var(--seal)}
+
+/* 標題 */
+.masthead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.masthead h1{font-family:var(--display);font-weight:900;font-size:clamp(30px,7vw,44px);margin:0;letter-spacing:.04em;line-height:1.15;text-wrap:balance}
+.masthead .sub{color:var(--muted);margin:6px 0 0;font-size:14px;max-width:60ch}
+.masthead .sub b{color:var(--gold);font-weight:700}
+.theme{flex:none;border:1px solid var(--line);background:var(--paper);border-radius:999px;width:38px;height:38px;display:grid;place-items:center;font-size:16px;margin-top:6px}
+
+/* 分頁導覽 */
+.tabs{position:sticky;top:0;z-index:6;background:var(--bg);margin-top:18px;border-bottom:2px solid var(--ink);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;background:none;border:0;padding:10px 14px;font-size:15px;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
+.tab[aria-selected=true]{color:var(--ink);font-weight:700;border-bottom-color:var(--seal)}
+.tab small{display:block;font-size:11px;letter-spacing:.04em;color:var(--muted);font-weight:400;line-height:1.2}
+
+/* 工具列 */
+.bar{position:sticky;top:46px;z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.row.scroll::-webkit-scrollbar{display:none}
+input[type=search]{flex:1;min-width:0;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+.chip{flex:none;border:1px solid var(--line);background:var(--chip);padding:4px 11px;border-radius:999px;font-size:13px;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.ghost{background:none}
+.count{color:var(--muted);font-size:13px;margin-left:auto;white-space:nowrap}
+.active-m{font-size:13px;color:var(--seal)}
+.active-m button{border:0;background:none;color:var(--muted);text-decoration:underline;font-size:13px;padding:0 4px}
+
+/* 分期總覽帶 */
+.eras-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin:18px 0 6px}
+.es{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:8px 8px 6px;text-align:left;display:flex;flex-direction:column;gap:1px;min-width:0}
+.es b{font-family:var(--display);font-size:13.5px;line-height:1.3}
+.es span{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.es small{font-size:11px;color:var(--gold)}
+.es[aria-pressed=true]{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal)}
+.es[aria-pressed=true] b{color:var(--seal)}
+@media (max-width:640px){.eras-strip{grid-template-columns:repeat(3,1fr)}.es b{font-size:12.5px}}
+@media (max-width:480px){.tab{padding:9px 10px;font-size:14px}.tab small{display:none}.bar{top:40px}}
+.intro{color:var(--muted);font-size:14px;max-width:62ch;margin:14px 0 0}
+
+/* 年表 */
+.era-head{font-family:var(--display);font-size:20px;font-weight:700;margin:36px 0 4px;display:flex;align-items:baseline;gap:10px;scroll-margin-top:120px}
+.era-head span{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:400}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:14px;padding-block:14px;border-top:1px solid var(--line)}
+.when{font-variant-numeric:tabular-nums}
+.yr{font-family:var(--display);font-size:24px;font-weight:900;line-height:1.1}
+.era-yr{font-size:12px;color:var(--muted);line-height:1.4;margin-top:2px}
+.age{font-size:12px;color:var(--gold);font-weight:700}
+.what{min-width:0}
+.ttl{font-weight:700;font-size:16px;display:flex;gap:6px;align-items:flex-start;background:none;border:0;padding:0;text-align:left;width:100%;line-height:1.5}
+.ttl .tw{flex:1}
+.seal{flex:none;font-family:var(--display);font-size:11px;color:var(--seal);border:1.5px solid var(--seal);padding:0 4px;border-radius:3px;margin-top:3px;line-height:1.5}
+.seal.m{color:var(--gold);border-color:var(--gold)}
+.seal.ck{color:var(--ink);border-color:var(--ink)}
+.det{margin-top:6px}
+.det p{margin:0 0 6px;max-width:62ch}
+.move,.ckbox{margin:8px 0;padding:10px 12px;border:1px solid var(--line);border-radius:6px;max-width:62ch;background:var(--paper)}
+.move .lbl,.ckbox .lbl{font-family:var(--display);font-weight:700;font-size:14px;display:block;margin-bottom:2px}
+.move .lbl{color:var(--gold)}
+.ckbox{background:color-mix(in srgb,var(--seal) 6%,var(--paper))}
+.ckbox .lbl{color:var(--seal)}
+.move p,.ckbox p{margin:0;font-size:14.5px}
+.why{color:var(--muted);font-size:14px}
+.why b{color:var(--seal)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:12px;color:var(--muted);background:var(--chip);padding:1px 8px;border-radius:4px;border:0}
+.tag.mt{color:var(--gold)}
+textarea{width:100%;margin-top:8px;font:inherit;font-size:14px;padding:8px 10px;border:1px dashed var(--line);border-radius:6px;background:var(--paper);color:var(--ink);resize:vertical;min-height:2.6em}
+mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;border-radius:2px}
+.empty{color:var(--muted);padding:32px 0;text-align:center}
+@media (max-width:440px){.ev{grid-template-columns:70px 1fr;gap:10px}.yr{font-size:20px}}
+@media (prefers-reduced-motion:no-preference){.det{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}}}
+
+/* 民主接力 */
+.sec{margin-top:22px}
+.sec h2{font-family:var(--display);font-size:20px;margin:0 0 4px;text-wrap:balance}
+.sec h3{font-family:var(--display);font-size:17px;margin:28px 0 6px}
+.sec p.lead{margin:0 0 12px;color:var(--muted);font-size:14px;max-width:62ch}
+.rtable{border-top:2px solid var(--ink)}
+.rrow{display:grid;grid-template-columns:5.5em 1fr 1fr;gap:10px;padding-block:9px;border-bottom:1px solid var(--line);font-size:14px;align-items:start}
+.rrow.rh{font-size:12px;color:var(--muted);letter-spacing:.06em;font-weight:700}
+.rrow .rk{font-family:var(--display);font-weight:700}
+.rrow button{background:none;border:0;padding:0;text-align:left;font-size:14px;line-height:1.55}
+.rrow button:hover .ry{text-decoration:underline}
+.ry{font-weight:700;font-variant-numeric:tabular-nums}
+.ra .ry{color:var(--muted)}
+.rb .ry{color:var(--seal)}
+@media (max-width:520px){.rrow{grid-template-columns:1fr 1fr}.rrow .rk{grid-column:1/-1}.rrow.rh span:first-child{display:none}}
+.steps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:5em 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .sy{font-family:var(--display);font-weight:900;color:var(--seal);font-variant-numeric:tabular-nums}
+.steps .sy small{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:11px}
+.steps .st b{display:block}
+.steps .st span{color:var(--muted);font-size:14px}
+.steps button{display:block;background:none;border:0;padding:0;font:inherit;color:var(--ink);text-align:left;font-weight:700}
+.steps button:hover{text-decoration:underline}
+
+/* 政治手腕 */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-top:10px}
+.mbtn{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:3px}
+.mbtn b{font-family:var(--display);font-size:17px}
+.mbtn span{font-size:13.5px;color:var(--muted);line-height:1.5}
+.mbtn small{font-size:12px;color:var(--gold);font-variant-numeric:tabular-nums;margin-top:4px}
+.mbtn em{font-style:normal;font-size:13px;color:var(--ink)}
+.mbtn:hover{border-color:var(--seal)}
+
+/* 背景補充 */
+.bg-lead{color:var(--muted);font-size:14px;max-width:62ch;margin:20px 0 12px}
+.bg-nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.bg-nav a{font-size:13px;color:var(--ink);text-decoration:none;background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:4px 10px;display:flex;gap:6px;align-items:baseline}
+.bg-nav a span{font-size:11px;color:var(--gold);font-variant-numeric:tabular-nums}
+.bg-nav a:hover{border-color:var(--seal)}
+.bgc{border-top:1px solid var(--line);scroll-margin-top:130px}
+.bgc:last-of-type{border-bottom:1px solid var(--line)}
+.bgc summary{cursor:pointer;padding-block:14px;display:grid;grid-template-columns:92px 1fr;column-gap:14px;list-style:none}
+.bgc summary::-webkit-details-marker{display:none}
+.bk{grid-row:span 2;font-family:var(--display);font-weight:900;font-size:15px;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.4}
+.bt{font-family:var(--display);font-weight:700;font-size:18px;text-wrap:balance}
+.bt::after{content:" ＋";color:var(--muted);font-family:var(--body);font-weight:400;font-size:14px}
+.bgc[open] .bt::after{content:" －"}
+.bs{color:var(--muted);font-size:14px}
+.bgb{padding:0 0 18px 106px;min-width:0}
+.bgb>p{margin:0 0 10px;max-width:62ch}
+.bgb h4{margin:0 0 4px;font-size:14px;color:var(--seal)}
+.flow{list-style:none;margin:6px 0 14px 6px;padding:0 0 0 14px;border-left:2px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.flow li{display:grid;grid-template-columns:7.5em 1fr;gap:10px;position:relative}
+.flow li::before{content:"";position:absolute;left:-19px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.fl{font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+.ft{min-width:0;font-size:14.5px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 14px}
+.pair>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 12px;min-width:0}
+.pair ul{margin:0;padding-left:1.1em;font-size:14px}
+.tblw{overflow-x:auto;margin:6px 0 14px}
+.tblw table{border-collapse:collapse;width:100%;font-size:14px}
+.tblw th{text-align:left;font-size:12px;color:var(--muted);font-weight:700;border-bottom:2px solid var(--ink);padding:6px 8px}
+.tblw td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.tblw td:first-child{font-weight:700}
+@media (min-width:640px){.tblw td:first-child{white-space:nowrap}}
+.nt,.ln{font-size:14px;padding:9px 12px;border-radius:6px;margin:0 0 10px;max-width:62ch}
+.nt{background:var(--chip)}
+.nt b,.ln b{display:block;font-family:var(--display);font-size:13px;margin-bottom:2px}
+.nt b{color:var(--gold)}
+.ln{border:1px solid var(--seal);background:color-mix(in srgb,var(--seal) 6%,var(--paper))}
+.ln b{color:var(--seal)}
+.tl-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--muted);margin-top:6px}
+.tl-links button{border:1px solid var(--line);background:var(--paper);border-radius:4px;padding:1px 8px;font-size:13px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.bgc summary{grid-template-columns:1fr}.bk{grid-row:auto}.bgb{padding-left:0}.pair{grid-template-columns:1fr}.flow li{grid-template-columns:1fr;gap:0}}
+
+/* 翻卡 */
+.quiz{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px}
+.q-scope{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px;align-items:center;font-size:13px;color:var(--muted)}
+.prog{height:4px;background:var(--chip);border-radius:2px;overflow:hidden;margin-bottom:14px}
+.prog i{display:block;height:100%;background:var(--seal);width:0;transition:width .2s}
+.q-k{font-size:13px;color:var(--muted)}
+.q-front{font-family:var(--display);font-size:22px;font-weight:700;margin:8px 0 4px;text-wrap:balance}
+.q-hint{color:var(--muted);font-size:14px}
+.q-back{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.q-back .yr{color:var(--seal)}
+.q-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.q-act button{border:1px solid var(--line);background:var(--chip);padding:8px 14px;border-radius:6px}
+.q-act .pri{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.q-act kbd{font-family:inherit;font-size:11px;color:var(--muted);margin-left:6px}
+.score{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;margin-top:10px}
+
+.linkbtn{border:1px solid var(--seal);background:none;color:var(--seal);border-radius:6px;padding:3px 10px;font-size:13px;margin:2px 4px 2px 0}
+.linkbtn:hover{background:color-mix(in srgb,var(--seal) 8%,var(--paper))}
+.threeway{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0 12px}
+.threeway>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 12px;min-width:0;font-size:14px}
+.threeway h4{margin:0 0 4px;font-family:var(--display);font-size:15px;color:var(--seal)}
+.threeway ul{margin:0;padding-left:1.1em}
+@media (max-width:640px){.threeway{grid-template-columns:1fr}}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));border:1px solid var(--line);background:var(--paper);border-radius:999px;width:40px;height:40px;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.12);z-index:4}
+footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+footer p{margin:0 0 6px;max-width:70ch}
+
+/* 總覽 */
+:root{--c0:var(--seal);--c1:var(--gold);--c2:#3b6d8a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c2:#7fb0cf}}
+:root[data-theme="dark"]{--c2:#7fb0cf}
+#v-overview{width:min(1500px,calc(100vw - 40px));margin-left:50%;transform:translateX(-50%)}
+.ovbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 8px}
+.ovbar .legend{font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}
+.ovbar .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.ovscroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--paper);scrollbar-width:thin}
+#ovSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
+#ovSvg text{fill:var(--ink)}
+#ovSvg .lanebg{fill:color-mix(in srgb,var(--ink) 3%,transparent)}
+#ovSvg .axis{stroke:var(--line);stroke-width:1.5}
+#ovSvg .lead{stroke:var(--line);stroke-width:1}
+#ovSvg .lanelbl{font-size:15px;font-weight:700;fill:var(--muted)}
+#ovSvg .era text{font-size:13px;font-weight:700}
+#ovSvg .era rect{fill:var(--chip);stroke:var(--paper);stroke-width:2}
+#ovSvg .era small{font-size:11px}
+#ovSvg .yr{font-size:11px;fill:var(--muted)}
+#ovSvg .grid{stroke:var(--line);stroke-dasharray:2 4;stroke-width:1}
+#ovSvg .ev{cursor:pointer;outline:none}
+#ovSvg .ev .dot{stroke:var(--paper);stroke-width:2}
+#ovSvg .ev text{font-size:16px;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#ovSvg .ev:hover text,#ovSvg .ev:focus-visible text{font-weight:700}
+#ovSvg .ev.sel .dot{stroke:var(--ink);stroke-width:3}
+#ovSvg .ev.sel text{font-weight:900;fill:var(--seal)}
+#ovSvg .minor{cursor:pointer;outline:none}
+#ovSvg .minor circle{opacity:.55}
+#ovSvg .minor:hover circle,#ovSvg .minor.sel circle{opacity:1}
+#ovSvg .minor.sel circle{stroke:var(--ink);stroke-width:2}
+#ovSvg .office{cursor:pointer}
+#ovSvg .office rect{opacity:.22}
+#ovSvg .office:hover rect,#ovSvg .office.sel rect{opacity:.5}
+#ovSvg .office text{font-size:13px;font-weight:700}
+.ovcard{margin-top:10px;border:1px solid var(--line);border-left:4px solid var(--seal);border-radius:8px;background:var(--paper);padding:12px 16px;min-height:96px}
+.ovcard .hint{color:var(--muted);margin:0}
+.ovcard .d{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ovcard h3{font-family:var(--display);font-size:19px;margin:2px 0 6px;line-height:1.4}
+.ovcard p{margin:0 0 6px;max-width:80ch;font-size:14.5px}
+.ovcard .act{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ovcard .act button{border:1px solid var(--line);background:var(--chip);border-radius:6px;padding:5px 12px;font-size:13.5px}
+.ovcard .act .pri{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ovcard .act .sp{margin-left:auto;display:flex;gap:6px}
+.backpill{position:fixed;left:16px;bottom:16px;z-index:9;border:0;background:var(--seal);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.ev.flash{animation:flash 2s ease-out}
+@keyframes flash{0%,40%{background:color-mix(in srgb,var(--gold) 22%,transparent)}100%{background:transparent}}
+.ev{scroll-margin-top:110px}
+
+/* 台灣史 */
+.hblocks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+@media (max-width:640px){.hblocks{grid-template-columns:repeat(2,1fr)}}
+.hb{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.hb b{font-family:var(--display);font-size:16px}
+.hb span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hb small{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.hb em{font-style:normal;font-size:12px;color:var(--gold);margin-top:auto;padding-top:4px}
+.hb[aria-pressed=true]{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal)}
+.hb[aria-pressed=true] b{color:var(--seal)}
+.hpanel{margin-top:6px}
+.hhead{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.hhead h2{font-family:var(--display);font-size:22px;margin:0}
+.hhead p{margin:2px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+#hAll{display:block;width:100%;min-width:720px;height:auto;font-family:var(--body)}
+#hAll text{fill:var(--ink)}
+#hAll .axis{stroke:var(--line);stroke-width:1.5}
+#hAll .grid{stroke:var(--line);stroke-dasharray:2 4}
+#hAll .lanelbl{font-size:14px;font-weight:700}
+#hAll .yr{font-size:11px;fill:var(--muted)}
+#hAll .bar{cursor:pointer}
+#hAll .bar rect{stroke:var(--bg);stroke-width:1.5}
+#hAll .bar text{fill:#fff;font-size:13px;font-weight:600;pointer-events:none}
+#hAll .bar:hover rect,#hAll .dot:hover circle{filter:brightness(1.12)}
+#hAll .dot{cursor:pointer}
+#hAll .band{fill:var(--seal);opacity:.08;pointer-events:none}
+#hAll .tbd{font-size:12px;fill:var(--muted)!important}
+.hall{margin:14px 0 18px}.hallh{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.zoombar{display:flex;gap:6px;align-items:center;justify-content:flex-end;margin:4px 0}
+.zoombar button{font:inherit;font-size:13px;padding:3px 10px;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:6px;cursor:pointer}
+.zoombar button:hover{border-color:var(--seal)}.zoombar .zl{font-size:12px;color:var(--muted);min-width:44px;text-align:center}
+@media(min-width:900px){.ovscroll.wide,.zoombar.wide{width:min(96vw,1700px);position:relative;left:50%;transform:translateX(-50%)}}
+.hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
+#hSvg{display:block;width:100%;min-width:1100px;height:auto;font-family:var(--body)}
+#hSvg text{fill:var(--ink)}
+#hSvg .axis{stroke:var(--line);stroke-width:1.5}
+#hSvg .lead{stroke:var(--line)}
+#hSvg .grid{stroke:var(--line);stroke-dasharray:2 4}
+#hSvg .lanelbl{font-size:15px;font-weight:700}
+#hSvg .yr{font-size:11px;fill:var(--muted)}
+#hSvg .ev{cursor:pointer;outline:none}
+#hSvg .ev .dot{stroke:var(--paper);stroke-width:2}
+#hSvg .ev text{font-size:16px;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#hSvg .ev:hover text,#hSvg .ev:focus-visible text{font-weight:700}
+#hSvg .ev.sel .dot{stroke:var(--ink);stroke-width:3}
+#hSvg .ev.sel text{font-weight:900;fill:var(--seal)}
+.badge{display:inline-block;font-size:12px;padding:0 8px;border-radius:999px;border:1.5px solid var(--muted);color:var(--muted);margin-left:6px;vertical-align:1px}
+.badge.verified{border-color:#2f7a4f;color:#2f7a4f}
+.badge.disputed{border-color:var(--seal);color:var(--seal)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge.verified{border-color:#6fc28f;color:#6fc28f}}
+:root[data-theme="dark"] .badge.verified{border-color:#6fc28f;color:#6fc28f}
+.hnote{color:var(--seal)}
+.alias summary{cursor:pointer;color:var(--muted);font-size:14px}
+.alias ul{margin:4px 0 6px;padding-left:20px;font-size:14px}
+.src{font-size:13.5px;color:var(--muted)}
+.src a{margin-right:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<button class="backpill" id="backpill" hidden>↩ 回總覽</button>
+<header class="masthead">
+  <div>
+    <h1>台灣史年表：從荷西到今天</h1>
+    <p class="sub">1624 年至今的台灣與中華民國史，持續擴充中。另有李登輝線（讀《餘生》的學習筆記，1923–2020）：<b id="total"></b> 則事件，<b id="mtotal"></b> 則附政治手腕解析，<b id="cktotal"></b> 則標出蔣經國的影響</p>
+  </div>
+  <button class="theme" id="theme" aria-label="切換深色／淺色" title="切換深色／淺色">◐</button>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="主要分頁">
+  <button class="tab" role="tab" data-view="history" aria-selected="true">台灣史<small>1624 至今</small></button>
+  <button class="tab" role="tab" data-view="overview" aria-selected="false">李登輝<small>總覽圖＋逐年年表</small></button>
+  <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
+  <button class="tab" role="tab" data-view="methods">政治手腕<small>六種手法</small></button>
+  <button class="tab" role="tab" data-view="background">背景補充<small>台灣史脈絡</small></button>
+  <button class="tab" role="tab" data-view="quiz">翻卡複習<small>自我測驗</small></button>
+</nav>
+
+<!-- 台灣史 -->
+<section id="v-history" role="tabpanel">
+  <p class="intro">從荷蘭、西班牙來台（1624）到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
+  <div class="hall">
+    <div class="hallh"><b>整段台灣史一張圖</b><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交（已補完的事件）</span><span><i style="background:var(--c1)"></i>李登輝線</span></span></div>
+    <div class="ovscroll" id="hAllScroll"><svg id="hAll" role="group" aria-label="台灣史全期泳道圖"></svg></div>
+    <p class="hallnote">點色條或圓點，會打開該時期的細部圖。統治政權只畫主要政權的大略起訖，1895 年台灣民主國等短暫政權未畫出；「政治與外交」目前只有日治時期補完，其他時期之後逐期加入。</p>
+  </div>
+  <div class="hblocks" id="hBlocks"></div>
+  <div id="hPanel" class="hpanel" hidden>
+    <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
+    <div class="ovbar"><span class="legend"><span><i style="background:var(--c0)"></i>統治政權</span><span><i style="background:var(--c2)"></i>政治與外交</span><span><i style="background:var(--c1)"></i>李登輝線</span><span>可左右滑動</span></span></div>
+    <div class="ovscroll" id="hScroll"><svg id="hSvg" role="group" aria-label="時期事件軌道"></svg></div>
+    <div class="ovcard hcard" id="hCard" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 總覽 -->
+<section id="v-overview" role="tabpanel" hidden>
+  <p class="intro">這一頁分兩半：上半是 1923–2020 的總覽圖（李登輝的人生、台灣政局、國際與兩岸），點事件看摘要；下半是逐年年表，可搜尋、篩選、寫筆記。圖上點「看下方年表」會跳到那則事件，再按「↩ 回總覽圖」就回來。</p>
+  <div class="ovbar">
+    <button class="chip" id="ovAll" aria-pressed="false">顯示全部事件（小圓點）</button>
+    <span class="legend"><span><i style="background:var(--c0)"></i>李登輝人生</span><span><i style="background:var(--c1)"></i>台灣政局</span><span><i style="background:var(--c2)"></i>國際與兩岸</span><span>可左右滑動</span></span>
+  </div>
+  <div class="ovscroll" id="ovScroll"><svg id="ovSvg" role="group" aria-label="李登輝生平總覽時間軸"></svg></div>
+  <div class="ovcard" id="ovCard" aria-live="polite"></div>
+</section>
+
+<!-- 年表 -->
+<section id="v-timeline" role="tabpanel" hidden>
+  <h2 class="subh" id="tlHead">逐年年表</h2>
+  <p class="intro">一位沒有派系、沒有軍權的農經學者，如何在 12 年內把威權體制改成民主制度。點選分期可以只看那段時間；每則事件點標題展開，底部可以寫自己的筆記。</p>
+  <div class="eras-strip" id="erasStrip"></div>
+  <div class="bar">
+    <div class="row">
+      <input type="search" id="q" placeholder="搜尋：人名、年份、關鍵字（如 郝柏村、1991、釋字261）" aria-label="搜尋事件">
+    </div>
+    <div class="row scroll">
+      <button class="chip" id="keyonly" aria-pressed="false">只看必記</button>
+      <button class="chip" id="mvonly" aria-pressed="false">只看手腕</button>
+      <button class="chip" id="ckonly" aria-pressed="false">蔣經國線</button>
+      <button class="chip ghost" id="expand">全部展開</button>
+      <span class="active-m" id="activeM"></span>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+  <main id="list"></main>
+</section>
+
+<!-- 民主接力 -->
+<section id="v-relay" role="tabpanel" class="sec" hidden>
+  <h2>民主接力：蔣經國萌芽，李登輝落實</h2>
+  <p class="lead">蔣經國晚年打開了門，但體制的骨架（臨時條款、萬年國會、間接選舉）還在。李登輝把門後的路走完。點年份可跳到年表裡當年的事件。</p>
+  <div class="rtable" role="table" aria-label="民主接力對照">
+    <div class="rrow rh" role="row"><span role="columnheader">議題</span><span role="columnheader">蔣經國 · 萌芽</span><span role="columnheader">李登輝 · 落實</span></div>
+    <div id="rbody"></div>
+  </div>
+
+  <h3>江南案：萌芽的導火線之一</h3>
+  <p class="lead">1984 年的一樁海外暗殺，讓蔣家接班與情報體系都受到質疑。事件之後，蔣經國的改革節奏明顯加快。</p>
+  <ol class="steps" id="steps3"></ol>
+  <p class="nt"><b>更完整的說明</b><button class="linkbtn" data-bg="jiangnan">江南案經過、判決與爭議 →</button></p>
+
+  <h3>這個說法有爭論</h3>
+  <p class="lead">「蔣經國萌芽、李登輝落實」是整理框架。蔣經國為什麼改革，研究者常提三種解釋，實際上常是三者並用，差別在強調哪一個。</p>
+  <div class="threeway">
+    <div><h4>個人意願</h4><ul><li>在有能力鎮壓時選擇容忍</li><li>主動預告不接班、宣布解嚴</li><li>有研究者認為他是真心想推動民主化</li></ul></div>
+    <div><h4>外部壓力</h4><ul><li>美國國會施壓、江南案</li><li>1986 年美國眾議院決議</li><li>與中共的制度競爭</li></ul></div>
+    <div><h4>民間力量</h4><ul><li>黨外運動持續衝撞</li><li>1986 年民進黨成立</li><li>社會要求開放的聲音增加</li></ul></div>
+  </div>
+  <p class="nt"><b>要記得</b>他同時是威權體制的掌舵者，1979 年美麗島事件、1984 年江南案都在他任內；李登輝的修憲過程也有爭議。<button class="linkbtn" data-bg="debate" style="margin-top:6px">完整的不同看法 →</button><button class="linkbtn" data-bg="succession" style="margin-top:6px">為什麼不是直接傳位？ →</button><button class="linkbtn" data-bg="leaders" style="margin-top:6px">歷任領導人與三個時期 →</button></p>
+
+  <h3>萬年國會怎麼退場：三步走</h3>
+  <p class="lead">上百位在中國大陸選出、四十多年沒改選的老代表，最後沒有發生正面衝突就全部退職。每一步都給對方台階。</p>
+  <ol class="steps" id="steps1"></ol>
+
+  <h3>終止動員戡亂的路徑</h3>
+  <p class="lead">解嚴只是讓軍隊退出街頭；終止動員戡亂才讓憲法回到正常運作。從民意壓力到法律程序，花了一年多。</p>
+  <ol class="steps" id="steps2"></ol>
+
+  <h3>戒嚴與動員戡亂，差在哪？</h3>
+  <p class="lead">戒嚴管的是「街上」，動員戡亂管的是「憲法」。兩者都屬於戰時體制，但影響層面和結束時間不同。</p>
+  <div class="tblw"><table>
+    <thead><tr><th></th><th>戒嚴</th><th>動員戡亂時期</th></tr></thead>
+    <tbody>
+      <tr><td>是什麼</td><td>由軍方管制社會的措施</td><td>把共產黨定為「叛亂團體」的國家非常狀態</td></tr>
+      <tr><td>影響層面</td><td>社會生活：集會、遊行、組黨、辦報、出入境；平民可受軍法審判</td><td>憲政體制：憲法被凍結、總統權力擴大、萬年國會不必改選、叛亂罪重判</td></tr>
+      <tr><td>期間</td><td>本島 1949.5.20–1987.7.15<br>金馬至 1992.11.7</td><td>1947.7–1991.4.30</td></tr>
+      <tr><td>誰結束</td><td>蔣經國（本島）、李登輝（金馬）</td><td>李登輝</td></tr>
+      <tr><td>兩岸定位</td><td>沒有直接改變</td><td>結束後不再視中共為叛亂團體，改稱「大陸當局」</td></tr>
+    </tbody>
+  </table></div>
+  <p class="nt"><b>重點句</b>蔣經國解嚴，讓人民不再被軍隊管；李登輝終止動員戡亂，讓國家不再用「戰時」當理由凍結憲法。解嚴之後，台灣人仍可能因為言論被判叛亂罪，這是兩者最大的差別。</p>
+</section>
+
+<!-- 政治手腕 -->
+<section id="v-methods" role="tabpanel" class="sec" hidden>
+  <h2>政治手腕索引</h2>
+  <p class="lead">他反覆使用的六種手法。點選任一種，會切到年表，只留下用到這種手法的事件。</p>
+  <div class="mgrid" id="mgrid"></div>
+  <p class="nt" style="margin-top:16px"><b>怎麼讀</b>這些手法常常同時出現在同一件事上。例如 1990 年讓郝柏村組閣，同時是「人事佈局」（借重強人）、「先穩後改」（安撫保守派）與「借力使力」（之後靠新國會讓他下台）。</p>
+</section>
+
+<!-- 背景補充 -->
+<section id="v-background" role="tabpanel" hidden>
+  <div class="bar" style="top:46px">
+    <div class="row"><input type="search" id="qbg" placeholder="在背景補充裡搜尋（如 戒嚴、三民主義、二二八）" aria-label="搜尋背景"><span class="count" id="countbg"></span></div>
+  </div>
+  <div id="bg"></div>
+</section>
+
+<!-- 翻卡 -->
+<section id="v-quiz" role="tabpanel" hidden>
+  <div class="q-scope">範圍：
+    <button class="chip" data-scope="all" aria-pressed="true">全部</button>
+    <button class="chip" data-scope="key" aria-pressed="false">必記</button>
+    <button class="chip" data-scope="mv" aria-pressed="false">有手腕解析</button>
+    <button class="chip" data-scope="ck" aria-pressed="false">蔣經國線</button>
+    <button class="chip" data-scope="d" aria-pressed="false">總統十二年</button>
+  </div>
+  <div class="quiz" id="quiz"></div>
+</section>
+
+<button class="totop" id="totop" aria-label="回到頂部" hidden>↑</button>
+
+<footer>
+  <p>「台灣史」分頁：目前只有「日治時期」補完整，其餘時期會依同樣格式逐期擴充。每則事件都標示可信度（✓已查證／≈常見說法／⚑有爭議），並盡量並列各方稱謂與來源。其餘分頁是以李登輝為主體的深入內容。</p>
+  <p>年號欄：1945 年以前標示日治年號（大正／昭和），之後標示民國紀年；年齡為實歲（當年 − 1923）。「必記」是理解他一生轉折最關鍵的節點，「手腕」表示附有政治手腕解析，「經國」表示標出蔣經國的影響與民主接力。</p>
+  <p>事件內容、手腕解析與背景補充是根據公開史料整理的學習筆記，不是《餘生》的原文。受難人數、接班意圖等仍有爭議的說法，頁面上都有註明。每則事件下方的筆記只存在你這台裝置的瀏覽器裡。</p>
+  <p>主要參考：行政院轉型正義資料、司法院釋字第 261 號、國家人權記憶庫「江南案」、中國時報人間副刊評論（2024.10.17）、《近代史研究所集刊》第 114 期書評、國史館與國父紀念館資料庫、中央社、關鍵評論網、Taipei Times「Taiwan in Time」專欄、洪惟仁台灣語言研究。</p>
+</footer>
+</div>
+
+<script>
+__DATA__
+__BG__
+__HIST__
+/* ---------- 共用 ---------- */
+const $=s=>document.querySelector(s);
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const eraYear=y=>y<1868?"":y<1912?`明治 ${y-1867} 年`:y<1926?`大正 ${y-1911} 年`:y<=1945?`昭和 ${y-1925} 年`:`民國 ${y-1911} 年`;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mName=id=>METHODS.find(m=>m.id===id).name;
+let state={view:"history",hp:null,hsel:null,hback:null,from:null,ovSel:null,ovAll:false,q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
+$("#total").textContent=E.length;
+$("#mtotal").textContent=E.filter(e=>e.mv).length;
+$("#cktotal").textContent=E.filter(e=>e.ck).length;
+
+/* 主題切換 */
+(function(){const t=store.get("theme");if(t)document.documentElement.dataset.theme=t;})();
+$("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";store.set("theme",r.dataset.theme)};
+
+/* 分頁 */
+const VIEWS=["history","overview","relay","methods","background","quiz"];
+function setView(v,push=true){
+  if(v==="timeline")v="overview";
+  if(!VIEWS.includes(v))v="history";
+  state.view=v;
+  document.querySelectorAll(".tab").forEach(t=>{t.setAttribute("aria-selected",t.dataset.view===v);if(t.dataset.view===v)t.scrollIntoView({block:"nearest",inline:"center"})});
+  VIEWS.forEach(x=>$("#v-"+x).hidden=x!==v);$("#v-timeline").hidden=v!=="overview";
+  if(push&&location.hash!=="#"+v)history.replaceState(null,"","#"+v);
+  if(v==="history")state.hback=null;
+  refreshPill();
+  if(v==="history")renderHistory();else if(v==="overview"){renderOv();render()}else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
+}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{state.from=null;setView(t.dataset.view);window.scrollTo({top:0})});
+addEventListener("hashchange",()=>setView(location.hash.slice(1)||"history",false));
+
+/* ---------- 年表 ---------- */
+const strip=$("#erasStrip");
+[{id:"all",name:"全部",range:"1923–2020"},...ERAS].forEach(e=>{
+  const n=e.id==="all"?E.length:E.filter(x=>x.era===e.id).length;
+  const b=document.createElement("button");b.className="es";b.dataset.era=e.id;
+  b.innerHTML=`<b>${e.name}</b><span>${e.range}</span><small>${n} 則</small>`;
+  b.onclick=()=>{state.era=state.era===e.id?"all":e.id;sync()};strip.append(b);
+});
+function hi(text){if(!state.q)return esc(text);const q=state.q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");return esc(text).replace(new RegExp(q,"gi"),m=>`<mark>${m}</mark>`)}
+function filtered(){
+  const q=state.q.toLowerCase();
+  return E.filter(e=>(state.era==="all"||e.era===state.era)&&(!state.keyOnly||e.key)&&(!state.mvOnly||e.mv)&&(!state.method||e.ms.includes(state.method))&&(!state.ckOnly||e.ck||e.tags.includes("蔣經國"))&&
+    (!q||[e.t,e.b,e.w,e.mv,e.ck,e.md,String(e.y),eraYear(e.y),...e.tags,...e.ms.map(mName)].join(" ").toLowerCase().includes(q)));
+}
+function render(){
+  const list=filtered();$("#count").textContent=`${list.length} / ${E.length} 則`;
+  const main=$("#list");main.innerHTML="";
+  if(!list.length){main.innerHTML=`<p class="empty">沒有符合條件的事件，換個關鍵字或清除篩選試試。</p>`;return}
+  let cur=null;
+  list.forEach(e=>{
+    if(e.era!==cur){cur=e.era;const er=ERAS.find(x=>x.id===cur);
+      main.insertAdjacentHTML("beforeend",`<h2 class="era-head" id="era-${cur}">${er.name}<span>${er.range}</span></h2>`)}
+    const open=state.expandAll||state.open.has(e.id)||!!state.q||!!state.method||state.ckOnly||state.mvOnly;
+    const note=store.get("note-"+e.id)||"";
+    const div=document.createElement("article");div.className="ev";div.id="ev-"+e.id;
+    div.innerHTML=`<div class="when"><div class="yr">${e.y}</div><div class="era-yr">${e.md?e.md+"<br>":""}${eraYear(e.y)}</div><div class="age">${e.y-1923} 歲</div></div>
+    <div class="what"><button class="ttl" aria-expanded="${open}"><span class="tw">${hi(e.t)}</span>${e.ck?'<span class="seal ck">經國</span>':""}${e.mv?'<span class="seal m">手腕</span>':""}${e.key?'<span class="seal">必記</span>':""}</button>
+    <div class="det" ${open?"":"hidden"}><p>${hi(e.b)}</p>
+    ${e.ck?`<div class="ckbox"><span class="lbl">蔣經國的影響 · 民主接力</span><p>${hi(e.ck)}</p></div>`:""}
+    ${e.mv?`<div class="move"><span class="lbl">政治手腕</span><p>${hi(e.mv)}</p></div>`:""}
+    ${e.w?`<p class="why"><b>串連：</b>${hi(e.w).replace(/\[\[bg:([\w-]+)\]\]/g,(m,id)=>{const g=BG.find(x=>x.id===id);return g?`<button class="linkbtn" data-bg="${id}">背景補充：${esc(g.t)} →</button>`:""})}</p>`:""}
+    <div class="tags">${e.ms.map(m=>`<button class="tag mt" data-m="${m}">◆ ${mName(m)}</button>`).join("")}${e.tags.map(t=>`<button class="tag" data-tag="${esc(t)}">#${esc(t)}</button>`).join("")}</div>
+    <textarea id="note-${e.id}" placeholder="我的筆記（頁碼、心得…）">${esc(note)}</textarea></div></div>`;
+    div.querySelector(".ttl").onclick=()=>{state.open.has(e.id)?state.open.delete(e.id):state.open.add(e.id);if(state.expandAll){state.expandAll=false;E.forEach(x=>state.open.add(x.id));state.open.delete(e.id)}render()};
+    div.querySelectorAll(".tag[data-tag]").forEach(t=>t.onclick=()=>{$("#q").value=t.dataset.tag;state.q=t.dataset.tag;sync()});
+    div.querySelectorAll("[data-bg]").forEach(x=>x.onclick=()=>gotoBg(x.dataset.bg));
+    div.querySelectorAll(".tag[data-m]").forEach(t=>t.onclick=()=>{state.method=t.dataset.m;state.era="all";sync()});
+    div.querySelector("textarea").oninput=ev=>store.set("note-"+e.id,ev.target.value);
+    main.append(div);
+  });
+}
+function gotoYear(y){state.q=String(y);$("#q").value=y;state.era="all";state.method=null;state.keyOnly=state.mvOnly=state.ckOnly=false;setView("timeline");sync();$("#v-timeline .bar").scrollIntoView({block:"start"})}
+function sync(){
+  document.querySelectorAll(".es").forEach(b=>b.setAttribute("aria-pressed",b.dataset.era===state.era));
+  document.querySelectorAll(".mbtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m===state.method));
+  $("#keyonly").setAttribute("aria-pressed",state.keyOnly);$("#mvonly").setAttribute("aria-pressed",state.mvOnly);$("#ckonly").setAttribute("aria-pressed",state.ckOnly);
+  $("#expand").textContent=state.expandAll?"全部收合":"全部展開";
+  $("#activeM").innerHTML=state.method?`手法：${mName(state.method)}<button id="clrM">清除</button>`:"";
+  if(state.method)$("#clrM").onclick=()=>{state.method=null;sync()};
+  if(state.view==="overview")render();
+}
+$("#q").oninput=ev=>{state.q=ev.target.value.trim();sync()};
+$("#keyonly").onclick=()=>{state.keyOnly=!state.keyOnly;sync()};
+$("#mvonly").onclick=()=>{state.mvOnly=!state.mvOnly;sync()};
+$("#ckonly").onclick=()=>{state.ckOnly=!state.ckOnly;sync()};
+$("#expand").onclick=()=>{state.expandAll=!state.expandAll;if(!state.expandAll)state.open.clear();sync()};
+
+/* ---------- 民主接力 ---------- */
+const rb=$("#rbody");
+RELAY.forEach(r=>{const d=document.createElement("div");d.className="rrow";d.setAttribute("role","row");
+  d.innerHTML=`<span class="rk" role="cell">${r.k}</span><button class="ra" role="cell" data-y="${r.ay}">${esc(r.a).replace(/(\d{4})/g,'<span class="ry">$1</span>')}</button><button class="rb" role="cell" data-y="${r.by}">${esc(r.b).replace(/(\d{4})/g,'<span class="ry">$1</span>')}</button>`;
+  d.querySelectorAll("button").forEach(b=>b.onclick=()=>gotoYear(b.dataset.y));
+  rb.append(d)});
+const STEPS1=[
+ ["1989","1月","自願退職條例","給錢、給面子，讓人自己選。多數人不退，但「該退了」成了官方立場。"],
+ ["1990","6月","釋字第 261 號","大法官定出截止日 1991.12.31。是「依法退職」，不是「被李登輝趕走」。"],
+ ["1991","4月","舊國代自己修憲","第一屆國大通過增修條文，親手通過改選法源。法統不中斷，退場也有尊嚴。"],
+ ["1991","12月","全面退職","12 月 21 日選出第二屆國代，年底老代表全部退職。國會從此由台灣人民選出。"]];
+const STEPS2=[
+ ["1990","3月","野百合學運","學生要求廢臨時條款、召開國是會議。他接見學生，承諾召開。民意壓力從此由他來用。"],
+ ["1990","5月","就職演說","公開承諾一年內終止動員戡亂，把自己和黨綁在時程上。"],
+ ["1990","6–7月","國是會議","朝野一起背書：終止動員戡亂、廢臨時條款、國會全面改選。"],
+ ["1990","10月","國統綱領","先說「我們仍以統一為目標」，安撫黨內統派與北京，替修憲鋪安全網。"],
+ ["1991","4月","修憲與廢止","第一屆國大通過增修條文、決議廢止臨時條款。"],
+ ["1991","5月1日","終止動員戡亂","正好在承諾的一年內。中共不再是「叛亂團體」，憲政回到常態。"]];
+function steps(el,rows){el.innerHTML=rows.map(r=>`<li><span class="sy">${r[0]}<small>${r[1]}</small></span><span class="st"><button data-y="${r[0]}">${r[2]}</button><span>${r[3]}</span></span></li>`).join("");el.querySelectorAll("button").forEach(b=>b.onclick=()=>gotoYear(b.dataset.y))}
+const STEPS3=[
+ ["1984","10月15日","江南案","劉宜良在美國遭槍殺，主謀是情報局長汪希苓。"],
+ ["1985","1–4月","美國施壓與判決","美方派員來台測謊，國會議員威脅切斷軍售。台灣判汪希苓無期徒刑，案子定調為個人行為。"],
+ ["1985","12月25日","蔣家人不接班","蔣經國公開表示蔣家人不能也不會接班，蔣孝武後來外放新加坡。"],
+ ["1986","3–9月","政治革新小組與民進黨","研擬國會改選、解嚴、開放黨禁。9 月民進黨成立，蔣經國指示冷靜處理。"],
+ ["1987","7月15日","解嚴","本島結束 38 年戒嚴。動員戡亂、臨時條款與萬年國會仍在，留給李登輝。"]];
+steps($("#steps1"),STEPS1);steps($("#steps2"),STEPS2);steps($("#steps3"),STEPS3);
+function gotoBg(id){bgOpen.add(id);state.qbg="";$("#qbg").value="";setView("background");const dd=document.getElementById("bg-"+id);if(dd){dd.open=true;dd.scrollIntoView({block:"start"})}}
+document.querySelectorAll("#v-relay [data-bg]").forEach(b=>b.onclick=()=>gotoBg(b.dataset.bg));
+
+/* ---------- 政治手腕 ---------- */
+const EX={借力:"1990 接住野百合學運",依法:"1990 釋字 261 號定期限",給台階:"1989 退職金；1993 舊對手任副主席",人事:"1990 郝柏村組閣，1993 由新國會讓他下台",先穩:"1990 先端出國統綱領，再終止動員戡亂",結盟:"1996 國發會與民進黨合作推動精省"};
+const mg=$("#mgrid");
+METHODS.forEach(m=>{
+  const n=E.filter(e=>e.ms.includes(m.id)).length;
+  const b=document.createElement("button");b.className="mbtn";b.dataset.m=m.id;b.setAttribute("aria-pressed","false");
+  b.innerHTML=`<b>${m.name}</b><span>${m.d}</span><em>例：${EX[m.id]}</em><small>${n} 則事件 →</small>`;
+  b.onclick=()=>{state.method=m.id;state.era="all";state.q="";$("#q").value="";setView("timeline");sync();$("#v-timeline .bar").scrollIntoView({block:"start"})};
+  mg.append(b);
+});
+
+/* ---------- 背景補充 ---------- */
+let bgOpen=new Set();
+function renderBg(){
+  const q=state.qbg.toLowerCase();
+  const items=BG.filter(b=>!q||(b.k+b.t+b.s+b.html.replace(/<[^>]+>/g,"")).toLowerCase().includes(q));
+  $("#countbg").textContent=`${items.length} / ${BG.length} 篇`;
+  const box=$("#bg");
+  if(!items.length){box.innerHTML=`<p class="empty">背景補充裡沒有「${esc(state.qbg)}」，換個關鍵字試試。</p>`;return}
+  box.innerHTML=`<p class="bg-lead">讀李登輝之前，先把舞台看清楚：台灣在他出生前後經歷了什麼。依時間順序整理 ${BG.length} 個主題，點標題展開；每篇底部的年份可以跳回年表。</p>
+  <nav class="bg-nav" aria-label="背景主題">${items.map(b=>`<a href="#bg-${b.id}" data-id="${b.id}"><span>${b.k}</span>${b.t}</a>`).join("")}</nav>`+
+  items.map(b=>`<details class="bgc" id="bg-${b.id}" ${bgOpen.has(b.id)||q?"open":""}><summary><span class="bk">${b.k}</span><span class="bt">${b.t}</span><span class="bs">${b.s}</span></summary><div class="bgb">${b.html}${b.ys.length?`<div class="tl-links">在年表中看：${b.ys.map(y=>`<button data-y="${y}">${y}</button>`).join("")}</div>`:""}</div></details>`).join("");
+  box.querySelectorAll("details").forEach(d=>d.addEventListener("toggle",()=>{const id=d.id.slice(3);d.open?bgOpen.add(id):bgOpen.delete(id)}));
+  box.querySelectorAll(".bg-nav a").forEach(a=>a.onclick=ev=>{ev.preventDefault();const d=document.getElementById("bg-"+a.dataset.id);if(d){d.open=true;bgOpen.add(a.dataset.id);d.scrollIntoView({block:"start"})}});
+  box.querySelectorAll(".tl-links button").forEach(b=>b.onclick=()=>gotoYear(b.dataset.y));
+  box.querySelectorAll(".bgb [data-bg]").forEach(b=>b.onclick=()=>gotoBg(b.dataset.bg));
+}
+$("#qbg").oninput=ev=>{state.qbg=ev.target.value.trim();renderBg()};
+
+/* ---------- 翻卡 ---------- */
+let deck=[],qi=0,shown=false,score={ok:0,no:0};
+function scoped(){return E.filter(e=>state.scope==="all"||(state.scope==="key"&&e.key)||(state.scope==="mv"&&e.mv)||(state.scope==="ck"&&(e.ck||e.tags.includes("蔣經國")))||(state.scope==="d"&&e.era==="d"))}
+function newDeck(){deck=scoped().slice().sort(()=>Math.random()-.5);qi=0;shown=false;score={ok:0,no:0}}
+document.querySelectorAll(".q-scope .chip").forEach(c=>c.onclick=()=>{state.scope=c.dataset.scope;document.querySelectorAll(".q-scope .chip").forEach(x=>x.setAttribute("aria-pressed",x===c));newDeck();renderQuiz()});
+function renderQuiz(){
+  const box=$("#quiz");
+  const total=deck.length;
+  const bar=`<div class="prog"><i style="width:${total?Math.min(100,qi/total*100):0}%"></i></div>`;
+  if(!total){box.innerHTML=`<p class="empty">這個範圍沒有事件。</p>`;return}
+  if(qi>=total){box.innerHTML=bar+`<p class="q-front">這一輪完成</p><p class="score">記得 ${score.ok} 則 · 還要再看 ${score.no} 則</p><div class="q-act"><button class="pri" id="again">再來一輪</button></div>`;
+    $("#again").onclick=()=>{newDeck();renderQuiz()};return}
+  const e=deck[qi];
+  box.innerHTML=bar+`<div class="q-k">第 ${qi+1} / ${total} 張 · 先想：哪一年？他幾歲？${e.mv?"他用了什麼手法？":"為什麼重要？"}</div>
+  <div class="q-front">${esc(e.t)}</div><div class="q-hint">${ERAS.find(x=>x.id===e.era).name}</div>
+  <div class="q-back" ${shown?"":"hidden"}><div class="yr">${e.y}${e.md?" · "+e.md:""}</div><div class="era-yr">${eraYear(e.y)} · ${e.y-1923} 歲</div><p>${esc(e.b)}</p>
+  ${e.ck?`<div class="ckbox"><span class="lbl">蔣經國的影響 · 民主接力</span><p>${esc(e.ck)}</p></div>`:""}
+  ${e.mv?`<div class="move"><span class="lbl">政治手腕${e.ms.length?"：":""}${e.ms.map(mName).join("、")}</span><p>${esc(e.mv)}</p></div>`:""}
+  ${e.w.replace(/\[\[bg:[\w-]+\]\]/g,"").trim()?`<p class="why"><b>串連：</b>${esc(e.w.replace(/\[\[bg:[\w-]+\]\]/g,"").trim())}</p>`:""}</div>
+  <div class="q-act">${shown?`<button class="pri" id="ok">記得<kbd>1</kbd></button><button id="no">還要再看<kbd>2</kbd></button>`:`<button class="pri" id="flip">翻開答案<kbd>空白鍵</kbd></button><button id="skip">跳過<kbd>→</kbd></button>`}</div>
+  <div class="score">記得 ${score.ok} · 再看 ${score.no}</div>`;
+  if(shown){$("#ok").onclick=()=>{score.ok++;next()};$("#no").onclick=()=>{score.no++;deck.push(e);next()}}
+  else{$("#flip").onclick=()=>{shown=true;renderQuiz()};$("#skip").onclick=next}
+}
+function next(){qi++;shown=false;renderQuiz()}
+addEventListener("keydown",ev=>{if(state.view!=="quiz"||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+  if(ev.key===" "&&!shown){ev.preventDefault();shown=true;renderQuiz()}
+  else if(ev.key==="ArrowRight"&&!shown)next();
+  else if(ev.key==="1"&&shown){score.ok++;next()}
+  else if(ev.key==="2"&&shown){score.no++;deck.push(deck[qi]);next()}});
+
+
+/* ---------- 總覽 ---------- */
+const OV_SEL=[[1923,"出生於","出生三芝",0],[1943,"進入京都帝國大學","京都帝大",0],[1957,"進入農復會","農復會",0],[1968,"獲康乃爾","康乃爾博士",0],
+[1988,"蔣經國逝世","繼任總統",0],[1996,"首次總統直選","直選當選",0],[2000,"政黨輪替","卸任",0],[2020,"病逝","病逝",0],
+[1947,"二二八事件","二二八",1],[1949,"台灣全面戒嚴","戒嚴",1],[1978,"蔣經國就任總統","蔣經國就任",1],[1979,"美麗島事件","美麗島",1],[1984,"江南案","江南案",1],[1985,"蔣經國宣示","不傳子",1],[1986,"民主進步黨成立","民進黨成立",1],[1987,"解除戒嚴","解嚴",1],[1990,"野百合學運","野百合",1],[1991,"宣布 5 月 1 日","終止動員戡亂",1],[1991,"萬年國會全面退職","萬年國會退職",1],[1994,"第三次修憲","修憲直選",1],[1995,"代表政府為二二八","二二八道歉",1],[1999,"九二一大地震","921",1],
+[1923,"孫文與蘇聯","聯俄容共",2],[1949,"中華民國政府遷往台北","國府遷台",2],[1971,"中華民國退出聯合國","退出聯合國",2],[1978,"美國宣布與中華人民共和國建交","美中斷交",2],[1991,"蘇聯解體","蘇聯解體",2],[1996,"台海飛彈危機","飛彈危機",2],[1999,"「特殊國與國關係」","兩國論",2]];
+const OV_OFF=[[1972.45,1978.45,"政務委員","出任行政院政務委員",0],[1978.45,1981.95,"台北市長","出任台北市長",0],[1981.95,1984.4,"省主席","出任台灣省主席",0],[1984.4,1988.04,"副總統","就任副總統",0],[1988.04,2000.4,"總統（1988–2000）","蔣經國逝世",0],[1972.45,1988.04,"蔣經國時代（行政院長 → 總統）","",1]];
+const OV_ERA=[["a",1923,1946],["b",1946,1972],["c",1972,1988.04],["d",1988.04,2000.4],["e",2000.4,2020.6]];
+const OV_PTS=[[1923,100],[1945,220],[1972,430],[1988,770],[2000,1310],[2021,1530]];
+const OV_W=1580, OV_LANES=["李登輝人生","台灣政局","國際與兩岸"];
+const ovX=(y,md)=>{const m=/月/.test(md||"")?parseInt(md):6;const v=y+(m-1)/12+0.04;for(let i=1;i<OV_PTS.length;i++){const[a,ax]=OV_PTS[i-1],[b,bx]=OV_PTS[i];if(v<=b)return ax+(Math.max(v,a)-a)/(b-a)*(bx-ax)}return OV_PTS[OV_PTS.length-1][1]};
+const ovYX=v=>{for(let i=1;i<OV_PTS.length;i++){const[a,ax]=OV_PTS[i-1],[b,bx]=OV_PTS[i];if(v<=b)return ax+(Math.max(v,a)-a)/(b-a)*(bx-ax)}return OV_PTS[OV_PTS.length-1][1]};
+function ovLane(e){const s=e.t+" "+e.tags.join(" ");
+  if(/蔣經國|蔣介石/.test(e.t))return 1;
+  if(/外交|美國|日本|斷交|聯合國|蘇聯|冷戰|兩岸|飛彈|國共|中共|中國|大陸|海基|辜汪|九二共識|統一|金門|砲戰|俄/.test(s))return 2;
+  if(/出生|進入|獲|結婚|畢業|赴|出任|就任|辭|病逝|出版|任教|服役|入伍|返台|回台|擔任/.test(e.t))return 0;
+  return 1}
+function ovBuild(){
+  const cur=[];
+  OV_SEL.forEach(([y,p,lab,lane])=>{const e=E.find(x=>x.y===y&&x.t.startsWith(p));if(e)cur.push({e,lab,lane,major:true})});
+  if(state.ovAll){const used=new Set(cur.map(c=>c.e.id));E.forEach(e=>{if(!used.has(e.id))cur.push({e,lab:"",lane:ovLane(e),major:false})})}
+  return cur}
+function renderOv(){
+  const svg=$("#ovSvg");const items=ovBuild();
+  items.forEach(c=>{c.x=ovX(c.e.y,c.e.md)});
+  const lanes=[0,1,2].map(l=>{
+    const list=items.filter(c=>c.lane===l&&c.major).sort((a,b)=>a.x-b.x);const rowsEnd=[];
+    list.forEach(c=>{const w=c.lab.length*16+12;c.l=Math.max(104,Math.min(OV_W-w-6,c.x-w/2));c.r=c.l+w;
+      let k=rowsEnd.findIndex(end=>end<c.l-4);if(k<0){k=rowsEnd.length;rowsEnd.push(0)}rowsEnd[k]=c.r;c.row=k});
+    return {list,rows:Math.max(1,rowsEnd.length)}});
+  let Y=58,out="",lanesOut="";
+  lanes.forEach((L,l)=>{L.hasBar=l<2;L.h=10+L.rows*25+8+(L.hasBar?32:16);L.y0=Y;L.axis=Y+10+L.rows*25+8;Y+=L.h+4});
+  const H=Y+26;
+  svg.setAttribute("viewBox",`0 0 ${OV_W} ${H}`);
+  let s=`<g class="era">`;
+  OV_ERA.forEach(([id,a,b])=>{const er=ERAS.find(x=>x.id===id);const x1=ovYX(a),x2=ovYX(b);
+    s+=`<rect x="${x1}" y="6" width="${x2-x1}" height="40" rx="4"/><text x="${(x1+x2)/2}" y="24" text-anchor="middle">${er.name}</text><text class="small" x="${(x1+x2)/2}" y="40" text-anchor="middle" style="font-size:11px;font-weight:400;fill:var(--muted)">${er.range}</text>`});
+  s+=`</g>`;
+  [1930,1940,1950,1960,1970,1980,1990,2000,2010,2020].forEach(y=>{const x=ovYX(y);s+=`<line class="grid" x1="${x}" x2="${x}" y1="50" y2="${H-20}"/><text class="yr" x="${x}" y="${H-6}" text-anchor="middle">${y}</text>`});
+  lanes.forEach((L,l)=>{
+    s+=`<rect class="lanebg" x="0" y="${L.y0}" width="${OV_W}" height="${L.h}" ${l%2?'':'style="opacity:.0"'}/><text class="lanelbl" x="8" y="${L.axis-6}" style="fill:var(--c${l})">${OV_LANES[l]}</text><line class="axis" x1="100" x2="${OV_W-20}" y1="${L.axis}" y2="${L.axis}"/>`;
+    OV_OFF.filter(o=>o[4]===l).forEach(o=>{const e=E.find(x=>x.t.startsWith(o[3]||"\u0000"));const x1=ovYX(o[0]),x2=ovYX(o[1]);
+      s+=`<g class="office" ${e?`data-id="${e.id}" role="button" tabindex="0"`:""}><rect x="${x1}" y="${L.axis+8}" width="${x2-x1}" height="20" rx="3" style="fill:var(--c${l})"/><text x="${(x1+x2)/2}" y="${L.axis+23}" text-anchor="middle" style="fill:var(--ink)">${o[2]}</text></g>`});
+    L.list.forEach(c=>{const top=L.y0+8+(L.rows-1-c.row)*25;
+      s+=`<g class="ev" data-id="${c.e.id}" role="button" tabindex="0" aria-label="${esc(c.e.y+' '+c.e.t)}"><line class="lead" x1="${c.x}" x2="${c.x}" y1="${top+22}" y2="${L.axis}"/><text x="${(c.l+c.r)/2}" y="${top+17}" text-anchor="middle">${esc(c.lab)}</text><circle class="dot" cx="${c.x}" cy="${L.axis}" r="6.5" style="fill:var(--c${l})"/><title>${esc(c.e.y+(c.e.md?" "+c.e.md:"")+"　"+c.e.t)}</title></g>`});
+    items.filter(c=>c.lane===l&&!c.major).forEach(c=>{
+      s+=`<g class="minor" data-id="${c.e.id}" role="button" tabindex="0" aria-label="${esc(c.e.y+' '+c.e.t)}"><circle cx="${c.x}" cy="${L.axis}" r="4" style="fill:var(--c${l})"/><title>${esc(c.e.y+(c.e.md?" "+c.e.md:"")+"　"+c.e.t)}</title></g>`})});
+  svg.innerHTML=s;
+  svg.querySelectorAll("[data-id]").forEach(g=>{const id=+g.dataset.id;g.onclick=()=>ovSelect(id);g.onkeydown=ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();ovSelect(id)}}});
+  ovMark();ovCard();
+  $("#ovAll").setAttribute("aria-pressed",state.ovAll);$("#ovAll").textContent=state.ovAll?"只顯示主要事件":"顯示全部事件（小圓點）";
+}
+function ovMark(){document.querySelectorAll("#ovSvg [data-id]").forEach(g=>g.classList.toggle("sel",+g.dataset.id===state.ovSel))}
+function ovSelect(id,scroll){state.ovSel=id;ovMark();ovCard();if(scroll){const g=document.querySelector(`#ovSvg [data-id="${id}"]`);if(g)g.scrollIntoView({inline:"center",block:"nearest"})}}
+function ovCard(){
+  const c=$("#ovCard");const e=E.find(x=>x.id===state.ovSel);
+  if(!e){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現摘要。<br>點最上面的色塊可看人生階段；底下的長條是各個職位的任期。</p>`;return}
+  const clean=e.w.replace(/\[\[bg:[\w-]+\]\]/g,"").trim();
+  const bgs=[...e.w.matchAll(/\[\[bg:([\w-]+)\]\]/g)].map(m=>BG.find(x=>x.id===m[1])).filter(Boolean);
+  let body=e.b;if(body.length>150)body=body.slice(0,150).replace(/[，、；。]?[^，、；。]*$/,"")+"……";
+  c.innerHTML=`<div class="d">${e.y}${e.md?" · "+e.md:""} · ${eraYear(e.y)} · ${e.y-1923} 歲</div><h3>${esc(e.t)}</h3><p>${esc(body)}</p>${clean?`<p style="color:var(--muted)"><b style="color:var(--seal)">串連：</b>${esc(clean)}</p>`:""}
+  <div class="act"><button class="pri" id="ovGo">看下方年表完整內容 ↓</button>${bgs.map(g=>`<button data-bg="${g.id}">背景：${esc(g.t)} →</button>`).join("")}<span class="sp"><button id="ovPrev" aria-label="上一個">← 前一個</button><button id="ovNext" aria-label="下一個">後一個 →</button></span></div>`;
+  $("#ovGo").onclick=()=>gotoEvent(e.id);
+  c.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{state.from=e.id;gotoBg(b.dataset.bg)});
+  const order=[...document.querySelectorAll("#ovSvg .ev,#ovSvg .minor")].map(g=>+g.dataset.id).map(i=>E.find(x=>x.id===i)).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));
+  const i=order.findIndex(x=>x.id===e.id);
+  const step=d=>{const n=order[(i+d+order.length)%order.length];ovSelect(n.id,true)};
+  $("#ovPrev").onclick=()=>step(-1);$("#ovNext").onclick=()=>step(1);
+}
+$("#ovAll").onclick=()=>{state.ovAll=!state.ovAll;renderOv()};
+function gotoEvent(id){
+  state.from=id;state.q="";$("#q").value="";state.era="all";state.method=null;state.keyOnly=state.mvOnly=state.ckOnly=false;state.expandAll=false;state.open.add(id);
+  setView("timeline");sync();
+  requestAnimationFrame(()=>{const el=document.getElementById("ev-"+id);if(el){el.scrollIntoView({block:"start"});el.classList.add("flash")}});
+}
+function refreshPill(){const p=$("#backpill");let show=false,txt="↩ 回總覽圖";
+  if(state.from!=null)show=true;
+  else if(state.hback&&state.view!=="history"){show=true;txt="↩ 回台灣史"}
+  p.textContent=txt;p.hidden=!show}
+$("#backpill").onclick=()=>{
+  if(state.from!=null){const id=state.from;state.from=null;state.ovSel=id;if(state.view!=="overview")setView("overview");refreshPill();window.scrollTo({top:0});ovMark();ovSelect(id,true)}
+  else if(state.hback){const hb=state.hback;state.hp=hb.pid;state.hsel=hb.sel;setView("history");window.scrollTo({top:0})}};
+
+
+/* ---------- 台灣史（三層下鑽） ---------- */
+const pOf=y=>PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[PERIODS.length-1];
+const H_LANES=["統治政權","政治與外交","李登輝線"];
+const H_LC=["var(--c0)","var(--c2)","var(--c1)"];
+function leeInPeriod(p){return E.filter(e=>e.key&&e.y>=p.a&&e.y<p.b)}
+function leeShort(e){const s=OV_SEL.find(x=>x[0]===e.y&&e.t.startsWith(x[1]));return s?s[2]:e.t.slice(0,7)}
+
+const HALL_PTS=[[1624,0],[1683,.14],[1895,.42],[1945,.62],[1987,.84],[2027,1]];
+function hallX(y,x0,x1){let i=0;while(i<HALL_PTS.length-2&&y>HALL_PTS[i+1][0])i++;const [a,fa]=HALL_PTS[i],[b,fb]=HALL_PTS[i+1];return x0+(fa+(Math.max(a,Math.min(b,y))-a)/(b-a)*(fb-fa))*(x1-x0)}
+function hallInv(f){f=Math.max(0,Math.min(1,f));let i=0;while(i<HALL_PTS.length-2&&f>HALL_PTS[i+1][1])i++;const [a,fa]=HALL_PTS[i],[b,fb]=HALL_PTS[i+1];return a+(f-fa)/(fb-fa)*(b-a)}
+const HALL_BARS=[
+ [1624,1662,"荷蘭",0,0,"荷蘭統治南部（1624–1662）"],[1626,1642,"西班牙",1,0,"西班牙佔領北部（1626–1642）"],[1662,1683,"鄭氏",0,1,"鄭氏政權（1662–1683）"],
+ [1683,1895,"清朝",0,2,"清領（1683–1895）"],[1895,1945,"日本",0,3,"日治（1895–1945）"],[1945,2027,"中華民國",0,4,"中華民國（1945 接收至今）"]];
+function renderHall(){
+  const svg=$("#hAll");if(!svg)return;const W=1000,x0=92,x1=W-24,rh=26;let s="";
+  const cur=PERIODS.find(p=>p.id===state.hp);
+  if(cur)s+=`<rect class="band" x="${hallX(Math.max(1624,cur.a),x0,x1)}" y="4" width="${hallX(Math.min(2027,cur.b),x0,x1)-hallX(Math.max(1624,cur.a),x0,x1)}" height="226"/>`;
+  [1624,1683,1895,1945,1987,2026].forEach(y=>{const x=hallX(y,x0,x1);s+=`<line class="grid" x1="${x}" x2="${x}" y1="4" y2="226"/><text class="yr" x="${x}" y="244" text-anchor="${y===2026?"end":y===1624?"start":"middle"}">${y}</text>`});
+  // lane 0
+  s+=`<text class="lanelbl" x="8" y="48" style="fill:var(--c0)">統治政權</text>`;
+  HALL_BARS.forEach(([a,b,n,row,_,tip])=>{const xa=hallX(a,x0,x1),xb=hallX(b,x0,x1),y=10+row*(rh+3);
+    s+=`<g class="bar" data-hy="${n==="中華民國"?1986:(a+b)/2}"><title>${tip}</title><rect x="${xa}" y="${y}" width="${xb-xa}" height="${rh}" rx="4" fill="var(--c0)" opacity="${n==="西班牙"?.7:1}"/>${xb-xa>40?`<text x="${(xa+xb)/2}" y="${y+18}" text-anchor="middle">${n}</text>`:""}</g>${xb-xa<=40?`<text class="tbd" x="${xb+5}" y="${y+18}">${n}</text>`:""}`});
+  const yo=10+2*(rh+3)+rh+4;
+  s+=`<g class="bar" data-hy="1700"><title>原住民族自古居住於此，各族群的社會與信仰延續至今（簡圖以細線表示）</title><rect x="${hallX(1624,x0,x1)}" y="${yo}" width="${x1-x0}" height="6" rx="3" fill="var(--c0)" opacity=".35"/></g><text class="tbd" x="${x0+6}" y="${yo+20}">原住民族：自古居住，延續至今</text>`;
+  s+=`<line class="axis" x1="${x0}" x2="${x1}" y1="134" y2="134"/>`;
+  // lane 1
+  s+=`<text class="lanelbl" x="8" y="165" style="fill:var(--c2)">政治與外交</text><line class="axis" x1="${x0}" x2="${x1}" y1="168" y2="168"/>`;
+  PERIODS.filter(p=>p.a>=1624&&!H.some(h=>pOf(h.y)===p)).forEach(p=>{const xa=hallX(p.a,x0,x1),xb=hallX(Math.min(p.b,2027),x0,x1);if(xb-xa>70)s+=`<text class="tbd" x="${(xa+xb)/2}" y="160" text-anchor="middle">待擴充</text>`});
+  H.filter(h=>h.track==="政治外交"||h.track==="政權").forEach(h=>{const x=hallX(h.y+(h.md&&/月/.test(h.md)?(parseInt(h.md)-1)/12:.5),x0,x1);
+    s+=`<g class="dot" data-hid="${h.id}"><title>${h.y} ${esc(h.t)}</title><circle cx="${x}" cy="${h.track==="政權"?150:168}" r="5" fill="${h.track==="政權"?"var(--c0)":"var(--c2)"}"/></g>`});
+  // lane 2
+  s+=`<text class="lanelbl" x="8" y="207" style="fill:var(--c1)">李登輝線</text><line class="axis" x1="${x0}" x2="${x1}" y1="210" y2="210"/>`;
+  s+=`<g class="bar" data-hy="1970"><title>李登輝生平（1923–2020）</title><rect x="${hallX(1923,x0,x1)}" y="196" width="${hallX(2020.6,x0,x1)-hallX(1923,x0,x1)}" height="6" rx="3" fill="var(--c1)" opacity=".35"/></g>`;
+  E.filter(e=>e.key).forEach(e=>{const x=hallX(e.y+.5,x0,x1);s+=`<g class="dot" data-lee="${e.id}"><title>${e.y} ${esc(e.t)}</title><circle cx="${x}" cy="210" r="4.5" fill="var(--c1)"/></g>`});
+  svg.setAttribute("viewBox","0 0 "+W+" 254");svg.innerHTML=s;
+  const open=(pid,sel)=>{state.hp=pid;state.hsel=sel||null;renderHistory();setTimeout(()=>$("#hPanel").scrollIntoView({block:"nearest",behavior:"smooth"}),50)};
+  const yearAt=(ev)=>{const r=svg.getBoundingClientRect();const f=((ev.clientX-r.left)/r.width*W-x0)/(x1-x0);return hallInv(f)};
+  svg.querySelectorAll(".bar").forEach(g=>g.onclick=ev=>{const y=g.dataset.hy=="1986"?yearAt(ev):+g.dataset.hy;const p=PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[7];open(p.id)});
+  svg.querySelectorAll("[data-hid]").forEach(g=>g.onclick=()=>{const h=H.find(x=>x.id===g.dataset.hid);open(pOf(h.y).id,h.id)});
+  svg.querySelectorAll("[data-lee]").forEach(g=>g.onclick=()=>{const e=E.find(x=>x.id===+g.dataset.lee);open(pOf(e.y).id,"e"+e.id)});
+}
+function renderHistory(){
+  const box=$("#hBlocks");
+  box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOf(h.y)===p).length,m=leeInPeriod(p).length;
+    return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
+  box.querySelectorAll(".hb").forEach(b=>b.onclick=()=>{state.hp=state.hp===b.dataset.p?null:b.dataset.p;state.hsel=null;renderHistory();if(state.hp)setTimeout(()=>$("#hPanel").scrollIntoView({block:"nearest",behavior:"smooth"}),50)});
+  renderHall();hPanel()}
+$("#hClose").onclick=()=>{state.hp=null;state.hsel=null;renderHistory();window.scrollTo({top:0})};
+function hPanel(){
+  const p=PERIODS.find(x=>x.id===state.hp);$("#hPanel").hidden=!p;if(!p)return;
+  $("#hTitle").textContent=p.name+"　"+p.range;$("#hSum").textContent=p.sum;
+  const hs=H.filter(h=>pOf(h.y)===p),es=leeInPeriod(p);
+  const svg=$("#hSvg");
+  if(!hs.length&&!es.length){$("#hScroll").hidden=true;$("#hCard").innerHTML=`<p class="hint">這個時期的事件還沒有補完，之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;return}
+  $("#hScroll").hidden=false;
+  const W=1500,x0=100,x1=W-50,a=p.a,b=p.b;
+  const cnt={};hs.concat(es).forEach(h=>{cnt[Math.floor(h.y)]=(cnt[Math.floor(h.y)]||0)+1});
+  const cum=[0];for(let y=a;y<b;y++)cum.push(cum[cum.length-1]+1+2.5*(cnt[y]||0));
+  const X=(y,md)=>{const m=/月/.test(md||"")?parseInt(md):6;const yy=Math.floor(y),i=Math.max(0,Math.min(cum.length-2,yy-a)),f=y>yy?y-yy:((m-1)/12+.04);return x0+(cum[i]+(cum[i+1]-cum[i])*f)/cum[cum.length-1]*(x1-x0)};
+  const items=[];
+  hs.forEach(h=>items.push({key:h.id,lane:h.track==="政權"?0:1,x:X(h.y,h.md),lab:h.s||h.t.slice(0,8),t:h.y+(h.md?" "+h.md:"")+"　"+h.t}));
+  es.forEach(e=>items.push({key:"e"+e.id,lane:2,x:X(e.y,e.md),lab:leeShort(e),t:e.y+(e.md?" "+e.md:"")+"　"+e.t}));
+  const used=[0,1,2].filter(l=>items.some(i=>i.lane===l));
+  let Y=14,s="";const lanes={};
+  used.forEach(l=>{const list=items.filter(i=>i.lane===l).sort((p1,p2)=>p1.x-p2.x),ends=[];
+    list.forEach(c=>{const w=c.lab.length*16+12;c.l=Math.max(x0+4,Math.min(W-w-6,c.x-w/2));c.r=c.l+w;let k=ends.findIndex(v=>v<c.l-4);if(k<0){k=ends.length;ends.push(0)}ends[k]=c.r;c.row=k});
+    const rows=Math.max(1,ends.length);lanes[l]={list,rows,y0:Y,axis:Y+10+rows*25+8};Y+=10+rows*25+8+22});
+  const H2=Y+30;svg.setAttribute("viewBox",`0 0 ${W} ${H2}`);
+  const step=(b-a)>150?25:(b-a)>40?10:5;
+  for(let y=Math.ceil(a/step)*step;y<b;y+=step){const x=X(y,"");s+=`<line class="grid" x1="${x}" x2="${x}" y1="6" y2="${H2-22}"/><text class="yr" x="${x}" y="${H2-6}" text-anchor="middle">${y}</text>`}
+  used.forEach(l=>{const L=lanes[l];
+    s+=`<text class="lanelbl" x="8" y="${L.axis-6}" style="fill:${H_LC[l]}">${H_LANES[l]}</text><line class="axis" x1="${x0}" x2="${x1+10}" y1="${L.axis}" y2="${L.axis}"/>`;
+    L.list.forEach(c=>{const top=L.y0+(L.rows-1-c.row)*25;
+      s+=`<g class="ev${state.hsel===c.key?" sel":""}" data-k="${c.key}" role="button" tabindex="0" aria-label="${esc(c.t)}"><line class="lead" x1="${c.x}" x2="${c.x}" y1="${top+22}" y2="${L.axis}"/><text x="${(c.l+c.r)/2}" y="${top+17}" text-anchor="middle">${esc(c.lab)}</text><circle class="dot" cx="${c.x}" cy="${L.axis}" r="6.5" style="fill:${H_LC[l]}"/><title>${esc(c.t)}</title></g>`})});
+  svg.innerHTML=s;
+  svg.querySelectorAll("[data-k]").forEach(g=>{const k=g.dataset.k;g.onclick=()=>hSelect(k);g.onkeydown=ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();hSelect(k)}}});
+  hCard()}
+function hSelect(k){state.hsel=k;document.querySelectorAll("#hSvg [data-k]").forEach(g=>g.classList.toggle("sel",g.dataset.k===k));hCard()}
+function hCard(){
+  const c=$("#hCard"),k=state.hsel;
+  if(!k){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現中性陳述、各方稱謂、來源與可信度。</p>`;return}
+  if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));if(!e){c.innerHTML="";return}
+    c.innerHTML=`<div class="d">${e.y}${e.md?" · "+e.md:""} · 李登輝線</div><h3>${esc(e.t)}</h3><p>${esc(e.b.length>140?e.b.slice(0,140)+"……":e.b)}</p><div class="act"><button class="pri" id="hLee">在李登輝總覽看 →</button><button id="hLee2">看年表完整內容 →</button></div>`;
+    $("#hLee").onclick=()=>{state.hback={pid:state.hp,sel:k};setView("overview");ovSelect(e.id,true);window.scrollTo({top:0})};
+    $("#hLee2").onclick=()=>{state.hback={pid:state.hp,sel:k};gotoEvent(e.id)};return}
+  const h=H.find(x=>x.id===k);if(!h){c.innerHTML="";return}
+  const cf=CONF[h.conf]||CONF.common;
+  const near=E.filter(e=>e.key).sort((p1,p2)=>Math.abs(p1.y-h.y)-Math.abs(p2.y-h.y))[0];
+  const showLee=near&&Math.abs(near.y-h.y)<=8&&h.y>=1923;
+  c.innerHTML=`<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
+  ${h.note?`<p class="hnote">⚑ ${esc(h.note)}</p>`:""}
+  ${(h.aliases||[]).length?`<details class="alias"><summary>各方稱謂</summary><ul>${h.aliases.map(a=>`<li><b>${esc(a.term)}</b>：${esc(a.note)}</li>`).join("")}</ul></details>`:""}
+  ${(h.src||[]).length?`<p class="src">來源：${h.src.map(s=>`<a href="${esc(s.u)}" target="_blank" rel="noopener noreferrer">${esc(s.t)}</a>`).join("、")}</p>`:`<p class="src">來源：待補</p>`}
+  <div class="act">${h.bg&&BG.find(g=>g.id===h.bg)?`<button class="pri" data-bg="${h.bg}">背景：${esc(BG.find(g=>g.id===h.bg).t)} →</button>`:""}${showLee?`<button id="hLeeNear">李登輝視角：${esc(leeShort(near))}（${near.y}）→</button>`:""}</div>`;
+  c.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{state.hback={pid:state.hp,sel:k};gotoBg(b.dataset.bg)});
+  const ln=$("#hLeeNear");if(ln)ln.onclick=()=>{state.hback={pid:state.hp,sel:k};setView("overview");ovSelect(near.id,true);window.scrollTo({top:0})}
+}
+
+/* ---------- 回頂部 ---------- */
+addEventListener("scroll",()=>{$("#totop").hidden=scrollY<600},{passive:true});
+$("#totop").onclick=()=>scrollTo({top:0});
+
+
+/* ---------- 泳道圖放大 ---------- */
+function addZoom(scrollId,svgId){
+  const sc=document.getElementById(scrollId),sv=document.getElementById(svgId);if(!sc||!sv)return;
+  sc.classList.add("wide");let z=1;
+  const bar=document.createElement("div");bar.className="zoombar wide";
+  bar.innerHTML=`<span class="zl" style="min-width:auto;margin-right:4px">圖表縮放</span><button type="button" data-z="-">－</button><span class="zl">100%</span><button type="button" data-z="+">＋</button><button type="button" data-z="0">還原</button>`;
+  sc.parentNode.insertBefore(bar,sc);
+  const bm=parseFloat(getComputedStyle(sv).minWidth)||0;const apply=()=>{sv.style.width=(z*100)+"%";sv.style.minWidth=innerWidth<900?(bm*z)+"px":"0";bar.querySelector(".zl:nth-of-type(2)").textContent=Math.round(z*100)+"%"};
+  bar.onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=b.dataset.z;z=k==="+"?Math.min(3,z+.25):k==="-"?Math.max(.75,z-.25):1;apply()};
+  new MutationObserver(()=>{bar.hidden=sc.hidden||sc.closest("[hidden]")!==null}).observe(sc,{attributes:true,attributeFilter:["hidden"]});
+  apply()}
+['hAll','hSvg','ovSvg'].forEach((s,i)=>addZoom(['hAllScroll','hScroll','ovScroll'][i],s));
+setView(location.hash.slice(1)||"history",false);
+</script>
+</body>
+</html>

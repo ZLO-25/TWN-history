@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: index.html 必須與 src/ 一致
+        run: python3 build.py --check
       - uses: actions/configure-pages@v5
         with:
           enablement: true

@@ -1,0 +1,903 @@
+{
+ "events": [
+  {
+   "year": 1895,
+   "md": "4月17日",
+   "title": "簽訂《馬關條約》",
+   "body": "清日兩國於馬關簽訂條約，清廷將台灣與澎湖永久讓與日本。",
+   "aliases": [
+    {
+     "term": "馬關條約／下關條約／日清講和條約",
+     "note": "中文多稱「馬關條約」，日文稱「下關條約」「日清講和條約」。"
+    }
+   ],
+   "conf": "verified",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "English Wikipedia: Treaty of Shimonoseki",
+     "u": "https://en.wikipedia.org/wiki/Treaty_of_Shimonoseki"
+    },
+    {
+     "t": "維基百科中文「乙未戰爭」",
+     "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+    }
+   ],
+   "note": "英文維基標示條約於1895年5月8日生效；日本實際接收時間，各來源另有說法（英文維基Shimonoseki條目稱至10月才接收，Invasion條目稱6月3日基隆海上交接）。"
+  },
+  {
+   "year": 1895,
+   "md": "5月25日",
+   "title": "台灣民主國宣布成立",
+   "body": "台灣士紳與官員推唐景崧為總統，年號「永清」，以抵抗接收。",
+   "aliases": [
+    {
+     "term": "台灣民主國／臺灣共和國（Republic of Formosa）",
+     "note": "中文多稱台灣民主國；英文常譯Republic of Formosa；性質上為短暫的抗拒割讓政權，各方評價不一。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「乙未戰爭」",
+     "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+    },
+    {
+     "t": "English Wikipedia: Republic of Formosa",
+     "u": "https://en.wikipedia.org/wiki/Republic_of_Formosa"
+    }
+   ],
+   "note": "中文維基乙未戰爭條：1895年5月25日成立。英文維基Republic of Formosa：內文與資訊框為5月23日宣布，總統表與宣言英譯指向5月25日就任；唐景崧任期該條目亦自相矛盾（表列至6月5日，內文稱6月4日夜潛逃、6日搭船離台）。"
+  },
+  {
+   "year": 1895,
+   "md": "5月29日",
+   "title": "日軍於澳底登陸",
+   "body": "日軍近衛師團在基隆東方的澳底一帶登陸，展開接收台灣的軍事行動。",
+   "aliases": [
+    {
+     "term": "乙未戰爭／乙未之役／台灣平定",
+     "note": "中文以干支「乙未」命名；日方稱「臺灣平定」「臺灣征討」，立場不同。"
+    }
+   ],
+   "conf": "verified",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「乙未戰爭」",
+     "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+    },
+    {
+     "t": "English Wikipedia: Japanese invasion of Taiwan (1895)",
+     "u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1895)"
+    }
+   ],
+   "note": "中文維基稱「澳底」；英文維基稱 Samtiao Point（三貂角）近Audi，日期同為5月29日。"
+  },
+  {
+   "year": 1895,
+   "md": "6月17日",
+   "title": "台北舉行始政式",
+   "body": "樺山資紀在台北城內原布政使司衙門的總督府舉行始政儀式，日後稱「始政紀念日」。",
+   "aliases": [
+    {
+     "term": "始政／始政紀念日",
+     "note": "日方以此日為統治開始；台灣方面亦有以5月至10月戰事視為統治確立過程之觀點。"
+    }
+   ],
+   "conf": "verified",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「乙未戰爭」",
+     "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+    },
+    {
+     "t": "English Wikipedia: Japanese invasion of Taiwan (1895)",
+     "u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1895)"
+    }
+   ],
+   "note": "英文維基Invasion條目另記6月3日在基隆港日艦上由樺山資紀與李經方辦理交接，與6月17日始政式為不同儀式。"
+  },
+  {
+   "year": 1895,
+   "md": "10月21日",
+   "title": "台南城陷落，劉永福離台",
+   "body": "10月20日劉永福離開台南渡廈門；21日日軍進入台南城，日方視為台灣民主國結束。",
+   "aliases": [
+    {
+     "term": "抗日／反抗殖民／抗日運動",
+     "note": "「抗日」為台灣與中國通行用語；日方與部分研究稱「匪亂」「土匪」（日本殖民史觀）；現代台灣史觀多稱抗日或反殖民。"
+    },
+    {
+     "term": "乙未戰爭／乙未之役／台灣平定",
+     "note": "中文以干支「乙未」命名；日方稱「臺灣平定」「臺灣征討」，立場不同。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「乙未戰爭」",
+     "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+    },
+    {
+     "t": "English Wikipedia: Japanese invasion of Taiwan (1895)",
+     "u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1895)"
+    },
+    {
+     "t": "English Wikipedia: Republic of Formosa",
+     "u": "https://en.wikipedia.org/wiki/Republic_of_Formosa"
+    }
+   ],
+   "note": "日期：中文維基稱日軍10月21日進入台南，靖國神社統計以10月22日為占領日；英文維基Invasion與Formosa皆為10月21日。劉永福：10月20日棄城，所乘英輪被日艦攔檢、後獲釋（船名英文維基作SS Thales）。"
+  },
+  {
+   "year": 1895,
+   "md": "1895–1902",
+   "title": "武裝抗日",
+   "body": "乙未戰爭後各地仍有武裝抗日；總督府以軍警鎮壓並輔以招降，至1902年前後大規模武裝抗爭大致平息。",
+   "aliases": [
+    {
+     "term": "抗日／反抗殖民／抗日運動",
+     "note": "「抗日」為台灣與中國通行用語；日方與部分研究稱「匪亂」「土匪」（日本殖民史觀）；現代台灣史觀多稱抗日或反殖民。"
+    },
+    {
+     "term": "乙未戰爭／乙未之役／台灣平定",
+     "note": "中文以干支「乙未」命名；日方稱「臺灣平定」「臺灣征討」，立場不同。"
+    }
+   ],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「乙未戰爭」",
+     "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "乙未戰爭數字：日軍衛生部門統計死亡8,503人（戰死333人）；靖國神社統計戰死354人；台方戰場遺屍據稱七、八千人，學術估算陣亡至少14,000人，平民受害估計至少10萬人（均據中文維基，估計值差異大）。1898–1902年的招降與各地抗日事件，本次未讀到足夠一手或學術來源，細節待補。"
+  },
+  {
+   "year": 1896,
+   "md": "3月31日",
+   "title": "公布「六三法」",
+   "body": "日本帝國議會通過法律第63號，授權台灣總督發布具法律效力的命令（律令），總督集行政、立法、司法權。",
+   "aliases": [
+    {
+     "term": "六三法／台灣施行法令相關法律",
+     "note": "正式名為《臺灣ニ施行スヘキ法令ニ關スル法律》；台灣人稱總督為「土皇帝」（據中文維基）。"
+    }
+   ],
+   "conf": "verified",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "維基百科中文「六三法」",
+     "u": "https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "原定三年期限，經1899、1902、1905年延長；1906年改以《三一法》取代，總督仍保有律令制定權。其與憲法適用台灣之關係，學者意見分歧。"
+  },
+  {
+   "year": 1898,
+   "md": "2月26日",
+   "title": "兒玉源太郎就任，後藤新平任民政長官",
+   "body": "第四任總督兒玉源太郎於1898年2月26日就任，後藤新平出任民政長官，推動土地、戶口調查與基礎建設。",
+   "aliases": [],
+   "conf": "verified",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: Governor-General of Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+    },
+    {
+     "t": "English Wikipedia: Gotō Shinpei",
+     "u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
+    }
+   ],
+   "note": "兒玉任期1898.2.26–1906.4.11（據英文維基總督表）；後藤就任民政長官的具體日期本次未讀到來源。"
+  },
+  {
+   "year": 1898,
+   "md": "1898–1905",
+   "title": "土地調查事業",
+   "body": "總督府以1898年《臺灣土地調查規則》展開土地調查，1905年3月完成、5月實施土地登記，並消滅大租權。",
+   "aliases": [],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "吳聰敏講義：土地調查與戶口調查（國立臺灣大學）",
+     "u": "https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf"
+    },
+    {
+     "t": "English Wikipedia: Gotō Shinpei",
+     "u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "吳聰敏講義：1898–1905年，1898年7月公告規則，1905年3月調查完成。英文維基Taiwan under Japanese rule稱「1911年前未做調查」，與前者不一致，疑指另一階段或表述有誤，需查原始文獻。調查前後的耕地面積與地租數字，本次未讀到可引用來源。"
+  },
+  {
+   "year": 1899,
+   "md": "",
+   "title": "台灣銀行成立",
+   "body": "依1897年《臺灣銀行法》設立的台灣銀行於1899年開始營業，兼具發行貨幣與中央銀行功能。",
+   "aliases": [],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: Bank of Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Bank_of_Taiwan"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "英文維基Bank of Taiwan：資訊框列1897，內文稱1899開業；英文維基Taiwan under Japanese rule：法案1897年3月通過，1899年營運。具體開業日期未查到。"
+  },
+  {
+   "year": 1905,
+   "md": "10月1日",
+   "title": "第一次臨時台灣戶口調查",
+   "body": "總督府於1905年10月1日進行首次戶口調查，其後約每五年一次，結果顯示台灣人口約三百萬。",
+   "aliases": [],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "吳聰敏講義：土地調查與戶口調查（國立臺灣大學）",
+     "u": "https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf"
+    },
+    {
+     "t": "吳聰敏：糖業、纏足與失蹤婦女（未完成初稿，臺大經濟系）",
+     "u": "https://econ.ntu.edu.tw/wp-content/uploads/2023/12/hist_1080516.pdf"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "吳聰敏：1905年10月1日現住人口3,039,751人（不含高山原住民），同年底3,046,859人；英文維基只稱約三百萬。講義另載調查年份為1905、1915、1920。"
+  },
+  {
+   "year": 1915,
+   "md": "7月6日",
+   "title": "西來庵（噍吧哖）事件",
+   "body": "余清芳等人以西來庵為據點起事，8月在噍吧哖與日軍警衝突，總督府大規模逮捕並軍法審判。",
+   "aliases": [
+    {
+     "term": "西來庵事件／噍吧哖事件／余清芳事件",
+     "note": "依地名或領導者命名；日方史觀曾稱匪亂，台灣現代史觀多視為抗日事件。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「西來庵事件」",
+     "u": "https://zh.wikipedia.org/wiki/西來庵事件"
+    },
+    {
+     "t": "English Wikipedia: Tapani incident",
+     "u": "https://en.wikipedia.org/wiki/Tapani_incident"
+    }
+   ],
+   "note": "人數各來源不一：中文維基（本次取得內容）：總督府統計逮捕1,957人，台南臨時法院判死刑866人（另有余清芳、羅俊、江定），11月10日安東貞美宣布約四分之三死刑改無期徒刑；學者估計日方殺害可能逾萬人；2014年新化發現逾3,000具遺骨，身分未確認。英文維基Tapani：參與1,413人，江定等272人於1916年5月18日被捕；死亡總數未給。日期：英文維基起事為7月6日，余清芳8月22日被捕。"
+  },
+  {
+   "year": 1919,
+   "md": "10月29日",
+   "title": "田健治郎就任首位文官總督",
+   "body": "田健治郎於1919年10月29日就任，台灣總督改由文官出任，統治方針轉向同化。",
+   "aliases": [
+    {
+     "term": "同化政策／內地延長主義",
+     "note": "同化政策主張台灣視為日本延長，實際仍存在本島人與內地人差別待遇。"
+    }
+   ],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: Governor-General of Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "總督表列田健治郎任期1919.10.29–1923.9.6，為第8任。同化階段起點，英文維基Taiwan under Japanese rule分期為1915–37，通說常以1919為文官總督起點，兩說並存。"
+  },
+  {
+   "year": 1921,
+   "md": "10月17日",
+   "title": "台灣文化協會成立",
+   "body": "蔣渭水等人在台北大稻埕創立台灣文化協會，林獻堂任總理，以講演、讀報社等啟蒙社會。",
+   "aliases": [],
+   "conf": "verified",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "English Wikipedia: Taiwanese Cultural Association",
+     "u": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"
+    }
+   ],
+   "note": "英文維基：1925與1926年巡迴講演聽眾超過23萬人次（為出席人次，非會員數）。會員人數本次未查到。"
+  },
+  {
+   "year": 1921,
+   "md": "1月30日",
+   "title": "台灣議會設置請願運動展開",
+   "body": "1921年1月30日首次向帝國議會提出請願，至1934年共15次，9月2日宣布停止。",
+   "aliases": [],
+   "conf": "verified",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "維基百科中文「臺灣議會設置請願運動」",
+     "u": "https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"
+    }
+   ],
+   "note": "中文維基：1921–1934共約14年、15次；1934年9月2日林獻堂等人決議停止，1931年台灣民主黨已解散。"
+  },
+  {
+   "year": 1923,
+   "md": "12月16日",
+   "title": "治警事件",
+   "body": "總督府以違反《治安警察法》為由大規模搜捕議會請願運動成員，後經三審判決。",
+   "aliases": [
+    {
+     "term": "治警事件／台灣治安警察法違反事件",
+     "note": "日方以違反治安警察法為名，台灣方面視為鎮壓政治結社。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "維基百科中文「治警事件」",
+     "u": "https://zh.wikipedia.org/wiki/治警事件"
+    },
+    {
+     "t": "維基百科中文「臺灣議會設置請願運動」",
+     "u": "https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"
+    }
+   ],
+   "note": "中文維基治警事件條：拘捕41人、傳訊58人、牽連99人、起訴18人；一審全數無罪，二審（1924.10.29）13人有罪，三審（1925.2.20）維持；蔣渭水、蔡培火各4個月，另5人各3個月，6人罰金100圓。台灣議會設置請願運動條目則稱「六人判3至4個月」且條目內列七人，與前者不一致。"
+  },
+  {
+   "year": 1927,
+   "md": "7月10日",
+   "title": "台灣民眾黨成立",
+   "body": "文協內部溫和派與左翼分歧，部分成員另組台灣民眾黨，被視為台灣第一個政黨。",
+   "aliases": [],
+   "conf": "disputed",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "English Wikipedia: Taiwanese People's Party",
+     "u": "https://en.wikipedia.org/wiki/Taiwanese_People%27s_Party"
+    },
+    {
+     "t": "English Wikipedia: Taiwanese Cultural Association",
+     "u": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"
+    }
+   ],
+   "note": "英文維基稱創立於1927年7月10日；被禁日期條目自相矛盾：資訊框為1931年8月，內文為1931年2月18日。文協分裂的確切日期，本次未查到來源。"
+  },
+  {
+   "year": 1928,
+   "md": "3月16日",
+   "title": "台北帝國大學設立",
+   "body": "台北帝國大學為日本第七所帝國大學，1928年設立，初設文政學部與理農學部。",
+   "aliases": [],
+   "conf": "verified",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: National Taiwan University",
+     "u": "https://en.wikipedia.org/wiki/National_Taiwan_University"
+    }
+   ],
+   "note": "英文維基：1928年3月16日設立，首屆新生入學4月30日、5月5日開課；1928–1943年學生約八成日籍、兩成台籍；1945年接收時1,767名學生中台籍351人。"
+  },
+  {
+   "year": 1930,
+   "md": "10月27日",
+   "title": "霧社事件",
+   "body": "賽德克族因長期受壓迫，在霧社公學校運動會當日襲擊日人，日本隨後以軍警及毒氣等武器鎮壓。",
+   "aliases": [
+    {
+     "term": "霧社事件／Musha（Wushe）Incident",
+     "note": "日文稱「霧社事件」；台灣原住民族視角強調賽德克人反殖民抵抗；亦有「抗日」之稱。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: Musha Incident",
+     "u": "https://en.wikipedia.org/wiki/Musha_Incident"
+    },
+    {
+     "t": "Taipei Times: Taiwan in Time（2015-10-25）",
+     "u": "https://www.taipeitimes.com/News/feat/archives/2015/10/25/2003630860"
+    },
+    {
+     "t": "Taiwan Review（外交部）霧社事件報導",
+     "u": "https://taiwanreview.nat.gov.tw/AMP/Culture/Top-News/24465/{{url}}"
+    },
+    {
+     "t": "香港01：霧社事件九十周年",
+     "u": "https://www.hk01.com/%E8%97%9D%E6%96%87%E4%B8%AD%E5%9C%8B/536836/"
+    }
+   ],
+   "note": "死傷各來源不一：日人死亡134人（英文維基、Taipei Times、Taiwan Review一致；英文維基另提兩名著和服的漢人）；日方傷者，Taiwan Review稱26人，英文維基資訊框稱215人。賽德克方：英文維基稱644人死亡（其中290人自殺，該數字標註待引用）；Taipei Times稱逾600人死、約半數自殺；香港01稱六社約1,500人減至298人倖存。參與者，Taiwan Review稱約1,236人。第二次霧社事件：1931年4月25日，味方蕃襲擊收容所，Taiwan Review稱216人死亡；英文維基稱斬首15歲以上男性、無死亡數。"
+  },
+  {
+   "year": 1930,
+   "md": "5月",
+   "title": "嘉南大圳完工",
+   "body": "嘉南大圳1920年動工、1930年完工，由總督府技師八田與一設計，以烏山頭水庫為核心。",
+   "aliases": [],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「嘉南大圳」",
+     "u": "https://zh.wikipedia.org/wiki/嘉南大圳"
+    },
+    {
+     "t": "English Wikipedia: Chianan Irrigation",
+     "u": "https://en.wikipedia.org/wiki/Chianan_Irrigation"
+    }
+   ],
+   "note": "中文維基：1920年9月動工、1930年5月完成；灌溉區各幹線面積加總約144,000甲（為本次依條目數字自行加總，條目未載總數）。英文維基稱可耕稻田由5,000增至150,000公頃，兩者單位與口徑不同。"
+  },
+  {
+   "year": 1935,
+   "md": "10月10日",
+   "title": "始政四十週年台灣博覽會",
+   "body": "為紀念統治四十年，博覽會於1935年10月10日至11月28日舉行，展示殖民建設成果。",
+   "aliases": [],
+   "conf": "verified",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: The Taiwan Exposition (1935)",
+     "u": "https://en.wikipedia.org/wiki/The_Taiwan_Exposition:_In_Commemoration_of_the_First_Forty_Years_of_Colonial_Rule"
+    }
+   ],
+   "note": "英文維基：共50天，入場者逾100萬人，另載館內參觀人次2,750,000。"
+  },
+  {
+   "year": 1936,
+   "md": "9月2日",
+   "title": "小林躋造就任，武官總督復活",
+   "body": "海軍出身的小林躋造就任第17任總督，台灣總督重回武官，提出「皇民化、工業化、南進基地化」。",
+   "aliases": [],
+   "conf": "verified",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "English Wikipedia: Governor-General of Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+    },
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "Soundtraces: Colonial Government Intensifies the Kominka Movement",
+     "u": "https://soundtraces.tw/?p=102611"
+    }
+   ],
+   "note": "總督表：小林躋造1936.9.2–1940.11.27。「三原則」說法見中文維基皇民化運動條。"
+  },
+  {
+   "year": 1937,
+   "md": "4月",
+   "title": "皇民化運動與報紙漢文欄廢止",
+   "body": "1937年起強化日語推行，查禁報紙漢文欄、廢除漢文書房，並推動神社參拜與國語家庭。",
+   "aliases": [
+    {
+     "term": "皇民化運動／皇民奉公運動／Japanization",
+     "note": "1941年4月成立皇民奉公會後轉稱皇民奉公運動；台灣學界亦譯Kōminka。"
+    }
+   ],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "English Wikipedia: Japanization",
+     "u": "https://en.wikipedia.org/wiki/Japanization"
+    },
+    {
+     "t": "Soundtraces: Colonial Government Intensifies the Kominka Movement",
+     "u": "https://soundtraces.tw/?p=102611"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "時間點：中文維基稱1937年四、五月開始查禁漢文欄；英文維基Taiwan under Japanese rule稱1937年4月；英文維基Japanization僅稱運動始於1937、未單獨標漢文欄日期。皇民化起點亦有1936年底說（中文維基第一階段為1936年底至1940年）。"
+  },
+  {
+   "year": 1940,
+   "md": "",
+   "title": "改姓名運動",
+   "body": "1940年起實施改日本姓名，採申請許可制，非全面強制，附帶配給與升學等優惠。",
+   "aliases": [
+    {
+     "term": "改姓名／改姓名運動",
+     "note": "日方稱「內地人式氏名」，台灣人則多稱改姓名；是否出於自願，學界常強調有壓力與誘因。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "比例不一：中文維基：1941年底約1%，1943年底17,526戶、126,211人，約占人口2%；英文維基Taiwan under Japanese rule：戰爭結束時約7%。兩者差異本次未能釐清（口徑或時間點不同）。"
+  },
+  {
+   "year": 1942,
+   "md": "",
+   "title": "陸軍特別志願兵制度",
+   "body": "1942年實施陸軍特別志願兵制度，1943年續設海軍特別志願兵，台灣人開始以志願名義入伍。",
+   "aliases": [
+    {
+     "term": "台籍日本兵／志願兵",
+     "note": "稱謂涉及自願與否及身分認同；戰後因喪失日本國籍而無法依日本法令請求撫卹，成為補償爭議。"
+    }
+   ],
+   "conf": "common",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "English Wikipedia: Conscription in Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Conscription_in_Taiwan"
+    },
+    {
+     "t": "The News Lens：台籍日本兵補償議題",
+     "u": "https://www.thenewslens.com/article/145592"
+    }
+   ],
+   "note": "人數：英文維基Conscription in Taiwan：1937–1945共207,183人服役（現役80,433、軍屬126,750）；The News Lens：約207,000人，約3萬人死亡；英文維基Taiwan under Japanese rule稱約5萬人死亡或失蹤。死亡數差異大（3萬 vs 5萬）。志願兵申請人數與錄取人數，本次未查到可引用來源。"
+  },
+  {
+   "year": 1945,
+   "md": "1月",
+   "title": "實施徵兵制",
+   "body": "台灣自1945年起全面實施徵兵制，直到日本投降為止。",
+   "aliases": [],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "English Wikipedia: Conscription in Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Conscription_in_Taiwan"
+    }
+   ],
+   "note": "起點：中文維基與英文維基Conscription in Taiwan皆稱1945年（英文維基稱1945年1月）；任務書所列「1944」年，本次所讀來源未能證實，可能指1944年公布或籌備，需另查。"
+  },
+  {
+   "year": 1945,
+   "md": "8月15日",
+   "title": "日本宣布投降",
+   "body": "1945年8月15日天皇廣播《終戰詔書》，9月2日簽署降伏文書，戰爭結束。",
+   "aliases": [
+    {
+     "term": "光復／終戰／戰敗／接收",
+     "note": "「光復」為中華民國官方傳統用語；「終戰」為日本與部分台灣人用語；「戰敗」強調日本角度；「接收」側重軍事接管、不預設主權移轉；亦有學者稱「再淪陷」（據中文維基光復條）。"
+    }
+   ],
+   "conf": "verified",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "維基百科中文「日本投降」",
+     "u": "https://zh.wikipedia.org/wiki/日本投降"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ],
+   "note": "8月14日天皇決定接受波茨坦公告並照會盟國；8月15日玉音放送；9月2日密蘇里號簽降。英文維基Taiwan under Japanese rule另寫「8月14日投降」，屬口徑不同。"
+  },
+  {
+   "year": 1945,
+   "md": "10月25日",
+   "title": "台灣受降與行政長官公署接收",
+   "body": "日方總督安藤利吉在台北公會堂向陳儀簽收受降，行政長官公署同日開始運作。",
+   "aliases": [
+    {
+     "term": "光復／終戰／戰敗／接收",
+     "note": "「光復」為中華民國官方傳統用語；「終戰」為日本與部分台灣人用語；「戰敗」強調日本角度；「接收」側重軍事接管、不預設主權移轉；亦有學者稱「再淪陷」（據中文維基光復條）。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政權",
+   "sources": [
+    {
+     "t": "維基百科中文「臺灣光復」",
+     "u": "https://zh.wikipedia.org/wiki/臺灣光復"
+    },
+    {
+     "t": "English Wikipedia: Taiwan Retrocession Day",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"
+    }
+   ],
+   "note": "性質有歧見：中華民國政府稱「光復」「收回」；部分學者與當時英美視為戰後軍事占領／接收、待和約決定主權（英文維基Retrocession Day稱英美不接受陳儀單方行動）。"
+  },
+  {
+   "year": 1946,
+   "md": "1月12日",
+   "title": "恢復中華民國國籍（時間點有歧見）",
+   "body": "中華民國政府宣稱台灣人恢復中國國籍；時間說法有1945年10月25日及1946年1月12日。",
+   "aliases": [
+    {
+     "term": "恢復國籍／國籍變更",
+     "note": "ROC稱「恢復」，批評者稱未經同意強加國籍；英美當時未接受。"
+    }
+   ],
+   "conf": "disputed",
+   "track": "政治外交",
+   "sources": [
+    {
+     "t": "Taipei Times 社論（陳儀楠）：ROC forced citizenship on unwary Taiwanese（2011-01-20，評論性文章）",
+     "u": "https://www.taipeitimes.com/News/editorials/archives/2011/01/20/2003493942"
+    },
+    {
+     "t": "English Wikipedia: Taiwan Retrocession Day",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"
+    },
+    {
+     "t": "維基百科中文「臺灣光復」",
+     "u": "https://zh.wikipedia.org/wiki/臺灣光復"
+    }
+   ],
+   "note": "據Taipei Times社論（陳儀楠，評論性文章，立場批評ROC）：行政長官公署稱自1945.10.25起恢復，行政院1946.1.12令為依據，1946.1.20公署聲明；1946.8.31英國外交部表示接受ROC控制台灣、但不接受國籍已恢復；1946年11月美國備忘錄同意英方；1952.8.5《台北條約》生效。中文維基光復條未載此日期。本次未找到行政院原令文本或國史館原件。"
+  }
+ ],
+ "topics": [
+  {
+   "id": "jp-policy",
+   "title": "日治統治政策三階段與總督概況",
+   "facts": [
+    "英文維基的分期為：武力鎮壓（1895–1915）、同化（1915–37）、皇民化（1937–45），原住民另有特別政策。[1]",
+    "總督集行政、立法、司法三權；1896年3月31日公布六三法，授權總督發布律令，原定三年，經1899、1902、1905年延長，1906年由三一法取代。[2]",
+    "共19任總督，前7任（樺山資紀至明石元二郎，1895–1919）為武官，第8至16任（田健治郎至中川健藏，1919.10–1936.9）為文官，第17至19任（小林躋造、長谷川清、安藤利吉，1936.9–1945.10）為武官。[3]",
+    "兒玉源太郎1898年2月26日至1906年4月11日任總督，後藤新平任民政長官，推動土地調查、專賣、港口與鐵路建設。[3] [4]",
+    "1936年9月小林躋造就任，提出皇民化、工業化、南進基地化三原則；1941年4月9日成立皇民奉公會。[5]",
+    "皇民化期間：1937年起查禁報紙漢文欄、廢漢文書房；1942年陸軍特別志願兵、1943年海軍特別志願兵、1945年全面徵兵。[5]",
+    "英文維基稱1940年「國語」使用者占人口51%，該來源指出此為「national language speakers」，未必代表流利程度。[6]"
+   ],
+   "disputes": [
+    "分期起訖並無單一通說：英文維基以1915（西來庵事件後）為同化起點，一般敘述常以1919年文官總督為起點。[tuj] [gg]",
+    "「日治」與「日據」稱謂各有立場；英文維基記載2013年行政院令用「日據」，2016年表示不再適用。[tuj]",
+    "改姓名比例各來源不同：中文維基1943年底約2%，英文維基稱約7%。[kzh] [tuj]"
+   ],
+   "sources": [
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    },
+    {
+     "t": "維基百科中文「六三法」",
+     "u": "https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95"
+    },
+    {
+     "t": "English Wikipedia: Governor-General of Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"
+    },
+    {
+     "t": "English Wikipedia: Gotō Shinpei",
+     "u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
+    },
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "English Wikipedia: Japanization",
+     "u": "https://en.wikipedia.org/wiki/Japanization"
+    }
+   ]
+  },
+  {
+   "id": "wushe",
+   "title": "霧社事件",
+   "facts": [
+    "起因：英文維基指長期警察不當對待、強制勞動、對原住民信仰習俗不敬；直接導火線為莫那魯道之子達多莫那婚宴上，警員與酒敬之爭執。[1]",
+    "1930年10月27日清晨，約1,236名來自六個部落的賽德克人在霧社公學校運動會襲擊，日人134人死亡、26人受傷（Taiwan Review）。[3]",
+    "英文維基與Taipei Times皆載134名日人死亡，另有兩名穿日本服裝的漢人被誤殺。[1] [2]",
+    "日方出動約2,000名軍警，使用山砲、飛機與毒氣類武器，約兩個月內鎮壓（Taiwan Review稱40天後結束）。[2] [3]",
+    "賽德克方死亡：英文維基稱644人（含290人自殺，該數字標待引用）；Taipei Times稱逾600人、約半數自殺；香港01稱六社約1,500人中逾半死亡、剩298人。[1] [2] [4]",
+    "莫那魯道於1930年11月28日自殺（英文維基）。[1]",
+    "第二次霧社事件：1931年4月25日，與日方合作的原住民攻擊收容所倖存者；Taiwan Review稱再有216人死亡。[3] [4]",
+    "倖存298人被遷至約50公里外的平地，日方稱「川中島」，賽德克語Alang Gluban；道澤與德魯固群獲得原屬土地。[3] [4]"
+   ],
+   "disputes": [
+    "日方死傷人數：傷者26人（Taiwan Review）與215人（英文維基資訊框）不一致。[twr] [musha]",
+    "賽德克死亡人數：644、逾600、「逾半數」三種口徑並存；自殺比例亦待證。[musha] [ttm] [hk01]",
+    "毒氣是否使用：英文維基稱曾被指為亞洲首次化學戰，但另引春山說法，認為使用的是催淚瓦斯或氰化物混合物，效果不明。[musha]",
+    "評價：1954年《台灣省通志稿》將其定調為反壓迫、抗日民族主義，賽德克社群長期沉默；近年原住民族觀點強調轉型正義與歷史記憶被政治形塑。[hk01]",
+    "英文維基Taiwan under Japanese rule所引《日本年鑑》對事件年份有1930與1929夏季兩種記載，應視為資料矛盾。[tuj]",
+    "總督石塚英藏與總務長官人見次郎於1931年1月因批評而下台（英文維基）。[musha]"
+   ],
+   "sources": [
+    {
+     "t": "English Wikipedia: Musha Incident",
+     "u": "https://en.wikipedia.org/wiki/Musha_Incident"
+    },
+    {
+     "t": "Taipei Times: Taiwan in Time（2015-10-25）",
+     "u": "https://www.taipeitimes.com/News/feat/archives/2015/10/25/2003630860"
+    },
+    {
+     "t": "Taiwan Review（外交部）霧社事件報導",
+     "u": "https://taiwanreview.nat.gov.tw/AMP/Culture/Top-News/24465/{{url}}"
+    },
+    {
+     "t": "香港01：霧社事件九十周年",
+     "u": "https://www.hk01.com/%E8%97%9D%E6%96%87%E4%B8%AD%E5%9C%8B/536836/"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    }
+   ]
+  },
+  {
+   "id": "jp-development",
+   "title": "經濟與社會建設及其評價爭議",
+   "facts": [
+    "土地調查：1898–1905年，1898年7月公布《臺灣土地調查規則》10條；1905年3月完成、5月實施土地登記；編製地籍圖與土地台帳並消滅大租權。[1]",
+    "人口：1905年10月1日現住人口3,039,751人，同年底3,046,859人（不含高山原住民）；英文維基稱1940年人口5.87百萬。[2] [6]",
+    "糖業：砂糖產量由1905年8,263萬斤增至1935年16億942萬斤，甘蔗收穫量約12.57倍；新式糖廠占比1907年16.0%、1935年97.6%。[3]",
+    "糖廠專用鐵道由1909年450.8公里增至1922年1,519公里；1905–1935年甘蔗收穫量年增率8.8%。[3] [4]",
+    "嘉南大圳1920年動工、1930年完成，烏山頭水庫集水58平方公里、容量約1.5億立方公尺。[5]",
+    "教育：英文維基稱1944年學齡兒童就學率台灣人71.3%、原住民86.4%、日本人99.6%，1943年實施義務教育。[6]",
+    "纏足：1905年女性1,406,224人中纏足800,618人（56.9%），1915年纏足279,038人（20.6%）。[2]",
+    "衛生：後藤新平主導的鴉片漸禁政策，吸食者由1900年16.5萬人降至1941年不足8,000人（英文維基）；吳聰敏統計台灣人死亡率1906年3.49%降至1912年2.46%。[7] [1]",
+    "吳聰敏估計日治初期人均GDP年平均成長約2%，脫離清治長期停滯。[2]"
+   ],
+   "disputes": [
+    "吳聰敏認為台灣糖業缺乏比較利益，是在日本進口替代保護下發展，蔗農受益、成本由日本本土消費者負擔；但同一份講義並未分析蔗價、利潤分配或契約，不足以評估剝削論。[sugar] [econ]",
+    "講義提出的疑問：原料採集區制度下糖廠對區內甘蔗有獨買權，是否對農民不利；另一方面農民仍可選擇作物。這是爭點而非結論。[rail]",
+    "英文維基指日治初期為殖民母國服務的政策「工業屬日本、農業屬台灣」，大型企業皆為日人所有且受嚴格管制，與「殖民現代性」敘述並存。[tuj]",
+    "土地調查：英文維基稱1911年前未做調查，與吳聰敏講義的1898–1905不一致。[tuj] [land]",
+    "戰爭末期鐵路僅約四成可用（英文維基），顯示戰時動員與空襲破壞。[tuj]",
+    "剝削論與現代化論的學界代表性文獻與具體對立論點，本次未讀到可引用來源，專題寫作時請標明不足。"
+   ],
+   "sources": [
+    {
+     "t": "吳聰敏講義：土地調查與戶口調查（國立臺灣大學）",
+     "u": "https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-LandCensus-why.pdf"
+    },
+    {
+     "t": "吳聰敏：糖業、纏足與失蹤婦女（未完成初稿，臺大經濟系）",
+     "u": "https://econ.ntu.edu.tw/wp-content/uploads/2023/12/hist_1080516.pdf"
+    },
+    {
+     "t": "吳聰敏：糖業與性別（臺大）",
+     "u": "https://homepage.ntu.edu.tw/~ntut019/ltes/Sugar-Gender.pdf"
+    },
+    {
+     "t": "吳聰敏講義：鐵路（臺大）",
+     "u": "https://homepage.ntu.edu.tw/~ntut019/te400/bm-T4A-Railway-why.pdf"
+    },
+    {
+     "t": "維基百科中文「嘉南大圳」",
+     "u": "https://zh.wikipedia.org/wiki/嘉南大圳"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    },
+    {
+     "t": "English Wikipedia: Gotō Shinpei",
+     "u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
+    }
+   ]
+  },
+  {
+   "id": "jp-identity",
+   "title": "日治時期台灣人的身份與認同",
+   "facts": [
+    "1895年《馬關條約》生效後，英文維基所引資料稱居民可在兩年內選擇去留以決定國籍。[1]",
+    "台灣人在日本統治下被稱「本島人」，日本人稱「內地人」，法制上適用不同法令，六三法使總督可制定專屬台灣的律令。[9]",
+    "台北帝大1928–1943年學生約八成日籍、兩成台籍；1931屆畢業生中日籍41人、台籍5人。[7]",
+    "1944年學齡兒童就學率：台灣人71.3%、日本人99.6%。[8]",
+    "1937年起推動皇民化，國語家庭享有配給與任用等優惠；1943年底17,526戶、126,211人改姓名。[4]",
+    "1937–1945年共207,183名台灣人服役（現役80,433、軍屬126,750）；戰後因失去日本國籍而無法依日本法令獲補償。[5] [6]",
+    "1945年10月25日日方在台北向陳儀簽收受降，行政長官公署同日運作。[2] [3]",
+    "ROC稱台灣人自1945年10月25日（公署說法）或1946年1月12日（行政院令）起恢復中國國籍；英國1946年8月31日、美國1946年11月表示不接受。[1]",
+    "1952年8月5日《台北條約》生效；1952年4月19日日本文件稱台灣人屆時喪失日本國籍。[1]"
+   ],
+   "disputes": [
+    "國籍恢復時點有1945.10.25、1946.1.12、1952年條約生效三種論述；陳儀楠社論主張1945–46年的做法違反當事人意願與國際法，這是評論性立場而非通說，ROC方面完整法理論述本次未讀到來源。[ttn]",
+    "「光復」「終戰」「戰敗」「接收」用語反映政權與族群立場；亦有學者稱「再淪陷」，並有人主張10月25日僅為軍事占領之始，主權待和約。[gf] [retro]",
+    "英美1946年不接受ROC單方面主張國籍已恢復，但美國承認ROC為中國合法政府。[retro] [ttn]",
+    "台灣人對「日本人／中國人／台灣人」的自我認同，本次未讀到具代表性的學術調查來源，專題寫作請勿推論。"
+   ],
+   "sources": [
+    {
+     "t": "Taipei Times 社論（陳儀楠）：ROC forced citizenship on unwary Taiwanese（2011-01-20，評論性文章）",
+     "u": "https://www.taipeitimes.com/News/editorials/archives/2011/01/20/2003493942"
+    },
+    {
+     "t": "English Wikipedia: Taiwan Retrocession Day",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"
+    },
+    {
+     "t": "維基百科中文「臺灣光復」",
+     "u": "https://zh.wikipedia.org/wiki/臺灣光復"
+    },
+    {
+     "t": "維基百科中文「皇民化運動」",
+     "u": "https://zh.wikipedia.org/wiki/皇民化運動"
+    },
+    {
+     "t": "English Wikipedia: Conscription in Taiwan",
+     "u": "https://en.wikipedia.org/wiki/Conscription_in_Taiwan"
+    },
+    {
+     "t": "The News Lens：台籍日本兵補償議題",
+     "u": "https://www.thenewslens.com/article/145592"
+    },
+    {
+     "t": "English Wikipedia: National Taiwan University",
+     "u": "https://en.wikipedia.org/wiki/National_Taiwan_University"
+    },
+    {
+     "t": "English Wikipedia: Taiwan under Japanese rule",
+     "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+    },
+    {
+     "t": "維基百科中文「六三法」",
+     "u": "https://zh.wikipedia.org/wiki/%E5%85%AD%E4%B8%89%E6%B3%95"
+    }
+   ]
+  }
+ ]
+}

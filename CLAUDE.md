@@ -58,4 +58,4 @@ tests/smoke.py      冒煙測試
 - 目前發布的 Artifact 版本是 `build.py --artifact` 的產物（去掉 viewport meta，加 `claude:viewport-fit-sides`）。
 
 ## 現況與下一步
-見 `docs/ROADMAP.md`。簡述：架構與「日治時期」樣板已完成並審查；其餘 7 個時期待逐期擴充，每期一批、每批都要審查。
+見 `docs/HANDOFF.md`（交接狀態）、`docs/ROADMAP.md`（待辦）、`docs/PROMPTS.md`（研究者／審查者提示詞）、`docs/P4_SCOPE_DRAFT.md`（下一期範圍草案，待使用者確認）。簡述：架構與「日治時期」樣板已完成並審查；其餘 7 個時期待逐期擴充，每期一批、每批都要審查。

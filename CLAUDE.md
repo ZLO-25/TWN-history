@@ -57,7 +57,9 @@ tests/smoke.py      冒煙測試
 
 ## 已知踩雷
 - Playwright 在手機寬度點擊常被相鄰標籤擋住，用 `force=True` 或 `dispatchEvent`。
-- 手機版圖表靠橫向捲動；桌機（≥900px）圖表突破欄寬並有縮放鈕（`addZoom`）。
+- 三張泳道圖（全期 `#lcAll`、時期 `#lcP`、李登輝總覽 `#lcOv`）共用同一個元件（template.html 的 `lcMake`／`lcRender`）：事件是「點＋標籤方塊」，放不下的合併成「+N」（點一下放大）；縮放是重新排版、字不會變大。改樣式只改 `.lc-*` 這一套 CSS，不要再為單張圖另寫樣式。
+- 窄於 700px 時，時期圖與李登輝總覽改為直式列表（全期圖維持橫向縮圖）；事件卡在 ≥1100px 固定在右側，較窄時從下方滑出（`.lc-card.open`）。
+- 有 `position:fixed` 的元素（底部事件卡）不能放在有 `transform` 的祖先裡，所以版面突破欄寬用 margin 計算（`.wide`），不要用 `translateX(-50%)`。
 - 目前發布的 Artifact 版本是 `build.py --artifact` 的產物（去掉 viewport meta，加 `claude:viewport-fit-sides`）。
 
 ## 現況與下一步

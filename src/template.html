@@ -1001,7 +1001,7 @@ function hCard(){
   const whoHtml=whoH.length?`<div class="rowr"><b>人物</b>${whoH.map(p=>`<button class="who" data-who="${p.id}">${esc(p.name)}</button>`).join("")}</div>`:"";
   const ths=THREADS.filter(t=>t.steps.some(st=>st.ref===h.key));
   const thHtml=ths.length?`<div class="rowr"><b>主線</b>${ths.map(t=>`<button class="th" data-th="${t.id}">${esc(t.title)}</button>`).join("")}</div>`:"";
-  const topicH=h.track&&h.track!=="政權"&&h.track!=="政治外交"?`<span class="topic">${esc(h.track)}</span>`:"";
+  const topicH=h.topic?`<span class="topic">${esc(h.topic)}</span>`:"";
   c.innerHTML=`${cardClose()}<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)&&!h.ctx?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span>${topicH}</div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
   ${ctxNote?`<p class="hnote">${ctxNote}</p>`:""}
   ${causes(h.why,"前因")}${causes(h.so,"影響")}${hasC?`<p class="kindnote">「直接」＝有文件或當事人行動可證；「學者解釋」＝研究者的詮釋，各家說法可能不同。</p>`:""}

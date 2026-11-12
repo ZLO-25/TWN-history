@@ -1352,7 +1352,8 @@ const H_RAW=[
 "key": "bank-taiwan-1899",
 "s": "台灣銀行",
 "b": "依1897年《臺灣銀行法》設立的台灣銀行，於1899年（9月26日）開業，兼具發行貨幣與中央銀行功能。",
-"track": "經濟產業",
+"track": "政權",
+"topic": "經濟產業",
 "conf": "common",
 "aliases": [],
 "note": "1897年是設立法案通過，1899年是開業，並非矛盾；英文維基Bank of Taiwan資訊框列1897。1898年6月成立之說，目前未見其他來源佐證。",
@@ -1625,7 +1626,8 @@ const H_RAW=[
 "key": "taihoku-univ-1928",
 "s": "台北帝大",
 "b": "台北帝國大學為日本第七所帝國大學，1928年設立，初設文政學部與理農學部。",
-"track": "文化生活",
+"track": "政權",
+"topic": "文化生活",
 "conf": "verified",
 "aliases": [],
 "note": "英文維基：1928年3月16日設立，首屆新生入學4月30日、5月5日開課；1928–1943年學生約八成日籍、兩成台籍；1945年接收時1,767名學生中台籍351人。",
@@ -1698,7 +1700,8 @@ const H_RAW=[
 "key": "chianan-1930",
 "s": "嘉南大圳",
 "b": "嘉南大圳1920年動工、1930年完工，由總督府技師八田與一設計，以烏山頭水庫為核心。",
-"track": "經濟產業",
+"track": "政權",
+"topic": "經濟產業",
 "conf": "common",
 "aliases": [],
 "note": "中文維基：1920年9月動工、1930年5月完成；灌溉區各幹線面積加總約144,000甲（為依條目數字自行加總，條目未載總數）。英文維基稱可耕稻田由5,000增至150,000公頃，兩者單位與口徑不同。",
@@ -3342,7 +3345,7 @@ function hCard(){
   const whoHtml=whoH.length?`<div class="rowr"><b>人物</b>${whoH.map(p=>`<button class="who" data-who="${p.id}">${esc(p.name)}</button>`).join("")}</div>`:"";
   const ths=THREADS.filter(t=>t.steps.some(st=>st.ref===h.key));
   const thHtml=ths.length?`<div class="rowr"><b>主線</b>${ths.map(t=>`<button class="th" data-th="${t.id}">${esc(t.title)}</button>`).join("")}</div>`:"";
-  const topicH=h.track&&h.track!=="政權"&&h.track!=="政治外交"?`<span class="topic">${esc(h.track)}</span>`:"";
+  const topicH=h.topic?`<span class="topic">${esc(h.topic)}</span>`:"";
   c.innerHTML=`${cardClose()}<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)&&!h.ctx?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span>${topicH}</div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
   ${ctxNote?`<p class="hnote">${ctxNote}</p>`:""}
   ${causes(h.why,"前因")}${causes(h.so,"影響")}${hasC?`<p class="kindnote">「直接」＝有文件或當事人行動可證；「學者解釋」＝研究者的詮釋，各家說法可能不同。</p>`:""}

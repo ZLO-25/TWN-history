@@ -186,6 +186,55 @@ mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;bor
 .tl-links button{border:1px solid var(--line);background:var(--paper);border-radius:4px;padding:1px 8px;font-size:13px;font-variant-numeric:tabular-nums}
 @media (max-width:560px){.bgc summary{grid-template-columns:1fr}.bk{grid-row:auto}.bgb{padding-left:0}.pair{grid-template-columns:1fr}.flow li{grid-template-columns:1fr;gap:0}}
 
+
+/* 事件卡：前因／影響／相關事件／人物／主線 */
+.cause{margin:10px 0 6px}
+.cause h4{margin:0 0 2px;font-size:13px;color:var(--gold);font-family:var(--display)}
+.cause ul{margin:0;padding-left:1.1em;font-size:14px}
+.cause li{margin-bottom:2px}
+.kind{display:inline-block;font-size:11px;line-height:1.6;border:1px solid var(--line);border-radius:999px;padding:0 7px;margin-left:4px;white-space:nowrap;color:var(--muted)}
+.kind.s{border-style:dashed}
+.kindnote{font-size:12px;color:var(--muted);margin:2px 0 6px}
+.rowr{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;margin:8px 0;color:var(--muted)}
+.rowr>b{font-weight:700;color:var(--ink);margin-right:2px}
+.rowr button{border:1px solid var(--line);background:var(--chip);border-radius:6px;padding:2px 9px;font-size:13px;text-align:left}
+.rowr button.who{border-radius:999px}
+.rowr button.th{border-color:var(--seal);color:var(--seal)}
+.topic{display:inline-block;font-size:12px;padding:0 8px;border-radius:999px;background:var(--chip);border:1px solid var(--line);margin-left:6px;vertical-align:1px;color:var(--muted)}
+/* 每期要記住的事 */
+.hkeys{margin:10px 0 4px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:10px 14px}
+.hkeys h3{margin:0 0 4px;font-family:var(--display);font-size:15px;color:var(--gold)}
+.hkeys ol{margin:0;padding-left:1.3em;font-size:14.5px}
+.hkeys li{margin-bottom:3px}
+/* 跨期主線 */
+.threads{margin:30px 0 0;padding-top:16px;border-top:2px solid var(--ink)}
+.threads h2{font-family:var(--display);font-size:20px;margin:0}
+.threads>p{color:var(--muted);font-size:14px;max-width:62ch;margin:4px 0 10px}
+.thchips{display:flex;gap:8px;flex-wrap:wrap}
+#thPanel{margin-top:12px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+#thPanel h3{font-family:var(--display);margin:0;font-size:18px}
+#thPanel .sum{margin:2px 0 10px;color:var(--muted);font-size:14px;max-width:62ch}
+#thPanel .flow button{border:1px solid var(--line);background:var(--chip);border-radius:6px;padding:1px 9px;font-size:14px;text-align:left;font-weight:700}
+#thPanel .flow .tg{font-size:11px;color:var(--muted);margin-left:6px;border:1px solid var(--line);border-radius:999px;padding:0 7px}
+#thPanel .flow .say{display:block;margin-top:3px;font-size:14px}
+/* 人物 */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:16px 0}
+.pb{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.pb b{font-family:var(--display);font-size:16px}
+.pb span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pb small{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.pb[aria-pressed=true]{border-color:var(--seal);box-shadow:inset 0 0 0 1px var(--seal)}
+.pb[aria-pressed=true] b{color:var(--seal)}
+#pCard{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--seal);border-radius:8px;padding:16px 18px;scroll-margin-top:110px}
+#pCard h3{font-family:var(--display);font-size:22px;margin:0}
+#pCard h3 small{font-family:var(--body);font-size:14px;color:var(--muted);font-weight:400;margin-left:8px}
+#pCard .role{color:var(--muted);font-size:14px;margin:0}
+#pCard .one{font-size:16px;margin:8px 0}
+#pCard h4{margin:14px 0 4px;font-size:14px;color:var(--seal)}
+#pCard ul{margin:0;padding-left:1.2em;font-size:14.5px}
+#pCard .views li{margin-bottom:4px}
+#pCard .src{font-size:13px;color:var(--muted);margin-top:14px}
+
 /* 翻卡 */
 .quiz{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px}
 .q-scope{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px;align-items:center;font-size:13px;color:var(--muted)}
@@ -253,9 +302,9 @@ footer p{margin:0 0 6px;max-width:70ch}
 .hall{margin:14px 0 18px}.hallh{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin-bottom:6px}
 .hallh .legend{display:flex;flex-wrap:wrap;gap:4px 14px}pre.tree{font-family:ui-monospace,Menlo,Consolas,"Noto Sans TC",monospace;font-size:13px;line-height:1.7;background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto;white-space:pre}.subh{font-family:var(--serif,inherit);font-size:20px;margin:34px 0 4px;padding-top:18px;border-top:2px solid var(--ink)}.hallh .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:baseline}.hallnote{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:70ch}
 /* 共用泳道圖元件 */
-:root{--c3:#6f7b75}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c3:#98a49e}}
-:root[data-theme="dark"]{--c3:#98a49e}
+:root{--c3:#6f7b75;--c4:#8a6bb0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c3:#98a49e;--c4:#b79ddb}}
+:root[data-theme="dark"]{--c3:#98a49e;--c4:#b79ddb}
 @media(min-width:900px){.wide{width:min(96vw,1700px);margin-left:calc(50% - min(48vw,850px))}}
 .lc-tools{display:flex;gap:8px 12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0}
 .lc-legend{display:flex;gap:6px;flex-wrap:wrap}
@@ -350,6 +399,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 
 <nav class="tabs" role="tablist" aria-label="主要分頁">
   <button class="tab" role="tab" data-view="history" aria-selected="true">台灣史<small>1624 至今</small></button>
+  <button class="tab" role="tab" data-view="people" aria-selected="false">人物<small>人物索引</small></button>
   <button class="tab" role="tab" data-view="overview" aria-selected="false">李登輝<small>總覽圖＋逐年年表</small></button>
   <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
   <button class="tab" role="tab" data-view="methods">政治手腕<small>六種手法</small></button>
@@ -368,8 +418,22 @@ footer p{margin:0 0 6px;max-width:70ch}
   <div class="hblocks" id="hBlocks"></div>
   <div id="hPanel" class="hpanel" hidden>
     <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
+    <div class="hkeys" id="hKeys" hidden></div>
     <div class="lc-split wide"><div id="lcP"></div><div class="ovcard hcard lc-card" id="hCard" aria-live="polite"></div></div>
   </div>
+  <div class="threads" id="threads">
+    <h2>跨期主線</h2>
+    <p>有些事不是一個時期說得完的。主線把分散在不同時期的事件串起來，看它怎麼開始、怎麼演變、怎麼結束。</p>
+    <div class="thchips" id="thChips"></div>
+    <div id="thPanel" hidden></div>
+  </div>
+</section>
+
+<!-- 人物 -->
+<section id="v-people" role="tabpanel" class="sec" hidden>
+  <p class="intro">事件卡上的人名可以點進來；這裡也可以從人物找回他參與的事件。評價有分歧的人物，各方看法並列呈現。</p>
+  <div class="pgrid" id="pGrid"></div>
+  <div id="pCard" aria-live="polite" hidden></div>
 </section>
 
 <!-- 總覽 -->
@@ -956,7 +1020,8 @@ const PERIODS=[
  {id:"p0",name:"原住民社會",range:"至 1624",a:1400,b:1624,sum:"南島語系原住民族在各地生活，各有自己的社會與信仰。"},
  {id:"p1",name:"荷西與鄭氏",range:"1624–1683",a:1624,b:1683,sum:"荷蘭、西班牙先後經營台灣，後由鄭成功趕走荷蘭，鄭氏政權延續到 1683 年。"},
  {id:"p2",name:"清領時期",range:"1683–1895",a:1683,b:1895,sum:"1683 年起納入清朝版圖，漢人移民增加，19 世紀後期建省。"},
- {id:"p3",name:"日治時期",range:"1895–1945",a:1895,b:1946,sum:"馬關條約後日本統治台灣五十年（亦稱日據時期、日本殖民統治時期），從武力鎮壓、同化到戰時動員。"},
+ {id:"p3",name:"日治時期",range:"1895–1945",a:1895,b:1946,sum:"馬關條約後日本統治台灣五十年（亦稱日據時期、日本殖民統治時期），從武力鎮壓、同化到戰時動員。",
+  keys:["統治方式大致由武力鎮壓、同化走向皇民化與戰時動員；分期沒有單一通說（見專題「日治統治政策三階段」）","1920 年代出現以文化協會、議會設置請願為代表的非武裝政治運動，也有 1930 年霧社事件這樣的武裝衝突","建設與統治並存，評價有很大爭議；台灣人的身分認同在這五十年間有抵抗、協力、適應等多種選擇"]},
  {id:"p4",name:"戰後接收與內戰",range:"1945–1949",a:1946,b:1950,sum:"國民政府接收台灣，1947 年二二八事件，1949 年中華民國政府遷台。"},
  {id:"p5",name:"威權戒嚴",range:"1949–1987",a:1950,b:1988,sum:"戒嚴與動員戡亂體制下的政治、經濟起飛，也是白色恐怖時期。"},
  {id:"p6",name:"民主化",range:"1987–2000",a:1988,b:2001,sum:"解嚴、國會全面改選、修憲與總統直選，2000 年第一次政黨輪替。"},
@@ -968,6 +1033,7 @@ const H_RAW=[
 "y": 1895,
 "md": "4月17日",
 "t": "簽訂《馬關條約》",
+"key": "treaty-shimonoseki-1895",
 "s": "馬關條約",
 "b": "清日兩國於馬關簽訂條約，清廷將台灣與澎湖永久讓與日本。",
 "track": "政治外交",
@@ -988,12 +1054,30 @@ const H_RAW=[
 "t": "維基百科中文「乙未戰爭」",
 "u": "https://zh.wikipedia.org/wiki/乙未戰爭"
 }
+],
+"why": [
+{
+"t": "甲午戰爭（1894–1895）中清廷戰敗，與日本議和。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "條約規定割讓台灣與澎湖；台灣士紳與官員隨後宣布成立台灣民主國以抵抗接收，日軍於 5 月底登陸，展開接收。",
+"k": "d"
+}
+],
+"rel": [
+"world-sino-japanese-1894",
+"republic-formosa-1895",
+"landing-aodi-1895"
 ]
 },
 {
 "y": 1895,
 "md": "5月25日",
 "t": "台灣民主國宣布成立",
+"key": "republic-formosa-1895",
 "s": "台灣民主國",
 "b": "5月23日發布自主宣言，5月25日成立，台灣士紳與官員推唐景崧為總統，年號「永清」，以抵抗接收。",
 "track": "政權",
@@ -1014,12 +1098,30 @@ const H_RAW=[
 "t": "English Wikipedia: Republic of Formosa",
 "u": "https://en.wikipedia.org/wiki/Republic_of_Formosa"
 }
+],
+"why": [
+{
+"t": "《馬關條約》規定割讓台灣，台灣的部分士紳與官員決定宣布自主、抵抗接收。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "日軍於 5 月 29 日登陸；唐景崧於 6 月初離台，10 月 21 日台南城陷落、劉永福離台（各事件日期見各卡）。",
+"k": "d"
+}
+],
+"rel": [
+"treaty-shimonoseki-1895",
+"landing-aodi-1895",
+"tainan-fall-1895"
 ]
 },
 {
 "y": 1895,
 "md": "5月29日",
 "t": "日軍於澳底登陸",
+"key": "landing-aodi-1895",
 "s": "日軍登陸澳底",
 "b": "日軍近衛師團在基隆東方的澳底一帶登陸，展開接收台灣的軍事行動。",
 "track": "政權",
@@ -1046,6 +1148,7 @@ const H_RAW=[
 "y": 1895,
 "md": "6月17日",
 "t": "台北舉行始政式",
+"key": "inauguration-1895",
 "s": "始政式",
 "b": "樺山資紀在台北城內原布政使司衙門的總督府舉行始政儀式，日後稱「始政紀念日」。",
 "track": "政權",
@@ -1072,6 +1175,7 @@ const H_RAW=[
 "y": 1895,
 "md": "10月21日",
 "t": "台南城陷落，劉永福離台",
+"key": "tainan-fall-1895",
 "s": "台南陷落",
 "b": "10月20日劉永福離開台南渡廈門；21日日軍進入台南城，日方視為台灣民主國結束。",
 "track": "政權",
@@ -1106,6 +1210,7 @@ const H_RAW=[
 "y": 1895,
 "md": "",
 "t": "武裝抗日（1895–1902）",
+"key": "armed-resistance-1895",
 "s": "武裝抗日",
 "b": "乙未戰爭後各地仍有武裝抗日；總督府以軍警鎮壓並輔以招降，至1902年前後大規模武裝抗爭大致平息。",
 "track": "政權",
@@ -1136,6 +1241,7 @@ const H_RAW=[
 "y": 1896,
 "md": "3月31日",
 "t": "公布「六三法」",
+"key": "law63-1896",
 "s": "六三法",
 "b": "日本帝國議會通過法律第63號，授權台灣總督發布具法律效力的命令（律令），總督集行政、立法、司法權。",
 "track": "政治外交",
@@ -1157,12 +1263,29 @@ const H_RAW=[
 "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
 }
 ],
-"bg": "jp-policy"
+"bg": "jp-policy",
+"why": [
+{
+"t": "日本取得台灣後，需要決定治理台灣的法律依據；憲法是否適用台灣，學者意見分歧。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "總督得發布具法律效力的律令，集行政、立法、司法權；原定三年，經三次延長，1906 年由《三一法》取代。",
+"k": "d"
+}
+],
+"rel": [
+"kodama-goto-1898",
+"treaty-shimonoseki-1895"
+]
 },
 {
 "y": 1898,
 "md": "2月26日",
 "t": "兒玉源太郎就任，後藤新平主持民政",
+"key": "kodama-goto-1898",
 "s": "兒玉、後藤上任",
 "b": "第四任總督兒玉源太郎於1898年2月26日就任，後藤新平主持民政（初任民政局長，同年官制改為民政長官），推動土地、戶口調查與基礎建設。",
 "track": "政權",
@@ -1179,12 +1302,27 @@ const H_RAW=[
 "u": "https://en.wikipedia.org/wiki/Gotō_Shinpei"
 }
 ],
-"bg": "jp-policy"
+"bg": "jp-policy",
+"so": [
+{
+"t": "後藤新平主持民政期間，展開土地調查事業與戶口調查，並推動基礎建設（見相關事件）。",
+"k": "d"
+}
+],
+"rel": [
+"land-survey-1898",
+"census-1905",
+"bank-taiwan-1899"
+],
+"who": [
+"goto-shinpei"
+]
 },
 {
 "y": 1898,
 "md": "",
 "t": "土地調查事業（1898–1905）",
+"key": "land-survey-1898",
 "s": "土地調查",
 "b": "總督府以1898年《臺灣土地調查規則》展開土地調查，1905年3月完成、5月實施土地登記，並消滅大租權。",
 "track": "政權",
@@ -1211,9 +1349,10 @@ const H_RAW=[
 "y": 1899,
 "md": "",
 "t": "台灣銀行成立",
+"key": "bank-taiwan-1899",
 "s": "台灣銀行",
 "b": "依1897年《臺灣銀行法》設立的台灣銀行，於1899年（9月26日）開業，兼具發行貨幣與中央銀行功能。",
-"track": "政權",
+"track": "經濟產業",
 "conf": "common",
 "aliases": [],
 "note": "1897年是設立法案通過，1899年是開業，並非矛盾；英文維基Bank of Taiwan資訊框列1897。1898年6月成立之說，目前未見其他來源佐證。",
@@ -1233,6 +1372,7 @@ const H_RAW=[
 "y": 1905,
 "md": "10月1日",
 "t": "第一次臨時台灣戶口調查",
+"key": "census-1905",
 "s": "首次戶口調查",
 "b": "總督府於1905年10月1日進行首次戶口調查，其後1915年再調查，1920年起每五年一次，結果顯示台灣人口約三百萬。",
 "track": "政權",
@@ -1259,6 +1399,7 @@ const H_RAW=[
 "y": 1915,
 "md": "7月6日",
 "t": "西來庵（噍吧哖）事件",
+"key": "tapani-1915",
 "s": "西來庵事件",
 "b": "余清芳等人以西來庵為據點起事，8月在噍吧哖與日軍警衝突，總督府大規模逮捕並軍法審判。",
 "track": "政權",
@@ -1285,6 +1426,7 @@ const H_RAW=[
 "y": 1919,
 "md": "10月29日",
 "t": "田健治郎就任首位文官總督",
+"key": "den-1919",
 "s": "首位文官總督",
 "b": "田健治郎於1919年10月29日就任，台灣總督改由文官出任，統治方針轉向同化。",
 "track": "政權",
@@ -1312,6 +1454,7 @@ const H_RAW=[
 "y": 1921,
 "md": "10月17日",
 "t": "台灣文化協會成立",
+"key": "tca-1921",
 "s": "文化協會",
 "b": "蔣渭水等人在台北大稻埕創立台灣文化協會，林獻堂任總理，以講演、讀報社等啟蒙社會。",
 "track": "政治外交",
@@ -1324,12 +1467,35 @@ const H_RAW=[
 "u": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"
 }
 ],
-"bg": "jp-identity"
+"bg": "jp-identity",
+"why": [
+{
+"t": "學者常把一次大戰後的民族自決思潮、日本國內的大正民主風氣，視為台灣知識青年組織文協的背景；影響的程度與路徑，各家說法不一。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "文協以講演、讀報社等方式啟蒙社會；1927 年內部溫和派與左翼分歧，部分成員另組台灣民眾黨。",
+"k": "d"
+}
+],
+"rel": [
+"world-ww1-1918",
+"petition-1921",
+"cpl-incident-1923",
+"tpp-1927"
+],
+"who": [
+"chiang-wei-shui",
+"lin-hsien-tang"
+]
 },
 {
 "y": 1921,
 "md": "1月30日",
 "t": "台灣議會設置請願運動展開",
+"key": "petition-1921",
 "s": "議會請願",
 "b": "1921年1月30日首次向帝國議會提出請願，至1934年共15次，9月2日宣布停止。",
 "track": "政治外交",
@@ -1342,12 +1508,32 @@ const H_RAW=[
 "u": "https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"
 }
 ],
-"bg": "jp-identity"
+"bg": "jp-identity",
+"why": [
+{
+"t": "同上：民族自決思潮與大正民主風氣，常被學者視為背景之一，但影響程度並無定論。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "請願共提出 15 次，1934 年宣布停止；1923 年總督府曾以《治安警察法》搜捕運動成員（治警事件）。",
+"k": "d"
+}
+],
+"rel": [
+"tca-1921",
+"cpl-incident-1923"
+],
+"who": [
+"lin-hsien-tang"
+]
 },
 {
 "y": 1923,
 "md": "12月16日",
 "t": "治警事件",
+"key": "cpl-incident-1923",
 "s": "治警事件",
 "b": "總督府以違反《治安警察法》為由大規模搜捕議會請願運動成員，後經三審判決。",
 "track": "政治外交",
@@ -1369,12 +1555,32 @@ const H_RAW=[
 "u": "https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"
 }
 ],
-"bg": "jp-identity"
+"bg": "jp-identity",
+"why": [
+{
+"t": "起因是議會設置請願運動的組織與活動，總督府以違反《治安警察法》為由處理。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "二審 13 人有罪、三審維持；蔣渭水、蔡培火各判 4 個月（細節見說明）。",
+"k": "d"
+}
+],
+"rel": [
+"petition-1921",
+"tpp-1927"
+],
+"who": [
+"chiang-wei-shui"
+]
 },
 {
 "y": 1927,
 "md": "7月10日",
 "t": "台灣民眾黨成立",
+"key": "tpp-1927",
 "s": "民眾黨",
 "b": "文協內部溫和派與左翼分歧，部分成員另組台灣民眾黨，被視為台灣第一個政黨。",
 "track": "政治外交",
@@ -1391,15 +1597,35 @@ const H_RAW=[
 "u": "https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"
 }
 ],
-"bg": "jp-identity"
+"bg": "jp-identity",
+"why": [
+{
+"t": "文協內部溫和派與左翼出現分歧，部分成員另組政黨。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "台灣民眾黨於 1931 年 2 月 18 日被禁；同年 8 月蔣渭水過世。",
+"k": "d"
+}
+],
+"rel": [
+"tca-1921",
+"cpl-incident-1923"
+],
+"who": [
+"chiang-wei-shui"
+]
 },
 {
 "y": 1928,
 "md": "3月16日",
 "t": "台北帝國大學設立",
+"key": "taihoku-univ-1928",
 "s": "台北帝大",
 "b": "台北帝國大學為日本第七所帝國大學，1928年設立，初設文政學部與理農學部。",
-"track": "政權",
+"track": "文化生活",
 "conf": "verified",
 "aliases": [],
 "note": "英文維基：1928年3月16日設立，首屆新生入學4月30日、5月5日開課；1928–1943年學生約八成日籍、兩成台籍；1945年接收時1,767名學生中台籍351人。",
@@ -1415,6 +1641,7 @@ const H_RAW=[
 "y": 1930,
 "md": "10月27日",
 "t": "霧社事件",
+"key": "wushe-1930",
 "s": "霧社事件",
 "b": "賽德克族起事六社，在霧社公學校運動會當日襲擊日人；日方以軍警、飛機與火砲鎮壓，並被指使用毒氣。起因包括強制勞動、警察不當對待等（英文維基）。",
 "track": "政權",
@@ -1444,15 +1671,34 @@ const H_RAW=[
 "u": "https://www.hk01.com/%E8%97%9D%E6%96%87%E4%B8%AD%E5%9C%8B/536836/"
 }
 ],
-"bg": "wushe"
+"bg": "wushe",
+"why": [
+{
+"t": "起因包括強制勞動、警察不當對待等；各來源強調的原因不同，詳見專題。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "日方以軍警鎮壓；1931 年 4 月又發生第二次霧社事件（與日方合作的原住民襲擊收容所）。倖存者被遷往平地。",
+"k": "d"
+}
+],
+"rel": [
+"kominka-1937"
+],
+"who": [
+"mona-rudao"
+]
 },
 {
 "y": 1930,
 "md": "5月",
 "t": "嘉南大圳完工",
+"key": "chianan-1930",
 "s": "嘉南大圳",
 "b": "嘉南大圳1920年動工、1930年完工，由總督府技師八田與一設計，以烏山頭水庫為核心。",
-"track": "政權",
+"track": "經濟產業",
 "conf": "common",
 "aliases": [],
 "note": "中文維基：1920年9月動工、1930年5月完成；灌溉區各幹線面積加總約144,000甲（為依條目數字自行加總，條目未載總數）。英文維基稱可耕稻田由5,000增至150,000公頃，兩者單位與口徑不同。",
@@ -1472,6 +1718,7 @@ const H_RAW=[
 "y": 1935,
 "md": "10月10日",
 "t": "始政四十週年台灣博覽會",
+"key": "expo-1935",
 "s": "始政40年博覽會",
 "b": "為紀念統治四十年，博覽會於1935年10月10日至11月28日舉行，展示總督府施政建設。",
 "track": "政權",
@@ -1490,6 +1737,7 @@ const H_RAW=[
 "y": 1936,
 "md": "9月2日",
 "t": "小林躋造就任，武官總督復活",
+"key": "kobayashi-1936",
 "s": "武官總督復活",
 "b": "海軍出身的小林躋造就任第17任總督，台灣總督重回武官，提出「皇民化、工業化、南進基地化」。",
 "track": "政權",
@@ -1516,6 +1764,7 @@ const H_RAW=[
 "y": 1937,
 "md": "4月",
 "t": "皇民化運動與報紙漢文欄廢止",
+"key": "kominka-1937",
 "s": "皇民化運動",
 "b": "1937年起強化日語推行，查禁報紙漢文欄、廢除漢文書房，並推動神社參拜與國語家庭。",
 "track": "政權",
@@ -1545,12 +1794,30 @@ const H_RAW=[
 "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
 }
 ],
-"bg": "jp-identity"
+"bg": "jp-identity",
+"why": [
+{
+"t": "學者多把皇民化放在戰爭動員的脈絡下理解，但起點與動機的說法並不一致（見說明）。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "同一政策方向下，之後有改姓名（1940）、陸軍特別志願兵（1942）與徵兵（1945）等措施。",
+"k": "s"
+}
+],
+"rel": [
+"name-change-1940",
+"volunteer-1942",
+"conscription-1945"
+]
 },
 {
 "y": 1940,
 "md": "",
 "t": "改姓名運動",
+"key": "name-change-1940",
 "s": "改姓名",
 "b": "1940年起實施改日本姓名，採申請許可制，非全面強制，附帶配給與升學等優惠。",
 "track": "政權",
@@ -1578,6 +1845,7 @@ const H_RAW=[
 "y": 1942,
 "md": "",
 "t": "陸軍特別志願兵制度",
+"key": "volunteer-1942",
 "s": "特別志願兵",
 "b": "1942年實施陸軍特別志願兵制度，1943年續設海軍特別志願兵，台灣人開始以正式軍人身分（志願兵）入伍。",
 "track": "政權",
@@ -1603,12 +1871,24 @@ const H_RAW=[
 "u": "https://www.thenewslens.com/article/145592"
 }
 ],
-"bg": "jp-identity"
+"bg": "jp-identity",
+"so": [
+{
+"t": "1937–1945 年共約 20.7 萬台灣人以軍人、軍屬、軍夫身分服役；死亡人數口徑不同，見說明。",
+"k": "d"
+}
+],
+"rel": [
+"kominka-1937",
+"conscription-1945",
+"world-pacific-war-1941"
+]
 },
 {
 "y": 1945,
 "md": "1月",
 "t": "徵兵制（1943年宣布、1945年1月起徵兵檢查）",
+"key": "conscription-1945",
 "s": "徵兵制",
 "b": "1943年宣布自1945年起施行；1944年9月起台灣人負兵役義務，1945年1月開始徵兵檢查並入營，至日本投降為止。",
 "track": "政權",
@@ -1635,6 +1915,7 @@ const H_RAW=[
 "y": 1945,
 "md": "8月15日",
 "t": "日本宣布投降",
+"key": "surrender-1945",
 "s": "日本投降",
 "b": "1945年8月15日天皇廣播《終戰詔書》，9月2日簽署降伏文書，戰爭結束。",
 "track": "政治外交",
@@ -1655,12 +1936,29 @@ const H_RAW=[
 "t": "English Wikipedia: Taiwan under Japanese rule",
 "u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
 }
+],
+"why": [
+{
+"t": "二戰末期，日本於 8 月 14 日決定接受波茨坦公告並照會盟國，15 日廣播《終戰詔書》。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "台灣的統治權進入移轉：10 月 25 日在台北舉行受降，行政長官公署開始運作。",
+"k": "d"
+}
+],
+"rel": [
+"takeover-1945",
+"world-pacific-war-1941"
 ]
 },
 {
 "y": 1945,
 "md": "10月25日",
 "t": "台灣受降與行政長官公署接收",
+"key": "takeover-1945",
 "s": "受降與接收",
 "b": "日方總督安藤利吉在台北公會堂向陳儀簽收受降，行政長官公署同日開始運作。",
 "track": "政權",
@@ -1681,12 +1979,32 @@ const H_RAW=[
 "t": "English Wikipedia: Taiwan Retrocession Day",
 "u": "https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"
 }
+],
+"why": [
+{
+"t": "日本投降後，依盟軍的受降安排，台灣日軍向中華民國政府（蔣介石的中國戰區）投降。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "行政長官公署開始運作；1946 年 1 月行政院令台澎居民恢復中華民國國籍。接收的性質（光復或軍事占領）有歧見。",
+"k": "d"
+}
+],
+"rel": [
+"surrender-1945",
+"nationality-1946"
+],
+"who": [
+"chen-yi"
 ]
 },
 {
 "y": 1946,
 "md": "1月12日",
 "t": "恢復中華民國國籍",
+"key": "nationality-1946",
 "s": "恢復國籍",
 "b": "1946年1月12日行政院令台澎居民恢復中華民國國籍，並溯及1945年10月25日生效；1月20日長官公署再公告。",
 "track": "政治外交",
@@ -1711,12 +2029,31 @@ const H_RAW=[
 "t": "維基百科中文「臺灣光復」",
 "u": "https://zh.wikipedia.org/wiki/臺灣光復"
 }
+],
+"why": [
+{
+"t": "1945 年 10 月 25 日起，中華民國政府自稱已收回台灣，國籍令溯及該日生效。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "國際上是否承認有爭議；1952 年 8 月 5 日《台北條約》生效（細節見說明）。",
+"k": "d"
+}
+],
+"rel": [
+"takeover-1945"
+],
+"who": [
+"chen-yi"
 ]
 },
 {
 "y": 1912,
 "md": "1月1日",
 "t": "中華民國臨時政府在南京成立，孫文就任臨時大總統",
+"key": "provisional-gov-1912",
 "s": "臨時政府成立",
 "b": "1912年1月1日，中華民國宣告成立，革命各省代表在南京組成臨時政府，孫文（孫中山）就任臨時大總統。行政院網站與英文維基百科均以這一天作為民國成立日。",
 "track": "政權",
@@ -1753,6 +2090,7 @@ const H_RAW=[
 "y": 1912,
 "md": "2月12日",
 "t": "清帝（宣統帝）頒布退位詔書",
+"key": "abdication-1912",
 "s": "清帝退位",
 "b": "1912年2月12日，宣統帝的退位詔書頒布，清朝帝制結束。這是臨時政府與北方清廷、袁世凱交涉的結果之一。",
 "track": "政權",
@@ -1781,6 +2119,7 @@ const H_RAW=[
 "y": 1912,
 "md": "3月10日",
 "t": "袁世凱在北京就任臨時大總統",
+"key": "yuan-1912",
 "s": "袁世凱就任",
 "b": "1912年2月15日南京臨時參議院選出袁世凱為臨時大總統；3月10日袁在北京就任。孫文於4月1日解職後，臨時參議院北遷，此後中央政府一般稱北京政府或北洋政府。",
 "track": "政權",
@@ -1825,6 +2164,7 @@ const H_RAW=[
 "y": 1912,
 "md": "",
 "t": "北洋（北京）政府時期：起訖年份的幾種界定",
+"key": "beiyang-def-1912",
 "s": "北洋政府時期",
 "b": "北洋政府（北京政府）一般指1912年起、以北京為首都、由北洋軍系人物主導的中華民國中央政府，至1928年北伐完成前後結束。",
 "track": "政權",
@@ -1861,6 +2201,7 @@ const H_RAW=[
 "y": 1912,
 "md": "8月25日",
 "t": "國民黨成立（同盟會與數個小黨合併）",
+"key": "kmt-1912",
 "s": "國民黨成立",
 "b": "1912年8月25日，同盟會與其他小黨合併成立國民黨，宋教仁為實際最具影響力的成員。1913年宋教仁遇刺、二次革命失敗後，袁世凱取締國民黨。",
 "track": "政權",
@@ -1889,6 +2230,7 @@ const H_RAW=[
 "y": 1914,
 "md": "7月8日",
 "t": "孫文在日本另組中華革命黨",
+"key": "revolutionary-party-1914",
 "s": "中華革命黨",
 "b": "二次革命失敗、國民黨被取締後，孫文在日本另組中華革命黨，1914年7月8日在東京召開成立大會。1919年孫文在上海再改組，並於10月10日定名中國國民黨。",
 "track": "政權",
@@ -1921,6 +2263,7 @@ const H_RAW=[
 "y": 1919,
 "md": "10月10日",
 "t": "中華革命黨改稱中國國民黨",
+"key": "kmt-rename-1919",
 "s": "改稱中國國民黨",
 "b": "1919年10月10日，孫文在上海將中華革命黨改稱中國國民黨，沿用至今。",
 "track": "政權",
@@ -1944,6 +2287,7 @@ const H_RAW=[
 "y": 1924,
 "md": "1月20日",
 "t": "中國國民黨一全大會於廣州召開，完成改組",
+"key": "kmt-reorg-1924",
 "s": "國民黨一大",
 "b": "1924年1月20日至30日，中國國民黨第一次全國代表大會在廣州舉行，完成黨的改組，通過與蘇聯合作、與中國共產黨合作（第一次國共合作）等政策，並採列寧式黨組織。",
 "track": "政權",
@@ -1980,6 +2324,7 @@ const H_RAW=[
 "y": 1925,
 "md": "7月1日",
 "t": "廣州國民政府成立",
+"key": "guangzhou-gov-1925",
 "s": "廣州國民政府",
 "b": "孫文於1925年3月12日逝世後，國民黨在廣州公布《國民政府組織法》，於1925年7月1日成立國民政府。",
 "track": "政權",
@@ -2012,6 +2357,7 @@ const H_RAW=[
 "y": 1926,
 "md": "7月9日",
 "t": "國民革命軍北伐（1926–1928）",
+"key": "northern-exp-1926",
 "s": "北伐",
 "b": "國民革命軍自1926年7月起自廣東北上，以結束軍閥割據為目標；1928年6月進入北京，12月29日張學良宣布效忠南京政府，北伐在形式上完成。",
 "track": "政權",
@@ -2044,6 +2390,7 @@ const H_RAW=[
 "y": 1927,
 "md": "4月18日",
 "t": "南京國民政府成立（寧漢對立）",
+"key": "nanjing-gov-1927",
 "s": "南京國民政府",
 "b": "1927年4月，蔣中正發動清黨（4月12日起），並於4月18日在南京另立國民政府；以汪兆銘為首的武漢國民政府與之對立，形成寧漢分裂，其後兩方合流。",
 "track": "政權",
@@ -2084,6 +2431,7 @@ const H_RAW=[
 "y": 1928,
 "md": "10月3日",
 "t": "《訓政綱領》通過，國民黨以黨領政的訓政開始",
+"key": "tutelage-1928",
 "s": "訓政綱領",
 "b": "1928年北伐形式完成後，國民黨宣布進入訓政時期。10月3日中央政治會議通過《訓政綱領》，規定訓政期間由中國國民黨全國代表大會代表國民大會領導國民行使政權，行政、立法、司法、考試、監察五種治權由國民政府總攬。",
 "track": "政權",
@@ -2124,6 +2472,7 @@ const H_RAW=[
 "y": 1931,
 "md": "6月1日",
 "t": "《中華民國訓政時期約法》公布",
+"key": "provisional-const-1931",
 "s": "訓政時期約法",
 "b": "國民會議於1931年5月12日制定《中華民國訓政時期約法》，國民政府於6月1日公布施行。第30條規定訓政時期中央統治權由中國國民黨全國代表大會代表國民大會行使，閉會時由中央執行委員會行使；第85條規定約法解釋權屬於中央執行委員會。",
 "track": "政權",
@@ -2152,6 +2501,7 @@ const H_RAW=[
 "y": 1946,
 "md": "12月25日",
 "t": "制憲國民大會三讀通過《中華民國憲法》",
+"key": "const-1946",
 "s": "制憲通過",
 "b": "國民大會於1946年12月25日在南京三讀通過憲法，國民政府於1947年1月1日公布，自1947年12月25日起施行。中國共產黨與中國民主同盟未參加國民大會，中共並否認該憲法。",
 "track": "政權",
@@ -2184,6 +2534,7 @@ const H_RAW=[
 "y": 1948,
 "md": "5月10日",
 "t": "《動員戡亂時期臨時條款》公布",
+"key": "temp-provisions-1948",
 "s": "動員戡亂條款",
 "b": "國民大會於1948年4月18日依憲法修憲程序三讀通過《動員戡亂時期臨時條款》，國民政府於5月10日公布施行。條款使總統得經行政院會議決議實施緊急處分，不受憲法第39條或第43條限制，後經修訂延續，至1991年5月1日廢止。",
 "track": "政權",
@@ -2210,12 +2561,30 @@ const H_RAW=[
 }
 ],
 "bg": "roc-terms",
-"ctx": "中國大陸"
+"ctx": "中國大陸",
+"why": [
+{
+"t": "官方說法是為因應國共內戰、賦予總統緊急處分權；批評者則認為它使憲法部分條文長期被凍結。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "條款經多次修訂延續，至 1991 年 5 月 1 日廢止。",
+"k": "d"
+}
+],
+"rel": [
+"const-1946",
+"inauguration-1948",
+"taipei-1949"
+]
 },
 {
 "y": 1948,
 "md": "5月20日",
 "t": "行憲後第一任總統就職，國民政府改組",
+"key": "inauguration-1948",
 "s": "第一任總統就職",
 "b": "1948年5月20日，蔣中正與李宗仁就任行憲後第一任總統與副總統；國民政府主席一職由總統取代，國民政府改組為總統府，中央政府改稱中華民國政府，訓政時期在制度上結束。",
 "track": "政權",
@@ -2242,12 +2611,20 @@ const H_RAW=[
 }
 ],
 "bg": "roc-terms",
-"ctx": "中國大陸"
+"ctx": "中國大陸",
+"rel": [
+"const-1946",
+"temp-provisions-1948"
+],
+"who": [
+"chiang-kai-shek"
+]
 },
 {
 "y": 1949,
 "md": "10月1日",
 "t": "中華人民共和國中央人民政府成立",
+"key": "prc-1949",
 "s": "人民共和國成立",
 "b": "1949年10月1日下午3時，毛澤東在北京天安門廣場宣告中華人民共和國中央人民政府成立。公告稱該政府為『代表中華人民共和國全國人民唯一合法政府』。",
 "track": "政權",
@@ -2276,6 +2653,7 @@ const H_RAW=[
 "y": 1949,
 "md": "12月7日",
 "t": "中華民國政府遷設臺北（宣布以臺北為臨時首都）",
+"key": "taipei-1949",
 "s": "政府遷臺北",
 "b": "1949年12月，中華民國政府自大陸遷至臺灣，臺北被宣布為（臨時）首都，行政院長閻錫山等人於當時前往臺北。常見日期為12月7日。",
 "track": "政權",
@@ -2321,10 +2699,203 @@ const H_RAW=[
 "u": "https://history.state.gov/historicaldocuments/frus1949v08/d850"
 }
 ],
-"bg": "roc-terms"
+"bg": "roc-terms",
+"why": [
+{
+"t": "國共內戰局勢逆轉，1949 年 10 月 1 日中華人民共和國成立；中華民國政府自大陸撤往台灣。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "臺北成為中華民國政府的所在地，台灣成為其主要統治範圍。稱呼（遷都、播遷、撤退）各方不同。",
+"k": "d"
+}
+],
+"rel": [
+"prc-1949",
+"temp-provisions-1948"
+],
+"who": [
+"chiang-kai-shek"
+]
+},
+{
+"y": 1894,
+"md": "8月1日",
+"t": "甲午戰爭爆發（清日互相宣戰）",
+"key": "world-sino-japanese-1894",
+"s": "甲午戰爭",
+"b": "清、日兩國因朝鮮問題衝突，於 1894 年 8 月 1 日互相宣戰；戰爭持續到 1895 年 4 月簽訂《馬關條約》。",
+"track": "政治外交",
+"ctx": "世界",
+"conf": "common",
+"aliases": [
+{
+"term": "甲午戰爭／日清戰爭／第一次中日戰爭",
+"note": "中文多稱甲午戰爭，日文稱日清戰爭。"
+}
+],
+"note": "戰事自 7 月 25 日豐島海戰起，8 月 1 日為互相宣戰日，各來源擇一記載。",
+"so": [
+{
+"t": "清廷戰敗，1895 年簽訂《馬關條約》，割讓台灣與澎湖。",
+"k": "d"
+}
+],
+"rel": [
+"treaty-shimonoseki-1895"
+],
+"src": [
+{
+"t": "English Wikipedia: First Sino-Japanese War",
+"u": "https://en.wikipedia.org/wiki/First_Sino-Japanese_War"
+}
+]
+},
+{
+"y": 1918,
+"md": "11月11日",
+"t": "第一次世界大戰停戰；民族自決成為國際討論主題",
+"key": "world-ww1-1918",
+"s": "一戰停戰",
+"b": "同盟國與協約國於 1918 年 11 月 11 日停戰。戰爭後期美國總統威爾遜等人提出「民族自決」等主張，成為戰後國際討論的主題之一。",
+"track": "政治外交",
+"ctx": "世界",
+"conf": "common",
+"note": "民族自決思潮對殖民地知識分子的影響程度，學界看法不一；列在這裡是提供對照，不是說兩者有必然因果。",
+"so": [
+{
+"t": "學者常把戰後的民族自決思潮與 1920 年代台灣知識青年的政治運動（文化協會、議會設置請願）連在一起談；影響的程度與路徑，各家說法不一。",
+"k": "s"
+}
+],
+"rel": [
+"tca-1921",
+"petition-1921"
+],
+"src": [
+{
+"t": "English Wikipedia: Armistice of 11 November 1918",
+"u": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918"
+}
+]
+},
+{
+"y": 1941,
+"md": "12月7–8日",
+"t": "太平洋戰爭爆發（珍珠港事件）",
+"key": "world-pacific-war-1941",
+"s": "太平洋戰爭",
+"b": "日本海軍偷襲美國夏威夷珍珠港，並同時向東南亞與太平洋發動攻勢，美日開戰，第二次世界大戰擴及東亞與太平洋。",
+"track": "政治外交",
+"ctx": "世界",
+"conf": "common",
+"note": "珍珠港事件在夏威夷時間為 12 月 7 日，日本時間為 12 月 8 日。",
+"so": [
+{
+"t": "台灣在日本「南進基地化」方針下被捲入戰事，台灣人也陸續被徵調入伍（見相關事件）。",
+"k": "s"
+}
+],
+"rel": [
+"volunteer-1942",
+"surrender-1945"
+],
+"src": [
+{
+"t": "English Wikipedia: Attack on Pearl Harbor",
+"u": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"
+}
+]
+},
+{
+"y": 1947,
+"md": "3月12日",
+"t": "杜魯門主義：美國對共產主義採取圍堵立場",
+"key": "world-cold-war-1947",
+"s": "冷戰開端",
+"b": "美國總統杜魯門在國會演說，表示美國將支持抵抗「武裝少數或外來壓力」的自由民族，常被視為冷戰開端的標誌之一。",
+"track": "政治外交",
+"ctx": "世界",
+"conf": "common",
+"note": "冷戰的起點並無單一通說，另有 1946 年邱吉爾「鐵幕」演說、1948 年柏林封鎖等說法。",
+"rel": [
+"prc-1949",
+"taipei-1949"
+],
+"src": [
+{
+"t": "U.S. Department of State, Office of the Historian: Truman Doctrine",
+"u": "https://history.state.gov/milestones/1945-1952/truman-doctrine"
+},
+{
+"t": "English Wikipedia: Truman Doctrine",
+"u": "https://en.wikipedia.org/wiki/Truman_Doctrine"
+}
+]
 }
 ];
 const H=H_RAW.map((h,i)=>({id:"h"+i,...h})).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));
+
+/* 人物卡。事件用 who:["id"] 連到這裡；人物參與的事件由 who 反查，不在這裡重複列。
+   欄位：id, name, years, role, one(一句話定位), did(做了什麼，3–5 點), views(各方評價，並列：[{who,t}]),
+         kin(相關人物 id), src(來源 [{t,u}])。評價有分歧時一定要並列，並且各自有來源。 */
+const PEOPLE=[
+{id:"chiang-wei-shui",name:"蔣渭水",years:"1888–1931",role:"醫師・非武裝政治運動者",
+ one:"醫師，日治時期非武裝抗日運動的主要組織者之一。",
+ did:["1921 年與同志在台北大稻埕創立台灣文化協會。","1923 年治警事件被捕，與蔡培火各被判 4 個月。","1927 年文協內部分歧後，參與另組台灣民眾黨。","1931 年 8 月過世，同年 2 月民眾黨已被總督府禁止。"],
+ kin:["lin-hsien-tang"],
+ src:[{t:"English Wikipedia: Taiwanese Cultural Association",u:"https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"},{t:"維基百科中文「治警事件」",u:"https://zh.wikipedia.org/wiki/治警事件"},{t:"English Wikipedia: Taiwanese People's Party",u:"https://en.wikipedia.org/wiki/Taiwanese_People%27s_Party"}]},
+{id:"lin-hsien-tang",name:"林獻堂",years:"1881–1956",role:"仕紳・議會設置請願運動領導者",
+ one:"中部仕紳，日治時期議會設置請願運動與文化協會的代表人物。",
+ did:["1921 年文化協會成立時擔任總理。","議會設置請願運動共提出 15 次；1934 年與同志決議停止。"],
+ kin:["chiang-wei-shui"],
+ src:[{t:"English Wikipedia: Taiwanese Cultural Association",u:"https://en.wikipedia.org/wiki/Taiwanese_Cultural_Association"},{t:"維基百科中文「臺灣議會設置請願運動」",u:"https://zh.wikipedia.org/wiki/臺灣議會設置請願運動"}]},
+{id:"goto-shinpei",name:"後藤新平",years:"1857–1929",role:"日治初期民政長官",
+ one:"1898 年起主持台灣民政的日本官員，日治初期各項調查與建設的推動者。",
+ did:["1898 年隨總督兒玉源太郎來台，初任民政局長，同年官制改為民政長官。","推動土地調查、戶口調查與基礎建設。","主導鴉片漸禁政策（見專題「經濟與社會建設及其評價爭議」）。"],
+ views:[{who:"肯定的看法",t:"強調調查事業與基礎建設為台灣後來的現代化打下基礎，經濟史研究者也指出日治初期的成長脫離了清末的長期停滯。"},{who:"批評的看法",t:"認為這些建設的目的是殖民統治與資源汲取，成本與利益的分配對台灣人與日本人並不相同，且同時期對抗日武裝力量採取鎮壓。"}],
+ kin:[],
+ src:[{t:"English Wikipedia: Gotō Shinpei",u:"https://en.wikipedia.org/wiki/Gotō_Shinpei"},{t:"English Wikipedia: Governor-General of Taiwan",u:"https://en.wikipedia.org/wiki/Governor-General_of_Taiwan"}]},
+{id:"mona-rudao",name:"莫那魯道",years:"約 1880 年代–1930",role:"賽德克族馬赫坡社頭目",
+ one:"1930 年霧社事件起事六社的領導人物。",
+ did:["1930 年 10 月 27 日參與霧社事件的起事。","1930 年 11 月 28 日自殺（英文維基）。"],
+ views:[{who:"日方當時的說法",t:"視為殺害日本人的叛亂首謀。"},{who:"後來台灣社會的說法",t:"常視為反抗殖民壓迫與歧視的原住民英雄；也有論者提醒，事件後賽德克人之間的第二次霧社事件同樣造成嚴重傷亡，不宜單一敘述。"}],
+ kin:[],
+ src:[{t:"English Wikipedia: Musha Incident",u:"https://en.wikipedia.org/wiki/Musha_Incident"},{t:"Taipei Times 2015-10-25",u:"https://www.taipeitimes.com/News/feat/archives/2015/10/25/2003630860"}]},
+{id:"chen-yi",name:"陳儀",years:"1883–1950",role:"台灣省行政長官",
+ one:"戰後第一任台灣省行政長官，接收台灣的負責人，也是二二八事件時的最高行政首長。",
+ did:["1945 年 10 月 25 日在台北向日方總督安藤利吉簽收受降，行政長官公署同日運作。","長官公署集行政、立法、司法與軍事權於一身（見專題「戰後接收：從歡迎到失望」）。","1947 年 5 月長官公署撤銷，改設台灣省政府。"],
+ views:[{who:"對接收治理的看法",t:"批評者指出貪腐、物價飛漲與專賣制度引發民怨；也有論者提醒，當時處於內戰與戰後物資短缺的背景。"},{who:"對二二八責任的看法",t:"各方對責任歸屬的看法不同，詳見專題「二二八事件」與官方報告，這裡不下單一結論。"}],
+ kin:["chiang-kai-shek"],
+ src:[{t:"維基百科中文「臺灣光復」",u:"https://zh.wikipedia.org/wiki/臺灣光復"},{t:"English Wikipedia: Taiwan Retrocession Day",u:"https://en.wikipedia.org/wiki/Taiwan_Retrocession_Day"}]},
+{id:"chiang-kai-shek",name:"蔣中正（蔣介石）",years:"1887–1975",role:"國民政府領導人・中華民國總統",
+ one:"國民黨與國民政府領導人，1948 年起任行憲後第一任總統，1949 年率政府遷台。",
+ did:["1948 年 5 月 20 日就任行憲後第一任總統（副總統李宗仁）。","1949 年底中華民國政府遷設臺北，此後台灣成為其主要統治範圍。"],
+ views:[{who:"肯定的看法",t:"強調他領導抗戰與保住中華民國在台灣的延續，以及其任內的經濟與建設。"},{who:"批評的看法",t:"強調戒嚴與白色恐怖時期的政治迫害，以及與二二八事件相關的責任；轉型正義的相關報告與討論至今仍在進行。"}],
+ kin:["chen-yi"],
+ src:[{t:"English Wikipedia: Republic of China (1912–1949)",u:"https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)"},{t:"English Wikipedia: Great Retreat (Taiwan)",u:"https://en.wikipedia.org/wiki/Great_Retreat_(Taiwan)"}]}
+];
+
+/* 跨期主線：把分散在不同時期的事件串成一條「這件事怎麼來、怎麼走」。
+   steps 每一步：{ref:"事件 key"} 連到台灣史事件卡；{ref:"lee:年份:標題開頭"} 連到李登輝線事件；{bg:"專題id"} 連到背景專題；
+   每步的 say 是這一步的白話說明，只寫事實與順序，不把「接著發生」寫成因果。 */
+const THREADS=[
+{id:"martial-law",title:"戒嚴到解嚴",sum:"從 1948 年的臨時條款，到 1949 年戒嚴，再到 1987 年解除戒嚴與 1991 年終止動員戡亂：威權體制怎麼建立，又怎麼一步步退場。",
+ steps:[
+ {ref:"temp-provisions-1948",say:"憲法施行的前夕，《動員戡亂時期臨時條款》讓總統取得緊急處分權；它之後經多次修訂延續。"},
+ {ref:"lee:1949:台灣全面戒嚴",say:"1949 年宣布台灣全面戒嚴，官方的理由是國共內戰失利、防範共產黨滲透；戒嚴一直持續到 1987 年，共 38 年。"},
+ {ref:"taipei-1949",say:"同年底中華民國政府遷設臺北，戒嚴與動員戡亂體制在這個統治範圍內長期運作。"},
+ {bg:"terror",say:"戒嚴期間的政治案件與審判，見專題「白色恐怖」。"},
+ {ref:"lee:1979:美麗島事件",say:"1979 年高雄的世界人權日集會爆發警民衝突，是黨外運動與當局衝突的高點之一。"},
+ {ref:"lee:1986:民主進步黨成立",say:"1986 年黨外人士在戒嚴與黨禁之下宣布組黨，當局沒有下令取締。"},
+ {ref:"lee:1987:解除戒嚴",say:"1987 年解除戒嚴，改以《國家安全法》規範；但動員戡亂時期與臨時條款仍然存在。"},
+ {ref:"lee:1991:宣布 5 月 1 日終止動員戡亂時期",say:"1991 年終止動員戡亂時期、廢止臨時條款，憲政回到常態。"},
+ {ref:"lee:1992:金門、馬祖解嚴",say:"1992 年金門、馬祖結束戰地政務，全台灣都脫離軍事管制。"}
+ ],
+ note:"這條主線目前串起的是已收錄的內容（台灣史事件加上李登輝線）。威權時期尚未收錄的主軸事件（例如韓戰與美援、雷震案、白色恐怖個案），會在該時期擴充時補入。"}
+];
 
 /* ---------- 共用 ---------- */
 const $=s=>document.querySelector(s);
@@ -2332,7 +2903,7 @@ const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},se
 const eraYear=y=>y<1868?"":y<1912?`明治 ${y-1867} 年`:y<1926?`大正 ${y-1911} 年`:y<=1945?`昭和 ${y-1925} 年`:`民國 ${y-1911} 年`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mName=id=>METHODS.find(m=>m.id===id).name;
-let state={view:"history",hp:null,hsel:null,hback:null,from:null,ovSel:null,ovAll:false,q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
+let state={view:"history",person:null,th:null,hp:null,hsel:null,hback:null,from:null,ovSel:null,ovAll:false,q:"",era:"all",keyOnly:false,mvOnly:false,ckOnly:false,method:null,open:new Set(),expandAll:false,qbg:"",scope:"all"};
 $("#total").textContent=E.length;
 $("#mtotal").textContent=E.filter(e=>e.mv).length;
 $("#cktotal").textContent=E.filter(e=>e.ck).length;
@@ -2342,7 +2913,7 @@ $("#cktotal").textContent=E.filter(e=>e.ck).length;
 $("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark";store.set("theme",r.dataset.theme)};
 
 /* 分頁 */
-const VIEWS=["history","overview","relay","methods","background","quiz"];
+const VIEWS=["history","people","overview","relay","methods","background","quiz"];
 function setView(v,push=true){
   if(v==="timeline")v="overview";
   if(!VIEWS.includes(v))v="history";
@@ -2352,7 +2923,7 @@ function setView(v,push=true){
   if(push&&location.hash!=="#"+v)history.replaceState(null,"","#"+v);
   if(v==="history")state.hback=null;
   refreshPill();
-  if(v==="history")renderHistory();else if(v==="overview"){renderOv();render()}else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
+  if(v==="history"){renderHistory();renderThreads()}else if(v==="overview"){renderOv();render()}else if(v==="people")renderPeople();else if(v==="background")renderBg();else if(v==="quiz"){newDeck();renderQuiz()}
 }
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{state.from=null;setView(t.dataset.view);window.scrollTo({top:0})});
 addEventListener("hashchange",()=>setView(location.hash.slice(1)||"history",false));
@@ -2507,7 +3078,7 @@ addEventListener("keydown",ev=>{if(state.view!=="quiz"||/INPUT|TEXTAREA/.test(do
 /* ---------- 共用泳道圖元件（三張圖共用：全期、時期、李登輝總覽） ----------
    參考 vis-timeline 的「點＋標籤方塊」與地圖叢集：放不下的事件合併成「+N」，點一下放大。
    桌機：橫向泳道圖，左側泳道名稱固定；手機（窄於 700px）且 list:true 時改為直式列表。 */
-const LANE={gov:["統治政權","var(--c0)"],cn:["同期中國大陸","var(--c3)"],pol:["政治與外交","var(--c2)"],lee:["李登輝線","var(--c1)"],
+const LANE={gov:["統治政權","var(--c0)"],cn:["同期中國大陸","var(--c3)"],world:["同期世界","var(--c4)"],pol:["政治與外交","var(--c2)"],lee:["李登輝線","var(--c1)"],
   life:["李登輝人生","var(--c1)"],tw:["台灣政局","var(--c0)"],intl:["國際與兩岸","var(--c2)"]};
 const lcYear=(y,md)=>{const m=/(\d+)月/.exec(md||""),d=/(\d+)日/.exec(md||"");return m?y+(+m[1]-1)/12+(d?(+d[1]-1)/366:.04):y+.5};
 let lcCtx=null;
@@ -2675,11 +3246,12 @@ function gotoEvent(id){
 }
 function refreshPill(){const p=$("#backpill");let show=false,txt="↩ 回總覽圖";
   if(state.from!=null)show=true;
-  else if(state.hback&&state.view!=="history"){show=true;txt="↩ 回台灣史"}
+  else if(state.hback&&state.view!==(state.hback.person?"people":"history")){show=true;txt=state.hback.person?"↩ 回人物":"↩ 回台灣史"}
   p.textContent=txt;p.hidden=!show}
 $("#backpill").onclick=()=>{
   if(state.from!=null){const id=state.from;state.from=null;state.ovSel=id;if(state.view!=="overview")setView("overview");refreshPill();window.scrollTo({top:0});ovMark();ovSelect(id,true)}
-  else if(state.hback){const hb=state.hback;state.hp=hb.pid;state.hsel=hb.sel;setView("history");window.scrollTo({top:0})}};
+  else if(state.hback&&state.hback.person){const pid=state.hback.person;state.hback=null;state.person=pid;setView("people");refreshPill()}
+  else if(state.hback){const hb=state.hback;state.hp=hb.pid;state.hsel=hb.sel;state.th=hb.th||null;setView("history");window.scrollTo({top:0});if(state.th)setTimeout(()=>$("#threads").scrollIntoView({block:"start"}),60)}};
 
 
 /* ---------- 台灣史（三層下鑽） ---------- */
@@ -2704,20 +3276,21 @@ const lItem=e=>({key:"e"+e.id,y:e.y,md:e.md,lab:leeShort(e),title:e.y+(e.md?" "+
 function barsIn(a,b,gov,click){return HALL_BARS.filter(x=>GOV_BARS.includes(x[2])===gov&&x[1]>a&&x[0]<b).map(([xa,xb,n,,,tip])=>({a:Math.max(a,xa),b:Math.min(b,xb),label:n,title:tip,soft:!gov||n==="西班牙",list:gov&&xa>=a,click}))}
 function hallData(){
   const click=y=>hallOpen(pOf(y).id);
-  const band=PERIODS.filter(p=>p.b>1624).map(p=>{const n=H.filter(h=>pOf(h.y)===p).length;
+  const band=PERIODS.filter(p=>p.b>1624).map(p=>{const n=H.filter(h=>pOf(h.y)===p&&h.ctx!=="世界").length;
     return{a:Math.max(1624,p.a),b:Math.min(2027,p.b),label:p.name,short:p.name.slice(0,2),sub:n?n+" 則事件":"事件待擴充",on:p.id===state.hp,title:p.name+"（"+p.range+"）"+(n?"":"：事件待擴充"),click:()=>hallOpen(p.id)}});
   return {pts:HALL_PTS,range:[1624,2027],minW:0,maxRows:2,band,lanes:[
     {id:"gov",bars:barsIn(1624,2027,true,click).concat([{a:1624,b:2026.9,label:"原住民族：自古居住，延續至今",soft:true,title:"原住民族自古居住於此，各族群的社會與信仰延續至今",click}]),items:H.filter(h=>h.track==="政權"&&!h.ctx).map(hItem)},
-    {id:"cn",bars:barsIn(1624,2027,false,click),items:H.filter(h=>h.ctx).map(hItem)},
-    {id:"pol",items:H.filter(h=>h.track==="政治外交"&&!h.ctx).map(hItem)},
+    {id:"cn",bars:barsIn(1624,2027,false,click),items:H.filter(h=>h.ctx==="中國大陸").map(hItem)},
+    {id:"world",bars:[],items:H.filter(h=>h.ctx==="世界").map(hItem)},
+    {id:"pol",items:H.filter(h=>h.track!=="政權"&&!h.ctx).map(hItem)},
     {id:"lee",bars:[{a:1923,b:2020.6,label:"李登輝生平",soft:true,title:"李登輝生平（1923–2020）",click}],items:E.filter(e=>e.key).map(lItem)}]}}
 function renderHall(){
   if(!lcAll)lcAll=lcMake($("#lcAll"),{label:"台灣史全期泳道圖",list:false,data:hallData,onSelect:k=>{if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));hallOpen(pOf(e.y).id,k)}else{const h=H.find(x=>x.id===k);hallOpen(pOf(h.y).id,k)}}});
   lcRender(lcAll)}
 function renderHistory(){
   const box=$("#hBlocks");
-  box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOf(h.y)===p).length,m=leeInPeriod(p).length;
-    return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
+  box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOf(h.y)===p&&h.ctx!=="世界").length,w=H.filter(h=>pOf(h.y)===p&&h.ctx==="世界").length,m=leeInPeriod(p).length;
+    return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${w?" · 同期世界 "+w+" 則":""}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
   box.querySelectorAll(".hb").forEach(b=>b.onclick=()=>{state.hp=state.hp===b.dataset.p?null:b.dataset.p;state.hsel=null;renderHistory();if(state.hp)setTimeout(()=>$("#hPanel").scrollIntoView({block:"start",behavior:"smooth"}),50)});
   renderHall();hPanel()}
 $("#hClose").onclick=()=>{state.hp=null;state.hsel=null;cardOpen($("#hCard"),false);renderHistory();window.scrollTo({top:0})};
@@ -2729,13 +3302,15 @@ function pData(){
   const cum=[0];for(let y=a;y<b;y++)cum.push(cum[cum.length-1]+1+2.5*(cnt[y]||0));const T=cum[cum.length-1];
   const pts=cum.map((c,i)=>[a+i,c/T]);
   const lanes=[{id:"gov",bars:barsIn(a,b,true),items:hs.filter(h=>h.track==="政權"&&!h.ctx).map(hItem)},
-    {id:"cn",bars:barsIn(a,b,false),items:hs.filter(h=>h.ctx).map(hItem)},
-    {id:"pol",items:hs.filter(h=>h.track==="政治外交"&&!h.ctx).map(hItem)},
-    {id:"lee",items:es.map(lItem)}].filter(L=>L.items.length||(L.id!=="lee"&&L.id!=="pol"&&L.bars.length&&hs.length));
+    {id:"cn",bars:barsIn(a,b,false),items:hs.filter(h=>h.ctx==="中國大陸").map(hItem)},
+    {id:"world",bars:[],items:hs.filter(h=>h.ctx==="世界").map(hItem)},
+    {id:"pol",items:hs.filter(h=>h.track!=="政權"&&!h.ctx).map(hItem)},
+    {id:"lee",items:es.map(lItem)}].filter(L=>L.items.length||(L.id!=="lee"&&L.id!=="pol"&&L.id!=="world"&&L.bars.length&&hs.length));
   return {pts,range:[a,b],minW:0,maxRows:4,lanes}}
 function hPanel(){
   const p=PERIODS.find(x=>x.id===state.hp);$("#hPanel").hidden=!p;if(!p){cardOpen($("#hCard"),false);return}
   $("#hTitle").textContent=p.name+"　"+p.range;$("#hSum").textContent=p.sum;
+  const kb=$("#hKeys");kb.hidden=!(p.keys&&p.keys.length);kb.innerHTML=p.keys?`<h3>這個時期要記住的 3 件事</h3><ol>${p.keys.map(k=>`<li>${esc(k)}</li>`).join("")}</ol>`:"";
   const hs=H.filter(h=>pOf(h.y)===p),es=leeInPeriod(p);
   if(!lcP)lcP=lcMake($("#lcP"),{label:"時期事件軌道",list:true,data:pData,onSelect:k=>hSelect(k,true)});
   if(!hs.length&&!es.length){$("#lcP").hidden=true;$("#hCard").innerHTML=`<p class="hint">這個時期的事件還沒有補完，之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;$("#hCard").classList.add("empty");cardOpen($("#hCard"),false);return}
@@ -2747,6 +3322,7 @@ function hCard(){
   const c=$("#hCard"),k=state.hsel;
   const nav=`<div class="nav"><button id="hPrev" aria-label="上一則">← 前一則</button><button id="hNext" aria-label="下一則">後一則 →</button></div>`;
   const wire=()=>{cardWire(c);const pv=$("#hPrev"),nx=$("#hNext");if(pv&&lcP){pv.onclick=()=>lcStep(lcP,-1);nx.onclick=()=>lcStep(lcP,1)}};
+  if(!k&&!H.some(h=>pOf(h.y)===PERIODS.find(x=>x.id===state.hp)&&h.ctx!=="世界")&&!leeInPeriod(PERIODS.find(x=>x.id===state.hp)).length){c.innerHTML=`<p class="hint">這個時期的台灣史事件還沒有補完，圖上只有同期世界的事件作為對照；之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;return}
   if(!k){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現中性陳述、各方稱謂、來源與可信度。放不下的事件會合併成「+N」，點一下就放大；也可以用鍵盤左右鍵逐則瀏覽。</p>`;return}
   if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));if(!e){c.innerHTML="";return}
     c.innerHTML=`${cardClose()}<div class="d">${e.y}${e.md?" · "+e.md:""} · 李登輝線</div><h3>${esc(e.t)}</h3><p>${esc(e.b.length>140?e.b.slice(0,140)+"……":e.b)}</p><div class="act"><button class="pri" id="hLee">在李登輝總覽看 →</button><button id="hLee2">看年表完整內容 →</button></div>${nav}`;wire();
@@ -2755,15 +3331,68 @@ function hCard(){
   const h=H.find(x=>x.id===k);if(!h){c.innerHTML="";return}
   const cf=CONF[h.conf]||CONF.common;
   const near=E.filter(e=>e.key).sort((p1,p2)=>Math.abs(p1.y-h.y)-Math.abs(p2.y-h.y))[0];
-  const showLee=near&&Math.abs(near.y-h.y)<=8&&h.y>=1923;
-  c.innerHTML=`${cardClose()}<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)&&!h.ctx?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span></div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
-  ${h.ctx?`<p class="hnote">🌏 同期背景：事件發生地為${esc(h.ctx)}，列在這裡是為了對照台灣同時期的統治政權。</p>`:""}
+  const showLee=near&&Math.abs(near.y-h.y)<=8&&h.y>=1923&&!h.ctx;
+  const ctxNote=h.ctx==="世界"?"🌐 同期世界：事件發生在台灣以外的地方，列在這裡是為了對照台灣當時所處的國際環境，不代表兩者有必然因果。":h.ctx?`🌏 同期背景：事件發生地為${esc(h.ctx)}，列在這裡是為了對照台灣同時期的統治政權。`:"";
+  const causes=(arr,label)=>arr&&arr.length?`<div class="cause"><h4>${label}</h4><ul>${arr.map(x=>`<li>${esc(x.t)}<span class="kind ${x.k}" title="${x.k==="d"?"有文件或當事人行動可證":"研究者的詮釋，各家說法可能不同"}">${x.k==="d"?"直接":"學者解釋"}</span></li>`).join("")}</ul></div>`:"";
+  const hasC=(h.why||[]).length||(h.so||[]).length;
+  const relH=(h.rel||[]).map(rk=>HK[rk]).filter(Boolean).sort((p1,p2)=>lcYear(p1.y,p1.md)-lcYear(p2.y,p2.md));
+  const v0=lcYear(h.y,h.md);
+  const relHtml=relH.length?`<div class="rowr"><b>相關事件</b>${relH.map(r=>{const bf=lcYear(r.y,r.md)<v0;return `<button data-rel="${esc(r.key)}" title="${esc(r.t)}">${bf?"← ":""}${r.y} ${esc(r.s||r.t.slice(0,8))}${bf?"":" →"}</button>`}).join("")}</div>`:"";
+  const whoH=(h.who||[]).map(w=>PK[w]).filter(Boolean);
+  const whoHtml=whoH.length?`<div class="rowr"><b>人物</b>${whoH.map(p=>`<button class="who" data-who="${p.id}">${esc(p.name)}</button>`).join("")}</div>`:"";
+  const ths=THREADS.filter(t=>t.steps.some(st=>st.ref===h.key));
+  const thHtml=ths.length?`<div class="rowr"><b>主線</b>${ths.map(t=>`<button class="th" data-th="${t.id}">${esc(t.title)}</button>`).join("")}</div>`:"";
+  const topicH=h.track&&h.track!=="政權"&&h.track!=="政治外交"?`<span class="topic">${esc(h.track)}</span>`:"";
+  c.innerHTML=`${cardClose()}<div class="d">${h.y}${h.md?" · "+h.md:""}${eraYear(h.y)&&!h.ctx?" · "+eraYear(h.y):""} <span class="badge ${h.conf}" title="可信度">${cf[0]} ${cf[1]}</span>${topicH}</div><h3>${esc(h.t)}</h3><p>${esc(h.b)}</p>
+  ${ctxNote?`<p class="hnote">${ctxNote}</p>`:""}
+  ${causes(h.why,"前因")}${causes(h.so,"影響")}${hasC?`<p class="kindnote">「直接」＝有文件或當事人行動可證；「學者解釋」＝研究者的詮釋，各家說法可能不同。</p>`:""}
   ${h.note?`<p class="hnote">⚑ ${esc(h.note)}</p>`:""}
   ${(h.aliases||[]).length?`<details class="alias"><summary>各方稱謂</summary><ul>${h.aliases.map(a=>`<li><b>${esc(a.term)}</b>：${esc(a.note)}</li>`).join("")}</ul></details>`:""}
+  ${relHtml}${whoHtml}${thHtml}
   ${(h.src||[]).length?`<p class="src">來源：${h.src.map(s=>`<a href="${esc(s.u)}" target="_blank" rel="noopener noreferrer">${esc(s.t)}</a>`).join("、")}</p>`:`<p class="src">來源：待補</p>`}
   <div class="act">${h.bg&&BG.find(g=>g.id===h.bg)?`<button class="pri" data-bg="${h.bg}">背景：${esc(BG.find(g=>g.id===h.bg).t)} →</button>`:""}${showLee?`<button id="hLeeNear">李登輝視角：${esc(leeShort(near))}（${near.y}）→</button>`:""}</div>${nav}`;wire();
   c.querySelectorAll("[data-bg]").forEach(b=>b.onclick=()=>{cardOpen(c,false);state.hback={pid:state.hp,sel:k};gotoBg(b.dataset.bg)});
+  c.querySelectorAll("[data-rel]").forEach(b=>b.onclick=()=>gotoH(HK[b.dataset.rel]));
+  c.querySelectorAll("[data-who]").forEach(b=>b.onclick=()=>{cardOpen(c,false);state.hback={pid:state.hp,sel:k};state.person=b.dataset.who;setView("people");window.scrollTo({top:0})});
+  c.querySelectorAll("[data-th]").forEach(b=>b.onclick=()=>{cardOpen(c,false);openThread(b.dataset.th)});
   const ln=$("#hLeeNear");if(ln)ln.onclick=()=>{cardOpen(c,false);state.hback={pid:state.hp,sel:k};setView("overview");ovSelect(near.id,true);window.scrollTo({top:0})}
+}
+
+/* ---------- 事件代號、人物、跨期主線 ---------- */
+const HK={};H.forEach(h=>{if(h.key)HK[h.key]=h});
+const PK={};PEOPLE.forEach(p=>{PK[p.id]=p});
+function gotoH(h){const p=pOf(h.y);if(state.view==="history"&&state.hp===p.id){hSelect(h.id,true);$("#hPanel").scrollIntoView({block:"start",behavior:"smooth"})}else{setView("history");hallOpen(p.id,h.id)}}
+function leeFind(ref){const m=/^lee:(\d+):(.+)$/.exec(ref);return m?E.find(e=>e.y===+m[1]&&e.t.startsWith(m[2])):null}
+function renderThreads(){
+  $("#thChips").innerHTML=THREADS.map(t=>`<button class="chip" data-th="${t.id}" aria-pressed="${state.th===t.id}">${esc(t.title)}</button>`).join("");
+  $("#thChips").querySelectorAll("button").forEach(b=>b.onclick=()=>{state.th=state.th===b.dataset.th?null:b.dataset.th;renderThreads()});
+  const t=THREADS.find(x=>x.id===state.th),box=$("#thPanel");box.hidden=!t;if(!t)return;
+  box.innerHTML=`<h3>${esc(t.title)}</h3><p class="sum">${esc(t.sum)}</p><ul class="flow">${t.steps.map((st,i)=>{
+    let lab="",btn="",tag="";
+    if(st.ref&&st.ref.startsWith("lee:")){const e=leeFind(st.ref);if(e){lab=e.y+(e.md?`<br><small>${esc(e.md)}</small>`:"");btn=`<button data-i="${i}">${esc(e.t.length>26?e.t.slice(0,26)+"…":e.t)}</button>`;tag=`<span class="tg">李登輝線</span>`}}
+    else if(st.ref){const h=HK[st.ref];if(h){lab=h.y+(h.md?`<br><small>${esc(h.md)}</small>`:"");btn=`<button data-i="${i}">${esc(h.t.length>26?h.t.slice(0,26)+"…":h.t)}</button>`}}
+    else if(st.bg){const g=BG.find(x=>x.id===st.bg);if(g){lab="專題";btn=`<button data-i="${i}">${esc(g.t)}</button>`;tag=`<span class="tg">背景補充</span>`}}
+    return `<li><span class="fl">${lab}</span><span class="ft">${btn}${tag}<span class="say">${esc(st.say||"")}</span></span></li>`}).join("")}</ul>${t.note?`<p class="nt">${esc(t.note)}</p>`:""}`;
+  box.querySelectorAll("button[data-i]").forEach(b=>b.onclick=()=>{const st=t.steps[+b.dataset.i];
+    if(st.bg){state.hback={pid:state.hp,sel:state.hsel,th:t.id};gotoBg(st.bg)}
+    else if(st.ref.startsWith("lee:")){state.hback={pid:state.hp,sel:state.hsel,th:t.id};gotoEvent(leeFind(st.ref).id)}
+    else gotoH(HK[st.ref])})}
+function openThread(id){state.th=id;if(state.view!=="history")setView("history");renderThreads();setTimeout(()=>$("#threads").scrollIntoView({block:"start",behavior:"smooth"}),50)}
+function eventsOfPerson(id){return H.filter(h=>(h.who||[]).includes(id)).sort((a,b)=>lcYear(a.y,a.md)-lcYear(b.y,b.md))}
+function renderPeople(){
+  const list=PEOPLE.slice().sort((a,b)=>(parseInt(a.years.replace(/[^\d]/g,"").slice(0,4))||0)-(parseInt(b.years.replace(/[^\d]/g,"").slice(0,4))||0));
+  $("#pGrid").innerHTML=list.map(p=>`<button class="pb" data-p="${p.id}" aria-pressed="${state.person===p.id}"><b>${esc(p.name)}</b><span>${esc(p.years)}　${esc(p.role)}</span><small>${esc(p.one)}</small></button>`).join("");
+  $("#pGrid").querySelectorAll(".pb").forEach(b=>b.onclick=()=>{state.person=state.person===b.dataset.p?null:b.dataset.p;renderPeople();if(state.person)setTimeout(()=>$("#pCard").scrollIntoView({block:"start",behavior:"smooth"}),50)});
+  const p=PK[state.person],box=$("#pCard");box.hidden=!p;if(!p)return;
+  const evs=eventsOfPerson(p.id);
+  box.innerHTML=`<h3>${esc(p.name)}<small>${esc(p.years)}</small></h3><p class="role">${esc(p.role)}</p><p class="one">${esc(p.one)}</p>
+  ${(p.did||[]).length?`<h4>做了什麼</h4><ul>${p.did.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+  ${evs.length?`<h4>參與的事件</h4><div class="rowr">${evs.map(h=>`<button data-h="${h.id}">${h.y} ${esc(h.s||h.t.slice(0,8))}</button>`).join("")}</div>`:""}
+  ${(p.views||[]).length?`<h4>各方評價</h4><ul class="views">${p.views.map(v=>`<li><b>${esc(v.who)}</b>：${esc(v.t)}</li>`).join("")}</ul>`:""}
+  ${(p.kin||[]).map(k=>PK[k]).filter(Boolean).length?`<h4>相關人物</h4><div class="rowr">${p.kin.map(k=>PK[k]).filter(Boolean).map(q=>`<button class="who" data-k="${q.id}">${esc(q.name)}</button>`).join("")}</div>`:""}
+  ${(p.src||[]).length?`<p class="src">來源：${p.src.map(x=>`<a href="${esc(x.u)}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>`).join("、")}</p>`:""}`;
+  box.querySelectorAll("[data-h]").forEach(b=>b.onclick=()=>{const h=H.find(x=>x.id===b.dataset.h),pid=p.id;setView("history");hallOpen(pOf(h.y).id,h.id);state.hback={person:pid};refreshPill();});
+  box.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{state.person=b.dataset.k;renderPeople();$("#pCard").scrollIntoView({block:"start",behavior:"smooth"})});
 }
 
 /* ---------- 回頂部 ---------- */

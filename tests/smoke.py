@@ -16,7 +16,7 @@ def check(name, cond, info=""):
 
 
 with sync_playwright() as p:
-    b = p.chromium.launch()
+    b = p.chromium.launch(**({"executable_path": os.environ["CHROME"]} if os.environ.get("CHROME") else {}))
     for w, h, n in [(1400, 900, "桌機"), (400, 850, "手機")]:
         errs = []
         pg = b.new_page(viewport={"width": w, "height": h})
@@ -61,8 +61,46 @@ with sync_playwright() as p:
         pg.evaluate("document.querySelector('#lcAll [data-z=\"+\"]').click()")
         w1 = ev("document.querySelector('#lcAll .lc-svg').getBoundingClientRect().width")
         check(f"{n} 放大按鈕有效", w1 > w0 * 1.2, f"{w0}->{w1}")
+        # --- 階段 1：事件卡新欄位、同期世界、人物、主線 ---
+        check(f"{n} 資料完整性：key 不重複、rel／who／主線引用都能解析",
+              ev("""(()=>{const ks=H.filter(h=>h.key).map(h=>h.key);if(new Set(ks).size!==ks.length||ks.length!==H.length)return false;
+              for(const h of H){for(const r of (h.rel||[]))if(!HK[r])return false;for(const w of (h.who||[]))if(!PK[w])return false;
+                for(const x of (h.why||[]).concat(h.so||[]))if(!x.t||!["d","s"].includes(x.k))return false}
+              for(const t of THREADS)for(const st of t.steps){if(st.ref&&st.ref.startsWith("lee:")){if(!leeFind(st.ref))return false}else if(st.ref){if(!HK[st.ref])return false}else if(!BG.find(g=>g.id===st.bg))return false}
+              return true})()"""))
+        check(f"{n} 同期世界 4 則、全期圖有同期世界泳道", ev("H.filter(h=>h.ctx==='世界').length")==4 and ev("lcAll.data.lanes.some(l=>l.id==='world'&&l.items.length===4)"))
+        ev("setView('history');hallOpen('p3',HK['treaty-shimonoseki-1895'].id)"); pg.wait_for_timeout(300)
+        check(f"{n} 事件卡有前因、影響與「直接／學者解釋」標示", pg.locator("#hCard .cause h4").count()>=2 and pg.locator("#hCard .kind").count()>=2)
+        check(f"{n} 事件卡有相關事件按鈕", pg.locator("#hCard [data-rel]").count()>=2)
+        pg.locator("#hCard [data-rel]").first.dispatch_event("click"); pg.wait_for_timeout(300)
+        check(f"{n} 點相關事件會切到該事件", ev("state.hsel")!=ev("HK['treaty-shimonoseki-1895'].id"))
+        ev("setView('history');hallOpen('p3',HK['tca-1921'].id)"); pg.wait_for_timeout(300)
+        check(f"{n} 文協卡有人物與主線以外的人名按鈕", pg.locator("#hCard [data-who]").count()==2)
+        pg.locator("#hCard [data-who]").first.dispatch_event("click"); pg.wait_for_timeout(300)
+        check(f"{n} 點人名進人物頁並顯示人物卡", ev("state.view")=="people" and pg.locator("#pCard").is_visible() and pg.locator("#pCard .rowr [data-h]").count()>=3)
+        check(f"{n} 人物頁有「回台灣史」", "回台灣史" in pg.inner_text("#backpill"))
+        pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
+        check(f"{n} 返回後回到事件卡", ev("state.view")=="history" and ev("!!state.hsel"))
+        pg.click('.tab[data-view="people"]'); pg.wait_for_timeout(200)
+        check(f"{n} 人物索引 6 張", pg.locator("#pGrid .pb").count()==6)
+        pg.locator("#pCard [data-h]").first.dispatch_event("click") if ev("!document.getElementById('pCard').hidden") else None
+        ev("state.person='goto-shinpei';renderPeople()"); pg.wait_for_timeout(100)
+        check(f"{n} 評價分歧的人物並列各方評價", pg.locator("#pCard .views li").count()>=2)
+        pg.locator("#pCard [data-h]").first.dispatch_event("click"); pg.wait_for_timeout(300)
+        check(f"{n} 從人物回事件後出現「回人物」", ev("state.view")=="history" and "回人物" in pg.inner_text("#backpill"))
+        pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
+        check(f"{n} 回人物頁", ev("state.view")=="people")
+        pg.click('.tab[data-view="history"]'); pg.wait_for_timeout(200)
+        pg.locator("#thChips button").first.click(); pg.wait_for_timeout(200)
+        check(f"{n} 主線展開 9 步", pg.locator("#thPanel .flow li").count()==9)
+        pg.locator("#thPanel button[data-i]").nth(1).dispatch_event("click"); pg.wait_for_timeout(500)
+        check(f"{n} 主線裡李登輝線步驟可跳到年表並可返回", ev("state.view")=="overview" and not ev("document.getElementById('backpill').hidden"))
+        ev("setView('history');hallOpen('p3',HK['surrender-1945'].id)"); pg.wait_for_timeout(300)
+        check(f"{n} 日治期有「這個時期要記住的 3 件事」", pg.locator("#hKeys li").count()==3)
+        ev("hallOpen('p2')"); pg.wait_for_timeout(300)
+        check(f"{n} 清領只有同期世界時仍標示事件待擴充", ev("document.querySelector('.hb[data-p=p2] em').textContent.includes('事件待擴充')") and "還沒有補完" in pg.inner_text("#hCard"))
         # 其他分頁不報錯
-        for v in ["relay", "methods", "background", "quiz"]:
+        for v in ["relay", "methods", "background", "quiz", "people"]:
             pg.click(f'.tab[data-view="{v}"]'); pg.wait_for_timeout(150)
         check(f"{n} 無 JS 錯誤", not errs, "; ".join(errs))
         pg.close()

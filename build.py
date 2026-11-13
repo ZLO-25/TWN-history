@@ -18,7 +18,7 @@ def read(name):
 
 def build():
     html = read("template.html")
-    for key, f in (("__DATA__", "data.js"), ("__BG__", "bgdata.js"), ("__HIST__", "history.js")):
+    for key, f in (("__DATA__", "data.js"), ("__BG__", "bgdata.js"), ("__HIST__", "history.js"), ("__PEOPLE__", "people.js"), ("__THREADS__", "threads.js")):
         assert key in html, f"template.html 缺少佔位符 {key}"
         html = html.replace(key, read(f))
     return html

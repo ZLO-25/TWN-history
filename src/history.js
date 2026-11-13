@@ -1819,6 +1819,864 @@ const H_RAW=[
 "u": "https://en.wikipedia.org/wiki/Truman_Doctrine"
 }
 ]
+},
+{
+"y": 1950,
+"md": "6月27日",
+"t": "杜魯門聲明：第七艦隊防止對台灣的攻擊",
+"key": "truman-fleet-1950",
+"s": "第七艦隊",
+"b": "韓戰局勢之下，美國總統杜魯門發表聲明，表示已下令第七艦隊防止對福爾摩沙（台灣）的任何攻擊，並要求在台灣的中國政府停止對大陸的海空作戰。聲明同時說，台灣未來地位的決定，須等待太平洋地區安全恢復、對日和約，或聯合國的考慮。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "福爾摩沙（Formosa）",
+"note": "當時美國文件對台灣的稱呼；聲明原文用 Formosa。"
+}
+],
+"note": "此卡只轉述聲明原文。「台灣地位未定」這一句此後在各方有不同解讀，各方解讀目前未見可引用來源，故不在此並列。",
+"why": [
+{
+"t": "聲明標題為「關於韓國局勢」，把朝鮮半島的戰事與台灣海峽的安全放在同一份聲明裡處理。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "第七艦隊進入台灣海峽，成為之後數年美國介入台海局勢的起點之一（見專題「台海危機」）。",
+"k": "s"
+}
+],
+"rel": [
+"shelling-1954",
+"mdt-1954"
+],
+"who": [
+"chiang-kai-shek"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "The American Presidency Project：Statement by the President on the Situation in Korea（1950-06-27）",
+"u": "https://www.presidency.ucsb.edu/documents/statement-the-president-the-situation-korea"
+},
+{
+"t": "美國國務院史家辦公室：The Taiwan Straits Crises: 1954–55 and 1958",
+"u": "https://history.state.gov/milestones/1953-1960/taiwan-strait-crises"
+}
+]
+},
+{
+"y": 1954,
+"md": "9月3日",
+"t": "九三砲戰：中共砲擊金門（第一次台海危機）",
+"key": "shelling-1954",
+"s": "九三砲戰",
+"b": "1954年9月3日，中共對金門實施隔海砲擊，砲擊目標隨後擴及馬祖與大陳。這輪衝突後來被稱為「第一次台海危機」。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "九三砲戰",
+"note": "臺灣常用，以首次大規模砲擊的日期命名。"
+},
+{
+"term": "第一次台海危機（First Taiwan Strait Crisis）",
+"note": "「第幾次危機」是後人的分類，不是當時的正式名稱。"
+}
+],
+"note": "日期：國防部學術期刊的註記為1954年9月3日；美國國務院史家辦公室的頁面只寫「1954年9月」。危機的範圍（起訖）各家分法不同：國防部《陸軍學術雙月刊》的註記把九三砲戰、1955年1月一江山、2月大陳撤退，到4月23日周恩來在萬隆會議發言，視為同一段；美國國務院頁面則說1955年9月中美在日內瓦開始談判。中共發動砲擊的動機，目前未見可引用的當事方原始聲明；國防部《空軍學術雙月刊》記載周恩來曾發表聲明，抗議1954年12月簽訂的條約。",
+"why": [
+{
+"t": "國共內戰後，兩岸隔著海峽對峙，金門、馬祖仍由中華民國控制。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "同年12月美國與中華民國簽訂共同防禦條約（見相關事件）。",
+"k": "d"
+}
+],
+"rel": [
+"truman-fleet-1950",
+"mdt-1954",
+"yijiangshan-1955",
+"taipei-1949"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "國防部《陸軍學術雙月刊》596期：八二三砲戰前國軍外島防衛作戰計畫—太白計畫研究",
+"u": "https://www.mnd.gov.tw/File/48868"
+},
+{
+"t": "美國國務院史家辦公室：The Taiwan Straits Crises: 1954–55 and 1958",
+"u": "https://history.state.gov/milestones/1953-1960/taiwan-strait-crises"
+}
+]
+},
+{
+"y": 1954,
+"md": "12月2日",
+"t": "簽訂《中美共同防禦條約》",
+"key": "mdt-1954",
+"s": "共同防禦約",
+"b": "1954年12月2日，美國與中華民國在華盛頓簽訂《共同防禦條約》，1955年3月3日在台北換文生效。第六條把條約適用範圍定為台灣與澎湖，其他領土須「經雙方協議決定」。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "中美共同防禦條約／美華共同防禦條約",
+"note": "英文為 Mutual Defense Treaty between the United States and the Republic of China。"
+}
+],
+"note": "國防部《空軍學術雙月刊》與耶魯 Avalon 計畫的條約文件都寫簽訂日為12月2日。條約第五條寫明各方「依其憲法程序」行動以應對對締約國領土的武裝攻擊；金門、馬祖是否屬於適用範圍，條文沒有直接點名（第六條只寫台灣與澎湖及「經雙方協議決定」的其他領土）。另有一份國防部期刊的正文寫簽訂日為12月4日、註釋寫12月3日，與條約文件所載12月2日不一致，此處依條約文件。1979年美中建交後條約的後續處理，不在此卡範圍。",
+"why": [
+{
+"t": "1954年9月金門遭砲擊後，美國與中華民國簽訂條約。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "1955年1月美國國會通過福爾摩沙決議案，授權總統保衛台灣與外島（見相關事件）。",
+"k": "d"
+}
+],
+"rel": [
+"shelling-1954",
+"formosa-res-1955",
+"normalization-1979"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "Avalon Project／Britannica：Mutual Defense Treaty between the US and the ROC, Dec 2, 1954",
+"u": "https://cdn.britannica.com/primary_source/avalon/20th_century/chin001.asp"
+},
+{
+"t": "國防部《空軍學術雙月刊》617期：八二三台海戰役中共用兵決策與徵候解析",
+"u": "https://www.mnd.gov.tw/File/12137"
+}
+]
+},
+{
+"y": 1955,
+"md": "1月18日",
+"t": "一江山戰役",
+"key": "yijiangshan-1955",
+"s": "一江山",
+"b": "1955年1月，解放軍進攻大陳島群附近的一江山島，國軍失守。",
+"track": "政治外交",
+"conf": "common",
+"note": "日期與描述：國防部《空軍學術雙月刊》寫「1月18日攻下一江山」；Taiwan Insight 寫解放軍1月18日開始進攻、19日清晨守軍全部陣亡。國防部《陸軍學術雙月刊》只寫「民國44年1月奪占」，中央社只寫1955年。守軍人數與傷亡，目前未見可引用來源。",
+"why": [
+{
+"t": "1954年9月起，中共砲擊金門、馬祖與大陳。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "同年2月大陳島軍民在美國第七艦隊協助下撤往台灣（見相關事件）。",
+"k": "d"
+}
+],
+"rel": [
+"shelling-1954",
+"dachen-1955"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "國防部《空軍學術雙月刊》617期：八二三台海戰役中共用兵決策與徵候解析",
+"u": "https://www.mnd.gov.tw/File/12137"
+},
+{
+"t": "Taiwan Insight：The “Lost Outlying Island” of the Tachen Diaspora（2021）",
+"u": "https://taiwaninsight.org/2021/09/17/the-lost-outlying-island-of-the-tachen-diaspora/"
+},
+{
+"t": "國防部《陸軍學術雙月刊》596期：八二三砲戰前國軍外島防衛作戰計畫—太白計畫研究",
+"u": "https://www.mnd.gov.tw/File/48868"
+}
+]
+},
+{
+"y": 1955,
+"md": "1月",
+"t": "美國國會通過福爾摩沙決議案",
+"key": "formosa-res-1955",
+"s": "福爾摩沙決議",
+"b": "1955年1月，美國國會通過「福爾摩沙決議案」，授權艾森豪總統採取保衛台灣與外島所需的措施。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "福爾摩沙決議案／台灣決議案",
+"note": "英文為 Formosa Resolution；中央社稱「台灣決議案」。"
+}
+],
+"note": "美國國務院史家辦公室頁面只寫「1955年1月」，未給日期；中央社的文章寫為1月26日，兩者並列，確切日期目前未見官方來源。該頁面的描述是決議案讓艾森豪「對保衛台灣及外島擁有全部權力」；決議所稱「外島」是否包含金門、馬祖，其文字與當時的解讀，目前未見可引用來源。",
+"so": [
+{
+"t": "同年2月大陳島軍民撤往台灣（見相關事件）。",
+"k": "d"
+}
+],
+"rel": [
+"mdt-1954",
+"dachen-1955"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "美國國務院史家辦公室：The Taiwan Straits Crises: 1954–55 and 1958",
+"u": "https://history.state.gov/milestones/1953-1960/taiwan-strait-crises"
+},
+{
+"t": "中央社：開箱老照片》大陳軍民撤退來台（2024）",
+"u": "https://www.cna.com.tw/news/ahel/202402075008.aspx"
+}
+]
+},
+{
+"y": 1955,
+"md": "2月",
+"t": "大陳島軍民撤退來台",
+"key": "dachen-1955",
+"s": "大陳撤退",
+"b": "1955年2月，大陳島的國軍與居民在美國第七艦隊協助下撤往台灣。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "大陳島撤退／大陳轉進",
+"note": "國防部期刊用「轉進」，一般新聞用「撤退」。"
+},
+{
+"term": "大陳義胞",
+"note": "撤到台灣的大陳居民在台灣的稱呼之一。"
+}
+],
+"note": "日期與人數各來源不同：中央社寫2月8日起美國第七艦隊協助撤退，2月10日「1萬4483人全部撤往台灣」；蔣中正日記（聯合報引述）寫2月6日美國下令掩護、聯合報寫至11日完成；國防部《空軍學術雙月刊》寫2月5日艾森豪下令第七艦隊「協助」撤退；Taiwan Insight 寫2月2日至25日共約2.8萬人，可能計入不同對象（居民與軍人等），各頁未說明口徑。蔣中正1955年1月21日日記載有美方提議「以協防金門換取大陳撤退」的建議，這是日記的紀錄，不等於雙方已有正式協議；美國國務院頁面的說法是蔣介石在換取對金門、馬祖的私下承諾後同意撤軍。",
+"why": [
+{
+"t": "一江山失守後，大陳島群的防守成為問題。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "撤離的居民在台灣安置，形成後來的「大陳義胞」社群。",
+"k": "d"
+}
+],
+"rel": [
+"yijiangshan-1955",
+"formosa-res-1955",
+"shelling-1958"
+],
+"who": [
+"chiang-kai-shek"
+],
+"bg": "dachen",
+"src": [
+{
+"t": "中央社：開箱老照片》大陳軍民撤退來台（2024）",
+"u": "https://www.cna.com.tw/news/ahel/202402075008.aspx"
+},
+{
+"t": "聯合報：大陳島撤退 蔣中正日記批艾森豪（2026）",
+"u": "https://udn.com/news/story/6656/9786963"
+},
+{
+"t": "Taiwan Insight：The “Lost Outlying Island” of the Tachen Diaspora（2021）",
+"u": "https://taiwaninsight.org/2021/09/17/the-lost-outlying-island-of-the-tachen-diaspora/"
+},
+{
+"t": "美國國務院史家辦公室：The Taiwan Straits Crises: 1954–55 and 1958",
+"u": "https://history.state.gov/milestones/1953-1960/taiwan-strait-crises"
+}
+]
+},
+{
+"y": 1958,
+"md": "8月23日",
+"t": "八二三砲戰",
+"key": "shelling-1958",
+"s": "八二三砲戰",
+"b": "1958年8月23日傍晚，中共開始對金門大規模砲擊，持續約兩個月。美國海軍協助護航運補。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "八二三砲戰",
+"note": "臺灣常用，以首日命名。"
+},
+{
+"term": "第二次台海危機（Second Taiwan Strait Crisis）",
+"note": "後人的分類。"
+}
+],
+"note": "細節各來源不一：開始時間，國防部期刊分別寫下午5時30分與6時30分；開始砲擊後一至兩個多小時內的落彈數，寫2.9萬餘發至5.7萬餘發不等（4.7萬餘發的寫法最常見）；44天總數，寫約44萬發（引中共官方統計）或約47萬發；首日國軍三位副司令官的傷亡，寫法略有出入（有的寫三人陣亡，有的寫吉星文三天後傷重而亡）。美國護航的日期也不同：寫8月25日艾森豪同意、8月29日決定護航、9月3日開始護航等。美國國務院頁面則說1958年中共趁國際注意力集中在美國介入黎巴嫩時恢復砲擊。8月17日北戴河會議決定砲擊金門，為一份國防部期刊（八二三砲戰勝利60週年）所載；另一份只寫「北戴河會議」而未給日期。",
+"why": [
+{
+"t": "1955年大陳撤退後，金門、馬祖仍由中華民國控制，1958年美軍同時介入黎巴嫩。",
+"k": "d"
+}
+],
+"so": [
+{
+"t": "10月6日中共宣布暫停砲擊（見相關事件）；之後長期的「單打雙不打」持續到1979年。",
+"k": "d"
+}
+],
+"rel": [
+"dachen-1955",
+"ceasefire-1958",
+"dulles-chiang-1958"
+],
+"bg": "kinmen",
+"src": [
+{
+"t": "國防部：八二三砲戰勝利60週年—作戰整備之研究",
+"u": "https://www.mnd.gov.tw/File/29432"
+},
+{
+"t": "國防部《國防雜誌》34卷1期：八二三砲戰中的平民經歷回顧與對全民國防教育的啟示",
+"u": "https://www.mnd.gov.tw/File/30702"
+},
+{
+"t": "國防部《國防雜誌》99年8月號：八二三砲戰時期之國際事務與戰略研究",
+"u": "https://www.mnd.gov.tw/File/12191"
+},
+{
+"t": "美國國務院史家辦公室：The Taiwan Straits Crises: 1954–55 and 1958",
+"u": "https://history.state.gov/milestones/1953-1960/taiwan-strait-crises"
+}
+]
+},
+{
+"y": 1958,
+"md": "10月6日",
+"t": "中共宣布暫停砲擊金門（《告台灣同胞書》）",
+"key": "ceasefire-1958",
+"s": "暫停砲擊",
+"b": "1958年10月6日，中共以國防部長彭德懷名義發表《告台灣同胞書》，宣布對金門暫停砲擊；10月25日再發表《再告台灣同胞書》，宣稱雙日停火。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "單打雙不打",
+"note": "之後長期的砲擊模式：單日象徵性砲擊、雙日停火。"
+}
+],
+"note": "暫停時間：國防部期刊寫7天；遠見（引述伍世文的回憶）寫三週。《告台灣同胞書》由誰撰寫：國防部期刊引述大陸學者的說法，稱實際是毛澤東以彭德懷名義寫的，為單一轉述。「單打雙不打」的結束時間：一份國防部期刊寫持續到1979年；另一份寫「直至民國67年（1978年）才宣告停戰」；美國國務院頁面寫約二十年，到美中建交為止。",
+"rel": [
+"shelling-1958",
+"dulles-chiang-1958",
+"normalization-1979"
+],
+"who": [
+"peng-dehuai"
+],
+"bg": "kinmen",
+"src": [
+{
+"t": "國防部《國防雜誌》34卷1期：八二三砲戰中的平民經歷回顧與對全民國防教育的啟示",
+"u": "https://www.mnd.gov.tw/File/30702"
+},
+{
+"t": "國防部《國防雜誌》99年8月號：八二三砲戰時期之國際事務與戰略研究",
+"u": "https://www.mnd.gov.tw/File/12191"
+},
+{
+"t": "國防部：八二三砲戰勝利60週年—作戰整備之研究",
+"u": "https://www.mnd.gov.tw/File/29432"
+},
+{
+"t": "遠見雜誌：7個孩子交給您了！這群老兵道盡外人不知的823血淚史（2018）",
+"u": "https://www.gvm.com.tw/article/45605"
+},
+{
+"t": "美國國務院史家辦公室：The Taiwan Straits Crises: 1954–55 and 1958",
+"u": "https://history.state.gov/milestones/1953-1960/taiwan-strait-crises"
+}
+]
+},
+{
+"y": 1958,
+"md": "10月23日",
+"t": "蔣介石與杜勒斯發表聯合公報",
+"key": "dulles-chiang-1958",
+"s": "蔣杜公報",
+"b": "1958年10月23日在台北，蔣介石與美國國務卿杜勒斯會商後發表聯合公報。公報稱「在目前情況下，金門與馬祖的防禦與台灣、澎湖的防禦密切相關」，並說中華民國認為恢復大陸人民的自由是「神聖使命」，達成使命的主要手段是實行孫中山的三民主義，「而不是使用武力」。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "蔣杜公報／中美聯合公報（1958）",
+"note": "與1972、1979、1982年的美中「三公報」不同，這份是美國與中華民國之間的公報。"
+}
+],
+"note": "引文依美國國務院《美國外交關係》文件（FRUS）所載公報英文本意譯。對公報的評價，一說是「三分軍事、七分政治」的開始（國防部期刊引述學者林正義），另有不同看法；此卡不下定論。",
+"rel": [
+"shelling-1958",
+"ceasefire-1958",
+"mdt-1954"
+],
+"who": [
+"chiang-kai-shek",
+"dulles"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "FRUS 1958–1960 Vol. XIX, doc 209：Joint Communiqué（Taipei, Oct 23, 1958）",
+"u": "https://history.state.gov/historicaldocuments/frus1958-60v19/d209"
+},
+{
+"t": "國防部《國防雜誌》34卷1期：八二三砲戰中的平民經歷回顧與對全民國防教育的啟示",
+"u": "https://www.mnd.gov.tw/File/30702"
+}
+]
+},
+{
+"y": 1972,
+"md": "2月21–28日",
+"t": "尼克森訪問中國",
+"key": "nixon-visit-1972",
+"s": "尼克森訪中",
+"b": "美國總統尼克森於1972年2月21日至28日訪問中華人民共和國，訪問結束時發表《上海公報》。",
+"track": "政治外交",
+"ctx": "世界",
+"conf": "verified",
+"note": "訪問期間依《上海公報》文本頁面所載（February 21 to February 28, 1972）。",
+"rel": [
+"shanghai-comm-1972"
+],
+"src": [
+{
+"t": "Teaching American History：Shanghai Communiqué（來源 FRUS 1969–1972 XVII doc 203）",
+"u": "https://old.teachingamericanhistory.org/document/joint-statement-following-discussions-with-leaders-of-the-peoples-republic-of-china-shanghai-communique/"
+}
+]
+},
+{
+"y": 1972,
+"md": "2月28日",
+"t": "《上海公報》",
+"key": "shanghai-comm-1972",
+"s": "上海公報",
+"b": "美國與中華人民共和國發表聯合公報，雙方各自陳述對台灣的立場。美方稱「認知到海峽兩邊所有的中國人都認為只有一個中國，台灣是中國的一部分」（英文：acknowledges），並表示「對這一立場不提出異議」，也確認最終目標是撤出美國在台灣的全部武裝力量與軍事設施。中方稱台灣問題是阻礙兩國關係正常化的關鍵，中華人民共和國政府是中國的唯一合法政府。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "acknowledges 的中譯",
+"note": "英文 acknowledges 在中文有「認知」「認識到」等不同譯法；各版本中文措辭的比較，目前未見可引用來源。"
+}
+],
+"note": "公報日期：1982年公報文本把它引為「1972年2月28日的上海公報」；公報頁面本身列的是訪問期間（2月21日至28日），沒有另列簽署日。上文為依英文本的中文意譯，非官方中文譯本。",
+"rel": [
+"nixon-visit-1972",
+"normalization-1979"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "Teaching American History：Shanghai Communiqué（來源 FRUS 1969–1972 XVII doc 203）",
+"u": "https://old.teachingamericanhistory.org/document/joint-statement-following-discussions-with-leaders-of-the-peoples-republic-of-china-shanghai-communique/"
+},
+{
+"t": "AIT 檔案：Joint Communique of the US and the PRC (1982)",
+"u": "https://web-archive-2017.ait.org.tw/en/us-joint-communique-1982.html"
+}
+]
+},
+{
+"y": 1979,
+"md": "1月1日",
+"t": "美國與中華人民共和國建交",
+"key": "normalization-1979",
+"s": "美中建交",
+"b": "美國與中華人民共和國於1979年1月1日正式建交（建交公報1978年12月15日在華盛頓與北京同時發表）。公報稱美國「承認」中華人民共和國政府是中國的唯一合法政府，並「認知」中方的一中立場；美國人民將與台灣人民保持文化、商務與其他非官方關係。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "斷交",
+"note": "臺灣方面稱美國與中華民國「斷交」；美方的說法是承認中華人民共和國。"
+}
+],
+"note": "文字依公報英文本（recognizes／acknowledges）意譯；公報也說雙方將在1979年3月1日互換大使並設立大使館。",
+"rel": [
+"shanghai-comm-1972",
+"tra-1979",
+"ceasefire-1958"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "AIT 檔案：Joint Communique of the US and the PRC (1979)",
+"u": "https://web-archive-2017.ait.org.tw/en/us-joint-communique-1979.html"
+},
+{
+"t": "CRS Report 96-246：Taiwan: Texts of the Taiwan Relations Act, the U.S.-China Communiques, and the “Six Assurances”",
+"u": "https://www.everycrsreport.com/reports/96-246.html"
+}
+]
+},
+{
+"y": 1979,
+"md": "4月10日",
+"t": "美國《台灣關係法》",
+"key": "tra-1979",
+"s": "台灣關係法",
+"b": "美國國會通過、1979年4月10日核准《台灣關係法》（公法96-8），第18條規定追溯自1979年1月1日生效。條文說美國與中華人民共和國建交的決定，基於台灣前途將以和平方式決定的期望；任何非和平方式的企圖，都是對西太平洋和平安全的威脅，也是美國嚴重關切之事；美國將向台灣提供防禦性武器。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "Taiwan Relations Act（TRA）",
+"note": "美國國內法，不是與任何一方簽署的條約或公報。"
+}
+],
+"note": "條文用語是「嚴重關切」「提供防禦性武器」，並規定由總統與國會「依憲法程序決定適當行動」，與1954年條約第五條的共同防禦條款措辭不同；各方如何解讀這些差別，目前未見可引用來源。",
+"rel": [
+"normalization-1979",
+"aug17-comm-1982",
+"mdt-1954"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "CRS Report 96-246：Taiwan: Texts of the Taiwan Relations Act, the U.S.-China Communiques, and the “Six Assurances”",
+"u": "https://www.everycrsreport.com/reports/96-246.html"
+}
+]
+},
+{
+"y": 1982,
+"md": "8月17日",
+"t": "《八一七公報》",
+"key": "aug17-comm-1982",
+"s": "八一七公報",
+"b": "美國與中華人民共和國發表聯合公報。美方稱不尋求執行長期對台軍售政策，對台軍售在質與量上不會超過近年水準，並打算逐步減少；中方稱台灣問題是中國內政。",
+"track": "政治外交",
+"conf": "verified",
+"note": "文字依公報英文本意譯。公報也提到1979年談判中對台軍售問題未獲解決，中方表示建交後會再提。公報發表後美方另有「六項保證」（見相關事件）。",
+"rel": [
+"tra-1979",
+"six-assur-1982"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "AIT 檔案：Joint Communique of the US and the PRC (1982)",
+"u": "https://web-archive-2017.ait.org.tw/en/us-joint-communique-1982.html"
+},
+{
+"t": "CRS Report 96-246：Taiwan: Texts of the Taiwan Relations Act, the U.S.-China Communiques, and the “Six Assurances”",
+"u": "https://www.everycrsreport.com/reports/96-246.html"
+}
+]
+},
+{
+"y": 1982,
+"md": "",
+"t": "美國對台灣的「六項保證」",
+"key": "six-assur-1982",
+"s": "六項保證",
+"b": "1982年，美國向台北表達六項立場：未同意訂定終止對台軍售的日期；未同意就對台軍售與北京磋商；不扮演台北與北京間的調解角色；未同意修改《台灣關係法》；未改變對台灣主權的立場；不會對台灣施壓要求與北京談判。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "Six Assurances",
+"note": "英文名稱；來自美方對台北的表述，不是與北京簽署的文件。"
+}
+],
+"note": "日期：美國在台協會（AIT）網頁列有1982年7月10日與8月17日兩封電報，其中8月17日電報「提出六項保證」。六項的措辭依AIT網頁所列的英文電報意譯。這些保證是美方對台灣方面的表述，非公開簽署的公報；北京方面對此的看法，目前未見可引用來源。",
+"rel": [
+"aug17-comm-1982",
+"tra-1979"
+],
+"bg": "us-roc-prc",
+"src": [
+{
+"t": "AIT 檔案：Six Assurances (1982)",
+"u": "https://web-archive-2022.ait.org.tw/our-relationship/policy-history/key-u-s-foreign-policy-documents-region/six-assurances-1982/index.html"
+},
+{
+"t": "CRS Report 96-246：Taiwan: Texts of the Taiwan Relations Act, the U.S.-China Communiques, and the “Six Assurances”",
+"u": "https://www.everycrsreport.com/reports/96-246.html"
+}
+]
+},
+{
+"y": 1992,
+"md": "10月",
+"t": "香港商談與「九二共識」之爭",
+"key": "hk-talks-1992",
+"s": "九二共識",
+"b": "1992年10月，台灣的海基會與中國大陸的海協會在香港舉行工作性商談，雙方都堅持「一個中國」，但對其意涵的認知不同。事後兩會以各自口頭表述的方式處理。「九二共識」一詞是2000年4月28日由陸委會主委蘇起首度提出。",
+"track": "政治外交",
+"conf": "disputed",
+"aliases": [
+{
+"term": "一個中國，各自表述／一中各表",
+"note": "國民黨與蘇起提出的解讀。"
+},
+{
+"term": "認同一個中國的共識",
+"note": "中國海協會副會長唐樹備1999年的說法，稱兩岸1992年達成此共識。"
+},
+{
+"term": "「九二共識」不存在",
+"note": "陳水扁、李登輝等人曾公開質疑此共識的存在（TVBS 報導）。"
+}
+],
+"note": "爭議核心：1992年是否形成「共識」，以及內容是什麼。中央社的名詞解釋寫：這是事後塑造出的概括性名詞，商談內容是否形成共識有爭議。時間：中央社寫10月26至30日，TVBS寫為期3天、10月28日開始；TVBS另載11月3日海基會與陸委會各自發新聞稿、11月16日海協會回函表示「充分尊重並接受」海基會的建議（單一來源）。2019年習近平「重新定調」九二共識，蔡英文表示台灣「始終未接受九二共識」（中央社）。TVBS也指出，當時的新聞簡報看不到「九二共識」這個名詞。",
+"rel": [
+"koo-wang-1993"
+],
+"who": [
+"koo-chen-fu",
+"wang-daohan"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "中央社：不只九二共識 兩岸喊話這些名詞你都知道嗎（2019）",
+"u": "https://www.cna.com.tw/news/firstnews/201901025006.aspx"
+},
+{
+"t": "TVBS：還原香港會談 九二共識事後達成",
+"u": "https://news.tvbs.com.tw/politics/367567"
+}
+]
+},
+{
+"y": 1993,
+"md": "4月27–29日",
+"t": "辜汪會談（新加坡）",
+"key": "koo-wang-1993",
+"s": "辜汪會談",
+"b": "海基會董事長辜振甫與海協會會長汪道涵於1993年4月27日至29日在新加坡會談，簽署四項事務性協議。Taipei Times 與當代中國都稱這是1949年後兩岸的首次正式接觸。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "汪辜會談",
+"note": "中國大陸的稱法，把汪道涵放在前。"
+}
+],
+"note": "日期：Taipei Times 與當代中國內文都寫4月27日至29日，當代中國有一張圖說寫4月25至27日，與內文不一致，此處依內文。四項協議的完整名稱，當代中國只舉出《汪辜會談共同協議》與《兩會聯繫與會談制度協議》。「首次正式接觸」為上述兩個來源的說法。",
+"rel": [
+"hk-talks-1992",
+"jiang8-1995"
+],
+"who": [
+"koo-chen-fu",
+"wang-daohan"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "Taipei Times：Koo-Wang 會談20週年座談報導（2013-04-29）",
+"u": "https://www.taipeitimes.com/News/front/archives/2013/04/29/2003560975"
+},
+{
+"t": "當代中國：改革開放 汪辜會談後兩岸關係解凍（2021）",
+"u": "https://www.ourchinastory.com/zh/1498"
+},
+{
+"t": "遠見雜誌：兩岸大事記（2004）",
+"u": "https://www.gvm.com.tw/article/9240"
+}
+]
+},
+{
+"y": 1995,
+"md": "1月30日",
+"t": "江澤民發表「江八點」",
+"key": "jiang8-1995",
+"s": "江八點",
+"b": "1995年1月30日，中共中央總書記江澤民發表談話，提出對台八點主張，其中一點是「堅持一個中國的原則，是實現和平統一的基礎和前提」。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "江八點",
+"note": "〈為促進祖國統一大業的完成而繼續奮鬥〉講話的八點主張。"
+}
+],
+"note": "八點的完整內容，此處未逐點收錄。",
+"rel": [
+"lee6-1995"
+],
+"who": [
+"jiang-zemin"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "中央社：李登輝與江澤民多次過招 18套劇本因應台海飛彈危機（2022）",
+"u": "https://www.cna.com.tw/news/acn/202211300345.aspx"
+},
+{
+"t": "遠見雜誌：兩岸大事記（2004）",
+"u": "https://www.gvm.com.tw/article/9240"
+}
+]
+},
+{
+"y": 1995,
+"md": "4月8日",
+"t": "李登輝提出「李六條」",
+"key": "lee6-1995",
+"s": "李六條",
+"b": "1995年4月8日，李登輝提出六點主張回應「江八點」，包括「在兩岸分治的現實上追求中國統一」，以及「兩岸平等參與國際組織，雙方領導人藉此自然見面」。",
+"track": "政治外交",
+"conf": "verified",
+"aliases": [
+{
+"term": "李六條／李六點",
+"note": "兩種寫法並見。"
+}
+],
+"note": "六條的完整內容，此處未逐條收錄。遠見的大事記記載是在國統會上提出。",
+"rel": [
+"jiang8-1995",
+"missile-jul-1995"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "中央社：李登輝與江澤民多次過招 18套劇本因應台海飛彈危機（2022）",
+"u": "https://www.cna.com.tw/news/acn/202211300345.aspx"
+},
+{
+"t": "遠見雜誌：兩岸大事記（2004）",
+"u": "https://www.gvm.com.tw/article/9240"
+}
+]
+},
+{
+"y": 1995,
+"md": "7月21日",
+"t": "中共在台灣北方海域試射飛彈",
+"key": "missile-jul-1995",
+"s": "飛彈試射",
+"b": "1995年7月21日起，中共在台灣北部外海進行飛彈試射與軍演；8月再舉行第二輪。這是「第三次台海危機」的開端。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "第三次台海危機（Third Taiwan Strait Crisis）",
+"note": "後人的分類。"
+},
+{
+"term": "台海飛彈危機",
+"note": "臺灣常用說法。"
+}
+],
+"note": "日期：EBSCO 寫7月21至26日，共發射四枚短程與兩枚中程飛彈；中央社寫新華社7月18日宣布二砲部隊將於7月21日至28日在彭佳嶼附近海域試射，兩者的終止日不同。EBSCO 另載8月15至25日為第二輪，12月19日美國尼米茲號航艦通過台灣海峽。中共為何採取這些行動：學界常見說法是抗議李登輝同年6月訪美；EBSCO 轉述北京方面的看法，稱李登輝訪美是在爭取對台獨的支持，8月北京並稱李登輝「必須為他的固執受到懲罰」（EBSCO 轉述，非原始聲明）。以上是解釋或轉述，不是官方原始聲明，各方說法另見專題。",
+"why": [
+{
+"t": "1995年6月李登輝訪問母校康乃爾大學（見李登輝線）。",
+"k": "d"
+},
+{
+"t": "學界常把這輪飛彈試射和訪美連在一起談，也有人強調其他因素；各家說法並列於專題。",
+"k": "s"
+}
+],
+"so": [
+{
+"t": "1996年3月再次舉行飛彈演習並有美國航艦進入該海域（見相關事件）。",
+"k": "d"
+}
+],
+"rel": [
+"lee6-1995",
+"missile-mar-1996"
+],
+"who": [
+"jiang-zemin"
+],
+"bg": "missile",
+"src": [
+{
+"t": "EBSCO Research Starters：Third Taiwan Strait Crisis",
+"u": "https://www.ebsco.com/research-starters/history/third-taiwan-strait-crisis"
+},
+{
+"t": "中央社：李登輝與江澤民多次過招 18套劇本因應台海飛彈危機（2022）",
+"u": "https://www.cna.com.tw/news/acn/202211300345.aspx"
+}
+]
+},
+{
+"y": 1996,
+"md": "3月8日",
+"t": "1996年3月飛彈演習與美國航艦調動",
+"key": "missile-mar-1996",
+"s": "九六飛彈",
+"b": "1996年3月，中共再度舉行飛彈演習與軍演，飛彈落在基隆與高雄外海；美國派出獨立號航艦戰鬥群，後有尼米茲號加入。3月23日台灣舉行首次總統直選。",
+"track": "政治外交",
+"conf": "common",
+"note": "日期各來源不同：EBSCO 寫3月4日中共宣布3月8至18日試射、3月7日發射三枚、3月13日最後一次，另宣布3月12至20日與3月18至25日的實彈演習；中央社引述國防部，寫演習為3月8至15日，發射四枚東風15，三枚落高雄南方、一枚落基隆北方。美國部分：獨立號3月8日奉命前往，尼米茲號3月11日自波斯灣加入（中央社）。威嚇是否達到影響選舉的目的，外界評論多認為沒有，但這是評論，不是官方說法。",
+"rel": [
+"missile-jul-1995"
+],
+"who": [
+"jiang-zemin"
+],
+"bg": "missile",
+"src": [
+{
+"t": "EBSCO Research Starters：Third Taiwan Strait Crisis",
+"u": "https://www.ebsco.com/research-starters/history/third-taiwan-strait-crisis"
+},
+{
+"t": "中央社：李登輝與江澤民多次過招 18套劇本因應台海飛彈危機（2022）",
+"u": "https://www.cna.com.tw/news/acn/202211300345.aspx"
+}
+]
+},
+{
+"y": 2022,
+"md": "8月4日",
+"t": "裴洛西訪台後的解放軍大規模演訓",
+"key": "pla-drill-2022",
+"s": "八四軍演",
+"b": "美國聯邦眾議院議長裴洛西2022年8月2日深夜抵台、3日離開後，解放軍自8月4日中午起在台灣周邊六處海空域實施實彈演訓，原定至8月7日中午。我國防部表示，4日下午共軍發射11枚東風飛彈。",
+"track": "政治外交",
+"conf": "common",
+"note": "飛彈是否飛越台灣上空：日本防衛省的資料顯示有4枚飛越（含台北上空）、5枚落在日本專屬經濟海域（公視、今周刊轉述）；台灣國防部起初說軌跡未經台灣上空，之後改稱「不便評論」，並稱飛彈主要路徑在大氣層外、對地面無危害，所以沒有發布警報。中共外交部發言人華春瑩稱中日之間並無正式劃界，所以沒有「日本專屬經濟區」。8月5日中共宣布八項反制措施並制裁裴洛西及其直系親屬。蔡英文表示「不會升高衝突，不會挑起爭端」；外交部長吳釗燮稱裴洛西訪台只是藉口，目的是「企圖將台灣海峽內海化」（TVBS 8月9日）；裴洛西在東京表示美國不會讓中國孤立台灣。演訓後來還延長，TVBS 未寫明新的結束日。",
+"rel": [
+"missile-mar-1996"
+],
+"bg": "strait-crises",
+"src": [
+{
+"t": "公視新聞網：4枚飛彈掠過台灣警報為何沒響？一文了解中國軍演狀況（2022-08-05）",
+"u": "https://news.pts.org.tw/article/593745"
+},
+{
+"t": "今周刊（聯合新聞網稿）：共軍機艦今再跨越海峽中線…（2022-08-05）",
+"u": "https://www.businesstoday.com.tw/article/category/183012/post/202208050015/"
+},
+{
+"t": "TVBS：外交部五點聲明譴責共軍挑釁 外媒關注（2022-08-09）",
+"u": "https://news.tvbs.com.tw/politics/1872442"
+}
+]
 }
 ];
 const H=H_RAW.map((h,i)=>({id:"h"+i,...h})).sort((a,b)=>a.y-b.y||(parseInt(a.md)||0)-(parseInt(b.md)||0));

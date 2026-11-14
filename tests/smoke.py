@@ -68,7 +68,7 @@ with sync_playwright() as p:
                 for(const x of (h.why||[]).concat(h.so||[]))if(!x.t||!["d","s"].includes(x.k))return false}
               for(const t of THREADS)for(const st of t.steps){if(st.ref&&st.ref.startsWith("lee:")){if(!leeFind(st.ref))return false}else if(st.ref){if(!HK[st.ref])return false}else if(!BG.find(g=>g.id===st.bg))return false}
               return true})()"""))
-        check(f"{n} 同期世界 8 則、全期圖有同期世界泳道", ev("H.filter(h=>h.ctx==='世界').length")==8 and ev("lcAll.data.lanes.some(l=>l.id==='world'&&l.items.length===8)"))
+        check(f"{n} 同期世界 11 則、全期圖有同期世界泳道", ev("H.filter(h=>h.ctx==='世界').length")==11 and ev("lcAll.data.lanes.some(l=>l.id==='world'&&l.items.length===11)"))
         ev("setView('history');hallOpen('p3',HK['treaty-shimonoseki-1895'].id)"); pg.wait_for_timeout(300)
         check(f"{n} 事件卡有前因、影響與「直接／學者解釋」標示", pg.locator("#hCard .cause h4").count()>=2 and pg.locator("#hCard .kind").count()>=2)
         check(f"{n} 事件卡有相關事件按鈕", pg.locator("#hCard [data-rel]").count()>=2)
@@ -82,7 +82,7 @@ with sync_playwright() as p:
         pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
         check(f"{n} 返回後回到事件卡", ev("state.view")=="history" and ev("!!state.hsel"))
         pg.click('.tab[data-view="people"]'); pg.wait_for_timeout(200)
-        check(f"{n} 人物索引 16 張", pg.locator("#pGrid .pb").count()==16)
+        check(f"{n} 人物索引 22 張", pg.locator("#pGrid .pb").count()==22)
         pg.locator("#pCard [data-h]").first.dispatch_event("click") if ev("!document.getElementById('pCard').hidden") else None
         ev("state.person='goto-shinpei';renderPeople()"); pg.wait_for_timeout(100)
         check(f"{n} 評價分歧的人物並列各方評價", pg.locator("#pCard .views li").count()>=2)

@@ -1,6 +1,7 @@
 const PERIODS=[
  {id:"p0",name:"原住民社會",range:"至 1624",a:1400,b:1624,sum:"南島語系原住民族在各地生活，各有自己的社會與信仰。"},
- {id:"p1",name:"荷西與鄭氏",range:"1624–1683",a:1624,b:1683,sum:"荷蘭、西班牙先後經營台灣，後由鄭成功趕走荷蘭，鄭氏政權延續到 1683 年。"},
+ {id:"p1",name:"荷西與鄭氏",range:"1624–1683",a:1624,b:1683,sum:"荷蘭、西班牙先後經營台灣，後由鄭成功趕走荷蘭，鄭氏政權延續到 1683 年。",
+  keys:["1624年荷蘭人在大員（今台南安平）設據點，1626年西班牙人占領北部的雞籠，1642年荷蘭人攻下雞籠、西班牙人離開；荷蘭與西班牙是兩個不同的統治者，不是同一個政權", "1661年鄭成功率軍抵台，1662年2月1日荷蘭人與他定約離開；同年6月鄭成功逝世，之後鄭經一系延續到1683年；圍城與登陸的日期，各來源曆法不同，見事件卡", "這一時期的統治只及於台灣西部與北部的部分地區，原住民各社與荷蘭人、鄭氏之間的關係並不相同；麻豆社事件與郭懷一事件的人數，各來源差異很大，見事件卡"]},
  {id:"p2",name:"清領時期",range:"1683–1895",a:1683,b:1895,sum:"1683 年起納入清朝版圖，漢人移民增加，19 世紀後期建省。",
   keys:["清朝對台灣的治理從1684年設台灣府、隸屬福建省開始；入台要許可、不准攜眷，家眷政策反覆到1788年，劃界立碑把漢人與原住民隔開；解除限制的年份有1788年與1875年兩種說法，見事件卡", "清領時期的民變以朱一貴（1721）與林爽文（1786–1788）為代表；各來源的日期與人數並不一致，事件卡把不同寫法並列", "十九世紀後期，條約開港、牡丹社事件與清法戰爭促使清朝調整治理，1885年決定、1887年正式建省，劉銘傳推動鐵路；建省的年份與省會的說法有分歧，不下結論"]},
  {id:"p3",name:"日治時期",range:"1895–1945",a:1895,b:1946,sum:"馬關條約後日本統治台灣五十年（亦稱日據時期、日本殖民統治時期），從武力鎮壓、同化到戰時動員。",
@@ -6349,7 +6350,7 @@ const H_RAW=[
 "note": "稱法不同：英文維基百科的條目名稱是 Kingdom of Tungning（東寧王國），並列出鄭氏王朝、延平王國等稱法；台灣常稱明鄭或鄭氏政權，「明鄭」目前未見可引用來源。各方稱法並列，不下評價。"
 }
 ],
-"note": "日期與兵力各來源不一致，並列：英文維基百科 Battle of Penghu 的摘要欄寫7月10至16日，正文寫清軍7月8日出航、7月17日海戰結束、7月18日占領澎湖；國防部網站的文章寫7月8日自銅山島出發、7月10日進攻、7月16日總攻；Taipei Times 專欄寫施琅6月率約300艘戰船到澎湖，約一週內獲勝（可能是農曆）。鄭軍兵力，摘要欄寫20,000人，正文寫澎湖有30,000人。西曆與農曆的對照，目前未見可引用來源。",
+"note": "日期與兵力各來源不一致，並列：英文維基百科 Battle of Penghu 的文首摘要寫7月10至16日，正文寫清軍7月8日出航、7月17日海戰結束、7月18日占領澎湖；國防部網站的文章寫7月8日自銅山島出發、7月10日進攻、7月16日總攻；Taipei Times 專欄寫施琅6月率約300艘戰船到澎湖，約一週內獲勝（可能是農曆）。鄭軍兵力，文首摘要寫20,000人，正文寫澎湖有30,000人。西曆與農曆的對照，目前未見可引用來源。",
 "rel": [
 "surrender-1683",
 "prefecture-1684"
@@ -6376,10 +6377,10 @@ const H_RAW=[
 "t": "鄭克塽向施琅投降",
 "key": "surrender-1683",
 "s": "鄭克塽降清",
-"b": "1683年，鄭克塽向清朝投降，鄭氏政權結束。Taipei Times 專欄與國防部文章寫8月18日施琅接受鄭克塽的降書；英文維基百科 Kingdom of Tungning 的摘要欄把投降日列為9月5日（第二份降表送抵澎湖），10月5日施琅一行抵達台灣。投降後沒有人被處決，鄭克塽被封為漢軍公、編入八旗，在台的17位明朝宗室被送回大陸。",
+"b": "1683年，鄭克塽向清朝投降，鄭氏政權結束。Taipei Times 專欄與國防部文章寫8月18日施琅接受鄭克塽的降書；英文維基百科 Kingdom of Tungning 的文首摘要把投降日列為9月5日（第二份降表送抵澎湖），10月5日施琅一行抵達台灣。投降後沒有人被處決，鄭克塽被封為漢軍公、編入八旗，在台的17位明朝宗室被送回大陸。",
 "track": "政權",
 "conf": "disputed",
-"note": "投降日期有三種寫法並列：8月18日（Taipei Times、國防部）、9月5日（英文維基百科 Kingdom of Tungning 的摘要欄，並寫第二份投降書抵澎湖）、10月（國防部文章的另一段寫鄭克塽10月降清，與同一篇的8月18日不一致）。處置依英文維基百科（Battle of Penghu 與 Kingdom of Tungning 兩篇一致）。西曆與農曆的差異，目前未見可引用來源。",
+"note": "投降日期有三種寫法並列：8月18日（Taipei Times、國防部）、9月5日（英文維基百科 Kingdom of Tungning 的文首摘要，並寫第二份投降書抵澎湖）、10月（國防部文章的另一段寫鄭克塽10月降清，與同一篇的8月18日不一致）。處置依英文維基百科（Battle of Penghu 與 Kingdom of Tungning 兩篇一致）。西曆與農曆的差異，目前未見可引用來源。",
 "rel": [
 "penghu-1683",
 "prefecture-1684"
@@ -6499,7 +6500,7 @@ const H_RAW=[
 "b": "1721年，朱一貴在今高雄內門一帶起事，攻下府城，自稱王；清廷派兵渡海平定，朱一貴被捕處死。",
 "track": "政權",
 "conf": "disputed",
-"note": "日期在英文維基百科 Zhu Yigui 一文中前後不一致，並列：摘要欄寫「永和」年號起訖為1721年5月26日至7月30日；內文寫4月19日攻下竿津林一帶、5月1日稱王、6月16日清軍登陸、6月28日朱一貴被捕處死；摘要欄的死亡日期寫1722年2月22日。起事的原因與參加者的組成，目前未見可引用來源。",
+"note": "日期在英文維基百科 Zhu Yigui 一文中前後不一致，並列：文首摘要寫「永和」年號起訖為1721年5月26日至7月30日；內文寫4月19日攻下竿津林一帶、5月1日稱王、6月16日清軍登陸、6月28日朱一貴被捕處死；文首摘要的死亡日期寫1722年2月22日。起事的原因與參加者的組成，目前未見可引用來源。",
 "rel": [
 "lin-1786",
 "prefecture-1684"
@@ -6520,7 +6521,7 @@ const H_RAW=[
 "b": "1786年清朝官員查禁天地會，1787年1月16日林爽文殺官起事，根據地在彰化；清廷派福康安率兩萬兵力平定，1788年結束。",
 "track": "政權",
 "conf": "common",
-"note": "起訖並列：摘要欄寫1786至1788年，開頭段寫1787至1788年。人數並列：叛軍一度達5萬人，最多約30萬人參與；清軍摘要欄寫1786年1萬人、1788年福康安2萬人，內文另寫動用不到4萬人。雙方傷亡，英文維基百科寫不明。英文維基百科寫林爽文於1788年2月10日被清軍俘獲；處決的日期，目前未見可引用來源。",
+"note": "起訖並列：文首摘要寫1786至1788年，開頭段寫1787至1788年。人數並列：叛軍一度達5萬人，最多約30萬人參與；清軍文首摘要寫1786年1萬人、1788年福康安2萬人，內文另寫動用不到4萬人。雙方傷亡，英文維基百科寫不明。英文維基百科寫林爽文於1788年2月10日被清軍俘獲；處決的日期，目前未見可引用來源。",
 "rel": [
 "zhu-1721",
 "migration-1684"
@@ -6718,6 +6719,399 @@ const H_RAW=[
 {
 "t": "English Wikipedia：Taiwan Railways Administration",
 "u": "https://en.wikipedia.org/wiki/Taiwan_Railway_Administration"
+}
+]
+},
+{
+"y": 1624,
+"md": "",
+"t": "荷蘭東印度公司撤出澎湖，轉往大員設據點",
+"key": "voc-1624",
+"s": "荷蘭據大員",
+"b": "1624年，荷蘭東印度公司在明朝軍事壓力下撤出澎湖，改在台灣西南海岸的大員（今台南安平）設立據點，後來陸續興建熱蘭遮城（Fort Zeelandia）。",
+"track": "政權",
+"conf": "common",
+"note": "年份各來源一致，月日不一：英文維基百科 Dutch Formosa 寫1624年3月荷方奉命拆除澎湖的堡壘、7月30日明軍抵澎湖、8月3日荷方求和並撤往大員；另寫明軍攻勢始於同年2月。Fort Zeelandia 一文與 colonialvoyage.com 只寫8月。熱蘭遮城的完成年也不一：同一文的開頭寫1624年起建、歷時十年，另一處寫臨時堡壘「四年後」才改建，這裡只寫「陸續興建」。「明朝同意荷蘭人去台灣」的說法，目前未見可引用來源。",
+"rel": [
+"spain-1626",
+"koxinga-landing-1661"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Dutch Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+},
+{
+"t": "English Wikipedia：Fort Zeelandia (Taiwan)",
+"u": "https://en.wikipedia.org/wiki/Fort_Zeelandia_(Taiwan)"
+},
+{
+"t": "The Dutch in Formosa 1624-1662, 1664-1668（colonialvoyage.com）",
+"u": "https://www.colonialvoyage.com/dutch-formosa-1624-1662-1664-1668/"
+}
+]
+},
+{
+"y": 1626,
+"md": "5月",
+"t": "西班牙人占領北台灣的雞籠",
+"key": "spain-1626",
+"s": "西班牙占雞籠",
+"b": "1626年，西班牙人從馬尼拉出兵，5月5日先在今新北三貂角登陸，再移往雞籠建立據點，後來又在淡水建城。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "Santísima Trinidad／San Salvador",
+"note": "雞籠的西班牙據點，英文來源中兩個名稱並用（colonialvoyage.com），是同一座建築或不同建築，目前未見可引用來源。"
+}
+],
+"note": "雞籠在1626年各來源一致。淡水聖多明哥城（Fort Santo Domingo）的建城年，英文維基百科兩篇（Spanish expedition to Formosa、Spanish Formosa）寫1629年；colonialvoyage.com 的年表寫1628年，內文則把淡水與1626年並列，各來源不一，主線採兩說並列。Spanish expedition to Formosa 一文另寫1636年有夜襲毀城、1637年以石材重建；colonialvoyage.com 寫西班牙人1635年撤離淡水。雞籠的抵達日期，目前未見可引用來源。",
+"rel": [
+"voc-1642",
+"voc-1624"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Spanish expedition to Formosa",
+"u": "https://en.wikipedia.org/wiki/Spanish_expedition_to_Formosa"
+},
+{
+"t": "English Wikipedia：Spanish Formosa",
+"u": "https://en.wikipedia.org/wiki/Spanish_Formosa"
+},
+{
+"t": "The Dutch in Formosa 1624-1662, 1664-1668（colonialvoyage.com）",
+"u": "https://www.colonialvoyage.com/dutch-formosa-1624-1662-1664-1668/"
+}
+]
+},
+{
+"y": 1629,
+"md": "",
+"t": "麻豆社事件：荷蘭軍人在麻豆附近被襲",
+"key": "mattau-1629",
+"s": "麻豆社事件",
+"b": "1629年，荷蘭人與西拉雅人的麻豆社之間發生衝突，荷蘭士兵在麻豆社附近被伏擊；死亡人數有20人、約60人、63人等不同寫法。同年11月荷蘭人焚毀鄰近村落作為報復。",
+"track": "政權",
+"topic": "社會族群",
+"conf": "disputed",
+"note": "人數與經過並列：英文維基百科 Dutch pacification campaign on Formosa 一文中，一處寫約60名荷兵被殺，另一處寫派出63人、回程時溺水；Dutch Formosa 一文寫20名荷兵被殺，且寫荷方領隊提早一天離開而逃過。Taipei Times 專欄寫1629年7月派63名士兵去麻豆，全數被殺。報復的日期，英文維基百科寫11月23日焚毀村落，後來麻豆同意九個月休戰；受害村落（英文維基百科寫目加溜灣 Bakloan）的說法，兩篇略有不同。起因與麻豆方面的說法，目前未見可引用來源。",
+"rel": [
+"pacify-1635",
+"voc-1624"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Dutch pacification campaign on Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_pacification_campaign_on_Formosa"
+},
+{
+"t": "English Wikipedia：Dutch Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+},
+{
+"t": "Taipei Times 2024-11-17：Taiwan in Time（Nov. 18 to Nov. 24）",
+"u": "https://www.taipeitimes.com/News/feat/archives/2024/11/17/2003827018"
+}
+]
+},
+{
+"y": 1635,
+"md": "11月22日",
+"t": "荷蘭出兵麻豆，1636年召開地方會議",
+"key": "pacify-1635",
+"s": "荷軍征麻豆",
+"b": "1635年11月，荷蘭人出兵麻豆社，焚毀村落並與麻豆議和；1636年2月荷蘭在大員召開有28個村社代表出席的地方會議（Landdag）。",
+"track": "政權",
+"topic": "社會族群",
+"conf": "common",
+"note": "出兵日期並列：英文維基百科 Dutch pacification campaign on Formosa 的內文寫11月22日由總督 Putmans 率領，同一文的另一處寫11月23日，且另一段寫由 Nuyts 率領，前後不一；兵力並列為475人、500人，或500荷人加500西拉雅盟軍。麻豆議和日期，同一文只有一處寫12月18日。文中寫占領麻豆當晚處決26人。1636年2月22日的會議與28個村社，出自同一篇；學術期刊 Itinerario 一篇論文的摘要（全文未取得）提到這類儀式在1641年又舉辦，細節目前未見可引用來源。",
+"rel": [
+"mattau-1629",
+"voc-1642"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Dutch pacification campaign on Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_pacification_campaign_on_Formosa"
+},
+{
+"t": "English Wikipedia：Dutch Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+},
+{
+"t": "Itinerario：Political Spectacle and Colonial Rule: The Landdag on Dutch Taiwan 1629–1648（期刊論文摘要）",
+"u": "https://www.cambridge.org/core/journals/itinerario/article/political-spectacle-and-colonial-rule-the-landdag-on-dutch-taiwan-16291648/E59AE3E268E9F0459E73AD7085B026E1"
+}
+]
+},
+{
+"y": 1642,
+"md": "8月",
+"t": "荷蘭人攻下雞籠，西班牙人離開台灣",
+"key": "voc-1642",
+"s": "荷驅西班牙",
+"b": "1642年8月，荷蘭人以4艘大船、數艘小船與約369名荷蘭士兵進攻雞籠，圍攻約六天後，西班牙守軍投降；西班牙人離開台灣，荷蘭人控制西南與北部。",
+"track": "政權",
+"conf": "common",
+"note": "兵力並列：英文維基百科 Spanish expedition to Formosa 寫約369名荷蘭士兵，原住民盟軍是否參戰，目前未見可引用來源；colonialvoyage.com 寫11艘船、約1,000人，雞籠要塞有115名西班牙人、聚落共446人，是否含水手與盟軍，目前未見可引用來源。淡水的放棄時間也有不同寫法：colonialvoyage.com 寫西班牙人1635年已撤離淡水，英文維基百科寫1636年另有夜襲毀城紀錄，Dutch Formosa 寫驅逐淡水的守軍。確切日期，目前未見可引用來源。",
+"rel": [
+"spain-1626",
+"pacify-1635"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Spanish expedition to Formosa",
+"u": "https://en.wikipedia.org/wiki/Spanish_expedition_to_Formosa"
+},
+{
+"t": "English Wikipedia：Dutch Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+},
+{
+"t": "The Dutch in Formosa 1624-1662, 1664-1668（colonialvoyage.com）",
+"u": "https://www.colonialvoyage.com/dutch-formosa-1624-1662-1664-1668/"
+}
+]
+},
+{
+"y": 1652,
+"md": "9月7日",
+"t": "郭懷一事件",
+"key": "guo-1652",
+"s": "郭懷一事件",
+"b": "1652年9月7日夜，漢人農民在郭懷一領導下攻赤崁；荷蘭人與原住民盟軍在幾天內鎮壓，郭懷一被殺，估計約4,000名漢人死亡。",
+"track": "政權",
+"topic": "社會族群",
+"conf": "disputed",
+"note": "日期並列：英文維基百科 Guo Huaiyi rebellion 寫9月7日至11日，原定17日、因消息外洩提前。人數差異大：死亡約4,000人（約占在台漢人十分之一，為估計）；荷方死8人；叛軍人數，Guo Huaiyi rebellion 一文的摘要寫5,000至15,000人，內文未給數字；Dutch Formosa 一文則寫初期120名荷兵擊散約4,000名農民，11日的交戰傷亡約2,000人。起因依英文維基百科：重稅、獵鹿許可證與鹿肉價格、只對漢人徵人頭稅、低階官兵勒索。同年12月的另一次原住民反抗是不同事件。官方或學術原始文獻，目前未見可引用來源。",
+"rel": [
+"pacify-1635",
+"koxinga-landing-1661"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Guo Huaiyi rebellion",
+"u": "https://en.wikipedia.org/wiki/Guo_Huaiyi_rebellion"
+},
+{
+"t": "English Wikipedia：Dutch Formosa",
+"u": "https://en.wikipedia.org/wiki/Dutch_Formosa"
+}
+]
+},
+{
+"y": 1661,
+"md": "4月",
+"t": "鄭成功率軍抵台，圍攻熱蘭遮城",
+"key": "koxinga-landing-1661",
+"s": "鄭成功抵台",
+"b": "1661年，鄭成功率軍從金門出發，經澎湖到台灣，4月30日前後經鹿耳門水道進入台江、登陸，圍攻荷蘭人的熱蘭遮城與普羅民遮城；鄭軍約25,000人，荷方熱蘭遮城約1,700人（含905名官兵）。",
+"track": "政權",
+"conf": "common",
+"aliases": [
+{
+"term": "熱蘭遮城之戰／圍城",
+"note": "英文維基百科以 Siege of Fort Zeelandia 為題；鄭氏方面與荷蘭方面對這件事的稱法與評價不同，目前未見可引用來源。"
+}
+],
+"note": "日期並列：Taipei Times 寫4月30日荷蘭人發現鄭軍艦隊、隨後鄭軍攻下普羅民遮；colonialvoyage.com 寫4月30日起圍攻、普羅民遮5月4日投降；英文維基百科 Siege of Fort Zeelandia 寫3月23日自金門出發、4月2日抵大員、4月4日普羅民遮投降，日期整體比前兩者早約四週，維基沒有說明原因，是否為曆法不同，目前未見可引用來源，這裡採4月30日前後。Taipei Times 2023 與遠見另寫4月30日清晨鄭軍經鹿耳門水道進入台江。人數：鄭軍約25,000人、約400艘船，荷方救援艦隊12艘船、700名水手。1661年9月中旬，約500名男女孩童（含牧師）被處決（Taipei Times 2017）。農曆日期，目前未見可引用來源。",
+"rel": [
+"voc-surrender-1662",
+"dongdu-1661",
+"voc-1624"
+],
+"who": [
+"koxinga"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Siege of Fort Zeelandia",
+"u": "https://en.wikipedia.org/wiki/Siege_of_Fort_Zeelandia"
+},
+{
+"t": "Taipei Times 2021-01-24：Taiwan in Time（Jan. 25 to Jan. 30）",
+"u": "https://www.taipeitimes.com/News/feat/archives/2021/01/24/2003751114"
+},
+{
+"t": "The Dutch in Formosa 1624-1662, 1664-1668（colonialvoyage.com）",
+"u": "https://www.colonialvoyage.com/dutch-formosa-1624-1662-1664-1668/"
+},
+{
+"t": "Taipei Times 2017-12-04：Taiwan in Time（Dec. 4）",
+"u": "https://www.taipeitimes.com/News/feat/archives/2017/12/04/2003683390"
+},
+{
+"t": "Taipei Times 2023-04-23",
+"u": "https://www.taipeitimes.com/News/feat/archives/2023/04/23/2003798446"
+},
+{
+"t": "遠見雜誌",
+"u": "https://www.gvm.com.tw/article/3322"
+}
+]
+},
+{
+"y": 1661,
+"md": "5月2日（農曆）",
+"t": "鄭成功改赤崁為東都，設承天府與天興、萬年二縣",
+"key": "dongdu-1661",
+"s": "設承天府",
+"b": "依鄧孔昭〈明鄭台灣建置考〉轉引的《先王實錄》，永曆十五年（1661）五月初二日，鄭成功改赤崁為「東都明京」，設承天府、天興縣、萬年縣。",
+"track": "政權",
+"conf": "disputed",
+"aliases": [
+{
+"term": "東都／承天府／赤崁",
+"note": "「東都」是鄭氏對台灣的稱呼，「承天府」是府名，赤崁是設府之地；英文維基百科把這個新名稱譯為 Ming Eastern Capital。"
+}
+],
+"note": "年份並列：鄧孔昭論文引《先王實錄》寫永曆十五年（1661）五月初二；英文維基百科 Kingdom of Tungning 寫1662年5月29日赤崁被改為東都明京，兩者差一年，日期的西曆換算，目前未見可引用來源。承天府設置的確切日期，英文維基百科沒有寫。《先王實錄》原件，目前未見可引用來源。",
+"rel": [
+"koxinga-landing-1661",
+"dongning-1664"
+],
+"who": [
+"koxinga"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "鄧孔昭〈明鄭台灣建置考〉（兩岸台灣史學術研討會論文，core.ac.uk）",
+"u": "https://core.ac.uk/download/41346983.pdf"
+},
+{
+"t": "English Wikipedia：Kingdom of Tungning",
+"u": "https://en.wikipedia.org/wiki/Kingdom_of_Tungning"
+},
+{
+"t": "風傳媒專欄 2017：眾說紛紜爭歷史，「漢留」台灣鄭成功（胡又天）",
+"u": "https://www.storm.mg/article/316919"
+}
+]
+},
+{
+"y": 1662,
+"md": "2月1日",
+"t": "荷蘭人向鄭成功投降，離開台灣",
+"key": "voc-surrender-1662",
+"s": "荷蘭降鄭",
+"b": "1662年2月1日，荷蘭守軍與鄭成功定約，獲准帶私人財物離開；荷蘭人約2月9日交出熱蘭遮城，約2月12日啟航往巴達維亞。荷蘭東印度公司在台灣約38年的統治結束。",
+"track": "政權",
+"conf": "common",
+"note": "簽約日2月1日，Britannica、英文維基百科 Siege of Fort Zeelandia、Fort Zeelandia 與 1662 in China 一致；撤離日並列：英文維基百科 Fort Zeelandia 一文寫2月9日（該句維基本身標示缺出處），Taipei Times 2017 寫2月12日帶1,500至1,600人往巴達維亞。1月25日是 Taipei Times 2021 記載的鄭軍最後總攻日，不是投降日。荷方長官 Coyett 戰後著文自辯（英文維基百科，單一來源）。曆法說明，目前未見可引用來源。",
+"rel": [
+"koxinga-landing-1661",
+"koxinga-death-1662"
+],
+"who": [
+"koxinga"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Siege of Fort Zeelandia",
+"u": "https://en.wikipedia.org/wiki/Siege_of_Fort_Zeelandia"
+},
+{
+"t": "English Wikipedia：Fort Zeelandia (Taiwan)",
+"u": "https://en.wikipedia.org/wiki/Fort_Zeelandia_(Taiwan)"
+},
+{
+"t": "English Wikipedia：1662 in China",
+"u": "https://en.wikipedia.org/wiki/1662_in_China"
+},
+{
+"t": "Britannica：Zheng Chenggong",
+"u": "https://www.britannica.com/biography/Zheng-Chenggong"
+},
+{
+"t": "Taipei Times 2021-01-24：Taiwan in Time（Jan. 25 to Jan. 30）",
+"u": "https://www.taipeitimes.com/News/feat/archives/2021/01/24/2003751114"
+},
+{
+"t": "Taipei Times 2017-12-04：Taiwan in Time（Dec. 4）",
+"u": "https://www.taipeitimes.com/News/feat/archives/2017/12/04/2003683390"
+}
+]
+},
+{
+"y": 1662,
+"md": "6月23日",
+"t": "鄭成功在台灣逝世",
+"key": "koxinga-death-1662",
+"s": "鄭成功逝世",
+"b": "1662年6月23日，鄭成功在台灣逝世，享年37（足歲；中文常寫39歲，為虛歲）；之後由鄭經一系承繼，鄭氏政權延續到1683年。",
+"track": "政權",
+"conf": "common",
+"note": "逝世日期，Britannica、英文維基百科 Koxinga 與 1662 in China 一致；享年37是英文維基百科 Koxinga 的足歲算法（生日1624年8月），風傳媒的中文專欄寫得年39（虛歲）。死因並列：Koxinga 一文寫多數來源稱病，時人說中暑受寒，現代史家懷疑瘧疾，清方史書寫「突發瘋狂」；1662 in China 直接寫瘧疾；Britannica 沒寫死因。繼承並列：英文維基百科 Kingdom of Tungning 寫鄭經1662年12月抵台並擊敗對手，台灣原先擁立 Zheng Miao；鄧孔昭論文寫黃昭等人擁立鄭世襲，被鄭經平定。農曆日期，目前未見可引用來源。",
+"rel": [
+"voc-surrender-1662",
+"dongning-1664"
+],
+"who": [
+"koxinga"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Koxinga",
+"u": "https://en.wikipedia.org/wiki/Koxinga"
+},
+{
+"t": "English Wikipedia：1662 in China",
+"u": "https://en.wikipedia.org/wiki/1662_in_China"
+},
+{
+"t": "Britannica：Zheng Chenggong",
+"u": "https://www.britannica.com/biography/Zheng-Chenggong"
+},
+{
+"t": "English Wikipedia：Kingdom of Tungning",
+"u": "https://en.wikipedia.org/wiki/Kingdom_of_Tungning"
+},
+{
+"t": "鄧孔昭〈明鄭台灣建置考〉（core.ac.uk）",
+"u": "https://core.ac.uk/download/41346983.pdf"
+}
+]
+},
+{
+"y": 1664,
+"md": "",
+"t": "鄭經改東都為東寧",
+"key": "dongning-1664",
+"s": "改稱東寧",
+"b": "1664年（永曆十八年），鄭經把「東都」改稱「東寧」，並把天興、萬年二縣改為州，增設安撫司等行政單位。",
+"track": "政權",
+"conf": "common",
+"note": "月份並列（鄧孔昭論文所引）：《台灣鄭氏始末》寫夏四月，《重修台灣省通志》寫八月。論文作者認為承天府至此撤銷，這只是該文的論點。鄭經的行蹤：英文維基百科寫他1662年12月抵台；論文寫他平定擁立鄭世襲的內亂後，於1663年正月回到廈門，鄭泰事件也在1663年。陳永華的建設與孔廟年份，英文維基百科寫太學1665、聖廟1666，風傳媒的專欄只寫鄭經主政第三年，尚有分歧，不收為獨立事件。英文維基百科估計台灣人口1662年約14萬、1683年約20萬（估計）。",
+"rel": [
+"dongdu-1661",
+"koxinga-death-1662",
+"surrender-1683"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Kingdom of Tungning",
+"u": "https://en.wikipedia.org/wiki/Kingdom_of_Tungning"
+},
+{
+"t": "鄧孔昭〈明鄭台灣建置考〉（兩岸台灣史學術研討會論文，core.ac.uk）",
+"u": "https://core.ac.uk/download/41346983.pdf"
+},
+{
+"t": "風傳媒專欄 2017：眾說紛紜爭歷史，「漢留」台灣鄭成功（胡又天）",
+"u": "https://www.storm.mg/article/316919"
 }
 ]
 }

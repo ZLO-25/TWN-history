@@ -83,7 +83,7 @@ with sync_playwright() as p:
         pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
         check(f"{n} 返回後回到事件卡", ev("state.view")=="history" and ev("!!state.hsel"))
         pg.click('.tab[data-view="people"]'); pg.wait_for_timeout(200)
-        check(f"{n} 人物索引 30 張", pg.locator("#pGrid .pb").count()==30)
+        check(f"{n} 人物索引 31 張", pg.locator("#pGrid .pb").count()==31)
         pg.locator("#pCard [data-h]").first.dispatch_event("click") if ev("!document.getElementById('pCard').hidden") else None
         ev("state.person='goto-shinpei';renderPeople()"); pg.wait_for_timeout(100)
         check(f"{n} 評價分歧的人物並列各方評價", pg.locator("#pCard .views li").count()>=2)
@@ -92,14 +92,14 @@ with sync_playwright() as p:
         pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
         check(f"{n} 回人物頁", ev("state.view")=="people")
         pg.click('.tab[data-view="history"]'); pg.wait_for_timeout(200)
-        pg.locator("#thChips button").first.click(); pg.wait_for_timeout(200)
+        pg.locator("#thChips button").first.dispatch_event("click"); pg.wait_for_timeout(200)
         check(f"{n} 主線展開 9 步", pg.locator("#thPanel .flow li").count()==9)
         pg.locator("#thPanel button[data-i]").nth(1).dispatch_event("click"); pg.wait_for_timeout(500)
         check(f"{n} 主線裡李登輝線步驟可跳到年表並可返回", ev("state.view")=="overview" and not ev("document.getElementById('backpill').hidden"))
         ev("setView('history');hallOpen('p3',HK['surrender-1945'].id)"); pg.wait_for_timeout(300)
         check(f"{n} 日治期有「這個時期要記住的 3 件事」", pg.locator("#hKeys li").count()==3)
-        ev("hallOpen('p1')"); pg.wait_for_timeout(300)
-        check(f"{n} 荷西與鄭氏尚無事件時仍標示事件待擴充", ev("document.querySelector('.hb[data-p=p1] em').textContent.includes('事件待擴充')") and "還沒有補完" in pg.inner_text("#hCard"))
+        ev("hallOpen('p0')"); pg.wait_for_timeout(300)
+        check(f"{n} 原住民社會期尚無事件時仍標示事件待擴充", ev("document.querySelector('.hb[data-p=p0] em').textContent.includes('事件待擴充')") and "還沒有補完" in pg.inner_text("#hCard"))
         # 其他分頁不報錯
         for v in ["relay", "methods", "background", "quiz", "people"]:
             pg.click(f'.tab[data-view="{v}"]'); pg.wait_for_timeout(150)

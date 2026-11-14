@@ -170,5 +170,11 @@ const PEOPLE=[
  views:[{who:"對原住民的軍事行動",t:"英文維基百科寫他發動對原住民的軍事行動；評價與影響，目前未見可引用來源。"}],
  kin:["liu-mingchuan"],
  src:[{t:"English Wikipedia：Shen Baozhen",u:"https://en.wikipedia.org/wiki/Shen_Baozhen"},{t:"English Wikipedia：Taiwan under Qing rule",u:"https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"}]},
+{id:"koxinga",name:"鄭成功",years:"1624–1662",role:"鄭氏政權創建者",
+ one:"1661年率軍到台灣，1662年荷蘭人投降；同年6月逝世，享年37（足歲）。",
+ did:["1661年率軍從金門經澎湖到台灣，圍攻熱蘭遮城（英文維基百科、Taipei Times）。","1662年2月1日與荷蘭人定約，荷蘭人離開台灣（Britannica、英文維基百科）。","1662年6月23日逝世，享年37（足歲；中文常寫39歲，為虛歲）（Britannica、英文維基百科）。"],
+ views:[{who:"死因",t:"多數來源稱病；時人說中暑受寒，現代史家懷疑瘧疾，清方史書寫「突發瘋狂」，見事件卡。"}],
+ kin:[],
+ src:[{t:"English Wikipedia：Koxinga",u:"https://en.wikipedia.org/wiki/Koxinga"},{t:"Britannica：Zheng Chenggong",u:"https://www.britannica.com/biography/Zheng-Chenggong"},{t:"English Wikipedia：Siege of Fort Zeelandia",u:"https://en.wikipedia.org/wiki/Siege_of_Fort_Zeelandia"}]},
 ];
 

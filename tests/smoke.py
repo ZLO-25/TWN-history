@@ -99,7 +99,7 @@ with sync_playwright() as p:
         ev("setView('history');hallOpen('p3',HK['surrender-1945'].id)"); pg.wait_for_timeout(300)
         check(f"{n} 日治期有「這個時期要記住的 3 件事」", pg.locator("#hKeys li").count()==3)
         ev("hallOpen('p0')"); pg.wait_for_timeout(300)
-        check(f"{n} 原住民社會期尚無事件時仍標示事件待擴充", ev("document.querySelector('.hb[data-p=p0] em').textContent.includes('事件待擴充')") and "還沒有補完" in pg.inner_text("#hCard"))
+        check(f"{n} 原住民社會期有事件且不再標示待擴充", ev("!document.querySelector('.hb[data-p=p0] em').textContent.includes('事件待擴充')") and ev("lcP.order.length")>=8)
         # 其他分頁不報錯
         for v in ["relay", "methods", "background", "quiz", "people"]:
             pg.click(f'.tab[data-view="{v}"]'); pg.wait_for_timeout(150)

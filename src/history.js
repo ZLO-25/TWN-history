@@ -1,5 +1,6 @@
 const PERIODS=[
- {id:"p0",name:"原住民社會",range:"至 1624",a:1400,b:1624,sum:"南島語系原住民族在各地生活，各有自己的社會與信仰。"},
+ {id:"p0",name:"原住民社會",range:"至 1624",a:1292,b:1624,sum:"南島語系原住民族在各地生活，各有自己的社會與信仰；明朝與日本等外界有零星接觸。",
+  keys:["台灣的人類活動痕跡有數萬年；舊石器到鐵器時代的年代說法來源不同、數字相差很大，南島語族的起源「多數學者認為」與台灣有關，不是定論，見專題「史前文化與南島語族」", "在荷蘭與西班牙以前，明朝、日本等外界對台灣只有零星接觸：商船許可、陳第〈東番記〉、沈有容勸退荷蘭人、日本船隊攻台；這些接觸多半只有單一來源，事件卡會標明", "原住民族的稱呼隨統治者更換而改變（熟番、高砂族、山地同胞、原住民族），官方認定的族數也是逐步增加，見專題「原住民族的稱呼與官方認定」"]},
  {id:"p1",name:"荷西與鄭氏",range:"1624–1683",a:1624,b:1683,sum:"荷蘭、西班牙先後經營台灣，後由鄭成功趕走荷蘭，鄭氏政權延續到 1683 年。",
   keys:["1624年荷蘭人在大員（今台南安平）設據點，1626年西班牙人占領北部的雞籠，1642年荷蘭人攻下雞籠、西班牙人離開；荷蘭與西班牙是兩個不同的統治者，不是同一個政權", "1661年鄭成功率軍抵台，1662年2月1日荷蘭人與他定約離開；同年6月鄭成功逝世，之後鄭經一系延續到1683年；圍城與登陸的日期，各來源曆法不同，見事件卡", "這一時期的統治只及於台灣西部與北部的部分地區，原住民各社與荷蘭人、鄭氏之間的關係並不相同；麻豆社事件與郭懷一事件的人數，各來源差異很大，見事件卡"]},
  {id:"p2",name:"清領時期",range:"1683–1895",a:1683,b:1895,sum:"1683 年起納入清朝版圖，漢人移民增加，19 世紀後期建省。",
@@ -7113,6 +7114,260 @@ const H_RAW=[
 {
 "t": "風傳媒專欄 2017：眾說紛紜爭歷史，「漢留」台灣鄭成功（胡又天）",
 "u": "https://www.storm.mg/article/316919"
+}
+]
+},
+{
+"y": 1292,
+"md": "",
+"t": "元朝遣使前往「琉求」",
+"key": "yuan-1292",
+"s": "元使琉求",
+"b": "1292年，元朝派人前往「琉求」，據英文維基百科，一說登陸地在台灣，使者誤以為到了琉球，折損三人後退回泉州。",
+"track": "政治外交",
+"conf": "disputed",
+"note": "只有英文維基百科 Early Chinese contact with Taiwan 一文的說法。「琉求」指的是今天的台灣或琉球，歷來學界看法不一；漢代「夷洲」與隋代「流求」是否為台灣也有不同看法，這裡不收。細節的中文來源，目前未見可引用來源。",
+"rel": [
+"wang-dayuan-1349"
+],
+"bg": "indigenous-peoples",
+"src": [
+{
+"t": "English Wikipedia：Early Chinese contact with Taiwan",
+"u": "https://en.wikipedia.org/wiki/Early_Chinese_contact_with_Taiwan"
+}
+]
+},
+{
+"y": 1349,
+"md": "",
+"t": "汪大淵造訪台灣，留下書面描述",
+"key": "wang-dayuan-1349",
+"s": "汪大淵",
+"b": "1349年，汪大淵造訪台灣，據英文維基百科是對台灣最早的書面描述之一；書中寫澎湖有漢人居住，台灣沒有。",
+"track": "政治外交",
+"conf": "common",
+"note": "只有英文維基百科 Early Chinese contact with Taiwan 一文的說法；汪大淵所指地點與書中原文，目前未見可引用來源。",
+"rel": [
+"yuan-1292",
+"ilha-formosa-1544"
+],
+"bg": "indigenous-peoples",
+"src": [
+{
+"t": "English Wikipedia：Early Chinese contact with Taiwan",
+"u": "https://en.wikipedia.org/wiki/Early_Chinese_contact_with_Taiwan"
+}
+]
+},
+{
+"y": 1544,
+"md": "",
+"t": "葡萄牙水手稱台灣為「Ilha Formosa」",
+"key": "ilha-formosa-1544",
+"s": "美麗之島",
+"b": "多篇文章寫，1544年路過台灣的葡萄牙船員稱它為「Ilha Formosa」（美麗之島），這是「福爾摩沙」一名的由來。",
+"track": "政治外交",
+"conf": "common",
+"note": "「1544年」出自二手文章，原始紀錄（航海日誌或地圖）、船名與人名，目前未見可引用來源。Taipei Times 2019 明說沒有紀錄顯示葡萄牙人曾登島或設據點；Portuguese.asia 寫1554年的一幅世界地圖標有 Ilha Formosa，1582年葡萄牙船難倖存者成為首批登上台灣的歐洲人。",
+"rel": [
+"wang-dayuan-1349",
+"ming-license-1593"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "Taipei Times 2019-02-13",
+"u": "https://www.taipeitimes.com/News/feat/archives/2019/02/13/2003709641"
+},
+{
+"t": "Portuguese.asia：Formosa, Taiwan's other name from the Portuguese",
+"u": "https://www.portuguese.asia/post/formosa-taiwan-s-other-name-from-the-portuguese"
+}
+]
+},
+{
+"y": 1593,
+"md": "",
+"t": "明朝開始每年核發商船許可，前往雞籠、淡水貿易",
+"key": "ming-license-1593",
+"s": "明朝商船許可",
+"b": "1593年，明朝官員開始每年核發10張商船許可，雞籠、淡水各5張；英文維基百科寫這多半是把既有的非法貿易合法化。",
+"track": "政治外交",
+"topic": "經濟產業",
+"conf": "common",
+"note": "只有英文維基百科 Early Chinese contact with Taiwan 一文的說法；許可制度的明朝原始文件，目前未見可引用來源。",
+"rel": [
+"hideyoshi-1593",
+"chen-di-1603"
+],
+"bg": "indigenous-peoples",
+"src": [
+{
+"t": "English Wikipedia：Early Chinese contact with Taiwan",
+"u": "https://en.wikipedia.org/wiki/Early_Chinese_contact_with_Taiwan"
+}
+]
+},
+{
+"y": 1593,
+"md": "",
+"t": "豐臣秀吉要求台灣入貢",
+"key": "hideyoshi-1593",
+"s": "秀吉要求入貢",
+"b": "1593年，豐臣秀吉要求台灣向日本入貢；英文維基百科寫因為島上沒有統一的政府，要求沒有結果。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "高砂國（Takasago-koku）",
+"note": "英文維基百科 Taiwan under Japanese rule 寫當時日本稱台灣為「高砂國」（Takasago-koku）。"
+}
+],
+"note": "只有英文維基百科 Taiwan under Japanese rule 與 History of Taiwan 兩文的簡短說法；使者姓名、書信內容與確切日期，目前未見可引用來源，英文維基百科寫信因為島上沒有可接收的權威而未送達，這一說沒有其他來源佐證。",
+"rel": [
+"ming-license-1593",
+"japan-1616"
+],
+"src": [
+{
+"t": "English Wikipedia：Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+},
+{
+"t": "English Wikipedia：History of Taiwan",
+"u": "https://en.wikipedia.org/wiki/History_of_Taiwan"
+}
+]
+},
+{
+"y": 1603,
+"md": "1月至2月",
+"t": "陳第隨沈有容赴台，寫成〈東番記〉",
+"key": "chen-di-1603",
+"s": "東番記",
+"b": "1603年，陳第隨明朝將領沈有容出海剿倭，到台灣西南海岸，後寫成〈東番記〉，是對台灣原住民社會的早期漢文紀錄；英文維基百科寫記載中一個聚落約500至1,000人，以月圓計月、十個月為一年。",
+"track": "政治外交",
+"topic": "社會族群",
+"conf": "common",
+"note": "年份各來源一致；英文維基百科只標西曆1至2月，沒有給具體日期。登陸地點，有文章寫大員灣一帶，各說不同。這不是最早到台灣的漢人紀錄（見1349年事件）。〈東番記〉原文與官方典藏，目前未見可引用來源。",
+"rel": [
+"ming-license-1593",
+"shen-1604"
+],
+"bg": "indigenous-peoples",
+"src": [
+{
+"t": "English Wikipedia：Chen Di",
+"u": "https://en.wikipedia.org/wiki/Chen_Di"
+},
+{
+"t": "English Wikipedia：Early Chinese contact with Taiwan",
+"u": "https://en.wikipedia.org/wiki/Early_Chinese_contact_with_Taiwan"
+}
+]
+},
+{
+"y": 1604,
+"md": "12月",
+"t": "沈有容勸退荷蘭人韋麻郎，荷蘭人離開澎湖",
+"key": "shen-1604",
+"s": "沈有容退荷",
+"b": "1604年，荷蘭東印度公司的韋麻郎（Wijbrand van Waerwijck）一行到澎湖，想通商而未獲准；明朝將領沈有容勸退他們，荷蘭人轉往台灣。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "韋麻郎／Wijbrand van Waerwijck",
+"note": "英文來源拼法不一，例如 Wybrand van Warwijck。碑文用語，目前未見可引用來源。"
+}
+],
+"note": "細節並列：Taipei Times 2004 寫沈有容率20艘船，Taipei Times 2022 寫50艘戰船、3,000兵；韋麻郎的來歷，Taipei Times 2004 寫年初攻澳門失敗、夏天被颱風吹到澎湖，英文維基百科 Taiwan under Dutch rule 寫從巴達維亞出發、原要攻澳門，途中被颱風吹到澎湖（與前者「攻澳門失敗」的說法不同）。Taipei Times 2004 寫荷蘭人12月15日離開澎湖，曆法未標；另寫提出30,000個金塊被拒、有華人潘秀引路。相關石碑1919年在馬公天后宮出土，1985年移入廟內文庫（Taipei Times 2004）。",
+"rel": [
+"chen-di-1603",
+"dutch-penghu-1622"
+],
+"src": [
+{
+"t": "Taipei Times 2004-11-18",
+"u": "https://www.taipeitimes.com/News/taiwan/archives/2004/11/18/2003211525"
+},
+{
+"t": "Taipei Times 2022-07-31：Taiwan in Time（Aug. 1 to Aug. 7）",
+"u": "https://taipeitimes.com/News/feat/archives/2022/07/31/2003782707"
+},
+{
+"t": "English Wikipedia：Taiwan under Dutch rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Dutch_rule"
+}
+]
+},
+{
+"y": 1616,
+"md": "5月",
+"t": "村山等安率船隊攻台",
+"key": "japan-1616",
+"s": "日本攻台",
+"b": "1616年，長崎代官村山等安派出約13艘船的船隊攻台，遇颱風被打散；到達台灣的一艘船，歐方記載遭伏擊、中方記載被原住民包圍，船上的人都自盡。英文維基百科另寫1609年德川幕府曾派有馬晴信一行探查台灣。",
+"track": "政治外交",
+"conf": "disputed",
+"note": "日期與人數並列：歐方記載5月15日離開長崎，中方記載5月4日；兵力歐方約4,000人、中方逾3,000人；中方記載該船約有一二百人。1609年的探查，英文維基百科三篇的說法不一：Harunobu Arima 一文寫探查隊遭原住民攻擊、死傷不少，Taiwan under Japanese rule 寫同年有遠征隊攻擊澎湖與台灣、沈有容在基隆擊退，Japanese invasion of Taiwan (1616) 只有一句探勘任務；日方史料，目前未見可引用來源。",
+"rel": [
+"hideyoshi-1593",
+"dutch-penghu-1622"
+],
+"src": [
+{
+"t": "English Wikipedia：Japanese invasion of Taiwan (1616)",
+"u": "https://en.wikipedia.org/wiki/Japanese_invasion_of_Taiwan_(1616)"
+},
+{
+"t": "English Wikipedia：Harunobu Arima",
+"u": "https://en.wikipedia.org/wiki/Harunobu_Arima"
+},
+{
+"t": "English Wikipedia：Taiwan under Japanese rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Japanese_rule"
+}
+]
+},
+{
+"y": 1622,
+"md": "7月",
+"t": "荷蘭人占領澎湖、築堡",
+"key": "dutch-penghu-1622",
+"s": "荷蘭占澎湖",
+"b": "1622年，荷蘭東印度公司的艦隊在雷伊爾森（Cornelis Reyersen）率領下，攻澳門失敗後轉往澎湖築堡，並襲擊中國沿海；9月福建巡撫要求荷蘭人退到台灣。",
+"track": "政治外交",
+"conf": "common",
+"aliases": [
+{
+"term": "Reyersen／Reijersen／Reyersz",
+"note": "英文來源拼法不一。"
+}
+],
+"note": "日期：Taipei Times 2022 寫1622年7月抵達、8月在馬公港築堡，英文維基百科未寫月份（月份為單一來源）；澳門之役在澳門文化局資料寫1622年6月24日、8艘船逾1,000人；福建巡撫9月19日要求退往台灣（英文維基百科 Sino-Dutch conflicts）；10月的襲擊，英文維基百科寫廈門，Taipei Times 2022 寫10月18日攻漳州港、燒毀多達80艘船，地點不一致。華工死亡的數字只有單一來源，這裡不採。荷蘭人1624年離開澎湖，見後一事件。",
+"rel": [
+"shen-1604",
+"voc-1624"
+],
+"bg": "rulers",
+"src": [
+{
+"t": "English Wikipedia：Sino-Dutch conflicts",
+"u": "https://en.wikipedia.org/wiki/Sino-Dutch_conflicts"
+},
+{
+"t": "English Wikipedia：Taiwan under Dutch rule",
+"u": "https://en.wikipedia.org/wiki/Taiwan_under_Dutch_rule"
+},
+{
+"t": "Taipei Times 2022-07-31：Taiwan in Time（Aug. 1 to Aug. 7）",
+"u": "https://taipeitimes.com/News/feat/archives/2022/07/31/2003782707"
+},
+{
+"t": "澳門文化局：相關文獻頁",
+"u": "https://www.icm.gov.mo/rc/viewer/pdfViewerParts/40012/3828"
 }
 ]
 }

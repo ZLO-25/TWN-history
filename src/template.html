@@ -935,14 +935,14 @@ const hItem=h=>({key:h.id,y:h.y,md:h.md,lab:h.s||h.t.slice(0,8),conf:h.conf,titl
 const lItem=e=>({key:"e"+e.id,y:e.y,md:e.md,lab:leeShort(e),title:e.y+(e.md?" "+e.md:"")+"　"+e.t+"（李登輝線）",full:e.t});
 function barsIn(a,b,gov,click){return HALL_BARS.filter(x=>GOV_BARS.includes(x[2])===gov&&x[1]>a&&x[0]<b).map(([xa,xb,n,,,tip])=>({a:Math.max(a,xa),b:Math.min(b,xb),label:n,title:tip,soft:!gov||n==="西班牙",list:gov&&xa>=a,click}))}
 function hallData(){
-  const click=y=>hallOpen(pOf(y).id);
-  const band=PERIODS.filter(p=>p.b>1624).map(p=>{const n=H.filter(h=>pOfH(h)===p&&h.ctx!=="世界").length;
+  const click=y=>hallOpen(pOf(y).id),HH=H.filter(h=>h.y>=1624);
+  const band=PERIODS.filter(p=>p.b>1624).map(p=>{const n=HH.filter(h=>pOfH(h)===p&&h.ctx!=="世界").length;
     return{a:Math.max(1624,p.a),b:Math.min(2027,p.b),label:p.name,short:p.name.slice(0,2),sub:n?n+" 則事件":"事件待擴充",on:p.id===state.hp,title:p.name+"（"+p.range+"）"+(n?"":"：事件待擴充"),click:()=>hallOpen(p.id)}});
   return {pts:HALL_PTS,range:[1624,2027],minW:0,maxRows:2,band,lanes:[
-    {id:"gov",bars:barsIn(1624,2027,true,click).concat([{a:1624,b:2026.9,label:"原住民族：自古居住，延續至今",soft:true,title:"原住民族自古居住於此，各族群的社會與信仰延續至今",click}]),items:H.filter(h=>h.track==="政權"&&!h.ctx).map(hItem)},
-    {id:"cn",bars:barsIn(1624,2027,false,click),items:H.filter(h=>h.ctx==="中國大陸").map(hItem)},
-    {id:"world",bars:[],items:H.filter(h=>h.ctx==="世界").map(hItem)},
-    {id:"pol",items:H.filter(h=>h.track!=="政權"&&!h.ctx).map(hItem)},
+    {id:"gov",bars:barsIn(1624,2027,true,click).concat([{a:1624,b:2026.9,label:"原住民族：自古居住，延續至今",soft:true,title:"原住民族自古居住於此，各族群的社會與信仰延續至今",click}]),items:HH.filter(h=>h.track==="政權"&&!h.ctx).map(hItem)},
+    {id:"cn",bars:barsIn(1624,2027,false,click),items:HH.filter(h=>h.ctx==="中國大陸").map(hItem)},
+    {id:"world",bars:[],items:HH.filter(h=>h.ctx==="世界").map(hItem)},
+    {id:"pol",items:HH.filter(h=>h.track!=="政權"&&!h.ctx).map(hItem)},
     {id:"lee",bars:[{a:1923,b:2020.6,label:"李登輝生平",soft:true,title:"李登輝生平（1923–2020）",click}],items:E.filter(e=>e.key).map(lItem)}]}}
 function renderHall(){
   if(!lcAll)lcAll=lcMake($("#lcAll"),{label:"台灣史全期泳道圖",list:false,data:hallData,onSelect:k=>{if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));hallOpen(pOf(e.y).id,k)}else{const h=H.find(x=>x.id===k);hallOpen(pOfH(h).id,k)}}});
@@ -955,7 +955,7 @@ function renderHistory(){
   renderHall();hPanel()}
 $("#hClose").onclick=()=>{state.hp=null;state.hsel=null;cardOpen($("#hCard"),false);renderHistory();window.scrollTo({top:0})};
 function pData(){
-  const p=PERIODS.find(x=>x.id===state.hp),a=Math.max(p.a,1624),b=p.b;
+  const p=PERIODS.find(x=>x.id===state.hp),a=p.id==="p0"?p.a:Math.max(p.a,1624),b=p.b;
   const hs=H.filter(h=>pOfH(h)===p),es=leeInPeriod(p);
   // 依每年事件數分配寬度：事件多的年份比較寬
   const cnt={};hs.concat(es).forEach(h=>{cnt[h.y]=(cnt[h.y]||0)+1});

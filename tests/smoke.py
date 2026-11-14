@@ -82,7 +82,7 @@ with sync_playwright() as p:
         pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
         check(f"{n} 返回後回到事件卡", ev("state.view")=="history" and ev("!!state.hsel"))
         pg.click('.tab[data-view="people"]'); pg.wait_for_timeout(200)
-        check(f"{n} 人物索引 25 張", pg.locator("#pGrid .pb").count()==25)
+        check(f"{n} 人物索引 28 張", pg.locator("#pGrid .pb").count()==28)
         pg.locator("#pCard [data-h]").first.dispatch_event("click") if ev("!document.getElementById('pCard').hidden") else None
         ev("state.person='goto-shinpei';renderPeople()"); pg.wait_for_timeout(100)
         check(f"{n} 評價分歧的人物並列各方評價", pg.locator("#pCard .views li").count()>=2)

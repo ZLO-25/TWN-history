@@ -915,6 +915,7 @@ $("#backpill").onclick=()=>{
 
 /* ---------- 台灣史（三層下鑽） ---------- */
 const pOf=y=>PERIODS.find(p=>y>=p.a&&y<p.b)||PERIODS[PERIODS.length-1];
+const pOfH=h=>(h.per&&PERIODS.find(p=>p.id===h.per))||pOf(h.y);
 const H_LANES=["統治政權","政治與外交","李登輝線","同期中國大陸"];
 const H_LC=["var(--c0)","var(--c2)","var(--c1)","var(--muted)"];
 function leeInPeriod(p){return E.filter(e=>e.key&&e.y>=p.a&&e.y<p.b)}
@@ -935,7 +936,7 @@ const lItem=e=>({key:"e"+e.id,y:e.y,md:e.md,lab:leeShort(e),title:e.y+(e.md?" "+
 function barsIn(a,b,gov,click){return HALL_BARS.filter(x=>GOV_BARS.includes(x[2])===gov&&x[1]>a&&x[0]<b).map(([xa,xb,n,,,tip])=>({a:Math.max(a,xa),b:Math.min(b,xb),label:n,title:tip,soft:!gov||n==="西班牙",list:gov&&xa>=a,click}))}
 function hallData(){
   const click=y=>hallOpen(pOf(y).id);
-  const band=PERIODS.filter(p=>p.b>1624).map(p=>{const n=H.filter(h=>pOf(h.y)===p&&h.ctx!=="世界").length;
+  const band=PERIODS.filter(p=>p.b>1624).map(p=>{const n=H.filter(h=>pOfH(h)===p&&h.ctx!=="世界").length;
     return{a:Math.max(1624,p.a),b:Math.min(2027,p.b),label:p.name,short:p.name.slice(0,2),sub:n?n+" 則事件":"事件待擴充",on:p.id===state.hp,title:p.name+"（"+p.range+"）"+(n?"":"：事件待擴充"),click:()=>hallOpen(p.id)}});
   return {pts:HALL_PTS,range:[1624,2027],minW:0,maxRows:2,band,lanes:[
     {id:"gov",bars:barsIn(1624,2027,true,click).concat([{a:1624,b:2026.9,label:"原住民族：自古居住，延續至今",soft:true,title:"原住民族自古居住於此，各族群的社會與信仰延續至今",click}]),items:H.filter(h=>h.track==="政權"&&!h.ctx).map(hItem)},
@@ -944,18 +945,18 @@ function hallData(){
     {id:"pol",items:H.filter(h=>h.track!=="政權"&&!h.ctx).map(hItem)},
     {id:"lee",bars:[{a:1923,b:2020.6,label:"李登輝生平",soft:true,title:"李登輝生平（1923–2020）",click}],items:E.filter(e=>e.key).map(lItem)}]}}
 function renderHall(){
-  if(!lcAll)lcAll=lcMake($("#lcAll"),{label:"台灣史全期泳道圖",list:false,data:hallData,onSelect:k=>{if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));hallOpen(pOf(e.y).id,k)}else{const h=H.find(x=>x.id===k);hallOpen(pOf(h.y).id,k)}}});
+  if(!lcAll)lcAll=lcMake($("#lcAll"),{label:"台灣史全期泳道圖",list:false,data:hallData,onSelect:k=>{if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));hallOpen(pOf(e.y).id,k)}else{const h=H.find(x=>x.id===k);hallOpen(pOfH(h).id,k)}}});
   lcRender(lcAll)}
 function renderHistory(){
   const box=$("#hBlocks");
-  box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOf(h.y)===p&&h.ctx!=="世界").length,w=H.filter(h=>pOf(h.y)===p&&h.ctx==="世界").length,m=leeInPeriod(p).length;
+  box.innerHTML=PERIODS.map(p=>{const n=H.filter(h=>pOfH(h)===p&&h.ctx!=="世界").length,w=H.filter(h=>pOfH(h)===p&&h.ctx==="世界").length,m=leeInPeriod(p).length;
     return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${w?" · 同期世界 "+w+" 則":""}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
   box.querySelectorAll(".hb").forEach(b=>b.onclick=()=>{state.hp=state.hp===b.dataset.p?null:b.dataset.p;state.hsel=null;renderHistory();if(state.hp)setTimeout(()=>$("#hPanel").scrollIntoView({block:"start",behavior:"smooth"}),50)});
   renderHall();hPanel()}
 $("#hClose").onclick=()=>{state.hp=null;state.hsel=null;cardOpen($("#hCard"),false);renderHistory();window.scrollTo({top:0})};
 function pData(){
   const p=PERIODS.find(x=>x.id===state.hp),a=Math.max(p.a,1624),b=p.b;
-  const hs=H.filter(h=>pOf(h.y)===p),es=leeInPeriod(p);
+  const hs=H.filter(h=>pOfH(h)===p),es=leeInPeriod(p);
   // 依每年事件數分配寬度：事件多的年份比較寬
   const cnt={};hs.concat(es).forEach(h=>{cnt[h.y]=(cnt[h.y]||0)+1});
   const cum=[0];for(let y=a;y<b;y++)cum.push(cum[cum.length-1]+1+2.5*(cnt[y]||0));const T=cum[cum.length-1];
@@ -970,7 +971,7 @@ function hPanel(){
   const p=PERIODS.find(x=>x.id===state.hp);$("#hPanel").hidden=!p;if(!p){cardOpen($("#hCard"),false);return}
   $("#hTitle").textContent=p.name+"　"+p.range;$("#hSum").textContent=p.sum;
   const kb=$("#hKeys");kb.hidden=!(p.keys&&p.keys.length);kb.innerHTML=p.keys?`<h3>這個時期要記住的 3 件事</h3><ol>${p.keys.map(k=>`<li>${esc(k)}</li>`).join("")}</ol>`:"";
-  const hs=H.filter(h=>pOf(h.y)===p),es=leeInPeriod(p);
+  const hs=H.filter(h=>pOfH(h)===p),es=leeInPeriod(p);
   if(!lcP)lcP=lcMake($("#lcP"),{label:"時期事件軌道",list:true,data:pData,onSelect:k=>hSelect(k,true)});
   if(!hs.length&&!es.length){$("#lcP").hidden=true;$("#hCard").innerHTML=`<p class="hint">這個時期的事件還沒有補完，之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;$("#hCard").classList.add("empty");cardOpen($("#hCard"),false);return}
   $("#lcP").hidden=false;$("#hCard").classList.remove("empty");
@@ -981,7 +982,7 @@ function hCard(){
   const c=$("#hCard"),k=state.hsel;
   const nav=`<div class="nav"><button id="hPrev" aria-label="上一則">← 前一則</button><button id="hNext" aria-label="下一則">後一則 →</button></div>`;
   const wire=()=>{cardWire(c);const pv=$("#hPrev"),nx=$("#hNext");if(pv&&lcP){pv.onclick=()=>lcStep(lcP,-1);nx.onclick=()=>lcStep(lcP,1)}};
-  if(!k&&!H.some(h=>pOf(h.y)===PERIODS.find(x=>x.id===state.hp)&&h.ctx!=="世界")&&!leeInPeriod(PERIODS.find(x=>x.id===state.hp)).length){c.innerHTML=`<p class="hint">這個時期的台灣史事件還沒有補完，圖上只有同期世界的事件作為對照；之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;return}
+  if(!k&&!H.some(h=>pOfH(h)===PERIODS.find(x=>x.id===state.hp)&&h.ctx!=="世界")&&!leeInPeriod(PERIODS.find(x=>x.id===state.hp)).length){c.innerHTML=`<p class="hint">這個時期的台灣史事件還沒有補完，圖上只有同期世界的事件作為對照；之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;return}
   if(!k){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現中性陳述、各方稱謂、來源與可信度。放不下的事件會合併成「+N」，點一下就放大；也可以用鍵盤左右鍵逐則瀏覽。</p>`;return}
   if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));if(!e){c.innerHTML="";return}
     c.innerHTML=`${cardClose()}<div class="d">${e.y}${e.md?" · "+e.md:""} · 李登輝線</div><h3>${esc(e.t)}</h3><p>${esc(e.b.length>140?e.b.slice(0,140)+"……":e.b)}</p><div class="act"><button class="pri" id="hLee">在李登輝總覽看 →</button><button id="hLee2">看年表完整內容 →</button></div>${nav}`;wire();
@@ -1020,7 +1021,7 @@ function hCard(){
 /* ---------- 事件代號、人物、跨期主線 ---------- */
 const HK={};H.forEach(h=>{if(h.key)HK[h.key]=h});
 const PK={};PEOPLE.forEach(p=>{PK[p.id]=p});
-function gotoH(h){const p=pOf(h.y);if(state.view==="history"&&state.hp===p.id){hSelect(h.id,true);$("#hPanel").scrollIntoView({block:"start",behavior:"smooth"})}else{setView("history");hallOpen(p.id,h.id)}}
+function gotoH(h){const p=pOfH(h);if(state.view==="history"&&state.hp===p.id){hSelect(h.id,true);$("#hPanel").scrollIntoView({block:"start",behavior:"smooth"})}else{setView("history");hallOpen(p.id,h.id)}}
 function leeFind(ref){const m=/^lee:(\d+):(.+)$/.exec(ref);return m?E.find(e=>e.y===+m[1]&&e.t.startsWith(m[2])):null}
 function renderThreads(){
   $("#thChips").innerHTML=THREADS.map(t=>`<button class="chip" data-th="${t.id}" aria-pressed="${state.th===t.id}">${esc(t.title)}</button>`).join("");
@@ -1050,7 +1051,7 @@ function renderPeople(){
   ${(p.views||[]).length?`<h4>各方評價</h4><ul class="views">${p.views.map(v=>`<li><b>${esc(v.who)}</b>：${esc(v.t)}</li>`).join("")}</ul>`:""}
   ${(p.kin||[]).map(k=>PK[k]).filter(Boolean).length?`<h4>相關人物</h4><div class="rowr">${p.kin.map(k=>PK[k]).filter(Boolean).map(q=>`<button class="who" data-k="${q.id}">${esc(q.name)}</button>`).join("")}</div>`:""}
   ${(p.src||[]).length?`<p class="src">來源：${p.src.map(x=>`<a href="${esc(x.u)}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a>`).join("、")}</p>`:""}`;
-  box.querySelectorAll("[data-h]").forEach(b=>b.onclick=()=>{const h=H.find(x=>x.id===b.dataset.h),pid=p.id;setView("history");hallOpen(pOf(h.y).id,h.id);state.hback={person:pid};refreshPill();});
+  box.querySelectorAll("[data-h]").forEach(b=>b.onclick=()=>{const h=H.find(x=>x.id===b.dataset.h),pid=p.id;setView("history");hallOpen(pOfH(h).id,h.id);state.hback={person:pid};refreshPill();});
   box.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{state.person=b.dataset.k;renderPeople();$("#pCard").scrollIntoView({block:"start",behavior:"smooth"})});
 }
 

@@ -244,7 +244,7 @@ mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;bor
 .hsres .hn{padding:9px 12px;color:var(--muted);font-size:14px}
 .paths{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-block:8px}
 .paths small{flex-basis:100%;color:var(--muted);font-size:12px}
-body.lecture .hall,body.lecture #hBlocks,body.lecture #threads,body.lecture .hsearch,body.lecture .paths small,body.lecture .intro{display:none}
+body.lecture .hall,body.lecture #hBlocks,body.lecture #threads,body.lecture .hsearch,body.lecture .paths small,body.lecture .paths .chip:not(#lectureBtn),body.lecture .intro{display:none}
 body.lecture #hCard{font-size:1.2em}
 body.lecture #hCard .src{font-size:.8em}
 /* 翻卡 */
@@ -423,7 +423,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 <section id="v-history" role="tabpanel">
   <p class="intro">從史前與原住民社會到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
   <div class="hsearch">
-    <input type="search" id="hs" placeholder="搜尋全站：人名、事件、專題、年份（如 鄭成功、1949、釋字261）" aria-label="搜尋全站">
+    <input type="search" id="hs" placeholder="搜尋全站：人名、事件、專題、年份（如 鄭成功、1949、釋字第261號）" aria-label="搜尋全站">
     <div id="hsRes" class="hsres" hidden></div>
   </div>
   <p class="paths">想照順序學？<button class="chip" id="goPath30">30 分鐘路徑</button><button class="chip" id="goPath180">3 小時路徑</button><button class="chip" id="lectureBtn" aria-pressed="false">講課模式</button><small>講課模式：只留當前時期的圖與事件卡，用鍵盤 ← → 逐則切換。</small></p>
@@ -590,7 +590,7 @@ $("#theme").onclick=()=>{const r=document.documentElement;const dark=r.dataset.t
 
 /* 分頁 */
 const VIEWS=["history","people","overview","relay","methods","background","quiz"];
-function setView(v,push=true){
+function setView(v,push=true){if(v!=="history"&&document.body.classList.contains("lecture"))setLecture(false);
   if(v==="timeline")v="overview";
   if(!VIEWS.includes(v))v="history";
   state.view=v;
@@ -737,7 +737,7 @@ function renderQuiz(){
   const e=deck[qi];
   if(e.h){const cf={verified:"各來源一致",common:"常見說法",disputed:"有爭議"}[e.conf]||"";
     box.innerHTML=bar+`<div class="q-k">第 ${qi+1} / ${total} 張 · 先想：發生在哪一年？為什麼重要？</div>
-    <div class="q-front">${esc(e.t)}</div><div class="q-hint">${esc(pOfH(e).name)}</div>
+    <div class="q-front">${esc(e.t.replace(/[（(]\d{3,4}(?:[–-]\d{3,4})?[）)]/g,"").replace(/\d{3,4}(?:[–-]\d{3,4})?年(?:至\d{3,4}年)?/g,""))}</div><div class="q-hint">${esc(pOfH(e).name)}</div>
     <div class="q-back" ${shown?"":"hidden"}><div class="yr">${e.y}${e.md?" · "+esc(e.md):""}</div><p>${esc(e.b)}</p>${e.note?`<p class="why"><b>歧見或補充：</b>${esc(e.note)}</p>`:""}${cf?`<p class="why"><b>可信度：</b>${cf}</p>`:""}<p class="why"><button class="chip" id="qgo">到事件卡看來源</button></p></div>
     <div class="q-act">${shown?`<button class="pri" id="ok">記得<kbd>1</kbd></button><button id="no">還要再看<kbd>2</kbd></button>`:`<button class="pri" id="flip">翻開答案<kbd>空白鍵</kbd></button><button id="skip">跳過<kbd>→</kbd></button>`}</div>
     <div class="score">記得 ${score.ok} · 再看 ${score.no}</div>`;
@@ -982,7 +982,7 @@ function renderHistory(){
     return `<button class="hb" data-p="${p.id}" aria-pressed="${state.hp===p.id}"><b>${p.name}</b><span>${p.range}</span><small>${p.sum}</small><em>${n?n+" 則台灣史事件":"事件待擴充"}${w?" · 同期世界 "+w+" 則":""}${m?" · 李登輝線 "+m+" 則":""}</em></button>`}).join("");
   box.querySelectorAll(".hb").forEach(b=>b.onclick=()=>{state.hp=state.hp===b.dataset.p?null:b.dataset.p;state.hsel=null;renderHistory();if(state.hp)setTimeout(()=>$("#hPanel").scrollIntoView({block:"start",behavior:"smooth"}),50)});
   renderHall();hPanel()}
-$("#hClose").onclick=()=>{state.hp=null;state.hsel=null;cardOpen($("#hCard"),false);renderHistory();window.scrollTo({top:0})};
+$("#hClose").onclick=()=>{if(document.body.classList.contains("lecture"))setLecture(false);state.hp=null;state.hsel=null;cardOpen($("#hCard"),false);renderHistory();window.scrollTo({top:0})};
 function pData(){
   const p=PERIODS.find(x=>x.id===state.hp),a=p.id==="p0"?p.a:Math.max(p.a,1624),b=p.b;
   const hs=H.filter(h=>pOfH(h)===p),es=leeInPeriod(p);
@@ -1104,7 +1104,7 @@ function setLecture(on){document.body.classList.toggle("lecture",on);$("#lecture
   if(on&&!state.hp){const p=PERIODS.find(x=>H.some(h=>pOfH(h)===x))||PERIODS[0];hallOpen(p.id,H.find(h=>pOfH(h)===p).id)}
   if(!on)window.scrollTo({top:0})}
 $("#lectureBtn").onclick=()=>setLecture(!document.body.classList.contains("lecture"));
-addEventListener("keydown",ev=>{if(!document.body.classList.contains("lecture")||state.view!=="history"||!state.hp||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+addEventListener("keydown",ev=>{if(!document.body.classList.contains("lecture")||state.view!=="history"||!state.hp||/INPUT|TEXTAREA/.test(document.activeElement.tagName)||(document.activeElement.closest&&document.activeElement.closest(".lc-svg")))return;
   if(ev.key==="ArrowRight"){ev.preventDefault();lcStep(lcP,1)}else if(ev.key==="ArrowLeft"){ev.preventDefault();lcStep(lcP,-1)}else if(ev.key==="Escape")setLecture(false)});
 
 /* ---------- 回頂部 ---------- */

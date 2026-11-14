@@ -29,7 +29,8 @@ with sync_playwright() as p:
         check(f"{n} 全期圖放不下的事件合併成 +N", pg.locator("#lcAll .lc-cl").count() >= 1)
         # 全期圖事件 → 開啟時期並選到事件
         pg.evaluate("document.querySelector('#lcAll .lc-it').dispatchEvent(new MouseEvent('click',{bubbles:true}))")
-        check(f"{n} 點全期圖事件會開啟日治並選事件", ev("state.hp") == "p3" and ev("!!state.hsel"))
+        check(f"{n} 點全期圖事件會開啟該時期並選事件", ev("/^p\\d$/.test(state.hp)") and ev("!!state.hsel"))
+        ev("hallOpen('p3',HK['surrender-1945'].id)"); pg.wait_for_timeout(300)
         check(f"{n} 日治泳道圖有事件", ev("lcP.order.length") >= 25)
         if w < 700:
             check(f"{n} 手機時期圖改為直式列表", pg.locator("#lcP .lc-list").is_visible() and pg.locator("#lcP .lc-list button.lc-row").count() >= 25)
@@ -82,7 +83,7 @@ with sync_playwright() as p:
         pg.locator("#backpill").dispatch_event("click"); pg.wait_for_timeout(300)
         check(f"{n} 返回後回到事件卡", ev("state.view")=="history" and ev("!!state.hsel"))
         pg.click('.tab[data-view="people"]'); pg.wait_for_timeout(200)
-        check(f"{n} 人物索引 28 張", pg.locator("#pGrid .pb").count()==28)
+        check(f"{n} 人物索引 30 張", pg.locator("#pGrid .pb").count()==30)
         pg.locator("#pCard [data-h]").first.dispatch_event("click") if ev("!document.getElementById('pCard').hidden") else None
         ev("state.person='goto-shinpei';renderPeople()"); pg.wait_for_timeout(100)
         check(f"{n} 評價分歧的人物並列各方評價", pg.locator("#pCard .views li").count()>=2)
@@ -97,8 +98,8 @@ with sync_playwright() as p:
         check(f"{n} 主線裡李登輝線步驟可跳到年表並可返回", ev("state.view")=="overview" and not ev("document.getElementById('backpill').hidden"))
         ev("setView('history');hallOpen('p3',HK['surrender-1945'].id)"); pg.wait_for_timeout(300)
         check(f"{n} 日治期有「這個時期要記住的 3 件事」", pg.locator("#hKeys li").count()==3)
-        ev("hallOpen('p2')"); pg.wait_for_timeout(300)
-        check(f"{n} 清領只有同期世界時仍標示事件待擴充", ev("document.querySelector('.hb[data-p=p2] em').textContent.includes('事件待擴充')") and "還沒有補完" in pg.inner_text("#hCard"))
+        ev("hallOpen('p1')"); pg.wait_for_timeout(300)
+        check(f"{n} 荷西與鄭氏尚無事件時仍標示事件待擴充", ev("document.querySelector('.hb[data-p=p1] em').textContent.includes('事件待擴充')") and "還沒有補完" in pg.inner_text("#hCard"))
         # 其他分頁不報錯
         for v in ["relay", "methods", "background", "quiz", "people"]:
             pg.click(f'.tab[data-view="{v}"]'); pg.wait_for_timeout(150)

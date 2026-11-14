@@ -158,5 +158,17 @@ const PEOPLE=[
  views:[{who:"國台辦",t:"稱這段話釋放謀獨挑釁、破壞台海和平穩定的訊號（中央社）。"},{who:"陸委會",t:"呼籲對岸正視中華民國存在的事實、尊重台灣人民的選擇（TVBS）。"}],
  kin:["tsai-ing-wen"],
  src:[{t:"English Wikipedia：2024 Taiwanese general election",u:"https://en.wikipedia.org/wiki/2024_Taiwanese_general_election"},{t:"中央社 2024-05-20：就職演說全文",u:"https://www.cna.com.tw/news/aipl/202405205002.aspx"},{t:"TVBS 2024-05-20",u:"https://news.tvbs.com.tw/politics/2492106"}]},
+{id:"liu-mingchuan",name:"劉銘傳",years:"1836–1896",role:"台灣巡撫",
+ one:"清法戰爭時負責台灣防務，之後成為台灣建省後的第一任巡撫。",
+ did:["1884年6月被任命督辦台灣軍務，8月6日擊退法軍在基隆的登陸（英文維基百科）。","1887年起推動鐵路、街燈等建設；1891年基隆至台北鐵路通車（英文維基百科）。","1891年6月以健康為由辭職；1896年病逝於安徽合肥。"],
+ views:[{who:"地方上的評價",t:"Taipei Times 2015寫他在地方上被記得是進步的行政官員；建省年份的兩種說法見事件卡「台灣建省」。"}],
+ kin:["shen-baozhen"],
+ src:[{t:"English Wikipedia：Liu Mingchuan",u:"https://en.wikipedia.org/wiki/Liu_Mingchuan"},{t:"Taipei Times 2018-02-27",u:"https://www.taipeitimes.com/News/feat/archives/2018/02/27/2003688328"},{t:"Taipei Times 2015-10-11",u:"https://www.taipeitimes.com/News/feat/archives/2015/10/11/2003629762"}]},
+{id:"shen-baozhen",name:"沈葆楨",years:"1820–1879",role:"欽差大臣・兩江總督",
+ one:"牡丹社事件後來台，推動行政改革，包括設台北府與恆春縣。",
+ did:["牡丹社事件後來台，英文維基百科寫他親自赴台、改革行政（赴台年份目前未見可引用來源）。","1875年清朝設台北府與恆春縣、廢除入台限制（Taiwan under Qing rule 年表）。","1875年任兩江總督。"],
+ views:[{who:"對原住民的軍事行動",t:"英文維基百科寫他發動對原住民的軍事行動；評價與影響，目前未見可引用來源。"}],
+ kin:["liu-mingchuan"],
+ src:[{t:"English Wikipedia：Shen Baozhen",u:"https://en.wikipedia.org/wiki/Shen_Baozhen"},{t:"English Wikipedia：Taiwan under Qing rule",u:"https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"}]},
 ];
 

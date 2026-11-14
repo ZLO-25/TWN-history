@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>台灣史年表：從荷西到今天</title>
-<meta name="description" content="台灣史互動年表（1624 至今）：全期泳道圖、各時期事件與來源可信度標示；另有李登輝線（讀《餘生》的學習筆記）、民主接力、政治手腕、背景補充與翻卡複習。">
+<meta name="description" content="台灣史互動年表（史前至今）：全期泳道圖、各時期事件與來源可信度標示；另有李登輝線（讀《餘生》的學習筆記）、民主接力、政治手腕、背景補充與翻卡複習。">
 <meta property="og:title" content="台灣史年表：從荷西到今天">
 <meta property="og:description" content="從荷西到今天的台灣史互動泳道圖；可切換到李登輝線，看台灣民主化怎麼從蔣經國萌芽、在李登輝手上落實。">
 <meta property="og:type" content="website">
@@ -235,6 +235,18 @@ mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;bor
 #pCard .views li{margin-bottom:4px}
 #pCard .src{font-size:13px;color:var(--muted);margin-top:14px}
 
+
+.hsearch{position:relative;margin-block:8px}
+.hsres{margin-top:6px;border:1px solid var(--line);border-radius:8px;background:var(--paper);max-height:320px;overflow:auto}
+.hsres button{display:flex;gap:8px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:9px 12px;font:inherit;color:var(--ink);cursor:pointer}
+.hsres button:last-child{border-bottom:0}.hsres button:hover{background:var(--bg)}
+.hsres .hk{flex:none;font-size:12px;color:var(--muted);min-width:3.2em}
+.hsres .hn{padding:9px 12px;color:var(--muted);font-size:14px}
+.paths{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-block:8px}
+.paths small{flex-basis:100%;color:var(--muted);font-size:12px}
+body.lecture .hall,body.lecture #hBlocks,body.lecture #threads,body.lecture .hsearch,body.lecture .paths small,body.lecture .intro{display:none}
+body.lecture #hCard{font-size:1.2em}
+body.lecture #hCard .src{font-size:.8em}
 /* 翻卡 */
 .quiz{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px}
 .q-scope{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px;align-items:center;font-size:13px;color:var(--muted)}
@@ -392,13 +404,13 @@ footer p{margin:0 0 6px;max-width:70ch}
 <header class="masthead">
   <div>
     <h1>台灣史年表：從荷西到今天</h1>
-    <p class="sub">1624 年至今的台灣與中華民國史，持續擴充中。另有李登輝線（讀《餘生》的學習筆記，1923–2020）：<b id="total"></b> 則事件，<b id="mtotal"></b> 則附政治手腕解析，<b id="cktotal"></b> 則標出蔣經國的影響</p>
+    <p class="sub">史前至今的台灣與中華民國史，持續擴充中。另有李登輝線（讀《餘生》的學習筆記，1923–2020）：<b id="total"></b> 則事件，<b id="mtotal"></b> 則附政治手腕解析，<b id="cktotal"></b> 則標出蔣經國的影響</p>
   </div>
   <button class="theme" id="theme" aria-label="切換深色／淺色" title="切換深色／淺色">◐</button>
 </header>
 
 <nav class="tabs" role="tablist" aria-label="主要分頁">
-  <button class="tab" role="tab" data-view="history" aria-selected="true">台灣史<small>1624 至今</small></button>
+  <button class="tab" role="tab" data-view="history" aria-selected="true">台灣史<small>史前至今</small></button>
   <button class="tab" role="tab" data-view="people" aria-selected="false">人物<small>人物索引</small></button>
   <button class="tab" role="tab" data-view="overview" aria-selected="false">李登輝<small>總覽圖＋逐年年表</small></button>
   <button class="tab" role="tab" data-view="relay">民主接力<small>蔣經國 → 李登輝</small></button>
@@ -409,7 +421,12 @@ footer p{margin:0 0 6px;max-width:70ch}
 
 <!-- 台灣史 -->
 <section id="v-history" role="tabpanel">
-  <p class="intro">從荷蘭、西班牙來台（1624）到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
+  <p class="intro">從史前與原住民社會到現在，分三層看：先看八個時期，點一個時期看事件軌道，再點事件看來源與可信度。有李登輝線的時期，可以切換到他的視角細看。</p>
+  <div class="hsearch">
+    <input type="search" id="hs" placeholder="搜尋全站：人名、事件、專題、年份（如 鄭成功、1949、釋字261）" aria-label="搜尋全站">
+    <div id="hsRes" class="hsres" hidden></div>
+  </div>
+  <p class="paths">想照順序學？<button class="chip" id="goPath30">30 分鐘路徑</button><button class="chip" id="goPath180">3 小時路徑</button><button class="chip" id="lectureBtn" aria-pressed="false">講課模式</button><small>講課模式：只留當前時期的圖與事件卡，用鍵盤 ← → 逐則切換。</small></p>
   <div class="hall">
     <div class="hallh"><b>整段台灣史一張圖</b></div>
     <div class="wide" id="lcAll"></div>
@@ -543,7 +560,7 @@ footer p{margin:0 0 6px;max-width:70ch}
 <button class="totop" id="totop" aria-label="回到頂部" hidden>↑</button>
 
 <footer>
-  <p>「台灣史」分頁：目前只有「日治時期」補完整，其餘時期會依同樣格式逐期擴充。每則事件都標示可信度（✓已查證／≈常見說法／⚑有爭議），並盡量並列各方稱謂與來源。其餘分頁是以李登輝為主體的深入內容。</p>
+  <p>「台灣史」分頁：從史前與原住民社會到近年共八個時期，另有跨期主線、人物索引與學習路徑。每則事件都標示可信度（✓已查證／≈常見說法／⚑有爭議），並盡量並列各方稱謂與來源。其餘分頁是以李登輝為主體的深入內容。</p>
   <p>年號欄：1945 年以前標示日治年號（大正／昭和），之後標示民國紀年；年齡為實歲（當年 − 1923）。「必記」是理解他一生轉折最關鍵的節點，「手腕」表示附有政治手腕解析，「經國」表示標出蔣經國的影響與民主接力。</p>
   <p>事件內容、手腕解析與背景補充是根據公開史料整理的學習筆記，不是《餘生》的原文。受難人數、接班意圖等仍有爭議的說法，頁面上都有註明。每則事件下方的筆記只存在你這台裝置的瀏覽器裡。</p>
   <p>主要參考：行政院轉型正義資料、司法院釋字第 261 號、國家人權記憶庫「江南案」、中國時報人間副刊評論（2024.10.17）、《近代史研究所集刊》第 114 期書評、國史館與國父紀念館資料庫、中央社、關鍵評論網、Taipei Times「Taiwan in Time」專欄、洪惟仁台灣語言研究。</p>
@@ -8874,6 +8891,82 @@ const THREADS=[
  {bg:"indigenous-peoples",say:"原住民族的稱呼與官方認定，見專題。"}
  ],
  note:"這條主線只收已附來源的事件；漢代「夷洲」與隋代「流求」是否為台灣，各方看法不同，沒有列入；顏思齊的事蹟只有史料可靠性存疑的來源，沒有列入。"},
+{id:"path30",title:"學習路徑：30分鐘",sum:"只看15個站，從島上最早的居民走到近年。每一站點進去讀事件卡的一句話與來源；這條路徑只排順序，不代表前一站導致後一站。",
+ steps:[
+ {bg:"indigenous-peoples",say:"先認識島上最早的居民，以及稱呼為什麼會變。"},
+ {ref:"voc-1624",say:"1624年荷蘭人在大員設據點。"},
+ {ref:"voc-surrender-1662",say:"1662年荷蘭人與鄭成功定約離開。"},
+ {ref:"surrender-1683",say:"1683年鄭氏降清，進入清朝統治。"},
+ {ref:"province-1885",say:"1885年決定建省（正式年份有1887年一說）。"},
+ {ref:"treaty-shimonoseki-1895",say:"1895年馬關條約，進入日治時期。"},
+ {ref:"tca-1921",say:"1921年台灣文化協會：非武裝的政治與文化運動。"},
+ {ref:"surrender-1945",say:"1945年日本宣布投降。"},
+ {ref:"takeover-1945",say:"1945年10月台灣受降與行政長官公署接收。"},
+ {ref:"martial-1949",say:"1949年台灣省戒嚴令。"},
+ {ref:"un-1971",say:"1971年聯合國第2758號決議，各方解讀不同。"},
+ {ref:"martial-end-1987",say:"1987年解除戒嚴。"},
+ {ref:"direct-1996",say:"1996年第一次總統直選。"},
+ {ref:"election-2000",say:"2000年第一次政黨輪替。"},
+ {ref:"sunflower-2014",say:"2014年太陽花運動，近年的一個轉折點。"}
+ ],
+ note:"時間是粗估，每站約2分鐘；想看更細，改走「學習路徑：3小時」。"},
+{id:"path180",title:"學習路徑：3小時",sum:"約53個站，依時期走完全部八段；每段可停下來，用「翻卡複習」的該期題目自我測驗。這條路徑只排順序，不代表前一站導致後一站。",
+ steps:[
+ {bg:"prehistory",say:"史前文化與南島語族：年代說法並列。"},
+ {bg:"indigenous-peoples",say:"原住民族的稱呼與官方認定。"},
+ {ref:"chen-di-1603",say:"1603年〈東番記〉：早期的漢文紀錄。"},
+ {ref:"voc-1624",say:"1624年荷蘭人在大員設據點。"},
+ {ref:"spain-1626",say:"1626年西班牙人占雞籠。"},
+ {ref:"pacify-1635",say:"1635年荷蘭出兵麻豆。"},
+ {ref:"guo-1652",say:"1652年郭懷一事件，死亡人數說法差異大。"},
+ {ref:"koxinga-landing-1661",say:"1661年鄭成功抵台。"},
+ {ref:"voc-surrender-1662",say:"1662年荷蘭人離開。"},
+ {ref:"dongning-1664",say:"1664年改稱東寧。"},
+ {ref:"surrender-1683",say:"1683年鄭克塽降清。"},
+ {ref:"prefecture-1684",say:"1684年設台灣府。"},
+ {ref:"migration-1684",say:"渡台限制：家眷政策反覆。"},
+ {ref:"zhu-1721",say:"1721年朱一貴事件。"},
+ {ref:"lin-1786",say:"1786至1788年林爽文事件。"},
+ {ref:"tianjin-1858",say:"1858年條約開港。"},
+ {ref:"mudan-1874",say:"1874年牡丹社事件後日本出兵。"},
+ {ref:"sino-french-1884",say:"1884年清法戰爭。"},
+ {ref:"province-1885",say:"建省年份與省會的不同說法。"},
+ {ref:"treaty-shimonoseki-1895",say:"1895年馬關條約。"},
+ {ref:"armed-resistance-1895",say:"1895至1902年的武裝抗日。"},
+ {ref:"law63-1896",say:"1896年六三法：總督的立法權。"},
+ {bg:"jp-policy",say:"日治統治政策三階段與總督概況。"},
+ {ref:"tca-1921",say:"1921年文化協會。"},
+ {ref:"cpl-incident-1923",say:"1923年治警事件。"},
+ {ref:"wushe-1930",say:"1930年霧社事件。"},
+ {ref:"kominka-1937",say:"1937年皇民化運動。"},
+ {ref:"surrender-1945",say:"1945年日本宣布投降。"},
+ {ref:"takeover-1945",say:"1945年接收。"},
+ {bg:"e228",say:"二二八事件的背景與經過。"},
+ {ref:"martial-1949",say:"1949年戒嚴。"},
+ {ref:"taipei-1949",say:"1949年政府遷設臺北。"},
+ {ref:"land375-1949",say:"1949年三七五減租。"},
+ {ref:"shelling-1954",say:"1954年九三砲戰：第一次台海危機。"},
+ {ref:"mdt-1954",say:"1954年《中美共同防禦條約》。"},
+ {ref:"leichen-1960",say:"1960年雷震案。"},
+ {ref:"un-1971",say:"1971年聯合國第2758號決議。"},
+ {ref:"ten-projects-1974",say:"1974年十大建設。"},
+ {ref:"formosa-1979",say:"1979年美麗島事件。"},
+ {ref:"dpp-1986",say:"1986年民進黨成立。"},
+ {ref:"martial-end-1987",say:"1987年解除戒嚴。"},
+ {ref:"wildlily-1990",say:"1990年野百合學運。"},
+ {ref:"temp-end-1991",say:"1991年終止動員戡亂時期。"},
+ {ref:"direct-1996",say:"1996年第一次總統直選。"},
+ {ref:"missile-mar-1996",say:"1996年飛彈演習與美國航艦調動。"},
+ {ref:"two-state-1999",say:"1999年「特殊的國與國關係」，各方評價不同。"},
+ {ref:"election-2000",say:"2000年第一次政黨輪替。"},
+ {ref:"wto-2002",say:"2002年加入世界貿易組織。"},
+ {ref:"ecfa-2010",say:"2010年ECFA。"},
+ {ref:"sunflower-2014",say:"2014年太陽花運動。"},
+ {ref:"election-2016",say:"2016年第二次政黨輪替。"},
+ {ref:"ssm-2019",say:"2019年同性婚姻專法施行。"},
+ {ref:"election-2024",say:"2024年總統與立委選舉。"}
+ ],
+ note:"時間是粗估，每站約3到4分鐘；每個時期各有「要記住的3件事」，建議每走完一段先讀那三件事再往下。"},
 ];
 
 /* ---------- 共用 ---------- */
@@ -9024,8 +9117,11 @@ $("#qbg").oninput=ev=>{state.qbg=ev.target.value.trim();renderBg()};
 
 /* ---------- 翻卡 ---------- */
 let deck=[],qi=0,shown=false,score={ok:0,no:0};
-function scoped(){return E.filter(e=>state.scope==="all"||(state.scope==="key"&&e.key)||(state.scope==="mv"&&e.mv)||(state.scope==="ck"&&(e.ck||e.tags.includes("蔣經國")))||(state.scope==="d"&&e.era==="d"))}
+function scoped(){
+  if(state.scope.startsWith("h:")){const pid=state.scope.slice(2);return H.filter(h=>pid==="all"||pOfH(h).id===pid).map(h=>({h:true,...h}))}
+  return E.filter(e=>state.scope==="all"||(state.scope==="key"&&e.key)||(state.scope==="mv"&&e.mv)||(state.scope==="ck"&&(e.ck||e.tags.includes("蔣經國")))||(state.scope==="d"&&e.era==="d"))}
 function newDeck(){deck=scoped().slice().sort(()=>Math.random()-.5);qi=0;shown=false;score={ok:0,no:0}}
+$(".q-scope").insertAdjacentHTML("afterend",`<div class="q-scope">台灣史：<button class="chip" data-scope="h:all" aria-pressed="false">全部事件</button>${PERIODS.map(p=>`<button class="chip" data-scope="h:${p.id}" aria-pressed="false">${esc(p.name)}</button>`).join("")}</div>`);
 document.querySelectorAll(".q-scope .chip").forEach(c=>c.onclick=()=>{state.scope=c.dataset.scope;document.querySelectorAll(".q-scope .chip").forEach(x=>x.setAttribute("aria-pressed",x===c));newDeck();renderQuiz()});
 function renderQuiz(){
   const box=$("#quiz");
@@ -9035,6 +9131,15 @@ function renderQuiz(){
   if(qi>=total){box.innerHTML=bar+`<p class="q-front">這一輪完成</p><p class="score">記得 ${score.ok} 則 · 還要再看 ${score.no} 則</p><div class="q-act"><button class="pri" id="again">再來一輪</button></div>`;
     $("#again").onclick=()=>{newDeck();renderQuiz()};return}
   const e=deck[qi];
+  if(e.h){const cf={verified:"各來源一致",common:"常見說法",disputed:"有爭議"}[e.conf]||"";
+    box.innerHTML=bar+`<div class="q-k">第 ${qi+1} / ${total} 張 · 先想：發生在哪一年？為什麼重要？</div>
+    <div class="q-front">${esc(e.t)}</div><div class="q-hint">${esc(pOfH(e).name)}</div>
+    <div class="q-back" ${shown?"":"hidden"}><div class="yr">${e.y}${e.md?" · "+esc(e.md):""}</div><p>${esc(e.b)}</p>${e.note?`<p class="why"><b>歧見或補充：</b>${esc(e.note)}</p>`:""}${cf?`<p class="why"><b>可信度：</b>${cf}</p>`:""}<p class="why"><button class="chip" id="qgo">到事件卡看來源</button></p></div>
+    <div class="q-act">${shown?`<button class="pri" id="ok">記得<kbd>1</kbd></button><button id="no">還要再看<kbd>2</kbd></button>`:`<button class="pri" id="flip">翻開答案<kbd>空白鍵</kbd></button><button id="skip">跳過<kbd>→</kbd></button>`}</div>
+    <div class="score">記得 ${score.ok} · 再看 ${score.no}</div>`;
+    if(shown){$("#ok").onclick=()=>{score.ok++;next()};$("#no").onclick=()=>{score.no++;deck.push(e);next()};$("#qgo").onclick=()=>{setView("history");hallOpen(pOfH(e).id,e.id)}}
+    else{$("#flip").onclick=()=>{shown=true;renderQuiz()};$("#skip").onclick=next}
+    return}
   box.innerHTML=bar+`<div class="q-k">第 ${qi+1} / ${total} 張 · 先想：哪一年？他幾歲？${e.mv?"他用了什麼手法？":"為什麼重要？"}</div>
   <div class="q-front">${esc(e.t)}</div><div class="q-hint">${ERAS.find(x=>x.id===e.era).name}</div>
   <div class="q-back" ${shown?"":"hidden"}><div class="yr">${e.y}${e.md?" · "+e.md:""}</div><div class="era-yr">${eraYear(e.y)} · ${e.y-1923} 歲</div><p>${esc(e.b)}</p>
@@ -9374,6 +9479,29 @@ function renderPeople(){
   box.querySelectorAll("[data-h]").forEach(b=>b.onclick=()=>{const h=H.find(x=>x.id===b.dataset.h),pid=p.id;setView("history");hallOpen(pOfH(h).id,h.id);state.hback={person:pid};refreshPill();});
   box.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{state.person=b.dataset.k;renderPeople();$("#pCard").scrollIntoView({block:"start",behavior:"smooth"})});
 }
+
+
+/* ---------- 全站搜尋、學習路徑、講課模式 ---------- */
+function siteSearch(q){q=q.trim().toLowerCase();if(!q)return[];const out=[];
+  H.forEach(h=>{if((h.t+" "+h.b+" "+(h.note||"")+" "+h.y).toLowerCase().includes(q))out.push({k:"事件",lab:h.y+"　"+h.t,go:()=>{setView("history");hallOpen(pOfH(h).id,h.id)}})});
+  PEOPLE.forEach(p=>{if((p.name+" "+p.role+" "+p.one).toLowerCase().includes(q))out.push({k:"人物",lab:p.name+"　"+p.role,go:()=>{state.person=p.id;setView("people")}})});
+  BG.forEach(g=>{if((g.t+" "+g.s).toLowerCase().includes(q))out.push({k:"專題",lab:g.t,go:()=>gotoBg(g.id)})});
+  THREADS.forEach(x=>{if((x.title+" "+x.sum).toLowerCase().includes(q))out.push({k:"主線",lab:x.title,go:()=>openThread(x.id)})});
+  E.forEach(e=>{if((e.t+" "+e.b+" "+e.y).toLowerCase().includes(q))out.push({k:"李登輝線",lab:e.y+"　"+e.t,go:()=>gotoEvent(e.id)})});
+  return out}
+function renderSearch(){const q=$("#hs").value,box=$("#hsRes");if(!q.trim()){box.hidden=true;return}
+  const r=siteSearch(q),shown=r.slice(0,40);box.hidden=false;
+  box.innerHTML=shown.length?shown.map((x,i)=>`<button data-i="${i}"><span class="hk">${x.k}</span><span>${esc(x.lab)}</span></button>`).join("")+(r.length>40?`<div class="hn">還有 ${r.length-40} 筆，請輸入更精確的關鍵字。</div>`:""):`<div class="hn">沒有符合的結果。</div>`;
+  box.querySelectorAll("button").forEach(b=>b.onclick=()=>{const x=shown[+b.dataset.i];box.hidden=true;x.go()})}
+$("#hs").oninput=renderSearch;
+$("#goPath30").onclick=()=>openThread("path30");
+$("#goPath180").onclick=()=>openThread("path180");
+function setLecture(on){document.body.classList.toggle("lecture",on);$("#lectureBtn").setAttribute("aria-pressed",on);$("#lectureBtn").textContent=on?"離開講課模式":"講課模式";
+  if(on&&!state.hp){const p=PERIODS.find(x=>H.some(h=>pOfH(h)===x))||PERIODS[0];hallOpen(p.id,H.find(h=>pOfH(h)===p).id)}
+  if(!on)window.scrollTo({top:0})}
+$("#lectureBtn").onclick=()=>setLecture(!document.body.classList.contains("lecture"));
+addEventListener("keydown",ev=>{if(!document.body.classList.contains("lecture")||state.view!=="history"||!state.hp||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+  if(ev.key==="ArrowRight"){ev.preventDefault();lcStep(lcP,1)}else if(ev.key==="ArrowLeft"){ev.preventDefault();lcStep(lcP,-1)}else if(ev.key==="Escape")setLecture(false)});
 
 /* ---------- 回頂部 ---------- */
 addEventListener("scroll",()=>{$("#totop").hidden=scrollY<600},{passive:true});

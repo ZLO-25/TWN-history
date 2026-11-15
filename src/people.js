@@ -172,7 +172,7 @@ const PEOPLE=[
  src:[{t:"Taipei Times 2016-05-08：Taiwan in Time",u:"https://www.taipeitimes.com/News/feat/archives/2016/05/08/2003645758"},{t:"English Wikipedia：Shen Baozhen",u:"https://en.wikipedia.org/wiki/Shen_Baozhen"},{t:"English Wikipedia：Taiwan under Qing rule",u:"https://en.wikipedia.org/wiki/Taiwan_under_Qing_rule"}]},
 {id:"yin-chung-jung",name:"尹仲容",years:"1903–1963",role:"財經官員・工業政策推動者",
  one:"1950年代主管台灣工業與美援運用的財經官員，湖南邵陽人。",
- did:["1949年任生產管理委員會副主任委員，主管生產、物資分配、資金調度與對外貿易（陽明交大圖書館）。","1953年任經濟安定委員會工業委員會召集人，訂定四年計畫中的工業計畫，並統籌工業美援的申請與運用。","1954年任經濟部長；1955年揚子木材公司案起訴後辭職，之後獲判無罪（兩個來源的日期算法不一致，這裡不定日期）。","1957年復任經濟安定委員會秘書長，1960年任臺灣銀行董事長，1963年因肝癌病逝於台北。"],
+ did:["1949年受邀任臺灣區生產事業管理委員會副主任委員，主司產業復興與對外採購（陽明交大圖書館）。","1953年任經濟安定委員會工業委員會召集人，訂定四年計畫中的工業計畫，並統籌工業美援的申請與運用。","1954年任經濟部長；1955年因揚子木材公司案被起訴；獲判無罪後仍辭去官職，負政治責任（兩個來源對經過的日期算法不一致，這裡不定日期）。","1957年復出，任經濟安定委員會秘書長，1960年任臺灣銀行董事長，1963年因肝癌病逝於台北。"],
  views:[{who:"生卒月日",t:"陽明交大圖書館只寫1903–1963；英文維基百科寫1903年4月16日生、1963年1月24日卒，目前只有這一個非官方來源。"}],
  kin:[],
  src:[{t:"陽明交通大學圖書館：尹仲容先生其人其事",u:"https://news.lib.nycu.edu.tw/university-history/%E5%B0%B9%E4%BB%B2%E5%AE%B9%E5%85%88%E7%94%9F%E5%85%B6%E4%BA%BA%E5%85%B6%E4%BA%8B/"},{t:"English Wikipedia：Yin Chung-jung",u:"https://en.wikipedia.org/wiki/Yin_Chung-jung"}]},

@@ -413,13 +413,13 @@ footer p{margin:0 0 6px;max-width:70ch}
 @media(max-width:700px){.lc-tools{gap:6px 8px}.lc-legend{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.lc-legend::-webkit-scrollbar{display:none}.lc-lg{flex:none;white-space:nowrap}.lc-zoom{margin-left:auto}.lc-body{grid-template-columns:76px minmax(0,1fr)}.lc-head{font-size:12px;padding:0 6px;gap:5px}}
 .lc-card .nav{display:flex;gap:6px;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
 .lc-card .nav button{border:1px solid var(--line);background:var(--chip);border-radius:6px;padding:5px 12px;font-size:13.5px}
-.lc-note{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--muted);max-width:72ch}
+.lc-note{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--muted)}
 .lc-note:empty{display:none}
 .lc-card.idle{display:none!important}
 @media(max-width:700px){.lc-wonly{display:none}}
 .lc-x{float:right;border:0;background:none;font-size:24px;line-height:1;color:var(--muted);padding:0 4px;margin:-4px -6px 0 8px}
 @media(min-width:700px){
-  .lc-split .lc-card{margin-top:14px;max-width:880px;scroll-margin-top:70px}
+  .lc-split .lc-card{margin:14px auto 0;max-width:880px;scroll-margin-top:70px}
   .lc-x{display:none}}
 @media(max-width:699px){
   .lc-card{display:none}
@@ -518,7 +518,7 @@ footer p{margin:0 0 6px;max-width:70ch}
   <div class="ovbar">
     <button class="chip" id="ovAll" aria-pressed="false">顯示全部事件</button>
   </div>
-  <div class="lc-split wide idle"><div id="lcOv"></div><p class="lc-note" id="ovNote"><span class="lc-wonly">最上面的色帶是人生階段；泳道裡的長條是各個職位的任期。</span>點圖上的事件，可以看它的摘要。<span class="lc-wonly">放不下的事件會合併成「+N」，點一下就放大。</span></p><div class="ovcard lc-card idle" id="ovCard" aria-live="polite"></div></div>
+  <div class="lc-split wide idle"><div id="lcOv"></div><p class="lc-note" id="ovNote"><span class="lc-wonly">色帶是人生階段、長條是職位任期；</span>點圖上的事件看摘要<span class="lc-wonly">；「+N」點一下放大</span>。</p><div class="ovcard lc-card idle" id="ovCard" aria-live="polite"></div></div>
 </section>
 
 <!-- 年表 -->
@@ -11521,7 +11521,7 @@ function hPanel(){
   lcP.z=1;lcP.sel=state.hsel;lcRender(lcP);if(state.hsel)lcSel(lcP,state.hsel,true);
   hCard();cardOpen($("#hCard"),!!state.hsel)}
 function hSelect(k,reveal){state.hsel=k;if(lcP)lcSel(lcP,k,reveal);hCard();cardOpen($("#hCard"),true);if(reveal)cardReveal($("#hCard"))}
-const H_NOTE='點圖上的事件，可以看它的中性陳述、各方稱謂、來源與可信度。<span class="lc-wonly">放不下的事件會合併成「+N」，點一下就放大；也可以用鍵盤左右鍵逐則瀏覽。</span>';
+const H_NOTE='點圖上的事件，看中性陳述、各方稱謂、來源與可信度<span class="lc-wonly">；「+N」點一下放大，鍵盤左右鍵可逐則瀏覽</span>。';
 function hCard(){
   const c=$("#hCard"),k=state.hsel;
   const nav=`<div class="nav"><button id="hPrev" aria-label="上一則">← 前一則</button><button id="hNext" aria-label="下一則">後一則 →</button></div>`;

@@ -156,6 +156,17 @@ with sync_playwright() as p:
         check(f"{n} 講課模式：按鈕顯示「離開講課模式」、其他卡隱藏", "離開講課模式" in pg.inner_text("#lectureBtn") and ev("document.getElementById('lectureBtn').getAttribute('aria-pressed')") == "true" and not pg.locator("#goPath30").is_visible() and not pg.locator("#hint3").is_visible())
         pg.locator("#lectureBtn").dispatch_event("click"); pg.wait_for_timeout(200)
         check(f"{n} 離開講課模式後文字還原", pg.inner_text("#lectureBtn .pt") == "講課模式" and pg.locator("#goPath30").is_visible())
+        # 點時期方塊不自動捲動；時期內容在畫面下方時出現「↓」提示，點提示才捲過去
+        ev("state.hp=null;state.hsel=null;renderHistory();window.scrollTo(0,document.querySelectorAll('.hb')[1].getBoundingClientRect().top+scrollY-120)"); pg.wait_for_timeout(200)
+        y0 = ev("scrollY")
+        ev("document.querySelectorAll('.hb')[2].click()"); pg.wait_for_timeout(500)
+        below = ev("document.getElementById('hPanel').getBoundingClientRect().top>innerHeight-90")
+        check(f"{n} 點時期方塊後畫面不捲動", abs(ev("scrollY") - y0) < 2, (y0, ev("scrollY")))
+        check(f"{n} 時期內容在下方時顯示提示", pg.locator("#downhint").is_visible() == below, below)
+        if below:
+            pg.locator("#downhint").click(); pg.wait_for_timeout(900)
+            check(f"{n} 點提示後捲到時期內容且提示消失", ev("document.getElementById('hPanel').getBoundingClientRect().top") < 200 and not pg.locator("#downhint").is_visible())
+        ev("state.hp=null;state.hsel=null;renderHistory();window.scrollTo(0,0)"); pg.wait_for_timeout(200)
         check(f"{n} 分頁分隔元素不會被當成分頁", ev("document.querySelectorAll('.tab[data-view]').length") == 7 and ev("document.querySelectorAll('.tabsep[aria-hidden=true]').length") >= 1)
         pg.click('.tab[data-view="overview"]'); pg.wait_for_timeout(400)
         if w >= 1100:

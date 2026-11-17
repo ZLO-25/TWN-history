@@ -29,7 +29,7 @@
   --seal:#e0675d; --gold:#d6b25a; --chip:#262d29; color-scheme:dark}
 *{box-sizing:border-box}
 html[data-fsz=lg] body{font-size:18px}
-html[data-fsz=lg] :is(.intro,.sec p.lead,.bg-lead,.hhead p,.hkeys ol,.ovcard p,.hnote,.hcard .cause ul,.bgb>p,.ft,.nt,.ln,.hsres button,.masthead .sub,.hint3,.pcard .pd,.hb small,.hallhelp .hallnote,.hallhelp summary,.alias summary,.src){font-size:17px}
+html[data-fsz=lg] :is(.intro,.sec p.lead,.bg-lead,.hhead p,.hkeys ol,.ovcard p,.hnote,.hcard .cause ul,.bgb>p,.ft,.nt,.ln,.hsres button,.masthead .sub,.hint3,.pcard .pd,.hb small,.hallhelp .hallnote,.lc-note,.hallhelp summary,.alias summary,.src){font-size:17px}
 html[data-fsz=lg] :is(.hb b,.pcard .pt){font-size:19px}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -413,14 +413,20 @@ footer p{margin:0 0 6px;max-width:70ch}
 @media(max-width:700px){.lc-tools{gap:6px 8px}.lc-legend{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.lc-legend::-webkit-scrollbar{display:none}.lc-lg{flex:none;white-space:nowrap}.lc-zoom{margin-left:auto}.lc-body{grid-template-columns:76px minmax(0,1fr)}.lc-head{font-size:12px;padding:0 6px;gap:5px}}
 .lc-card .nav{display:flex;gap:6px;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
 .lc-card .nav button{border:1px solid var(--line);background:var(--chip);border-radius:6px;padding:5px 12px;font-size:13.5px}
+.lc-note{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--muted);max-width:72ch}
+.lc-note:empty{display:none}
+.lc-card.idle{display:none!important}
+@media(max-width:700px){.lc-wonly{display:none}}
 .lc-x{float:right;border:0;background:none;font-size:24px;line-height:1;color:var(--muted);padding:0 4px;margin:-4px -6px 0 8px}
 @media(min-width:1100px){
   .lc-split{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;align-items:start}
-  .lc-split .lc-card{position:sticky;top:60px;max-height:calc(100vh - 76px);overflow:auto;margin-top:44px}
+  .lc-split .lc-card{position:sticky;top:60px;max-height:calc(100vh - 76px);overflow:auto;margin-top:44px;grid-column:2;grid-row:1 / span 2}
+  .lc-split{grid-template-rows:auto 1fr}
+  .lc-split>.lc-note{grid-column:1;grid-row:2;align-self:start}
+  .lc-split.idle{grid-template-columns:minmax(0,1fr)}
   .lc-x{display:none}}
 @media(max-width:1099px){
   .lc-card{display:none}
-  .lc-card.empty{display:block}
   .lc-card.open{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;margin:0;max-height:62vh;overflow:auto;border-radius:16px 16px 0 0;border:1px solid var(--line);border-top:4px solid var(--seal);box-shadow:0 -8px 28px rgba(0,0,0,.25);padding:14px 18px calc(16px + env(safe-area-inset-bottom,0px))}
   .sheet-open .totop,.sheet-open .backpill{display:none}}
 @media (prefers-reduced-motion:no-preference){.lc-card.open{animation:sheet .2s ease-out}@keyframes sheet{from{transform:translateY(24px);opacity:.5}}}
@@ -493,7 +499,7 @@ footer p{margin:0 0 6px;max-width:70ch}
   <div id="hPanel" class="hpanel" hidden>
     <div class="hhead"><div><h2 id="hTitle"></h2><p id="hSum"></p></div><button class="chip" id="hClose">← 全部時期</button></div>
     <div class="hkeys" id="hKeys" hidden></div>
-    <div class="lc-split wide"><div id="lcP"></div><div class="ovcard hcard lc-card" id="hCard" aria-live="polite"></div></div>
+    <div class="lc-split wide idle"><div id="lcP"></div><p class="lc-note" id="hNote"></p><div class="ovcard hcard lc-card idle" id="hCard" aria-live="polite"></div></div>
   </div>
   <div class="threads" id="threads">
     <h2>跨期主線</h2>
@@ -516,7 +522,7 @@ footer p{margin:0 0 6px;max-width:70ch}
   <div class="ovbar">
     <button class="chip" id="ovAll" aria-pressed="false">顯示全部事件</button>
   </div>
-  <div class="lc-split wide"><div id="lcOv"></div><div class="ovcard lc-card" id="ovCard" aria-live="polite"></div></div>
+  <div class="lc-split wide idle"><div id="lcOv"></div><p class="lc-note" id="ovNote"><span class="lc-wonly">最上面的色帶是人生階段；泳道裡的長條是各個職位的任期。</span>點圖上的事件，可以看它的摘要。<span class="lc-wonly">放不下的事件會合併成「+N」，點一下就放大。</span></p><div class="ovcard lc-card idle" id="ovCard" aria-live="polite"></div></div>
 </section>
 
 <!-- 年表 -->
@@ -938,6 +944,7 @@ let lcRT;addEventListener("resize",()=>{clearTimeout(lcRT);lcRT=setTimeout(()=>L
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>LC_ALL.forEach(me=>{if(me.root.offsetParent)lcRender(me)}));
 
 /* 事件卡：桌機在右側固定、平板與手機從下方滑出 */
+function cardIdle(c,me,on){const sp=c.parentElement,was=sp.classList.contains("idle");c.classList.toggle("idle",on);sp.classList.toggle("idle",on);if(on)c.innerHTML="";if(was!==on&&me&&me.root.offsetParent&&innerWidth>=1100){lcRender(me);if(me.sel)lcSel(me,me.sel,true)}}
 function cardOpen(el,on){el.classList.toggle("open",!!on);document.body.classList.toggle("sheet-open",!!on&&innerWidth<1100)}
 document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".lc-card.open").forEach(c=>cardOpen(c,false))});
 function cardClose(el){return `<button type="button" class="lc-x" aria-label="關閉事件卡">×</button>`}
@@ -981,7 +988,8 @@ function ovMark(){if(lcOv)lcSel(lcOv,state.ovSel==null?null:String(state.ovSel))
 function ovSelect(id,scroll){state.ovSel=id;if(lcOv)lcSel(lcOv,String(id),scroll);ovCard();cardOpen($("#ovCard"),true)}
 function ovCard(){
   const c=$("#ovCard");const e=E.find(x=>x.id===state.ovSel);
-  if(!e){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現摘要。<br>最上面的色帶是人生階段；泳道裡的長條是各個職位的任期。放不下的事件會合併成「+N」，點一下就放大。</p>`;cardOpen(c,false);return}
+  if(!e){cardIdle(c,lcOv,true);cardOpen(c,false);return}
+  cardIdle(c,lcOv,false);
   const clean=e.w.replace(/\[\[bg:[\w-]+\]\]/g,"").trim();
   const bgs=[...e.w.matchAll(/\[\[bg:([\w-]+)\]\]/g)].map(m=>BG.find(x=>x.id===m[1])).filter(Boolean);
   let body=e.b;if(body.length>150)body=body.slice(0,150).replace(/[，、；。]?[^，、；。]*$/,"")+"……";
@@ -1069,17 +1077,20 @@ function hPanel(){
   const kb=$("#hKeys");kb.hidden=!(p.keys&&p.keys.length);kb.innerHTML=p.keys?`<h3>這個時期要記住的 3 件事</h3><ol>${p.keys.map(k=>`<li>${esc(k)}</li>`).join("")}</ol>`:"";
   const hs=H.filter(h=>pOfH(h)===p),es=leeInPeriod(p);
   if(!lcP)lcP=lcMake($("#lcP"),{label:"時期事件軌道",list:true,data:pData,onSelect:k=>hSelect(k,true)});
-  if(!hs.length&&!es.length){$("#lcP").hidden=true;$("#hCard").innerHTML=`<p class="hint">這個時期的事件還沒有補完，之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;$("#hCard").classList.add("empty");cardOpen($("#hCard"),false);return}
-  $("#lcP").hidden=false;$("#hCard").classList.remove("empty");
+  if(!hs.length&&!es.length){$("#lcP").hidden=true;$("#hNote").textContent="這個時期的事件還沒有補完，之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。";cardIdle($("#hCard"),null,true);cardOpen($("#hCard"),false);return}
+  $("#lcP").hidden=false;
   lcP.z=1;lcP.sel=state.hsel;lcRender(lcP);if(state.hsel)lcSel(lcP,state.hsel,true);
   hCard();cardOpen($("#hCard"),!!state.hsel)}
 function hSelect(k,reveal){state.hsel=k;if(lcP)lcSel(lcP,k,reveal);hCard();cardOpen($("#hCard"),true)}
+const H_NOTE='點圖上的事件，可以看它的中性陳述、各方稱謂、來源與可信度。<span class="lc-wonly">放不下的事件會合併成「+N」，點一下就放大；也可以用鍵盤左右鍵逐則瀏覽。</span>';
 function hCard(){
   const c=$("#hCard"),k=state.hsel;
   const nav=`<div class="nav"><button id="hPrev" aria-label="上一則">← 前一則</button><button id="hNext" aria-label="下一則">後一則 →</button></div>`;
   const wire=()=>{cardWire(c);const pv=$("#hPrev"),nx=$("#hNext");if(pv&&lcP){pv.onclick=()=>lcStep(lcP,-1);nx.onclick=()=>lcStep(lcP,1)}};
-  if(!k&&!H.some(h=>pOfH(h)===PERIODS.find(x=>x.id===state.hp)&&h.ctx!=="世界")&&!leeInPeriod(PERIODS.find(x=>x.id===state.hp)).length){c.innerHTML=`<p class="hint">這個時期的台灣史事件還沒有補完，圖上只有同期世界的事件作為對照；之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。</p>`;return}
-  if(!k){c.innerHTML=`<p class="hint">點圖上的事件，這裡會出現中性陳述、各方稱謂、來源與可信度。放不下的事件會合併成「+N」，點一下就放大；也可以用鍵盤左右鍵逐則瀏覽。</p>`;return}
+  const note=$("#hNote");note.innerHTML=H_NOTE;
+  if(!k&&!H.some(h=>pOfH(h)===PERIODS.find(x=>x.id===state.hp)&&h.ctx!=="世界")&&!leeInPeriod(PERIODS.find(x=>x.id===state.hp)).length){note.textContent="這個時期的台灣史事件還沒有補完，圖上只有同期世界的事件作為對照；之後會依同樣格式（中性陳述、各方稱謂、來源與可信度）逐批擴充。";cardIdle(c,lcP,true);return}
+  if(!k){cardIdle(c,lcP,true);return}
+  cardIdle(c,lcP,false);
   if(k[0]==="e"){const e=E.find(x=>x.id===+k.slice(1));if(!e){c.innerHTML="";return}
     c.innerHTML=`${cardClose()}<div class="d">${e.y}${e.md?" · "+e.md:""} · 李登輝線</div><h3>${esc(e.t)}</h3><p>${esc(e.b.length>140?e.b.slice(0,140)+"……":e.b)}</p><div class="act"><button class="pri" id="hLee">在李登輝總覽看 →</button><button id="hLee2">看年表完整內容 →</button></div>${nav}`;wire();
     $("#hLee").onclick=()=>{cardOpen(c,false);state.hback={pid:state.hp,sel:k};setView("overview");ovSelect(e.id,true);window.scrollTo({top:0})};

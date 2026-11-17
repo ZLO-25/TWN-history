@@ -179,6 +179,21 @@ with sync_playwright() as p:
         ev("setView('history')"); pg.wait_for_timeout(200)
         if w < 700:
             check(f"{n} 手機圖例與縮放不超過兩列", ev("document.querySelector('#lcAll .lc-tools').getBoundingClientRect().height") <= 100)
+        # 故事導讀：閱讀模式、站內連結與「回到故事」
+        if ev("STO.length"):
+            sid = ev("STO[0].id")
+            pg.goto(URL + "#story-" + sid); pg.wait_for_timeout(400)
+            check(f"{n} 故事網址直接開啟閱讀模式", pg.locator("#reader").is_visible() and pg.locator("#rdBody h2").count() >= 5)
+            check(f"{n} 閱讀模式無水平捲軸", ev("document.getElementById('rdScroll').scrollWidth<=innerWidth"))
+            bad = ev("STO.flatMap(s=>[...JSON.stringify(s).matchAll(/\\[\\[(p|h|bg):([^|\\]]+)\\|/g)].map(m=>[m[1],m[2]])).filter(([k,v])=>k==='p'?!PEOPLE.find(p=>p.id===v):k==='h'?!H.find(h=>h.t===v):!BG.find(b=>b.id===v))")
+            check(f"{n} 故事內所有站內連結都存在", not bad, bad[:5])
+            if pg.locator("#rdBody .rd-ln").count():
+                pg.locator("#rdBody .rd-ln").first.dispatch_event("click"); pg.wait_for_timeout(400)
+                check(f"{n} 點故事內連結後出現「回到故事」", pg.locator("#rdReturn").is_visible() and not pg.locator("#reader").is_visible())
+                pg.click("#rdRetGo"); pg.wait_for_timeout(300)
+                check(f"{n} 「回到故事」重新開啟同一篇", pg.locator("#reader").is_visible() and ev("rdCur.id") == sid)
+            pg.keyboard.press("Escape"); pg.wait_for_timeout(200)
+            check(f"{n} Esc 關閉閱讀模式", not pg.locator("#reader").is_visible())
         # 其他分頁不報錯
         for v in ["relay", "methods", "background", "quiz", "people"]:
             pg.click(f'.tab[data-view="{v}"]'); pg.wait_for_timeout(150)

@@ -21,6 +21,10 @@ def build():
     for key, f in (("__DATA__", "data.js"), ("__BG__", "bgdata.js"), ("__HIST__", "history.js"), ("__PEOPLE__", "people.js"), ("__THREADS__", "threads.js")):
         assert key in html, f"template.html 缺少佔位符 {key}"
         html = html.replace(key, read(f))
+    assert "__STORIES__" in html, "template.html 缺少佔位符 __STORIES__"
+    files = sorted((SRC / "stories").glob("*.js"))
+    stories = "const STORIES=[];function S(o){STORIES.push(o)}\n" + "\n".join(f.read_text(encoding="utf-8") for f in files)
+    html = html.replace("__STORIES__", stories)
     return html
 
 

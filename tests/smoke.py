@@ -163,7 +163,7 @@ with sync_playwright() as p:
             check(f"{n} 李登輝頁說明左緣與分頁左緣對齊", d < 4, d)
             ev("lcOv.opt.onSelect(lcOv.order[5].key,true)"); pg.wait_for_timeout(200)
             c = ev("document.getElementById('ovCard').getBoundingClientRect().toJSON()"); g = ev("document.getElementById('lcOv').getBoundingClientRect().toJSON()")
-            check(f"{n} ≥1100px 李登輝頁事件卡固定在圖右側", c["left"] >= g["right"] - 2 and c["right"] <= 1400)
+            check(f"{n} ≥1100px 李登輝頁事件卡在圖表下方、圖表不被壓縮", c["top"] >= g["bottom"] - 2 and g["width"] >= 1300, (c, g))
         check(f"{n} 無水平捲軸", ev("document.documentElement.scrollWidth<=innerWidth"), ev("document.documentElement.scrollWidth"))
         ev("setView('history')"); pg.wait_for_timeout(200)
         if w < 700:

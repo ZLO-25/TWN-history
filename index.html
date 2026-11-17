@@ -418,14 +418,10 @@ footer p{margin:0 0 6px;max-width:70ch}
 .lc-card.idle{display:none!important}
 @media(max-width:700px){.lc-wonly{display:none}}
 .lc-x{float:right;border:0;background:none;font-size:24px;line-height:1;color:var(--muted);padding:0 4px;margin:-4px -6px 0 8px}
-@media(min-width:1100px){
-  .lc-split{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;align-items:start}
-  .lc-split .lc-card{position:sticky;top:60px;max-height:calc(100vh - 76px);overflow:auto;margin-top:44px;grid-column:2;grid-row:1 / span 2}
-  .lc-split{grid-template-rows:auto 1fr}
-  .lc-split>.lc-note{grid-column:1;grid-row:2;align-self:start}
-  .lc-split.idle{grid-template-columns:minmax(0,1fr)}
+@media(min-width:700px){
+  .lc-split .lc-card{margin-top:14px;max-width:880px;scroll-margin-top:70px}
   .lc-x{display:none}}
-@media(max-width:1099px){
+@media(max-width:699px){
   .lc-card{display:none}
   .lc-card.open{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;margin:0;max-height:62vh;overflow:auto;border-radius:16px 16px 0 0;border:1px solid var(--line);border-top:4px solid var(--seal);box-shadow:0 -8px 28px rgba(0,0,0,.25);padding:14px 18px calc(16px + env(safe-area-inset-bottom,0px))}
   .sheet-open .totop,.sheet-open .backpill{display:none}}
@@ -11385,8 +11381,10 @@ let lcRT;addEventListener("resize",()=>{clearTimeout(lcRT);lcRT=setTimeout(()=>L
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>LC_ALL.forEach(me=>{if(me.root.offsetParent)lcRender(me)}));
 
 /* 事件卡：桌機在右側固定、平板與手機從下方滑出 */
-function cardIdle(c,me,on){const sp=c.parentElement,was=sp.classList.contains("idle");c.classList.toggle("idle",on);sp.classList.toggle("idle",on);if(on)c.innerHTML="";if(was!==on&&me&&me.root.offsetParent&&innerWidth>=1100){lcRender(me);if(me.sel)lcSel(me,me.sel,true)}}
-function cardOpen(el,on){el.classList.toggle("open",!!on);document.body.classList.toggle("sheet-open",!!on&&innerWidth<1100)}
+function cardIdle(c,me,on){c.classList.toggle("idle",on);c.parentElement.classList.toggle("idle",on);if(on)c.innerHTML=""}
+/* 寬螢幕事件卡在圖表下方：卡片頂端不在畫面內時，捲到圖表下半與卡片同時可見 */
+function cardReveal(c){if(innerWidth<700||c.classList.contains("idle"))return;const t=c.getBoundingClientRect().top;if(t>innerHeight-180||t<60)window.scrollBy({top:t-innerHeight*.5,behavior:"smooth"})}
+function cardOpen(el,on){el.classList.toggle("open",!!on);document.body.classList.toggle("sheet-open",!!on&&innerWidth<700)}
 document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".lc-card.open").forEach(c=>cardOpen(c,false))});
 function cardClose(el){return `<button type="button" class="lc-x" aria-label="關閉事件卡">×</button>`}
 function cardWire(el){const x=el.querySelector(".lc-x");if(x)x.onclick=()=>cardOpen(el,false)}
@@ -11426,7 +11424,7 @@ function renderOv(){
   $("#ovAll").setAttribute("aria-pressed",state.ovAll);$("#ovAll").textContent=state.ovAll?"只顯示主要事件":"顯示全部事件";
 }
 function ovMark(){if(lcOv)lcSel(lcOv,state.ovSel==null?null:String(state.ovSel))}
-function ovSelect(id,scroll){state.ovSel=id;if(lcOv)lcSel(lcOv,String(id),scroll);ovCard();cardOpen($("#ovCard"),true)}
+function ovSelect(id,scroll){state.ovSel=id;if(lcOv)lcSel(lcOv,String(id),scroll);ovCard();cardOpen($("#ovCard"),true);if(scroll)cardReveal($("#ovCard"))}
 function ovCard(){
   const c=$("#ovCard");const e=E.find(x=>x.id===state.ovSel);
   if(!e){cardIdle(c,lcOv,true);cardOpen(c,false);return}
@@ -11522,7 +11520,7 @@ function hPanel(){
   $("#lcP").hidden=false;
   lcP.z=1;lcP.sel=state.hsel;lcRender(lcP);if(state.hsel)lcSel(lcP,state.hsel,true);
   hCard();cardOpen($("#hCard"),!!state.hsel)}
-function hSelect(k,reveal){state.hsel=k;if(lcP)lcSel(lcP,k,reveal);hCard();cardOpen($("#hCard"),true)}
+function hSelect(k,reveal){state.hsel=k;if(lcP)lcSel(lcP,k,reveal);hCard();cardOpen($("#hCard"),true);if(reveal)cardReveal($("#hCard"))}
 const H_NOTE='點圖上的事件，可以看它的中性陳述、各方稱謂、來源與可信度。<span class="lc-wonly">放不下的事件會合併成「+N」，點一下就放大；也可以用鍵盤左右鍵逐則瀏覽。</span>';
 function hCard(){
   const c=$("#hCard"),k=state.hsel;
